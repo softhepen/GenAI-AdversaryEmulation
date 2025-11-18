@@ -1,0 +1,13 @@
+adfind
+chrome-passwords
+invoke-psimage
+metasploit
+paexec
+plink
+psexec
+pupy
+rubeus
+ryuk
+tinymet
+windows-credential-editor
+wmic

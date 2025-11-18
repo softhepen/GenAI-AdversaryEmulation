@@ -1,0 +1,5 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using only the PsExec tool to simulate the initial phase of the intrusion, which corresponds to the T1078 technique (VALID ACCOUNTS) in TA0001 (INITIAL ACCESS).
+
+Here is the output:
+
+Command: `psexec -i \\<remote_system> -u <attacker_username> -p <attacker_password>`

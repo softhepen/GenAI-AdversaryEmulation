@@ -1,0 +1,73 @@
+After analyzing the internal tools and technique descriptions, I've identified the following matches:
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+Description: Exploitation of vulnerabilities in client software to execute code. In the case of CosmicDuke, opening a PDF containing an exploit exploits a vulnerability to execute malicious code.
+Tool: No tool
+
+Technique: T1204 – USER EXECUTION
+Description: This technique involves inducing the user to run a malicious file, such as a Windows executable whose name has been manipulated to look like a document or image file. CosmicDuke uses social engineering to induce the user to launch the attack file.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1036 – MASQUERADING
+Description: This technique involves manipulating the file name to make it look like a different type of file, such as a document or image, in order to trick the victim into executing the malicious file.
+Tool: adfind
+
+Technique: T1036 – MASQUERADING
+Description: Disguising the malicious file as an image or document to look legitimate.
+Tool: adfind
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1056 – INPUT CAPTURE
+Description: recording of keystrokes made by the user to capture sensitive information such as credentials. recording of keystrokes made by the user to capture sensitive information such as credentials.
+Tool: chrome-passwords
+
+Technique: T1115 – CLIPBOARD DATA
+Description: Theft of data in the system clipboard. Theft of data in the system clipboard.
+Tool: No tool
+
+Technique: T1113 – SCREEN CAPTURE
+Description: Capture of desktop screens or specific windows Capture of desktop screens or specific windows
+Tool: ryuk
+
+Technique: T1005 – DATA FROM LOCAL SYSTEM
+Description: Collection of data from files in the system. Collection of data from files in the system.
+Tool: No tool
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1555 – CREDENTIALS FROM PASSWORD STORES
+Description: password password
+Tool: chrome-passwords
+
+Technique: T1552 – UNSECURED CREDENTIALS
+Description: The exfiltration of private keys and cryptographic certificates. The exfiltration of private keys and cryptographic certificates.
+Tool: No tool
+
+- Tactic: TA0010 – EXFILTRATION
+Technique: T1048 – EXFILTRATION OVER ALTERNATIVE PROTOCOL
+Description: Use of FTP specifically to exfiltrate data Use of FTP specifically to exfiltrate data Adversaries may steal data by exfiltrating it over a different protocol than that of the existing command and control channel.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Adversaries may transfer tools or other files from an external system into a compromised environment.
+Tool: No tool
+
+Technique: T1132 – DATA ENCODING
+Description: use of standard encodings to transform data for transfer or storage, as in the case of using RC4 to encrypt and decrypt data.
+Tool: No tool
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: Sending malicious attachments via email to induce victims to open them. PDF documents containing exploits are sent to targeted users as email attachments.
+Tool: No tool
+
+Technique: T1190 – EXPLOIT PUBLIC-FACING APPLICATION
+Description: Exploitation of known vulnerabilities in publicly exposed applications, as in the case of exploits used in PDF files containing malicious Flash objects
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: Creation of planned activities to maintain persistence on the system.
+Tool: No tool

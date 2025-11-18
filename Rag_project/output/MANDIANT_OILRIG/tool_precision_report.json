@@ -1,0 +1,11 @@
+{
+  "precision": 0.0,
+  "true_positives": [],
+  "false_positives": [
+    "mshtaexe",
+    "mshtaexe",
+    "mshtaexe"
+  ],
+  "total_tools": 3,
+  "total_entries": 22
+}

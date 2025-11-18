@@ -1,0 +1,18 @@
+Based on the provided documentation and attack description, I will generate a realistic command line using only the tool `Invoke-PSImage`.
+
+**Attack Description:**
+The obfuscation of both the macro and JavaScript is part of this technique, where adversaries disguise their code to evade detection.
+
+**MITRE Technique and Tactic:**
+Technique ID: T1027
+Technique name: OBFUSCATED FILES OR INFORMATION
+Tactic ID: TA0005
+Tactic name: DEFENSE EVASION
+
+**Command Line Generation:**
+
+After analyzing the attack description, I identified the need to encode a PowerShell script in a PNG image. I will use `Invoke-PSImage` to generate a command line that simulates this behavior.
+
+Here is the generated command line:
+
+Command: `Invoke-PSImage -Embed -InputFile <image_file> -OutputFile <output_png>`

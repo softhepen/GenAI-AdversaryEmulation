@@ -1,0 +1,9 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "psexec"
+  ],
+  "false_positives": [],
+  "total_tools": 1,
+  "total_entries": 10
+}

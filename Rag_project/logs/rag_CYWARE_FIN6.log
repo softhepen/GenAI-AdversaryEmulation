@@ -1,0 +1,17 @@
+[2025-11-07 12:42:21,993] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:42:24,332] INFO - Tool selection for report: CYWARE
+[2025-11-07 12:42:24,332] INFO - TTP extraction from CTI report
+[2025-11-07 12:42:24,348] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:42:59,793] INFO - Tool field precision: 1.00
+[2025-11-07 12:42:59,794] INFO - Validating LLM output
+[2025-11-07 12:42:59,799] INFO - Generating commands for report: CYWARE
+[2025-11-07 12:42:59,827] INFO - Parsed 7 feasible attack actions.
+[2025-11-07 12:43:11,031] INFO - Saved command in output\CYWARE_FIN6\generated_commands\command_psexec_TA0008_T1021.txt
+[2025-11-07 12:43:18,320] INFO - Saved command in output\CYWARE_FIN6\generated_commands\command_ryuk_TA0005_T1055.txt
+[2025-11-07 12:43:25,037] INFO - Saved command in output\CYWARE_FIN6\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 12:43:33,123] INFO - Saved command in output\CYWARE_FIN6\generated_commands\command_metasploit_TA0002_T1129.txt
+[2025-11-07 12:43:48,009] INFO - Saved command in output\CYWARE_FIN6\generated_commands\command_plink_TA0011_T1105.txt
+[2025-11-07 12:44:04,244] INFO - Saved command in output\CYWARE_FIN6\generated_commands\command_metasploit_TA0003_T1543.txt
+[2025-11-07 12:44:21,370] INFO - Saved command in output\CYWARE_FIN6\generated_commands\command_metasploit_TA0004_T1543.txt
+[2025-11-07 12:44:25,231] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CYWARE_FIN6\match_results_chrf.csv
+[2025-11-07 12:44:25,263] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CYWARE_FIN6\match_results_edit_distance.csv

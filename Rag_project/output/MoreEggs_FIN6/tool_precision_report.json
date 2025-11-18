@@ -1,0 +1,14 @@
+{
+  "precision": 0.4,
+  "true_positives": [
+    "adfind",
+    "windows-credential-editor"
+  ],
+  "false_positives": [
+    "psexecplinkpaexec",
+    "chromepasswordsrubeus",
+    "adfindwindowscredentialeditor"
+  ],
+  "total_tools": 5,
+  "total_entries": 6
+}

@@ -1,0 +1,44 @@
+Here is the analysis:
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1219 – REMOTE ACCESS SOFTWARE
+Description: Using Meterpreter to access and control the system.
+Tool: No tool
+
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Transferring BEACON payloads to servers and workstations.
+Tool: No tool
+
+Technique: T1136 – CREATE ACCOUNT
+Description: Creating a new domain account.
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Using an application layer protocol (FTP) to exfiltrate data Use of hard-coded credentials for FTP authentication during data exfiltration. Using file synchronization or replication applications to copy data to cloud file hosting or sharing services
+Tool: No tool
+
+Technique: T1090 – PROXY
+Description: Using ngrok for tunneling RDP sessions through multi-hop proxies
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1136 – CREATE ACCOUNT
+Description: Creating an account for subsequent operations
+Tool: No tool
+
+Technique: T1505 – SERVER SOFTWARE COMPONENT
+Description: Deployment of web shells on an Internet-exposed system.
+Tool: No tool
+
+Technique: T1078 – VALID ACCOUNTS
+Description: Using compromised accounts (services and users) to move laterally through the network Using local accounts with administrator privileges to move laterally and to install payloads Using a previously created domain administrator account to access systems and deploy MAZE ransomware.
+Tool: PsExec
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1003 – CREDENTIAL DUMPING
+Description: Using Mimikatz to collect credentials. Procdump and Mimikatz are tools used to extract credentials from system memory or system files
+Tool: No tool
+
+Technique: T1522 – UNSECURED CREDENTIALS
+Description: Searching for files containing credentials (e.g., files with the word "password")
+Tool: No tool

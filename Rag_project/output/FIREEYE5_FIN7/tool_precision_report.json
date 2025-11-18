@@ -1,0 +1,16 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "adfind",
+    "pupy",
+    "invoke-psimage",
+    "adfind",
+    "invoke-psimage",
+    "chrome-passwords",
+    "invoke-psimage",
+    "pupy"
+  ],
+  "false_positives": [],
+  "total_tools": 8,
+  "total_entries": 9
+}

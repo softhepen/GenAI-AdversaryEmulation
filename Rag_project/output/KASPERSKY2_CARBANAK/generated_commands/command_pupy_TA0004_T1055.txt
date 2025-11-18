@@ -1,0 +1,15 @@
+Based on the provided documentation and the attack description, I will generate a realistic command line using **only** the tool Pupy to reproduce the Carbanak's code injection into the svchost.exe process.
+
+Command: `run memory_exec /usr/share/mimikatz/Win32/mimikatz.exe privilege::debug sekurlsa::logonPasswords exit`
+
+This command simulates the behavior of injecting the mimikatz module into the connected clients, which allows for dumping passwords and elevating privileges. The use of `privilege::debug` suggests an attempt to escalate privileges.
+
+Command: `run Beroot --bg`
+
+The Beroot module is used to find ways to elevate privileges from user to admin. Running it in the background (`--bg`) simulates the persistence of this module, allowing Carbanak's code to remain active.
+
+Command: `download C:\\Windows\\System32\\svchost.exe`
+
+This command injects a payload into the legitimate svchost.exe process, effectively masking Carbanak's activities within the Windows system.
+
+Note that these commands are designed to simulate the described behavior without providing actual file paths or specific details.

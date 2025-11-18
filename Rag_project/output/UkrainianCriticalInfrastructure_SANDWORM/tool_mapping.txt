@@ -1,0 +1,28 @@
+Here is the analysis output:
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: Adversaries may use Valid Accounts to log into a service that accepts remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.
+Tool: psexec
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1078 – VALID ACCOUNTS
+Description: Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Persistence. Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Persistence.
+Tool: No tool
+
+Technique: T1566 – PHISHING
+Description: Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.
+Tool: No tool
+
+- Tactic: TA0040 – IMPACT
+Technique: T1485 – DATA DESTRUCTION
+Description: Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.
+Tool: No tool
+
+Technique: T1495 – FIRMWARE CORRUPTION
+Description: Adversaries may overwrite or corrupt the flash memory contents of system BIOS or other firmware in devices attached to a system in order to render them inoperable or unable to boot, thus denying the availability to use the devices and/or the system.
+Tool: No tool
+
+Technique: T1529 – SYSTEM SHUTDOWN/REBOOT
+Description: Adversaries may shutdown/reboot systems to interrupt access to, or aid in the destruction of, those systems.
+Tool: ryuk

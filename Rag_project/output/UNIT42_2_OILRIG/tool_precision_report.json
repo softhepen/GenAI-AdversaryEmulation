@@ -1,0 +1,13 @@
+{
+  "precision": 0.0,
+  "true_positives": [],
+  "false_positives": [
+    "webshell",
+    "webshell",
+    "ruler",
+    "ruler",
+    "webshell"
+  ],
+  "total_tools": 5,
+  "total_entries": 14
+}

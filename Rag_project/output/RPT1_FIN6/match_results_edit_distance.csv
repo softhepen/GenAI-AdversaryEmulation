@@ -1,0 +1,10 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_adfind_TA0007_T1018.txt,adfind,adfind -sc msDS-Behavior-Version,"adfind -f ""(objectcategory=group)""`",0.418,True
+command_adfind_TA0007_T1018.txt,adfind,"adfind -sitenamedc -b dc=<domain_name>,dc=net -f ""objectclass=*""","adfind -f ""(objectcategory=group)""`",0.424,True
+command_adfind_TA0007_T1018.txt,adfind,"adfind -sc sl:msds* -b dc=<domain_name>,dc=net -f ""objectcategory=computer""","adfind -f ""(objectcategory=group)""`",0.527,True
+command_adfind_TA0007_T1018.txt,adfind,"adfind -sc admincountdmp -b dc=<domain_name>,dc=net -f ""adminCount=1"" -jsdenl ""!m/(NT AUTHORITY|BUILTIN)/i""",`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.284,True
+command_adfind_TA0007_T1018.txt,adfind,adfind -s schdc -sc msDS-RevealedUsers,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.395,True
+command_plink_TA0011_T1572.txt,plink,plink -sshlog <log_file> -L <listen_ip>:<listen_port>:<remote_host>:<remote_port>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.299,True
+command_plink_TA0011_T1572.txt,plink,plink -R <listen_ip>:<listen_port>:localhost:<local_port>,"```sh
+plink -ssh #{user}@#{server}
+```",0.295,True

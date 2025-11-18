@@ -1,0 +1,16 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "chrome-passwords",
+    "plink",
+    "pupy",
+    "paexec",
+    "pupy",
+    "metasploit",
+    "pupy",
+    "pupy"
+  ],
+  "false_positives": [],
+  "total_tools": 8,
+  "total_entries": 14
+}

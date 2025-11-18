@@ -1,0 +1,61 @@
+Here is the analysis output:
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1566 – PHISHING
+Description: Trickbot arrives via an email disguised as a tax incentive notification.
+Tool: No tool
+
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Macro-enabled spreadsheet suggests Visual Basic macro used for initial payload delivery.
+Tool: chrome-passwords
+
+Technique: T1204 – USER EXECUTION
+Description: The email attachment is a macro-enabled Excel spreadsheet that the user is tricked into opening.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: The macro downloads Trickbot from a remote server.
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Using HTTP POST for data exfiltration to evade detection.
+Tool: No tool
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: The malware includes functionality to exploit VNC. The malware includes functionality to exploit SSH, particularly via PuTTY. The malware includes functionality to exploit RDP.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Adversaries may use obfuscation techniques to hide code or strings within the malware. Using API hashing to obscure API calls
+Tool: No tool
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1552 – UNSECURED CREDENTIALS
+Description: Adversaries may search for and steal credentials stored in files. Using CredEnumerateA API to steal saved RDP credentials.
+Tool: No tool
+
+Technique: T1003 – OS CREDENTIAL DUMPING
+Description: Trickbot specifically queries registry for saved credentials.
+Tool: windows-credential-editor
+
+Technique: T1522 – UNSECURED CREDENTIALS
+Description: Retrieving PuTTY private keys used for SSH authentication.
+Tool: No tool
+
+- Tactic: TA0010 – EXFILTRATION
+Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+Description: Sending exfiltrated data to C2 servers via HTTP POST.
+Tool: No tool
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1083 – FILE AND DIRECTORY DISCOVERY
+Description: Querying the registry to identify PuTTY sessions and settings.
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1005 – DATA FROM LOCAL SYSTEM
+Description: Credential harvesting across multiple local applications and services, including VNC and PuTTY, demonstrated by searching specific directories and registry keys.
+Tool: No tool

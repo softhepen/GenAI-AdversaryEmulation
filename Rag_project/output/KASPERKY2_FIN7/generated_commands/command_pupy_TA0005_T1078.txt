@@ -1,0 +1,7 @@
+Based on the provided documentation and the objective to simulate the attack behavior, I will generate realistic command lines using only the tool pupy to reproduce the following attack behavior:
+
+**Attack Description:** The bot collects credentials from various software, which can include valid accounts for different services.
+
+**Command: `run Lazagne`**
+
+This command uses the Lazagne module to retrieve passwords stored on the system (Windows/Linux) and store them in the local db.

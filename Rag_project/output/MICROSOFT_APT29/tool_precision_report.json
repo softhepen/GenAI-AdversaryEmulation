@@ -1,0 +1,14 @@
+{
+  "precision": 0.8,
+  "true_positives": [
+    "chrome-passwords",
+    "psexec",
+    "paexec",
+    "plink"
+  ],
+  "false_positives": [
+    "adfindforgatheringinformationfromactivedirectory"
+  ],
+  "total_tools": 5,
+  "total_entries": 7
+}

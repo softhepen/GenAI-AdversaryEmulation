@@ -1,0 +1,17 @@
+[2025-11-07 14:03:52,996] INFO - Loading existing vectorstore from disk
+[2025-11-07 14:03:55,266] INFO - Tool selection for report: KASPERKY3
+[2025-11-07 14:03:55,267] INFO - TTP extraction from CTI report
+[2025-11-07 14:03:55,277] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 14:04:51,984] INFO - Tool field precision: 0.57
+[2025-11-07 14:04:51,985] INFO - Validating LLM output
+[2025-11-07 14:04:51,985] WARNING - Invalid or multiple tools detected: 'psexec, paexec, ryuk' — replacing with 'No tool'
+[2025-11-07 14:04:51,985] WARNING - Invalid or multiple tools detected: 'psexec, paexec, ryuk' — replacing with 'No tool'
+[2025-11-07 14:04:51,986] WARNING - Invalid or multiple tools detected: 'psexec, paexec, ryuk' — replacing with 'No tool'
+[2025-11-07 14:04:51,989] INFO - Generating commands for report: KASPERKY3
+[2025-11-07 14:04:52,010] INFO - Parsed 4 feasible attack actions.
+[2025-11-07 14:04:58,527] INFO - Saved command in output\KASPERKY3_FIN7\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 14:05:09,799] INFO - Saved command in output\KASPERKY3_FIN7\generated_commands\command_chrome_passwords_TA0011_T1105.txt
+[2025-11-07 14:05:26,198] INFO - Saved command in output\KASPERKY3_FIN7\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-07 14:05:44,251] INFO - Saved command in output\KASPERKY3_FIN7\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-07 14:05:44,595] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\KASPERKY3_FIN7\match_results_chrf.csv
+[2025-11-07 14:05:44,604] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\KASPERKY3_FIN7\match_results_edit_distance.csv

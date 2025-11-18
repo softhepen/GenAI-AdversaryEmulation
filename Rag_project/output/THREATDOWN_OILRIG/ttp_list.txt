@@ -1,0 +1,42 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: The malicious email targeting a government official from Jordan's foreign ministry, which contained a malicious Excel document, is a clear example of spear-phishing with an attachment. The malicious email with the subject "Confirmation Receive Document" and the attachment "Confirmation Receive Document.xls"
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The Excel attachment contains a macro that performs malicious activities.
+  Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+  Description: The image in the document is a social engineering tactic designed to persuade the victim to enable the macro, which is crucial for the attack to proceed.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The creation of a `TaskService` object and retrieving the task folder that contains the list of current tasks indicates that the malware is interacting with the Windows Task Scheduler. This technique involves creating or modifying scheduled tasks or jobs to establish persistence or perform automated tasks. In your case, the malware uses a scheduled task to ensure that update.exe remains persistent on the system. The malicious document registers a scheduled task to execute an executable every X minutes, ensuring the malware runs persistently and systematically.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1564 – HIDE ARTIFACTS
+  Description: After the macro is enabled, the image is replaced with the coat of arms of the Jordanian government. This act of swapping images can be seen as a form of masquerading, where the attacker attempts to make the document appear more legitimate to avoid raising suspicion from the victim. The Excel macro hides the current sheet (which likely contains the initial content that lures the victim into enabling macros) and shows a new sheet with the Jordanian government's coat of arms
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: The malware checks if a mouse is connected, which suggests it's attempting to determine if it is running on a real machine rather than in a virtualized or sandbox environment. This helps the malware avoid execution in an analysis environment, thus impairing defenses. The malware checks if a mouse is connected, which suggests it's attempting to determine if it is running on a real machine rather than in a virtualized or sandbox environment. This helps the malware avoid execution in an analysis environment, thus impairing defenses.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: he malware reads base64-encoded content from the user forms, decodes it, and writes the decoded content into the created files. The use of compression to obscure the data being transmitted is an example of data obfuscation.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Adversaries use DNS for communication between the malware and its C2 server. This technique involves using DNS (Domain Name System) for C2 communications.
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: This technique involves the transfer of files or tools into a compromised environment, often from a remote server.
+  Technique: T1568 – DYNAMIC RESOLUTION
+  Description: The malware uses a Pseudo-Random Number Generator (PRNG), such as the Mersenne Twister, to generate subdomains dynamically.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: Uses WMI query to get IP address information.
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: The malware checks if a mouse is connected, which suggests it's attempting to determine if it is running on a real machine rather than in a virtualized or sandbox environment. This helps the malware avoid execution in an analysis environment, thus impairing defenses. The malware checks if a mouse is connected, which suggests it's attempting to determine if it is running on a real machine rather than in a virtualized or sandbox environment. This helps the malware avoid execution in an analysis environment, thus impairing defenses.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The creation of a `TaskService` object and retrieving the task folder that contains the list of current tasks indicates that the malware is interacting with the Windows Task Scheduler. This technique involves creating or modifying scheduled tasks or jobs to establish persistence or perform automated tasks. In your case, the malware uses a scheduled task to ensure that update.exe remains persistent on the system. The malicious document registers a scheduled task to execute an executable every X minutes, ensuring the malware runs persistently and systematically.
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: This technique involves using the Windows Registry or startup folder to ensure that malicious executables are run at system startup or user logon.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The creation of a `TaskService` object and retrieving the task folder that contains the list of current tasks indicates that the malware is interacting with the Windows Task Scheduler. This technique involves creating or modifying scheduled tasks or jobs to establish persistence or perform automated tasks. In your case, the malware uses a scheduled task to ensure that update.exe remains persistent on the system. The malicious document registers a scheduled task to execute an executable every X minutes, ensuring the malware runs persistently and systematically.
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: This technique involves using the Windows Registry or startup folder to ensure that malicious executables are run at system startup or user logon.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+  Description: Adversaries may steal data by exfiltrating it over an existing command and control channel.

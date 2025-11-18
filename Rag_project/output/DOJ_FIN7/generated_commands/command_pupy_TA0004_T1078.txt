@@ -1,0 +1,5 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the Pupy tool to simulate stealing credentials through surveillance for unauthorized access to sensitive information.
+
+Command: `lazagne --all`
+
+This command retrieves lots of passwords stored on the system (Windows/Linux) using the Lazagne tool.

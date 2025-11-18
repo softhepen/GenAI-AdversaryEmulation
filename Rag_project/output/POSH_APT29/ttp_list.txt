@@ -1,0 +1,30 @@
+- Tactic: TA0002 – EXECUTION
+  Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+  Description: The use of WMI to maintain persistence on the system. POSHSPY leverages WMI as one of the main tools. The use of WMI to execute commands in order to avoid detection.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The use of PowerShell to execute malicious commands or scripts. POSHSPY uses PowerShell as part of its toolkit. The use of PowerShell payloads allows only legitimate system processes to be used, making detection of malicious code more difficult. Using PowerShell to run the backdoor Running PowerShell commands to read, decrypt, and execute the backdoor code. Run additional PowerShell code. Run additional PowerShell code.
+  Technique: T1106 – NATIVE API
+  Description: Creating a new WMI class and adding a text property.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1546 – EVENT TRIGGERED EXECUTION
+  Description: The use of WMI to maintain persistence on the system. POSHSPY uses WMI to store and persist the backdoor code. Creating a WMI event subscription to run the backdoor.
+- Tactic: TA0005 – DEFENDE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Obfuscation of traffic and data. PowerShell code is encrypted and encoded in base64. Decryption of the backdoor code.
+  Technique: T1546 – EVENT TRIGGERED EXECUTION
+  Description: Creating a WMI event subscription to run the backdoor.
+  Technique: T1564 – HIDE ARTIFACTS
+  Description: Adversaries may attempt to hide artifacts associated with their behaviors to evade detection.
+  Technique: T1036 – MASQUERADING
+  Description: This technique involves masking executable files with names and paths that seem legitimate or familiar to the user, such as using file names that correspond to random directory names under Program Files.
+  Technique: T1070 – INDICATOR REMOVAL
+  Description: This TTP describes the action of modifying or manipulating file timestamps to hide malware activities, making it more difficult to detect and analyze operations performed on the system.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Download additional code to execute. Download additional code to execute.
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: to the use of asymmetric encryption algorithms, such as RSA, and symmetric encryption algorithms, such as AES, to protect communications, making it more difficult for defenders to monitor and intercept communications.
+  Technique: T1568 – DYNAMIC RESOLUTION
+  Description: dynamically generate a list of command and control (C2) domains on the fly, making it more difficult for defenders to block or detect C2 domains because they are randomly or pseudo-randomly generated.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: POSHSPY uses custom or system-derived User Agent strings and employs custom or randomly generated cookie names and values

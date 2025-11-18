@@ -1,0 +1,12 @@
+{
+  "precision": 0.3333333333333333,
+  "true_positives": [
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "metasploitinvokepsimagetinymet",
+    "plinkpaexec"
+  ],
+  "total_tools": 3,
+  "total_entries": 7
+}

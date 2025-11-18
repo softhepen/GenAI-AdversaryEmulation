@@ -1,0 +1,26 @@
+[2025-11-06 18:47:45,795] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:47:47,940] INFO - Tool selection for report: CROWD
+[2025-11-06 18:47:47,941] INFO - TTP extraction from CTI report
+[2025-11-06 18:47:47,962] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:50:05,927] INFO - Tool field precision: 1.00
+[2025-11-06 18:50:05,929] INFO - Validating LLM output
+[2025-11-06 18:50:05,933] INFO - Generating commands for report: CROWD
+[2025-11-06 18:50:05,993] INFO - Parsed 16 feasible attack actions.
+[2025-11-06 18:50:46,581] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_psexec_TA0001_T1078.txt
+[2025-11-06 18:51:05,661] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_plink_TA0011_T1105.txt
+[2025-11-06 18:51:15,673] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_metasploit_TA0011_T1071.txt
+[2025-11-06 18:51:33,148] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_chrome_passwords_TA0006_T1555.txt
+[2025-11-06 18:51:54,080] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_psexec_TA0006_T1003.txt
+[2025-11-06 18:52:31,768] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_metasploit_TA0002_T1059.txt
+[2025-11-06 18:52:44,100] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_metasploit_TA0002_T1035.txt
+[2025-11-06 18:52:57,863] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_metasploit_TA0007_T1018.txt
+[2025-11-06 18:53:09,558] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_metasploit_TA0007_T1082.txt
+[2025-11-06 18:53:21,380] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_metasploit_TA0007_T1057.txt
+[2025-11-06 18:53:47,532] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_psexec_TA0008_T1021.txt
+[2025-11-06 18:54:04,056] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_psexec_TA0003_T1078.txt
+[2025-11-06 18:54:16,348] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_psexec_TA0004_T1078.txt
+[2025-11-06 18:54:30,000] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_ryuk_TA0004_T1055.txt
+[2025-11-06 18:54:47,810] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_psexec_TA0005_T1078.txt
+[2025-11-06 18:54:59,432] INFO - Saved command in output\CROWD_WIZARDSPIDER\generated_commands\command_ryuk_TA0005_T1055.txt
+[2025-11-06 18:55:16,492] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CROWD_WIZARDSPIDER\match_results_chrf.csv
+[2025-11-06 18:55:16,556] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CROWD_WIZARDSPIDER\match_results_edit_distance.csv

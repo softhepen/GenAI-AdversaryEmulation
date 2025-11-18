@@ -1,0 +1,21 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",60.523,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords url <url> username <username> password <password>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",29.128,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -c host_key <host_key> path <path> cookie value <cookie_value>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",24.209,True
+command_rubeus_TA0003_T1543.txt,rubeus,rubeus createnetonly /targetuser:<scheduled_task_user> /show,`rubeus.exe kerberoast /domain:oz.local`,14.335,True
+command_rubeus_TA0003_T1543.txt,rubeus,rubeus ptt /luid:<LUID> /targetuser:<scheduled_task_user>,`rubeus.exe kerberoast /domain:oz.local`,14.375,True
+command_rubeus_TA0003_T1543.txt,rubeus,rubeus harvest /targetuser:<scheduled_task_user> /interval:10,`rubeus.exe kerberoast /domain:oz.local`,15.388,True
+command_rubeus_TA0003_T1543.txt,rubeus,"schtasks /create /tn ""<scheduled_task_name>"" /tr ""rubeus harvest /targetuser:<scheduled_task_user> /interval:10"" /sc ONLOGON",`rubeus.exe kerberoast /domain:oz.local`,8.512,True
+command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe --inject <dll_name> --process <target_process>,`ryuk.exe --encrypt --process-name notepad.exe`,36.963,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe /inject <dll_name> <process_id>,`ryuk.exe --encrypt --process-name notepad.exe`,34.094,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe /mount <share_name> <drive_letter>,`ryuk.exe --encrypt --process-name notepad.exe`,24.109,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe /stop_services <service_names>,`ryuk.exe --encrypt --process-name notepad.exe`,26.579,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe /delete_backups <backup_paths>,`ryuk.exe --encrypt --process-name notepad.exe`,22.53,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe /encrypt_files <file_paths> RYUKTM,`ryuk.exe --encrypt --process-name notepad.exe`,29.46,True
+command_ryuk_TA0005_T1055.txt,ryuk," and enclosed in backticks, as required by the output format.",`ryuk.exe --encrypt --process-name notepad.exe`,10.445,True
+command_ryuk_TA0009_T1022.txt,ryuk,ryuk.exe <file_path>,`ryuk.exe --encrypt --process-name notepad.exe`,28.634,True
+command_ryuk_TA0009_T1022.txt,ryuk,ryuk.exe --encrypt-all <directory_path>,`ryuk.exe --encrypt --process-name notepad.exe`,47.399,True
+command_ryuk_TA0010_T1041.txt,ryuk,ryuk.exe --disconnect-shares,`ryuk.exe --encrypt --process-name notepad.exe`,35.421,True
+command_ryuk_TA0010_T1041.txt,ryuk,ryuk.exe -e,`ryuk.exe --encrypt --process-name notepad.exe`,47.11,True
+command_ryuk_TA0010_T1041.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,36.908,True

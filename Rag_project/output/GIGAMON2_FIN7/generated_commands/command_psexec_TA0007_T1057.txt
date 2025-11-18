@@ -1,0 +1,9 @@
+Here are the command lines that simulate the process discovery technique using PsExec:
+
+Command: `psexec \\* -u Administrator -p <password> -s cmd /c tasklist`
+
+Command: `psexec @C:\path\to\computerlist.txt -u Administrator -p <password> -s cmd /c tasklist`
+
+Command: `psexec \\<target_computer> -u Administrator -p <password> -s cmd /c tasklist`
+
+Note that I've used placeholders for the password and computer name, as per the instructions.

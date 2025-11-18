@@ -1,0 +1,5 @@
+Based on the provided documentation and the attack description, I will generate a realistic command line using Metasploit to simulate the FIN6 attack behavior.
+
+Command: `msf6 > use exploit/http/foscam_rce`
+
+This command uses the Foscam RCE (Remote Code Execution) exploit module, which can be used to deliver a payload.

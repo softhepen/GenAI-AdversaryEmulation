@@ -1,0 +1,14 @@
+[2025-11-07 12:26:39,520] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:26:41,842] INFO - Tool selection for report: UNIT42_1
+[2025-11-07 12:26:41,843] INFO - TTP extraction from CTI report
+[2025-11-07 12:26:41,865] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:27:09,459] INFO - Tool field precision: 0.75
+[2025-11-07 12:27:09,461] INFO - Validating LLM output
+[2025-11-07 12:27:09,461] WARNING - Invalid or multiple tools detected: 'chrome-passwords, metasploit, paexec, psexec, pupy, rubeus, ryuk, tinymet' — replacing with 'No tool'
+[2025-11-07 12:27:09,466] INFO - Generating commands for report: UNIT42_1
+[2025-11-07 12:27:09,485] INFO - Parsed 3 feasible attack actions.
+[2025-11-07 12:27:45,762] INFO - Saved command in output\UNIT42_1_OILRIG\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-07 12:28:04,134] INFO - Saved command in output\UNIT42_1_OILRIG\generated_commands\command_windows_credential_editor_TA0006_T1003.txt
+[2025-11-07 12:28:28,971] INFO - Saved command in output\UNIT42_1_OILRIG\generated_commands\command_ryuk_TA0003_T1505.txt
+[2025-11-07 12:28:30,232] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\UNIT42_1_OILRIG\match_results_chrf.csv
+[2025-11-07 12:28:30,245] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\UNIT42_1_OILRIG\match_results_edit_distance.csv

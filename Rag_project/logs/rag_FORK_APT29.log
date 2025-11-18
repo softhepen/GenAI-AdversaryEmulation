@@ -1,0 +1,20 @@
+[2025-11-06 17:37:33,672] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:37:36,149] INFO - Tool selection for report: FORK
+[2025-11-06 17:37:36,150] INFO - TTP extraction from CTI report
+[2025-11-06 17:37:36,164] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:39:02,834] INFO - Tool field precision: 0.80
+[2025-11-06 17:39:02,835] INFO - Validating LLM output
+[2025-11-06 17:39:02,835] WARNING - Invalid or multiple tools detected: 'chrome-passwords, invoke-psimage' — replacing with 'No tool'
+[2025-11-06 17:39:02,835] WARNING - Invalid or multiple tools detected: 'adfind, psexec' — replacing with 'No tool'
+[2025-11-06 17:39:02,865] INFO - Generating commands for report: FORK
+[2025-11-06 17:39:02,887] INFO - Parsed 8 feasible attack actions.
+[2025-11-06 17:39:17,306] INFO - Saved command in output\FORK_APT29\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-06 17:39:41,497] INFO - Saved command in output\FORK_APT29\generated_commands\command_rubeus_TA0005_T1070.txt
+[2025-11-06 17:40:17,057] INFO - Saved command in output\FORK_APT29\generated_commands\command_plink_TA0010_T1048.txt
+[2025-11-06 17:40:29,721] INFO - Saved command in output\FORK_APT29\generated_commands\command_metasploit_TA0011_T1102.txt
+[2025-11-06 17:40:36,874] INFO - Saved command in output\FORK_APT29\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-06 17:40:44,369] INFO - Saved command in output\FORK_APT29\generated_commands\command_psexec_TA0011_T1105.txt
+[2025-11-06 17:40:56,817] INFO - Saved command in output\FORK_APT29\generated_commands\command_chrome_passwords_TA0009_T1114.txt
+[2025-11-06 17:41:19,345] INFO - Saved command in output\FORK_APT29\generated_commands\command_rubeus_TA0006_T1558.txt
+[2025-11-06 17:41:21,451] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FORK_APT29\match_results_chrf.csv
+[2025-11-06 17:41:21,468] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FORK_APT29\match_results_edit_distance.csv

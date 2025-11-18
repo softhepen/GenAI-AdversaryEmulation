@@ -1,0 +1,19 @@
+Here are the command lines that simulate the attack behavior of stealing credentials through surveillance for unauthorized access to sensitive information using only the tool Pupy:
+
+Command: `creddump`
+
+This command retrieves system hashes (Windows/Linux) and stores them in the local database.
+
+Command: `Lazagne`
+
+This command retrieves lots of passwords stored on the system (Windows/Linux), including browser passwords, email client passwords, and other types of credentials.
+
+Command: `loot_memory -b <browser_name>`
+
+This command crawls process memory to find browser passwords (<browser_name>) and stores them in the local database.
+
+Command: `cred` 
+
+This command displays all stored credentials from the local database.
+
+These commands simulate the attack behavior of stealing credentials through surveillance for unauthorized access to sensitive information, corresponding to MITRE technique T1078 (VALID ACCOUNTS) under tactic TA0005 (DEFENSE EVASION).

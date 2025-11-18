@@ -1,0 +1,13 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "psexec",
+    "psexec"
+  ],
+  "false_positives": [
+    "psexecpaexecplinkpuppy",
+    "psexecpaexecplinkpuppy"
+  ],
+  "total_tools": 4,
+  "total_entries": 6
+}

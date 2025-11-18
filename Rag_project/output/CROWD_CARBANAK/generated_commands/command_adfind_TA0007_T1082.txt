@@ -1,0 +1,13 @@
+Here are the command lines that simulate the collection of basic system information and system information, as per the provided documentation:
+
+Command:`adfind -sc syscrit`
+
+Command:`adfind -sc syscritl`
+
+Command:`adfind -sc sdump`
+
+Command:`adfind -sc sdump:csv`
+
+Command:`adfind -sc schemadmp`
+
+Note that these command lines utilize the `syscrit`, `sdump`, and `schemadmp` options to gather system information, including schema attributes and classes.

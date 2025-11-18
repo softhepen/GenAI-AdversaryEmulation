@@ -1,0 +1,20 @@
+[2025-11-06 19:12:45,486] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:12:47,902] INFO - Tool selection for report: MappingMitreToSandwormAPT
+[2025-11-06 19:12:47,903] INFO - TTP extraction from CTI report
+[2025-11-06 19:12:47,915] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:14:11,220] INFO - Tool field precision: 0.50
+[2025-11-06 19:14:11,222] INFO - Validating LLM output
+[2025-11-06 19:14:11,222] WARNING - Invalid or multiple tools detected: 'chrome-passwords, metasploit, paexec, psexec, tinyMet, windows-credential-editor' — replacing with 'No tool'
+[2025-11-06 19:14:11,223] WARNING - Invalid or multiple tools detected: 'pupy, rubeus' — replacing with 'No tool'
+[2025-11-06 19:14:11,223] WARNING - Invalid or multiple tools detected: 'adfind, plink, wmic' — replacing with 'No tool'
+[2025-11-06 19:14:11,226] WARNING - Invalid or multiple tools detected: 'paexec, psexec' — replacing with 'No tool'
+[2025-11-06 19:14:11,227] WARNING - Invalid or multiple tools detected: 'adfind, plink, wmic' — replacing with 'No tool'
+[2025-11-06 19:14:11,228] INFO - Generating commands for report: MappingMitreToSandwormAPT
+[2025-11-06 19:14:11,268] INFO - Parsed 5 feasible attack actions.
+[2025-11-06 19:14:34,163] INFO - Saved command in output\MappingMitreToSandwormAPT_SANDWORM\generated_commands\command_ryuk_TA0005_T1070.txt
+[2025-11-06 19:14:43,166] INFO - Saved command in output\MappingMitreToSandwormAPT_SANDWORM\generated_commands\command_windows_credential_editor_TA0006_T1003.txt
+[2025-11-06 19:14:54,990] INFO - Saved command in output\MappingMitreToSandwormAPT_SANDWORM\generated_commands\command_chrome_passwords_TA0006_T1552.txt
+[2025-11-06 19:15:14,758] INFO - Saved command in output\MappingMitreToSandwormAPT_SANDWORM\generated_commands\command_ryuk_TA0011_T1001.txt
+[2025-11-06 19:15:27,962] INFO - Saved command in output\MappingMitreToSandwormAPT_SANDWORM\generated_commands\command_ryuk_TA0040_T1490.txt
+[2025-11-06 19:15:28,312] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MappingMitreToSandwormAPT_SANDWORM\match_results_chrf.csv
+[2025-11-06 19:15:28,321] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MappingMitreToSandwormAPT_SANDWORM\match_results_edit_distance.csv

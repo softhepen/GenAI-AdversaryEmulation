@@ -1,0 +1,12 @@
+[2025-11-07 12:45:13,692] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:45:15,964] INFO - Tool selection for report: InsideTheBreach
+[2025-11-07 12:45:15,964] INFO - TTP extraction from CTI report
+[2025-11-07 12:45:15,978] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:45:41,882] INFO - Tool field precision: 0.50
+[2025-11-07 12:45:41,883] INFO - Validating LLM output
+[2025-11-07 12:45:41,884] WARNING - Invalid or multiple tools detected: 'PowerShell, Windows Command Shell' — replacing with 'No tool'
+[2025-11-07 12:45:41,886] INFO - Generating commands for report: InsideTheBreach
+[2025-11-07 12:45:41,912] INFO - Parsed 1 feasible attack actions.
+[2025-11-07 12:46:00,218] INFO - Saved command in output\InsideTheBreach_FIN6\generated_commands\command_chrome_passwords_TA0000_T1056.txt
+[2025-11-07 12:46:00,391] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\InsideTheBreach_FIN6\match_results_chrf.csv
+[2025-11-07 12:46:00,396] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\InsideTheBreach_FIN6\match_results_edit_distance.csv

@@ -1,0 +1,16 @@
+{
+  "precision": 0.5714285714285714,
+  "true_positives": [
+    "chrome-passwords",
+    "rubeus",
+    "pupy",
+    "ryuk"
+  ],
+  "false_positives": [
+    "metasploitpupy",
+    "psexecpaexecplink",
+    "pupypsexec"
+  ],
+  "total_tools": 7,
+  "total_entries": 12
+}

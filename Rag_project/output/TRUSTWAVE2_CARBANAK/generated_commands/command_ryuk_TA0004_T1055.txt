@@ -1,0 +1,11 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the Ryuk tool to reproduce the PROCESS INJECTION technique.
+
+**Command:** `ryuk.exe <inject_code_into_process>`
+
+The Ryuk executable requires admin privileges on the machine to properly modify its SE_TOKENS, perform the injection, and encrypt the contents of the host. The `<inject_code_into_process>` placeholder represents the process into which code will be injected.
+
+Since PROCESS INJECTION is a technique used for persistence and evasion, I will use the following command line:
+
+`Command: `ryuk.exe --inject-code-into-process=<target_process_name>`
+
+Please note that `<target_process_name>` should be replaced with an actual process name on the target machine.

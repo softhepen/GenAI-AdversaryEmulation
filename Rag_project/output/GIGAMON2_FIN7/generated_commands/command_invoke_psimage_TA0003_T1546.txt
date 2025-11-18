@@ -1,0 +1,13 @@
+Based on the provided documentation and the objective, I will generate realistic command lines using only the tool Invoke-PSImage to reproduce the Application Shimming technique.
+
+**Command:** `Invoke-PSImage -Script .\shim.ps1 -Out .\shim.png -Image .\shield.jpg`
+
+This command creates a new PNG image with the PowerShell script "shim.ps1" embedded in it, and saves it as "shim.png". The image can be losslessly compressed without affecting the ability to execute the payload. When creating new images, normal PowerShell scripts are actually significantly compressed, usually producing a png with a filesize ~50% of the original.
+
+**Command:** `Invoke-PSImage -Script .\shim.ps1 -Out .\existing_image.png -Image .\shield.jpg`
+
+This command embeds the PowerShell script "shim.ps1" in the least significant bytes of an existing image, "shield.jpg", without affecting its appearance. The resulting image can be saved as "existing_image.png".
+
+**Command:** `Invoke-PSImage -Script .\shim.ps1 -Out .\shim.png -WebRequest`
+
+This command generates a oneliner for executing the PowerShell script "shim.ps1" from the web, which includes the encoded bytes of the script in the pixels of a PNG image.

@@ -1,0 +1,18 @@
+[2025-11-06 18:15:53,921] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:15:56,117] INFO - Tool selection for report: FIREEYE1
+[2025-11-06 18:15:56,118] INFO - TTP extraction from CTI report
+[2025-11-06 18:15:56,129] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:18:11,518] INFO - Tool field precision: 1.00
+[2025-11-06 18:18:11,519] INFO - Validating LLM output
+[2025-11-06 18:18:11,549] INFO - Generating commands for report: FIREEYE1
+[2025-11-06 18:18:11,596] INFO - Parsed 8 feasible attack actions.
+[2025-11-06 18:18:31,473] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_chrome_passwords_TA0009_T1056.txt
+[2025-11-06 18:18:38,563] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_ryuk_TA0009_T1113.txt
+[2025-11-06 18:18:55,942] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_paexec_TA0011_T1021.txt
+[2025-11-06 18:19:16,252] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_paexec_TA0011_T1219.txt
+[2025-11-06 18:19:25,937] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_chrome_passwords_TA0005_T1027.txt
+[2025-11-06 18:19:51,660] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_ryuk_TA0005_T1055.txt
+[2025-11-06 18:20:05,387] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_ryuk_TA0006_T1055.txt
+[2025-11-06 18:20:23,692] INFO - Saved command in output\FIREEYE1_CARBANAK\generated_commands\command_paexec_TA0002_T1204.txt
+[2025-11-06 18:20:24,218] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE1_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:20:24,233] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE1_CARBANAK\match_results_edit_distance.csv

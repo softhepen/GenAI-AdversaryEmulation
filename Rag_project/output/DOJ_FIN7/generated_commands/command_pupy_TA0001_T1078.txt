@@ -1,0 +1,3 @@
+Based on the provided documentation, I will generate realistic command lines using only the Pupy tool to reproduce the attack behavior of stealing credentials through surveillance for unauthorized access to sensitive information.
+
+**Command:** `lazagne`

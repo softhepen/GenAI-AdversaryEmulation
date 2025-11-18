@@ -1,0 +1,13 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "chrome-passwords",
+    "psexec",
+    "psexec",
+    "psexec",
+    "pupy"
+  ],
+  "false_positives": [],
+  "total_tools": 5,
+  "total_entries": 11
+}

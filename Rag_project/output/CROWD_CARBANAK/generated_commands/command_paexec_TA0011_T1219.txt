@@ -1,0 +1,19 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using PAExec to simulate the REMOTE ACCESS SOFTWARE technique.
+
+Command: `paeexec.exe -s -i -u <user_name> -p <password> -c \\\\remote_system`
+
+This command line simulates remote access software controlling a victim machine. The `-s` option runs the process in the System account, `-i` allows interaction with the desktop of the specified session on the specified system, and `-u` specifies the user name for login to the remote computer.
+
+Command: `paeexec.exe -c \\\\remote_system -n <timeout_seconds> -p <password> -v`
+
+This command line simulates the copying of a file from the local machine to the remote system. The `-c` option connects to the remote system, `-n` specifies the timeout in seconds connecting to the remote computers, and `-p` specifies the optional password for user name.
+
+Command: `paeexec.exe -s -i -l -u <user_name> -w <remote_directory>`
+
+This command line simulates running a process as limited user (strips the Administrators group and allows only privileges assigned to the Users group). The `-l` option runs the process as limited user, `-u` specifies the user name for login to the remote computer, and `-w` sets the working directory of the process.
+
+Command: `paeexec.exe -s -i -h -c \\\\remote_system`
+
+This command line simulates running a process with the account's elevated token, if available. The `-h` option runs the process with the account's elevated token, and `-c` connects to the remote system.
+
+Note that I have used placeholders for user name, password, and remote system as per the instructions.

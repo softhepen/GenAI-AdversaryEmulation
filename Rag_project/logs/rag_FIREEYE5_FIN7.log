@@ -1,0 +1,18 @@
+[2025-11-07 13:33:51,931] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:33:54,177] INFO - Tool selection for report: FIREEYE5
+[2025-11-07 13:33:54,177] INFO - TTP extraction from CTI report
+[2025-11-07 13:33:54,192] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:34:38,712] INFO - Tool field precision: 1.00
+[2025-11-07 13:34:38,713] INFO - Validating LLM output
+[2025-11-07 13:34:38,716] INFO - Generating commands for report: FIREEYE5
+[2025-11-07 13:34:38,777] INFO - Parsed 8 feasible attack actions.
+[2025-11-07 13:34:51,076] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_adfind_TA0004_T1546.txt
+[2025-11-07 13:34:59,739] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_pupy_TA0004_T1055.txt
+[2025-11-07 13:35:20,517] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_invoke_psimage_TA0004_T1543.txt
+[2025-11-07 13:35:30,431] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_adfind_TA0003_T1546.txt
+[2025-11-07 13:35:47,578] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_invoke_psimage_TA0003_T1543.txt
+[2025-11-07 13:35:56,842] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 13:36:12,908] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_invoke_psimage_TA0002_T1106.txt
+[2025-11-07 13:36:20,069] INFO - Saved command in output\FIREEYE5_FIN7\generated_commands\command_pupy_TA0005_T1055.txt
+[2025-11-07 13:36:21,569] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE5_FIN7\match_results_chrf.csv
+[2025-11-07 13:36:21,592] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE5_FIN7\match_results_edit_distance.csv

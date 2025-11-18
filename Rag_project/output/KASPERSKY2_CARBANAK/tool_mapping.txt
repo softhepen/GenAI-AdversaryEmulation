@@ -1,0 +1,125 @@
+Here is the analysis output:
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: Sending phishing emails with malicious attachments to compromise the victim's system.
+Tool: No tool
+
+Technique: T1078 – VALID ACCOUNTS
+Description: Using valid accounts to gain unauthorized access to systems.
+Tool: psexec
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1204 – USER EXECUTION
+Description: the shellcode executes the backdoor Carbanak
+Tool: No tool
+
+Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+Description: Exploitation of software vulnerabilities to execute arbitrary code on the victim system.
+Tool: metasploit
+
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Using command and script interpreters to execute malicious commands and scripts.
+Tool: No tool
+
+Technique: T1569 – SYSTEM SERVICES
+Description: Carbanak sets Termservice in automatic execution mode (Auto).
+Tool: No tool
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE ACCESS TOOL
+Description: Attackers use remote services to move laterally in the compromised network.
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1125 – VIDEO CAPTURE
+Description: Attackers capture video of the victim's system, often for surveillance or to collect credentials and other sensitive information.
+Tool: No tool
+
+Technique: T1113 – SCREEN CAPTURE
+Description: Carbanak captures desktop screenshots every 20 seconds to monitor user activity and collect additional sensitive information.
+Tool: No tool
+
+Technique: T1056 – INPUT CAPTURE
+Description: Carbanak records keystrokes on the infected system's keyboard to collect sensitive information such as credentials and other data.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Communications with the command and control server (C2)
+Tool: No tool
+
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Transfer of tools or files from outside to the compromised system.
+Tool: No tool
+
+Technique: T1132 – DATA ENCODING
+Description: Carbanak uses RC2+Base64 encryption to encrypt data transmitted through the command and control channel.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1134 – ACCESS TOKEN MANIPULATION
+Description: The attackers abused the aforementioned services by impersonating legitimate local users
+Tool: pupy
+
+Technique: T1078 – VALID ACCOUNTS
+Description: Using valid accounts to gain unauthorized access to systems.
+Tool: psexec
+
+Technique: T1036 – MASQUERADING
+Description: The attacker renames a malicious file with a legitimate name to avoid detection.
+Tool: No tool
+
+Technique: T1564 – HIDE ARTIFACTS
+Description: The attacker hides files and directories by making them invisible to users and security tools.
+Tool: No tool
+
+Technique: T1070 – INDICATOR REMOVAL ON HOST
+Description: The attacker deletes files to eliminate traces of his activity and obstruct investigations.
+Tool: pupy
+
+Technique: T1055 – PROCESS INJECTION
+Description: Carbanak injects its code into the svchost.exe process to mask its activities within the legitimate Windows process.
+Tool: pupy
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1134 – ACCESS TOKEN MANIPULATION
+Description: The attackers abused the aforementioned services by impersonating legitimate local users
+Tool: pupy
+
+Technique: T1060 – REGISTRY RUN KEYS / STARTUP FOLDER
+Description: The malware use registry keys to execute commands or to configure automatic loading at system startup.
+Tool: No tool
+
+Technique: T1055 – PROCESS INJECTION
+Description: Carbanak injects its code into the svchost.exe process to mask its activities within the legitimate Windows process.
+Tool: pupy
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1057 – PROCESS DISCOVERY
+Description: Carbanak performs process discovery to identify specific processes associated with Kaspersky Internet Security (avp.exe or avpui.exe).
+Tool: No tool
+
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: If Carbanak detects the banking application BLIZKO (funds transfer software) in the infected computer, it sends a special notification to its C2 server.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1060 – REGISTRY RUN KEYS / STARTUP FOLDER
+Description: The malware use registry keys to execute commands or to configure automatic loading at system startup.
+Tool: No tool
+
+- Tactic: TA0010 – EXFILTRATION
+Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+Description: Carbanak communicates with its C2 server to download the file kldconfig.plug, which includes the names of the processes to be monitored.
+Tool: No tool
+
+- Tactic: TA0040 – IMPACT
+Technique: T1565 – DATA MANIPULATION
+Description: Carbanak can manipulate payment document details in the IFOBS system on command.
+Tool: No tool
+
+- Tactic: S0030 – COMMAND AND CONTROL
+Technique: T1219 – REMOTE ACCESS TOOL
+Description: This technique specifically covers the use of Ammyy Admin as a remote administration tool for controlling systems within a compromised network.
+Tool: No tool

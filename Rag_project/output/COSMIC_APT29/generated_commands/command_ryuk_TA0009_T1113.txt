@@ -1,0 +1,14 @@
+Based on the provided documentation and sample outputs, I will generate realistic command lines using only the tool ryuk to reproduce the attack behavior of capturing desktop screens or specific windows.
+
+Here are the command lines:
+
+Command: `ryuk.exe --drop-bat-files`
+This command drops kill.bat and window.bat into C:/Users/Public, which performs network share discovery.
+
+Command: `ryuk.exe -p "<process_name>"` (replace `<process_name>` with a specific process name)
+This command searches for the specified process name and injects it.
+
+Command: `ryuk.exe --encrypt`
+This command confirms the desire to encrypt the system.
+
+**Note:** Since the documentation does not provide explicit syntax for capturing desktop screens or specific windows, I will create new command lines using the documented capabilities. If you need me to add more commands, please let me know!

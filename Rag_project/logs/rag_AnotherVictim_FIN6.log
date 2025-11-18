@@ -1,0 +1,50 @@
+[2025-11-07 12:32:11,092] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:32:13,364] INFO - Tool selection for report: UNIT42_2
+[2025-11-07 12:32:13,365] INFO - TTP extraction from CTI report
+[2025-11-07 12:32:13,382] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:33:46,168] INFO - Tool field precision: 0.00
+[2025-11-07 12:33:46,170] INFO - Validating LLM output
+[2025-11-07 12:33:46,171] WARNING - Invalid or multiple tools detected: 'webshell' — replacing with 'No tool'
+[2025-11-07 12:33:46,171] WARNING - Invalid or multiple tools detected: 'webshell' — replacing with 'No tool'
+[2025-11-07 12:33:46,172] WARNING - Invalid or multiple tools detected: 'Ruler' — replacing with 'No tool'
+[2025-11-07 12:33:46,202] WARNING - Invalid or multiple tools detected: 'Ruler' — replacing with 'No tool'
+[2025-11-07 12:33:46,203] WARNING - Invalid or multiple tools detected: 'webshell' — replacing with 'No tool'
+[2025-11-07 12:33:46,206] INFO - Generating commands for report: UNIT42_2
+[2025-11-07 12:33:46,263] ERROR - No feasible attack actions found. Aborting.
+[2025-11-07 12:33:46,265] WARNING - No commands generated. Matching skipped.
+[2025-11-07 12:36:17,361] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:36:19,572] INFO - Tool selection for report: AnotherVictim
+[2025-11-07 12:36:19,573] INFO - TTP extraction from CTI report
+[2025-11-07 12:36:19,588] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:36:55,503] INFO - Tool field precision: 0.00
+[2025-11-07 12:36:55,505] INFO - Validating LLM output
+[2025-11-07 12:36:55,505] WARNING - Invalid or multiple tools detected: 'chrome-passwords, invoke-psimage' — replacing with 'No tool'
+[2025-11-07 12:36:55,506] WARNING - Invalid or multiple tools detected: 'metasploit, psexec, paexec, rubeus, windows-credential-editor' — replacing with 'No tool'
+[2025-11-07 12:36:55,537] INFO - Generating commands for report: AnotherVictim
+[2025-11-07 12:36:55,591] ERROR - No feasible attack actions found. Aborting.
+[2025-11-07 12:36:55,593] WARNING - No commands generated. Matching skipped.
+[2025-11-07 12:39:00,406] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:39:02,618] INFO - Tool selection for report: AnotherVictim
+[2025-11-07 12:39:02,619] INFO - TTP extraction from CTI report
+[2025-11-07 12:39:02,620] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:39:23,156] INFO - Tool field precision: 0.00
+[2025-11-07 12:39:23,158] INFO - Validating LLM output
+[2025-11-07 12:39:23,158] WARNING - Invalid or multiple tools detected: 'adfind, invoke-psimage' — replacing with 'No tool'
+[2025-11-07 12:39:23,160] INFO - Generating commands for report: AnotherVictim
+[2025-11-07 12:39:23,185] ERROR - No feasible attack actions found. Aborting.
+[2025-11-07 12:39:23,185] WARNING - No commands generated. Matching skipped.
+[2025-11-07 12:40:47,365] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:40:49,759] INFO - Tool selection for report: AnotherVictim
+[2025-11-07 12:40:49,760] INFO - TTP extraction from CTI report
+[2025-11-07 12:40:49,763] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:41:24,413] INFO - Tool field precision: 1.00
+[2025-11-07 12:41:24,415] INFO - Validating LLM output
+[2025-11-07 12:41:24,416] INFO - Generating commands for report: AnotherVictim
+[2025-11-07 12:41:24,429] INFO - Parsed 3 feasible attack actions.
+[2025-11-07 12:41:38,689] INFO - Saved command in output\AnotherVictim_FIN6\generated_commands\command_chrome_passwords_TA0005_T1027.txt
+[2025-11-07 12:41:42,130] INFO - Saved command in output\AnotherVictim_FIN6\generated_commands\command_ryuk_TA0010_T1041.txt
+[2025-11-07 12:41:58,480] INFO - Saved command in output\AnotherVictim_FIN6\generated_commands\command_psexec_TA0002_T1059.txt
+[2025-11-07 12:41:58,861] WARNING - No commands extracted from command_ryuk_TA0010_T1041.txt
+[2025-11-07 12:41:58,866] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\AnotherVictim_FIN6\match_results_chrf.csv
+[2025-11-07 12:41:58,874] WARNING - No commands extracted from command_ryuk_TA0010_T1041.txt
+[2025-11-07 12:41:58,876] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\AnotherVictim_FIN6\match_results_edit_distance.csv

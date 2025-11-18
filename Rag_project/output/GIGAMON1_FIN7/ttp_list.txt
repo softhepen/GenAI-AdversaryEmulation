@@ -1,0 +1,11 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: phishing techniques were used
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The actor relies on users to open malicious LNK or Visual Basic script (VBS/VBE) files embedded within documents, triggering the infection. FIN7 uses CMD files embedded within documents, which require user interaction to execute malicious code.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The use of Visual Basic scripts (VBS or VBE) to execute malicious code within the victim system. The CMD file writes and then executes JScript code using the WScript engine to evaluate further instructions from the file.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The attacker continues to obfuscate the codebase by breaking up the base64-encoded string into multiple parts and renaming variables to evade detection.

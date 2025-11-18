@@ -1,0 +1,47 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: The `survey.xls` file was likely distributed as an attachment in a spearphishing email, enticing the user to open it by masquerading as a legitimate survey.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The `survey.xls` file is designed to look like a legitimate employee satisfaction survey, which is a form of social engineering to get the victim to open the file and potentially enable macros.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The malicious VBA code within the `survey.xls` file begins to execute once macros are enabled by the user, which is an example of scripting for malicious purposes. The embedded VBA code that unpacks and installs the executable is an example of using VBA for malicious purposes. TONEDEAF 2.0's capability to execute arbitrary shell commands falls under this TTP, as it allows the attacker to issue any command on the compromised system.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The creation of the scheduled task "CheckUpdate" to run the executable is an example of using a scheduled task for persistence.
+  Technique: T1569 – SYSTEM SERVICES
+  Description: The scheduled task using the "..." argument to execute the backdoor aligns with this tactic.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: The unpacking of "Client update.exe" and its installation to the user's directory represents the transfer of a malicious tool onto the victim's machine.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: TONEDEAF 2.0 uses HTTP for communication with its C2 server. This TTP describes how the backdoor establishes a connection and maintains communication with the adversary's infrastructure. TONEDEAF 2.0 uses HTTP to communicate with its Command and Control (C2) server.
+  Technique: T1132 – DATA ENCODING
+  Description: The mention of a custom encoding mechanism indicates that TONEDEAF 2.0 is likely using a method to encode its C2 communications.
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: Uses custom encoding for C2 communication and message exchanges.
+  Technique: T1205 – TRAFFIC SIGNALING
+  Description: Uses specific HTTP query parameters as communication identifier.
+  Technique: T1102 – WEB SERVICE
+  Description: The use of a web page and an HTTP <div> element to transmit commands from the C2 to the malware aligns with using web services for C2.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The creation of the scheduled task "CheckUpdate" to run the executable is an example of using a scheduled task for persistence.
+- Tactic: TA0004 – PRIVILEGE ESCLATION
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The creation of the scheduled task "CheckUpdate" to run the executable is an example of using a scheduled task for persistence.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: TONEDEAF 2.0's use of string decoding is an example of this technique. By decoding strings dynamically, the malware avoids easy detection and analysis. TONEDEAF 2.0 obfuscates the names of APIs and the DLLs that contain them by encoding these strings. The encoded strings are only decoded during runtime, making static analysis more difficult and increasing the stealthiness of the malware. The C2 server's response is encoded and contains the command within an HTML <div> element with a special class name.
+  Technique: T1036 – MASQUERADING
+  Description: The malware is trying to deceive the user into believing that the application is a legitimate, albeit broken, program, rather than malicious software.
+  Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+  Description: Dynamically decodes API and DLL names during runtime to resolve them on demand.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1426 – SYSTEM INFOMRATION DISCOVERY
+  Description: Generates client ID using environment variables %HOMEPATH% and %COMPUTERNAME%.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: VALUEVAULT 2.0 specifically targets Chrome password dumping from local system.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1115 – CREDENTIALS FROM PASSWORD STORES
+  Description: Uses 'fsociety.dat' in AppData\\Roaming to store stolen Chrome passwords.

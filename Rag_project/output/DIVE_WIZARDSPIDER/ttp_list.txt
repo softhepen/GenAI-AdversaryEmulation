@@ -1,0 +1,28 @@
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using stolen credentials obtained by tools like Mimikatz, LaZagne, and Kerbrute.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using stolen credentials obtained by tools like Mimikatz, LaZagne, and Kerbrute.
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using stolen credentials obtained by tools like Mimikatz, LaZagne, and Kerbrute.
+  Technique: T1566 – PHISHING
+  Description: Using phishing  to re-establish a foothold
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using stolen credentials obtained by tools like Mimikatz, LaZagne, and Kerbrute.
+- Tactic: TA0006 – CREDENTIALS ACCESS
+  Technique: T1003 – OS CREDENTIAL DUMPING
+  Description: Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: Using RDP for lateral movement within the network. Using SSH for lateral movement within the network
+- Tactic: TA0009 – COLLECTION
+  Technique: T1074 – DATA STAGED
+  Description: Unzipping files into a created directory named share$ for local staging.
+  Technique: T1560 – ARCHIVE COLLECTED DATA
+  Description: The process of unzipping files, which may also imply the initial use of zipping for archiving collected or staged data.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Use of .bat scripts for executing commands, in this case, for iterating computer names and executing Ryuk.

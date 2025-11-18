@@ -1,0 +1,67 @@
+Here is the output:
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1190 – EXPLOIT PUBLIC-FACING APPLICATIONS
+Description: Adversaries may attempt to exploit a weakness in an Internet-facing host or system to initially access a network.
+Tool: No tool
+
+Technique: T1078 – VALID ACCOUNTS
+Description: The webshell uses valid credentials (network administrator username and password) to authenticate and access remote systems. This aligns with using stolen or compromised credentials to gain unauthorized access to network resources.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Backdoors are tools that allow attackers to gain unauthorized access to systems, often bypassing security controls. This technique involves transferring tools or files to a compromised system.
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: The malware communicates with its C2 server using DNS queries, specifically leveraging DNS TXT records. This technique involves using DNS queries and responses to communicate between the C2 server and the compromised system.
+Tool: No tool
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1068 – EXPLOITATION FOR PRIVILEGE ESCALATION
+Description: Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.
+Tool: No tool
+
+Technique: T1078 – VALID ACCOUNTS
+Description: The webshell uses valid credentials (network administrator username and password) to authenticate and access remote systems. This aligns with using stolen or compromised credentials to gain unauthorized access to network resources.
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1114 – EMAIL COLLECTION
+Description: Ruler is an open-source tool used by OilRig to exploit OWA by setting malicious rules, retrieving the Global Address List, and executing code remotely. This tool leverages the built-in functionalities of Microsoft Exchange to maintain stealth and efficiency in their operations.
+Tool: No tool
+
+Technique: T1560 – ARCHIVE COLLECTED DATA
+Description: The use of 7-Zip to compress and archive files before exfiltration is a classic example of this technique. Attackers often compress data to reduce its size, facilitate transfer, or obscure its contents.
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Using Ruler, OilRig can execute arbitrary commands on the Exchange server. This includes retrieving data, executing scripts, and deploying additional malware. Adversaries use PowerShell to run malicious scripts, download additional payloads, or execute commands directly.
+Tool: No tool
+
+- Tactic: TA0010 – EXFILTRATION
+Technique: T1048 – EXFILTRATION OVER ALTERNATIVE PROTOCOL
+Description: Alternate protocols include FTP, SMTP, HTTP/S, DNS, SMB, or any other network protocol not being used as the main command and control channel.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+Description: This process is designed to obscure the true nature of the payload, requiring decryption before it can be analyzed. The steps to decode and decrypt the embedded webshell demonstrate the use of sophisticated decryption routines that must be followed to retrieve and execute the payload.
+Tool: No tool
+
+- Tactic: TA0040 – IMPACT
+Technique: T1486 – DATA ENCRYPTED FOR IMPACT
+Description: This encryption method enhances security but also complicates efforts to analyze the malware without the correct decryption key. The process of using the 3DES cipher and a derived 24-character key (from the SHA256 hash) to decrypt the embedded webshell indicates an advanced encryption technique aimed at protecting the payload from unauthorized access.
+Tool: No tool
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1046 – NETWORK SERVICE DISCOVERY
+Description: The nbtscan module is employed by the webshell to scan the network and create a list of IP addresses for systems it can interact with. This type of scanning is typically used to identify potential targets within a network.
+Tool: No tool
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: The use of RDP sessions to access and operate the Glimpse panel indicates the use of remote desktop services to control and manage compromised systems.
+Tool: No tool

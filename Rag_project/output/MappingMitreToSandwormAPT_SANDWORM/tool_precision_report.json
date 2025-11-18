@@ -1,0 +1,19 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "ryuk",
+    "windows-credential-editor",
+    "chrome-passwords",
+    "ryuk",
+    "ryuk"
+  ],
+  "false_positives": [
+    "chromepasswordsmetasploitpaexecpsexectinymetwindowscredentialeditor",
+    "pupyrubeus",
+    "adfindplinkwmic",
+    "paexecpsexec",
+    "adfindplinkwmic"
+  ],
+  "total_tools": 10,
+  "total_entries": 15
+}

@@ -1,0 +1,7 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -s <username>:<domain>:<hash>[:<ntlm_hash>],"```sh
+wce.exe -w
+```",0.149,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -s attacker_username:attacker_domain:11111111111111111111111111111111:99999999999999999999999999999999,"```sh
+wce.exe -w
+```",0.079,True

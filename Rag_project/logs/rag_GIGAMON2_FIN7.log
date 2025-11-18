@@ -1,0 +1,18 @@
+[2025-11-07 13:42:22,334] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:42:24,492] INFO - Tool selection for report: GIGAMON2
+[2025-11-07 13:42:24,493] INFO - TTP extraction from CTI report
+[2025-11-07 13:42:24,508] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:43:10,163] INFO - Tool field precision: 0.75
+[2025-11-07 13:43:10,165] INFO - Validating LLM output
+[2025-11-07 13:43:10,165] WARNING - Invalid or multiple tools detected: 'None' — replacing with 'No tool'
+[2025-11-07 13:43:10,166] WARNING - Invalid or multiple tools detected: 'None' — replacing with 'No tool'
+[2025-11-07 13:43:10,171] INFO - Generating commands for report: GIGAMON2
+[2025-11-07 13:43:10,217] INFO - Parsed 6 feasible attack actions.
+[2025-11-07 13:43:15,592] INFO - Saved command in output\GIGAMON2_FIN7\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 13:43:33,777] INFO - Saved command in output\GIGAMON2_FIN7\generated_commands\command_psexec_TA0005_T1620.txt
+[2025-11-07 13:43:47,358] INFO - Saved command in output\GIGAMON2_FIN7\generated_commands\command_adfind_TA0005_T1112.txt
+[2025-11-07 13:44:09,884] INFO - Saved command in output\GIGAMON2_FIN7\generated_commands\command_invoke_psimage_TA0003_T1546.txt
+[2025-11-07 13:44:20,284] INFO - Saved command in output\GIGAMON2_FIN7\generated_commands\command_psexec_TA0007_T1057.txt
+[2025-11-07 13:44:31,079] INFO - Saved command in output\GIGAMON2_FIN7\generated_commands\command_chrome_passwords_TA0009_T1005.txt
+[2025-11-07 13:44:31,792] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GIGAMON2_FIN7\match_results_chrf.csv
+[2025-11-07 13:44:31,810] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GIGAMON2_FIN7\match_results_edit_distance.csv

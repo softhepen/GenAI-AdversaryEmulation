@@ -1,0 +1,30 @@
+Here is the analysis output:
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Malware is packaged using UPX, a common packer to compress and obfuscate the contents of the malware.
+Tool: invoke-psimage
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: The use of `exec()` to execute Python code dynamically .
+Tool: No tool
+
+- Tactic: None – DISCOVERY
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: The malware determines which operating system it is running on, which is a form of system information discovery.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1546 – EVENT TRIGGERED EXECUTION
+Description: Persistence via PowerShell
+Tool: pupy
+
+Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+Description: Persistence via the Run registry key Persistence via .lnk stored in the startup directory
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: The use of HTTP/HTTPS for communication.
+Tool: plink

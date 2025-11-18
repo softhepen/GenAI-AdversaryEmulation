@@ -1,0 +1,9 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -p > file.vbs,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.391,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,cscript //nologo file.vbs,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.098,True
+command_chrome_passwords_TA0002_T1204.txt,chrome passwords,chrome-passwords.exe -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.5,True
+command_chrome_passwords_TA0002_T1204.txt,chrome passwords,chrome-passwords.exe -c -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.482,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,"Invoke-PSImage -ScriptData ""base64:<encoded_script_here>"" -OutputFile <output_image_file>",`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.45,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,"Invoke-PSImage -ScriptData ""base64:<part1_base64_encoded_string_here>"" -OutputFile <image_file_1>.png",`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.453,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,"Invoke-PSImage -ScriptData ""base64:<part2_base64_encoded_string_here>"" -OutputFile <image_file_2>.png",`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.453,True

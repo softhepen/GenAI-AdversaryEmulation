@@ -1,0 +1,11 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool wmic to reproduce the SYSTEM INFORMATION DISCOVERY attack behavior.
+
+Here are the command lines:
+```
+Command: `wmic os get /value`
+Command: `wmic cpu get /value`
+Command: `wmic bios get /value`
+Command: `wmic process list /output:XML > process_output.xml`
+Command: `wmic path win32_process get name,processid,caption /format:value`
+```
+These command lines use the documented syntax and capabilities of wmic to retrieve system information such as OS, CPU, BIOS, and running processes.

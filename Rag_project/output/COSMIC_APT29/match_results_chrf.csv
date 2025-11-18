@@ -1,0 +1,6 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0005_T1036.txt,adfind,"adfind -b <domain_controller> -f ""(|(name=<malicious_file_name>.jpg)(name=<malicious_file_name>.doc))"" -d ""JPEG Photo""",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,11.814,True
+command_chrome_passwords_TA0009_T1056.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",60.523,True
+command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,36.908,True
+command_ryuk_TA0009_T1113.txt,ryuk,"ryuk.exe -p ""<process_name>""",`ryuk.exe --encrypt --process-name notepad.exe`,46.942,True
+command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe --encrypt,`ryuk.exe --encrypt --process-name notepad.exe`,72.768,True

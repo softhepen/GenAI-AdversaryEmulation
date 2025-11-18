@@ -1,0 +1,11 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "powershellwindowscommandshell"
+  ],
+  "total_tools": 2,
+  "total_entries": 4
+}

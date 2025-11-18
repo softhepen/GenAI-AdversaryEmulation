@@ -1,0 +1,11 @@
+Based on the provided documentation, I will generate realistic command lines using **only** the tool adfind to reproduce the attack behavior of querying Active Directory to discover domain trust relationships.
+
+Here are the command lines:
+
+Command: `adfind -b <basedn> -f "(objectcategory=group)(|!(name=*Domain Group))" -a dn`
+Command: `adfind -b <basedn> -f "(objectcategory=group)(|(msDS-GroupType=3)(!msDS-GroupType=2))" -a trustParent`
+Command: `adfind -b <basedn> -f "(objectcategory=computer)(|!(name=*Domain Computer))" -a trustChild`
+
+Note that I have used the placeholders `<basedn>` to indicate the base DN for the search. This placeholder must be replaced with the actual base DN when executing the command.
+
+These commands aim to simulate the attack behavior of querying Active Directory to discover domain trust relationships, which is described in the MITRE technique T1482 (DOMAIN TRUST DISCOVERY) and tactic TA0007 (DISCOVERY).

@@ -1,0 +1,15 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the WMIC tool to simulate the attack behavior.
+
+**Command:** `wmic /node:<target_computer> /namespace:\\root\cimv2 path Win32_Process call Create,CommandLine="calc.exe"`
+
+This command line simulates creating a new process on a target computer using WMI. The `/node` switch specifies the target computer, and the `/namespace` switch sets the namespace to `\\root\cimv2`. The `path` switch is used to specify the class `Win32_Process`, and the `call Create` verb creates a new process with the specified command line.
+
+**Command:** `wmic /node:<target_computer> /namespace:\\root\cimv2 path Win32_ScriptingObject call GetScript,ScriptLanguage="VBScript",ScriptText="Set fso = CreateObject('scripting.filesystem') Set file = fso.CreateTextFile(\"<file_path>\", True) file.Write \"Hello World!\""`
+
+This command line simulates executing a script on a target computer using WMI. The `/node` switch specifies the target computer, and the `/namespace` switch sets the namespace to `\\root\cimv2`. The `path` switch is used to specify the class `Win32_ScriptingObject`, and the `call GetScript` verb executes the script with the specified language (`VBScript`) and text.
+
+**Command:** `wmic /node:<target_computer> /namespace:\\root\cimv2 path Win32_PrintJob call SetPrintJob,PrinterName="<printer_name>",PrintFile="C:\\path\\to\\print_file.txt"`
+
+This command line simulates setting a print job on a target computer using WMI. The `/node` switch specifies the target computer, and the `/namespace` switch sets the namespace to `\\root\cimv2`. The `path` switch is used to specify the class `Win32_PrintJob`, and the `call SetPrintJob` verb sets the print job with the specified printer name and file path.
+
+I will continue generating command lines using only the WMIC tool, following the provided documentation and attack description. Please let me know if you need any further assistance.

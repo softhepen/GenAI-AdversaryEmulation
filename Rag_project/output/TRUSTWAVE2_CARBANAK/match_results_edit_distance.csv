@@ -1,0 +1,3 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe <inject_code_into_process>,`ryuk.exe --encrypt --process-name notepad.exe`,0.463,True
+command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe --inject-code-into-process=<target_process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,0.519,True

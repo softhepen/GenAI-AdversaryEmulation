@@ -1,0 +1,15 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: OilRig uses spear-phishing emails OilRig uses spear-phishing emails with macro-enabled Microsoft Office (Word and Excel) documents to deliver their custom payloads.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Custom payloads frequently use DNS tunneling for C2 communication.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Custom payloads include PowerShell scripts. Custom payloads include VBScripts.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – OS CREDENTIAL DUMPING
+  Description: Using tools like Mimikatz to dump credentials
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1505 – SERVER SOFTWARE COMPONENT
+  Description: Installing web shells on compromised web servers to maintain access.

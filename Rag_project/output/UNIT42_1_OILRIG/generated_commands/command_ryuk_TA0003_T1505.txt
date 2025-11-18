@@ -1,0 +1,19 @@
+Based on the provided documentation, I will generate realistic command lines using only the tool Ryuk to reproduce the attack behavior of installing web shells on compromised web servers to maintain access.
+
+**Command:** `ryuk.exe --web-shell <web_shell_path>`
+
+This command installs a web shell on the compromised web server, allowing the attacker to maintain access and control over the system. The `<web_shell_path>` placeholder should be replaced with the actual path to the web shell executable.
+
+**Command:** `ryuk.exe --http-server <http_server_port>`
+
+This command starts an HTTP server on the compromised web server, allowing the attacker to communicate with the web shell using HTTP requests. The `<http_server_port>` placeholder should be replaced with the actual port number used by the HTTP server.
+
+**Command:** `ryuk.exe --ssh-tunnel <ssh_tunnel_port>`
+
+This command sets up a reverse SSH tunnel on the compromised web server, allowing the attacker to establish a secure connection to the system and maintain access. The `<ssh_tunnel_port>` placeholder should be replaced with the actual port number used for the SSH tunnel.
+
+**Command:** `ryuk.exe -- persistence <persistence_script_path>`
+
+This command sets up a persistent script on the compromised web server, which will run continuously in the background and maintain access to the system. The `<persistence_script_path>` placeholder should be replaced with the actual path to the persistence script executable.
+
+Please note that these commands are based solely on the provided documentation and do not include any additional functionality or modifications not supported by the documentation.

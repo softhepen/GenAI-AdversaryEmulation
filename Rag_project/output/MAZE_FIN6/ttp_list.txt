@@ -1,0 +1,82 @@
+- Tactic: TA0002 – EXECUTION
+  Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+  Description: Initial deployment of Maze ransomware via exploit kits. Downloading and opening a Word document containing malicious macros.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Macros that execute commands to launch the IcedID payload. Using PowerShell to run scripts, in this case to exfiltrate data. Using batch scripts to automate commands and gather information. Using PowerShell to execute data exfiltration commands. Using PowerShell to execute data exfiltration commands. Using batch scripts to deploy and execute MAZE ransomware on many servers and workstations in the victim's environment.
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Email campaigns used to distribute Maze ransomware Email campaigns containing document attachments used to distribute Maze ransomware. Email campaigns that contain inline links to documents that download and execute Maze ransomware Email campaigns that contain inline links to documents that download and execute Maze ransomware emails with misleading themes (e.g., "Missed package delivery" and "Your AT&T wireless bill is ready to view") to induce victims to open the messages.
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Use of compromised accounts to send phishing emails. Using a generic account (support account) for initial access. To access the Citrix web portal. Use of legitimate credentials to gain access and maintain control. Use of various local and domain system accounts. Using compromised accounts (services and users) to move laterally through the network Using local accounts with administrator privileges to move laterally and to install payloads Using a previously created domain administrator account to access systems and deploy MAZE ransomware.
+  Technique: T1190 – EXPLOIT PUBLIC-FACING APPLICATION
+  Description: Exploitation of a misconfiguration on an Internet-exposed system.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Use of compromised accounts to send phishing emails. Using a generic account (support account) for initial access. To access the Citrix web portal. Use of legitimate credentials to gain access and maintain control. Use of various local and domain system accounts. Using compromised accounts (services and users) to move laterally through the network Using local accounts with administrator privileges to move laterally and to install payloads Using a previously created domain administrator account to access systems and deploy MAZE ransomware.
+- Tactic: TA0005), – DEFENSE EVASION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Use of compromised accounts to send phishing emails.
+- Tactic: TA0042 – RESOURCE DEVELOPMENT
+  Technique: T1584 – COMPROMISE INFRASTRUCTURE
+  Description: Use of malicious domains to send phishing emails.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: Access via RDP. Use of stolen credentials to move laterally through RDP Using PsExec for remote execution of scripts and ransomware on affected systems.
+  Technique: T1563 – REMOTE SERVICES
+  Description: Use of tscon for hijacking legitimate RDP sessions, falling under the manipulation of remote services for lateral movement
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using a generic account (support account) for initial access. To access the Citrix web portal. Use of legitimate credentials to gain access and maintain control. Use of various local and domain system accounts. Using compromised accounts (services and users) to move laterally through the network Using local accounts with administrator privileges to move laterally and to install payloads Using a previously created domain administrator account to access systems and deploy MAZE ransomware.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Obfuscated Files or Information
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1219 – REMOTE ACCESS SOFTWARE
+  Description: Using Meterpreter to access and control the system.
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Transferring BEACON payloads to servers and workstations.
+  Technique: T1136 – CREATE ACCOUNT
+  Description: Creating a new domain account.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Using an application layer protocol (FTP) to exfiltrate data Use of hard-coded credentials for FTP authentication during data exfiltration. Using file synchronization or replication applications to copy data to cloud file hosting or sharing services
+  Technique: T1090 – PROXY
+  Description: Using ngrok for tunneling RDP sessions through multi-hop proxies
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1136 – CREATE ACCOUNT
+  Description: Creating an account for subsequent operations
+  Technique: T1505 – SERVER SOFTWARE COMPONENT
+  Description: Deployment of web shells on an Internet-exposed system.
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using compromised accounts (services and users) to move laterally through the network Using local accounts with administrator privileges to move laterally and to install payloads Using a previously created domain administrator account to access systems and deploy MAZE ransomware.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – CREDENTIAL DUMPING
+  Description: Using Mimikatz to collect credentials. Procdump and Mimikatz are tools used to extract credentials from system memory or system files
+  Technique: T1522 – UNSECURED CREDENTIALS
+  Description: Searching for files containing credentials (e.g., files with the word "password")
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1482 – DOMAIN TRUST DISCOVERY
+  Description: Using Bloodhound to explore Active Directory configuration and identify attack paths to gain domain privileges PingCastle is used to analyze and evaluate the security of Active Directory configuration Collection of information on trust relationships between domains.
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: identify whether keepass is installed on the target devices
+  Technique: T1016 – SYSTEM NETWORK CONFIGURATION DISCOVERY
+  Description: Using Cobalt Strike to gather network configuration information Using built-in Windows commands to discover network configuration information Using Advanced IP Scanner to scan IP and network devices. Collection of network configuration information
+  Technique: T1087 – ACCOUNT DISCOVERY
+  Description: Using Cobalt Strike to discover account information Using built-in Windows commands to discover account information Collection of user account information.
+  Technique: T1083 – FILE AND DIRECTORY DISCOVERY
+  Description: Using Cobalt Strike to discover information about files and directories on compromised systems Using reconnaissance scripts to enumerate directories on internal hosts. The actor collected directory listings from file servers in the affected environment.
+  Technique: T1018 – REMOTE SYSTEM DISCOVERY
+  Description: Using nslookup to identify information about remote systems
+  Technique: T1046 – NETWORK SERVICE SCANNING
+  Description: PowerSploit/PowerView (Invoke-ShareFinder) can be used to scan the network and locate available services and resources.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1567 – EXFILTRATION OVER WEB SERVICE
+  Description: Attempts to exfiltrate sensitive data on cloud storage services
+  Technique: T1041 – EXFILTRATION OVER COMMAND AND CONTROL CHANNEL
+  Description: Using file transfer applications such as WinSCP to exfiltrate data on an FTP server controlled by the attacker Using file transfer applications such as WinSCP to exfiltrate data on an FTP server controlled by the attacker.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1074 – DATA STAGED
+  Description: Storage and compression of locally collected data.
+  Technique: T1560 – ARCHIVE COLLECTED DATA
+  Description: Using utilities such as 7zip to compress data from various corporate file shares before exfiltration.
+- Tactic: TA0040 – IMPACT
+  Technique: T1486 – DATA ENCRYPTED FOR IMPACT
+  Description: Distribution and execution of MAZE ransomware on numerous servers and workstations within the victim's environment. Running MAZE ransomware (sss.exe) on different systems to encrypt data

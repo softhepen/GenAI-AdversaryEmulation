@@ -1,0 +1,131 @@
+Here is the analysis:
+
+- Tactic: TA0001 – INITAL ACCESS
+Technique: T1566 – PHISHING
+Description: he initial compromise involves TrickBot, which is typically distributed via spam email, suggesting the use of phishing techniques to gain an initial foothold.
+Tool: No tool
+
+Technique: T1078 – VALID ACCOUNTS
+Description: Using or creating new user accounts for persistence and privilege escalation.
+Tool: psexec
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Distribution via Emotet Downloading and executing a reverse shell on the compromised host.
+Tool: plink
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Establishing command and control communication with a remote IP.
+Tool: metasploit
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1555 – CREDENTIAL FROM PASSWORD STORES
+Description: TrickBot's pwgrab module
+Tool: chrome-passwords
+
+Technique: T1003 – OS CREDENTIAL DUMPING
+Description: Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.
+Tool: psexec
+
+Technique: T1040 – NETWORK SNIFFING
+Description: Ping-like request to an IP address once the encryption process was completed
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING
+Description: Tunneling PowerShell Empire traffic Use of obfuscated PowerShell scripts to avoid detection. Downloading and installing PowerShell Empire for post-exploitation activities.
+Tool: metasploit
+
+Technique: T1035 – SERVICE EXECUTION
+Description: Installing PowerShell Empire as a service to maintain persistence and control.
+Tool: metasploit
+
+Technique: T1106 – NATIVE API
+Description: Using batch scripts to terminate processes/services and remove backups before executing the Ryuk binary. GetWindowsDirectoryW to construct installation folder path Constructing and running the executable using ShellExecuteW
+Tool: No tool
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1018 – REMOTE SYSTEM DISCOVERY
+Description: Utilizing standard and external tools to gather information about the network.
+Tool: metasploit
+
+Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+Description: Using CPUID instruction to detect if the malware is running in a virtualized environment like VirtualBox.
+Tool: No tool
+
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: Environment awareness based on OS version Using IsWow64Process to determine system architecture
+Tool: metasploit
+
+Technique: T1040 – NETWORK SNIFFING
+Description: Ping-like request to an IP address once the encryption process was completed
+Tool: No tool
+
+Technique: T1057 – PROCESS DISCOVERY
+Description: Ryuk uses process enumeration to identify suitable targets for code injection.
+Tool: metasploit
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: Using RDP for moving laterally within the network. Employing PsExec to push out the Ryuk binary to multiple hosts.
+Tool: psexec
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1078 – VALID ACCOUNTS
+Description: Using or creating new user accounts for persistence and privilege escalation.
+Tool: psexec
+
+Technique: T1547 – BOOT OR LOGON AUOSTART EXECUTION
+Description: This technique is used by Ryuk to ensure persistence by modifying the Windows Registry Run key to execute its payload on startup.
+Tool: No tool
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1078 – VALID ACCOUNTS
+Description: Using or creating new user accounts for persistence and privilege escalation.
+Tool: psexec
+
+Technique: T1134 – ACCESS TOKEN MANIPULATION
+Description: Ryuk attempts to adjust token privileges to gain necessary permissions for process manipulation.
+Tool: No tool
+
+Technique: T1055 – PROCESS INJECTION
+Description: Ryuk uses process injection methods to execute code within the context of a target process.
+Tool: Ryuk
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1078 – VALID ACCOUNTS
+Description: Using or creating new user accounts for persistence and privilege escalation.
+Tool: psexec
+
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Modifying the malware to remove checks that could detect analysis environments.
+Tool: No tool
+
+Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+Description: Using CPUID instruction to detect if the malware is running in a virtualized environment like VirtualBox.
+Tool: No tool
+
+Technique: T1070 – INDICATOR REMOVAL ON HOST
+Description: Stores keys in the executable using the proprietary Microsoft SIMPLEBLOB format Deleting the dropper when executed
+Tool: No tool
+
+Technique: T1036 – MASQUERADING
+Description: A random executable file name is constructed by calling _srand with a seed value from GetTickCount and _rand to generate five alphabetic characters
+Tool: No tool
+
+Technique: T1134 – ACCESS TOKEN MANIPULATION
+Description: Ryuk attempts to adjust token privileges to gain necessary permissions for process manipulation.
+Tool: No tool
+
+Technique: T1055 – PROCESS INJECTION
+Description: Ryuk uses process injection methods to execute code within the context of a target process.
+Tool: Ryuk
+
+- Tactic: TA0040 – IMPACT
+Technique: T1486 – DATA ENCRYPTED FOR IMPACT
+Description: Encrypts files using RSA-2048 and AES-256 Uses a file marker of HERMES to mark or check if a file has been encrypted Ryuk specifically avoids encrypting files with the extensions .exe, .dll, and .hrmlog. This technique is employed to prevent the encryption of executable files, dynamic link libraries, and debug log files, which might be critical for system operation or development/debugging purposes.
+Tool: No tool
+
+Technique: T1485 – DATA DESTRUCTION
+Description: This tactic is used to destroy files
+Tool: No tool

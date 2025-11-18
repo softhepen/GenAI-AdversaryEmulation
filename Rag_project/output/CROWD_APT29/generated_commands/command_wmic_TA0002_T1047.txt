@@ -1,0 +1,16 @@
+Based on the provided documentation and the attack description, I will generate a realistic command line using WMIC to simulate the described behavior.
+
+**Attack Behavior:** Run persistently via Windows Management Instrumentation (WMI) system.
+
+**Command Line:**
+```
+Command: `wmic /NAMESPACE:"root\cimv2" /ROLE:__elah! /NODE:<computer_name> PROCESS CREATE <namespace_path>\Win32_Process.StartService`
+```
+This command uses the `PROCESS` alias to create a new process with the specified namespace path (`<namespace_path>\Win32_Process`) and start a service. The `/NAMESPACE`, `/ROLE`, and `/NODE` options are used to specify the WMI namespace, role, and computer name. The `/IMPERSONATE` option is not necessary in this case since we're using an anonymous impersonation level.
+
+**Placeholders:**
+
+* `<computer_name>`: Replace with the actual computer name or IP address.
+* `<namespace_path>`: Replace with a valid namespace path, such as `\\.\root\cimv2`.
+
+This command line will create a new process that runs persistently via WMI system.

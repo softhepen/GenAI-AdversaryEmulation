@@ -1,0 +1,16 @@
+{
+  "precision": 0.8571428571428571,
+  "true_positives": [
+    "pupy",
+    "plink",
+    "pupy",
+    "pupy",
+    "pupy",
+    "windows-credential-editor"
+  ],
+  "false_positives": [
+    "metasploitpupyryuk"
+  ],
+  "total_tools": 7,
+  "total_entries": 12
+}

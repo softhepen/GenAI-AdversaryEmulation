@@ -1,0 +1,31 @@
+- Tactic: TA0009 – COLLECTION
+  Technique: T1113 – SCREEN CAPTURE
+  Description: Adversaries may attempt to take screen captures of the desktop to gather information over the course of an operation.
+  Technique: T1056 – INPUT CAPTURE
+  Description: Adversaries may log user keystrokes to intercept credentials as the user types them.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: Some of its capabilities include VNC.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1056 – INPUT CAPTURE
+  Description: Adversaries may log user keystrokes to intercept credentials as the user types them.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1095 – NON-APPLICATION LAYER PROTOCOL
+  Description: Adversaries may use an OSI non-application layer protocol for communication between host and C2 server or among infected hosts within a network.
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: Adversaries may employ an encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: FIN7 uses CARBANAK, specifically its video and tunnel commands, to maintain access and monitor the network.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Most of CARBANAK's strings are encrypted in order to make analysis more difficult.
+  Technique: T1055 – PROCESS INJECTION
+  Description: Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges.
+  Technique: T1218 – SYSTEM BINARY PROXY EXECUTION
+  Description: Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1055 – PROCESS INJECTION
+  Description: Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges.
+- Tactic: TA0002 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: FIN7 uses spear phishing emails

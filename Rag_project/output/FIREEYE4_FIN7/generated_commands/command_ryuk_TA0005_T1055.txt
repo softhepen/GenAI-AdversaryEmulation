@@ -1,0 +1,7 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the Ryuk tool to reproduce the PROCESS INJECTION behavior.
+
+**Command:** `ryuk.exe --inject <process_name>`
+
+This command injects code into the specified process `<process_name>` in order to evade process-based defenses and possibly elevate privileges.
+
+**Note:** `<process_name>` is a placeholder for the actual process name that should be replaced with the correct value.

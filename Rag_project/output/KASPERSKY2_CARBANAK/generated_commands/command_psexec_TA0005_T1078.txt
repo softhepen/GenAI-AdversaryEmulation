@@ -1,0 +1,19 @@
+Here are some realistic command lines that simulate the attack behavior using only the PsExec tool:
+
+Command: `psexec \\remote_system -u Domain\Administrator`
+
+Command: `psexec \\remote_system -u Domain\user1 -p <password>`
+
+Command: `psexec \\remote_system -s`
+
+Command: `psexec \\remote_system -u Domain\User2 -w C:\Path\To\Working\Directory`
+
+Command: `psexec \\remote_system -r ServiceName -i 0`
+
+Command: `psexec \\remote_system -e -f C:\Path\To\File.exe`
+
+Command: `psexec \\remote_system -l -v C:\Path\To\File.txt`
+
+Command: `psexec \\remote_system -h -u Domain\Administrator`
+
+Note that I have used placeholders where necessary, such as `<password>` and `<C:\Path\To\Working\Directory>`. These should be replaced with the actual values required for the specific attack scenario.

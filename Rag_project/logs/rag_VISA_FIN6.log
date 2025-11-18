@@ -1,0 +1,21 @@
+[2025-11-07 13:16:46,717] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:16:48,853] INFO - Tool selection for report: VISA
+[2025-11-07 13:16:48,853] INFO - TTP extraction from CTI report
+[2025-11-07 13:16:48,867] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:18:05,058] INFO - Tool field precision: 0.55
+[2025-11-07 13:18:05,059] INFO - Validating LLM output
+[2025-11-07 13:18:05,060] WARNING - Invalid or multiple tools detected: 'chrome-passwords, windows-credential-editor' — replacing with 'No tool'
+[2025-11-07 13:18:05,060] WARNING - Invalid or multiple tools detected: 'metasploit, invoke-psimage' — replacing with 'No tool'
+[2025-11-07 13:18:05,061] WARNING - Invalid or multiple tools detected: 'adfind, psexec' — replacing with 'No tool'
+[2025-11-07 13:18:05,065] WARNING - Invalid or multiple tools detected: 'plink, rubeus' — replacing with 'No tool'
+[2025-11-07 13:18:05,065] WARNING - Invalid or multiple tools detected: 'chrome-passwords, windows-credential-editor' — replacing with 'No tool'
+[2025-11-07 13:18:05,067] INFO - Generating commands for report: VISA
+[2025-11-07 13:18:05,107] INFO - Parsed 6 feasible attack actions.
+[2025-11-07 13:18:14,796] INFO - Saved command in output\VISA_FIN6\generated_commands\command_psexec_TA0002_T1106.txt
+[2025-11-07 13:18:33,517] INFO - Saved command in output\VISA_FIN6\generated_commands\command_adfind_TA0007_T1087.txt
+[2025-11-07 13:19:06,721] INFO - Saved command in output\VISA_FIN6\generated_commands\command_metasploit_TA0011_T1219.txt
+[2025-11-07 13:19:30,511] INFO - Saved command in output\VISA_FIN6\generated_commands\command_metasploit_TA0003_T1505.txt
+[2025-11-07 13:19:46,614] INFO - Saved command in output\VISA_FIN6\generated_commands\command_windows_credential_editor_TA0009_T1213.txt
+[2025-11-07 13:20:12,327] INFO - Saved command in output\VISA_FIN6\generated_commands\command_metasploit_TA0004_T1068.txt
+[2025-11-07 13:20:29,740] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\VISA_FIN6\match_results_chrf.csv
+[2025-11-07 13:20:29,806] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\VISA_FIN6\match_results_edit_distance.csv

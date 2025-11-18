@@ -1,0 +1,15 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using only the tool Ryuk to reproduce the following attack behavior:
+
+**Command:** `ryuk.exe --encrypt`
+This command corresponds to the first step of the attack, where the adversary confirms they want to encrypt the system.
+
+**Command:** `ryuk.exe -p <process_name>`
+This command corresponds to the process injection step, where the adversary searches for and performs process injection using a specific process name (e.g., `<process_name>`).
+
+**Command:** `ryuk.exe --disconnect-shares`
+This command corresponds to the share discovery and disconnection step, where the adversary disconnects any discoverable shares.
+
+**Command:** `ryuk.exe --drop-bat-files`
+This command corresponds to the network share discovery and dropping of kill.bat and window.bat files into C:/Users/Public.
+
+Please note that I have not included any file paths or registry keys in these examples as they are not explicitly specified in the attack description. If you need me to add those parameters, please let me know.

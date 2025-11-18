@@ -1,0 +1,24 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Attackers use email attachments containing malicious files Attackers deliver phishing emails containing malicious attachments, in this case, an RTF document embedded with a JavaScript OLE object. The attack starts with a spear-phishing email containing a malicious document with an LNK embedded OLE object.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OFUSCATED FILES OR INFORMATION
+  Description: FIN7 uses techniques such as file obfuscation to avoid detection by traditional security tools.
+  Technique: T1055 – PROCESS INJECTION
+  Description: The stealer DLL is injected directly into memory using PowerShell, allowing the malware to run in the context of legitimate processes.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: Attackers rely on user actions to open malicious files or click on embedded objects, triggering the malware execution. The attack relies on the user clicking the embedded OLE object to trigger the infection chain. The victim likely opens a malicious Word document object, initiating the infection process.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Execution of JavaScript from the embedded OLE object to begin the infection process. The JavaScript bot is extracted and executed as part of the infection chain. PowerShell is used to inject the stealer DLL into memory, a key part of the execution chain. The JavaScript chain is used for the next stage of execution
+  Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+  Description: The dropper leverages a crafted LNK file to initiate the execution of malicious code on the victim's machine, embedded within the Word document.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1555 – CREDENTIALS FROM PASSWORD STORES
+  Description: Attackers steal saved login credentials from web browsers, gaining access to accounts.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Using DNS as a channel to communicate with the command and control (C2) server and load additional shellcode.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1055 – PROCESS INJECTION
+  Description: The stealer DLL is injected directly into memory using PowerShell, allowing the malware to run in the context of legitimate processes.

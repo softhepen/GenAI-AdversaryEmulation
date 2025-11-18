@@ -1,0 +1,25 @@
+Here are the command lines to simulate the attack behavior using Rubeus:
+
+Command: `rubeus.exe createnetonly /program:"C:\Windows\System32\run.exe" /impersonateuser:<registry_key>`
+
+Note: The `<registry_key>` placeholder should be replaced with a valid registry key, such as "HKLM\SOFTWARE\Policies\Microsoft\Windows\Run".
+
+This command line creates a hidden program (run.exe) with random netonly credentials and displays the PID and LUID. The `/impersonateuser` parameter is used to specify the registry key that will be used to maintain persistence.
+
+Command: `rubeus.exe logonsession /luid:<logon_session_id>`
+
+Note: The `<logon_session_id>` placeholder should be replaced with a valid logon session ID, such as "0x121078" (1183864).
+
+This command line displays information about the current context's logon session or all logon sessions if elevated.
+
+Command: `rubeus.exe s4u /user:<username> /rc4:<random_key> /impersonateuser:<registry_key>`
+
+Note: The `<username>` placeholder should be replaced with a valid username, such as "patsy". The `<random_key>` placeholder should be replaced with a random RC4 key. The `<registry_key>` placeholder should be replaced with the same registry key used in the first command.
+
+This command line executes the S4U2self process, returning a forwardable ticket.
+
+Command: `rubeus.exe purge /luid:<logon_session_id>`
+
+Note: The `<logon_session_id>` placeholder should be replaced with the same logon session ID used in the second command.
+
+This command line purges all Kerberos tickets from the current logon session or, if elevated, to the specified logon session.

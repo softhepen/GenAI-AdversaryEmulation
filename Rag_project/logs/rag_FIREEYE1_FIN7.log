@@ -1,0 +1,13 @@
+[2025-11-07 13:25:30,826] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:25:33,050] INFO - Tool selection for report: FIREEYE1
+[2025-11-07 13:25:33,050] INFO - TTP extraction from CTI report
+[2025-11-07 13:25:33,064] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:26:42,956] INFO - Tool field precision: 0.33
+[2025-11-07 13:26:42,958] INFO - Validating LLM output
+[2025-11-07 13:26:42,959] WARNING - Invalid or multiple tools detected: 'RDFSNIFFER' — replacing with 'No tool'
+[2025-11-07 13:26:42,959] WARNING - Invalid or multiple tools detected: 'RDFSNIFFER' — replacing with 'No tool'
+[2025-11-07 13:26:42,992] INFO - Generating commands for report: FIREEYE1
+[2025-11-07 13:26:43,641] INFO - Parsed 1 feasible attack actions.
+[2025-11-07 13:27:05,603] INFO - Saved command in output\FIREEYE1_FIN7\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-07 13:27:05,981] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE1_FIN7\match_results_chrf.csv
+[2025-11-07 13:27:05,988] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE1_FIN7\match_results_edit_distance.csv

@@ -1,0 +1,9 @@
+Here are the command lines that simulate the attack behavior using only the Plink tool:
+
+Command: `plink login.example.com -l attacker_username`
+
+Command: `plink -ssh login.example.com -l attacker_username`
+
+Command: `plink -telnet login.example.com -l attacker_username`
+
+Note: I've used placeholders for the username and hostname as per the output format requirements. In a real-world scenario, these would need to be replaced with actual values.

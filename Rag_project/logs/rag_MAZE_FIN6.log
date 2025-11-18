@@ -1,0 +1,11 @@
+[2025-11-07 12:47:50,440] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:47:52,814] INFO - Tool selection for report: MAZE
+[2025-11-07 12:47:52,815] INFO - TTP extraction from CTI report
+[2025-11-07 12:47:52,828] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:48:38,364] INFO - Tool field precision: 1.00
+[2025-11-07 12:48:38,366] INFO - Validating LLM output
+[2025-11-07 12:48:38,368] INFO - Generating commands for report: MAZE
+[2025-11-07 12:48:38,397] INFO - Parsed 1 feasible attack actions.
+[2025-11-07 12:48:57,556] INFO - Saved command in output\MAZE_FIN6\generated_commands\command_psexec_TA0003_T1078.txt
+[2025-11-07 12:48:57,689] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MAZE_FIN6\match_results_chrf.csv
+[2025-11-07 12:48:57,696] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MAZE_FIN6\match_results_edit_distance.csv

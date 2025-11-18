@@ -1,0 +1,23 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0043_T1589.txt,adfind,adfind -sc whoami,"adfind -f ""(objectcategory=group)""`",29.853,True
+command_adfind_TA0043_T1589.txt,adfind,adfind -sc adinfo -binary,"adfind -f ""(objectcategory=group)""`",26.503,True
+command_adfind_TA0043_T1589.txt,adfind,adfind -sc adam_email:<email_address>,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,19.21,True
+command_adfind_TA0043_T1589.txt,adfind,adfind -sc adam_spn:<service_principal_name>,`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,17.878,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -l,"```sh
+wce.exe -w
+```",23.998,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -l -v,"```sh
+wce.exe -w
+```",16.059,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -i <javascript_code>,"```sh
+wce.exe -w
+```",8.139,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -l,"```sh
+wce.exe -w
+```",23.998,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -l -v,"```sh
+wce.exe -w
+```",16.059,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -i <javascript_code>,"```sh
+wce.exe -w
+```",8.139,True

@@ -1,0 +1,9 @@
+Based on the attack description, I understand that the attackers implanted malicious scripts on compromised web servers to gain persistent access.
+
+To simulate this behavior using PAExec, I will carefully analyze the attack description and identify any configuration parameters, file names, network indicators, or execution context. Then, I will construct realistic command lines that accurately reproduce the attack behavior using only the tool's documented syntax and capabilities.
+
+Here is my output:
+
+Command: `paexec -i -c <web_server_script_name>.bat`
+
+Note: `<web_server_script_name>` should be replaced with a placeholder indicating the actual file name of the malicious script on the compromised web server.

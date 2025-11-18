@@ -1,0 +1,49 @@
+Here are some command lines that simulate the attack behavior using the PsExec tool:
+
+**Create new user accounts for persistence**
+
+Command: `psexec \\remote-system -u <new-user-name> -p <password> -i`
+
+* Replace `<new-user-name>` with the desired username and `<password>` with a password of your choice.
+
+Example:
+Command: `psexec \\example.com -u testuser -p Test123! -i`
+
+**Create new user accounts for privilege escalation**
+
+Command: `psexec \\remote-system -u <admin-account> -c <target-executable> -a 1,2 -f`
+
+* Replace `<admin-account>` with an existing administrator account on the remote system.
+* Replace `<target-executable>` with the path to a malicious executable that will be executed as the new user.
+
+Example:
+Command: `psexec \\example.com -u adminuser -c C:\path\to\malware.exe -a 1,2 -f`
+
+**Run process as limited user**
+
+Command: `psexec \\remote-system -l -i`
+
+* This command will run the process as a limited user with only the privileges assigned to the Users group.
+
+Example:
+Command: `psexec \\example.com -l -i`
+
+**Specify optional password for user name**
+
+Command: `psexec \\remote-system -u <user-name> -p <password> -i`
+
+* Replace `<user-name>` with the desired username and `<password>` with a password of your choice.
+
+Example:
+Command: `psexec \\example.com -u testuser -p Test123! -i`
+
+**Set working directory**
+
+Command: `psexec \\remote-system -w <directory-path> -i`
+
+* Replace `<directory-path>` with the desired working directory on the remote system.
+
+Example:
+Command: `psexec \\example.com -w C:\path\to\working\dir -i`
+
+Note that you should replace `<remote-system>`, `<new-user-name>`, `<password>`, `<admin-account>`, `<target-executable>`, and `<directory-path>` with actual values suitable for your testing environment.

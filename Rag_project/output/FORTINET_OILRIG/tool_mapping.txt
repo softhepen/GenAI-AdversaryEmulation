@@ -1,0 +1,23 @@
+Here is the analysis output:
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: The attacker pretends to be a colleague from the IT department of the same governmental organization to deliver the phishing email.
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1204 – USER EXECUTION
+Description: The user is tricked into executing the malicious content by filling out and interacting with the confirmation form in the Excel file.
+Tool: chrome-passwords
+
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: The malicious VBA macro within the Excel file is executed when the document is opened and macros are enabled. The malware can execute commands via PowerShell.
+Tool: No tool
+
+Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+Description: The macro uses WMI to ping the C2 server, which is an uncommon choice compared to PowerShell or CMD.
+Tool: wmic
+
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: The malware can create arbitrary files on the infected machine as dictated by tasks received through DNS responses.
+Tool: ryuk

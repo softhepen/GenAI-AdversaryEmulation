@@ -1,0 +1,86 @@
+Based on the provided internal tools and technique descriptions, I will analyze each technique and determine whether any internal tool explicitly confirms it can reproduce or simulate the described behavior.
+
+Here is the output:
+
+- Tactic: TA0042 – RESOURCE DEVELOPMENT
+Technique: T1586 – COMPROMISE ACCOUNTS
+Description: Attackers will compromise legitimate e-mail accounts to send phishing e-mails from seemingly trustworthy sources, thus increasing the likelihood that victims will fall for the deception.
+Tool: No tool
+
+Technique: T1566 – PHISHING
+Description: Targeted phishing attacks that use links in emails to trick victims into clicking and downloading malicious files.
+Tool: chrome-passwords
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1586 – PHISHING
+Description: Phishing e-mails from seemingly trustworthy sources were sent.
+Tool: chrome-passwords
+
+Technique: T1566 – PHISHING
+Description: Targeted phishing attacks that use attachments of Microsoft Office documents (.doc or .xls) to distribute malware.
+Tool: No tool
+
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Users execute malicious files, such as documents with macros that download additional malicious payloads.
+Tool: windows-credential-editor
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1204 – USER EXECUTION
+Description: Users execute malicious files, such as documents with macros that download additional malicious payloads.
+Tool: windows-credential-editor
+
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Microsoft Word document with a malicious embedded macro.
+Tool: windows-credential-editor
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Downloading malicious tools from a remote location.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OF INFORMATION
+Description: Use of steganography to hide data within legitimate files.
+Tool: invoke-psimage
+
+Technique: T1055 – PROCESS INJECTION
+Description: Process injection techniques to execute malicious code inside a legitimate process.
+Tool: No tool
+
+Technique: T1218 – SYSTEM BINARY PROXY EXECUTION
+Description: The PowerDuke backdoor file is dropped with persistence via HKCU Run Key and executed via rundll32.exe.
+Tool: No tool
+
+Technique: T1112 – MODIFY REGISTRY
+Description: The PowerDuke backdoor is persisted via HKCU Run Key.
+Tool: rubeus
+
+- Tactic: TA005 – DEFENSE EVASION
+Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+Description: This technique includes efforts to detect and avoid execution in virtualized or sandbox environments.
+Tool: No tool
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: The PowerDuke backdoor boasts a feature set that allows the attackers to examine the system.
+Tool: No tool
+
+Technique: T1016 – SYSTEM NETWORK CONFIGURATION DISCOVERY
+Description: Adversaries may use various utilities to retrieve system network configuration information, such as NetBIOS name and domain information.
+Tool: No tool
+
+Technique: T1083 – FILE AND DIRECTORY DISCOVERY
+Description: Adversaries may search for files and directories on local and remote systems.
+Tool: rubeus
+
+Technique: T1057 – PROCESS DISCOVERY
+Description: Adversaries may attempt to get information about running processes on a system.
+Tool: No tool
+
+Technique: T1033 – SYSTEM OWNER/USER DISCOVERY
+Description: Adversaries may try to identify the current user of the system.
+Tool: rubeus
+
+Technique: T1124 – SYSTEM TIME DISCOVERY
+Description: Adversaries may gather the system time and time zone information from a local or remote system.
+Tool: No tool

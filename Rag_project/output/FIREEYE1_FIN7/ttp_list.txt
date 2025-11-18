@@ -1,0 +1,29 @@
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: BOOSTWRITE retrieves an encryption key from a remote server The ability to upload and download files is directly related to this technique, which involves transferring tools or files into or out of a compromised environment.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: BOOSTWRITE communicates over the internet using a common protocol to connect to a hardcoded IP address and retrieve the decryption key and IV. This technique involves using standard web protocols to communicate with a command-and-control (C2) server. RDFSNIFFER's interactions with RDFClient and potentially monitoring network traffic or connections align with using application layer protocols for communication. The backdoor component interacts with the RDFClient session, potentially using web protocols or other application layer protocols to send and receive commands.
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: BOOSTWRITE uses the ChaCha stream cipher, a symmetric encryption algorithm, to encrypt and decrypt the payloads. It retrieves a decryption key and an initialization vector (IV) from a remote server after connecting to a hardcoded IP address and port. This falls under the category of using symmetric cryptography for securing communications.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1055 – PROCESS INJECTION
+  Description: The malware is effectively injecting itself into the process. This allows the malware to execute within the context of a trusted application, making it harder to detect and more likely to bypass security controls. This describes how RDFSNIFFER injects itself into the process of RDFClient, which aligns with the process injection technique Hooking Win32 API functions can be part of process injection techniques, where the malware modifies the behavior of the legitimate application to perform its own functions.
+  Technique: T1574 – HIJACK EXECUTION FLOW
+  Description: OOSTWRITE is crafted to exploit the DLL search order used by applications, specifically targeting those that load the Dwrite.dll (a legitimate Microsoft DirectX Typography Services DLL). The application follows a typical load order (gdi -> gdiplus -> Dwrite), and the attacker places a malicious Dwrite.dll in a directory that the application will search first, causing it to load the malicious DLL instead of the legitimate one.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The process of embedding and encrypting DLL payloads within the DWrite.dll file and then decrypting them using a custom key and IV retrieved from a remote server is similar to software packing. This technique is used to protect the payloads from detection until they are unpacked and executed. This technique covers instances where adversaries create or generate files at runtime, often with randomized or unpredictable names to evade detection or hinder analysis. The use of random file names can make it more difficult for defenders to identify and track malicious files.
+  Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+  Description: BOOSTWRITE scans its own image to find and use a multi-XOR key to decode data within its body. The decoded data includes the IP address and port needed to retrieve the encryption key and IV. This technique involves deobfuscating or decoding files or data to extract useful information, such as decryption keys. The malware decrypts embedded payloads using a key and IV, which falls under this technique. Decrypting and then loading a payload into memory without writing it to disk is a tactic to avoid detection by file-based security tools.
+  Technique: T1036 – MASQUERADING
+  Description: By tampering with the NCR Aloha Command Center Client's user-interface, the malware could be disguising its malicious actions as normal application behavior.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1055 – PROCESS INJECTION
+  Description: The malware is effectively injecting itself into the process. This allows the malware to execute within the context of a trusted application, making it harder to detect and more likely to bypass security controls. This describes how RDFSNIFFER injects itself into the process of RDFClient, which aligns with the process injection technique Hooking Win32 API functions can be part of process injection techniques, where the malware modifies the behavior of the legitimate application to perform its own functions.
+  Technique: T1574 – HIJACK EXECUTION FLOW
+  Description: OOSTWRITE is crafted to exploit the DLL search order used by applications, specifically targeting those that load the Dwrite.dll (a legitimate Microsoft DirectX Typography Services DLL). The application follows a typical load order (gdi -> gdiplus -> Dwrite), and the attacker places a malicious Dwrite.dll in a directory that the application will search first, causing it to load the malicious DLL instead of the legitimate one.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1574 – HIJACK EXECUTION FLOW
+  Description: OOSTWRITE is crafted to exploit the DLL search order used by applications, specifically targeting those that load the Dwrite.dll (a legitimate Microsoft DirectX Typography Services DLL). The application follows a typical load order (gdi -> gdiplus -> Dwrite), and the attacker places a malicious Dwrite.dll in a directory that the application will search first, causing it to load the malicious DLL instead of the legitimate one.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The downloaded and decrypted payloads are PE32.DLL files that are likely malicious. The malware performs sanity checks to ensure these files are intact and correct before proceeding to load them.

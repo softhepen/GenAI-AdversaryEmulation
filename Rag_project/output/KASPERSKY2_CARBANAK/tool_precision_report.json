@@ -1,0 +1,22 @@
+{
+  "precision": 0.6153846153846154,
+  "true_positives": [
+    "psexec",
+    "metasploit",
+    "pupy",
+    "psexec",
+    "pupy",
+    "pupy",
+    "pupy",
+    "pupy"
+  ],
+  "false_positives": [
+    "chromepasswordspsexecpaexecplinkpupy",
+    "plinkpupy",
+    "metasploitpupy",
+    "metasploitpupy",
+    "metasploitpupy"
+  ],
+  "total_tools": 13,
+  "total_entries": 28
+}

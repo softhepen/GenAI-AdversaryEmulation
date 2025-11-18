@@ -1,0 +1,21 @@
+Here is the output:
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: APT29 created targeted spearphishing campaigns using links to a malicious dropper. Sending targeted emails containing malicious links to compromise target systems.
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1204 – USER EXECUTION
+Description: Once executed, the malicious link code delivers remote access tools (RATs).
+Tool: psexec
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: The dropper downloads and installs remote access tools (RATs) on the victim's machine.
+Tool: psexec
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Obfuscation of files or information to evade detection.
+Tool: invoke-psimage

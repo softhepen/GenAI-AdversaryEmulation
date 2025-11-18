@@ -1,0 +1,15 @@
+Based on the provided documentation and attack description, I will generate command lines using only the tool adfind to reproduce the malicious behavior.
+
+**Command:** `adfind -sddl++ -resolvesids -sdpipe+x -where "(&(objectCategory=link)(path=<shortcut_file_path>))"`
+
+This command uses the `-sddl++` option to decode security descriptors, `-resolvesids` to resolve user and group IDs, and `-sdpipe+x` to output explicit ACEs of the security descriptor in AD CSV format. The `-where` clause filters for objects with the category "link" (Windows shortcut) and a specific path (`<shortcut_file_path>`).
+
+**Command:** `adfind -sdpipe+ -resolvesidsgeneric -where "(&(objectCategory=form)(name=<form_name>))"`
+
+This command uses the `-sdpipe+` option to output explicit ACEs of the security descriptor in AD CSV format, adding generic SID resolution using `-resolvesidsgeneric`. The `-where` clause filters for objects with the category "form" (U.S. State Department form) and a specific name (`<form_name>`).
+
+**Command:** `adfind -sddl+++ -resolvesids -sdpipe+x -where "(&(objectCategory=computer)(dn=<pandora_music_streaming_service_dns>))"`
+
+This command uses the `-sddl+++` option to combine decoding of security descriptors with resolving user and group IDs, and output explicit ACEs in AD CSV format using `-sdpipe+x`. The `-where` clause filters for objects with the category "computer" (C2 domain) and a specific DNS name (`<pandora_music_streaming_service_dns>`).
+
+Please note that I have used placeholders `<shortcut_file_path>`, `<form_name>`, and `<pandora_music_streaming_service_dns>` as required, and followed the exact output format specified.

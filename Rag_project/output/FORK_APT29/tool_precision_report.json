@@ -1,0 +1,19 @@
+{
+  "precision": 0.8,
+  "true_positives": [
+    "invoke-psimage",
+    "rubeus",
+    "plink",
+    "metasploit",
+    "plink",
+    "psexec",
+    "chrome-passwords",
+    "rubeus"
+  ],
+  "false_positives": [
+    "chromepasswordsinvokepsimage",
+    "adfindpsexec"
+  ],
+  "total_tools": 10,
+  "total_entries": 20
+}

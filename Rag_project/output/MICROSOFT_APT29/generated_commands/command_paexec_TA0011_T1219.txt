@@ -1,0 +1,9 @@
+Here are the command lines that simulate the attack behavior:
+
+Command: `paexec -i -c <dll_name>`
+
+Command: `paexec -h -i -c <dll_name>`
+
+Command: `paexec -l -i -c <dll_name>`
+
+Note: Replace `<dll_name>` with the actual name of the backdoor DLL file.

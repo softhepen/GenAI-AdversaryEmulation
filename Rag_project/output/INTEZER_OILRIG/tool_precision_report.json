@@ -1,0 +1,18 @@
+{
+  "precision": 0.3333333333333333,
+  "true_positives": [
+    "chrome-passwords",
+    "chrome-passwords",
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "adfindchromepasswordspsexec",
+    "adfindchromepasswords",
+    "paexecpsexec",
+    "paexecpsexecwmic",
+    "paexecpsexecwmic",
+    "adfindwmic"
+  ],
+  "total_tools": 9,
+  "total_entries": 10
+}

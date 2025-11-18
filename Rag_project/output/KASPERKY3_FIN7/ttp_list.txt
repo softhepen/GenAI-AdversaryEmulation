@@ -1,0 +1,26 @@
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Using PHP for management and control of attack scripts fits under the use of scripting languages for execution and control in the attack lifecycle. SQLRat uses SQL scripts to execute commands on the host system, which is an uncommon method but falls under the use of SQL as a command interpreter. Execution of malicious JavaScript code after deobfuscation. This covers the execution of scripts, particularly those that drop and execute files on a system.
+  Technique: T1204 – USER EXECUTION
+  Description: Victims are tricked into opening and executing the attached document, enabling the attackers to gain an initial foothold. The lure document tricks the user into executing a malicious file.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: Creating scheduled task entries to maintain persistence on compromised machines. Creating scheduled task entries to maintain persistence.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: The panel pushing attack scripts down to compromised systems indicates transferring malicious tools or files to target systems. SQLRat retrieves and writes files to disk, which can then be executed.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: DNSbot uses DNS to send and receive commands and data between the compromised machine and the attacker's command-and-control (C2) server. DNSbot has the ability to switch to encrypted communication channels such as HTTPS or SSL when necessary. SQLRat uses a direct SQL connection to retrieve and execute files from a remote database, indicating the use of a web-based protocol to communicate with a malicious database.
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Attackers send targeted emails containing malicious attachments to entice victims into opening them and executing the payload.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1070 – INDICATOR REMOVAL
+  Description: After SQL scripts are executed, the attackers' code deletes the files, leaving minimal forensic artifacts, making recovery difficult.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The use of obfuscation techniques to hide the true nature of malicious code.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: Creating scheduled task entries to maintain persistence on compromised machines. Creating scheduled task entries to maintain persistence.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: Creating scheduled task entries to maintain persistence on compromised machines. Creating scheduled task entries to maintain persistence.

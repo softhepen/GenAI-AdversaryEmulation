@@ -1,0 +1,24 @@
+{
+  "precision": 0.4,
+  "true_positives": [
+    "rubeus",
+    "ryuk",
+    "ryuk",
+    "ryuk",
+    "ryuk",
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "psexecpaexec",
+    "psexecpaexecrubeus",
+    "chromepasswordsmetasploittinymet",
+    "wmi",
+    "metasploittinymet",
+    "metasploittinymet",
+    "metasploittinymet",
+    "metasploittinymet",
+    "ryukpsexecpaexec"
+  ],
+  "total_tools": 15,
+  "total_entries": 17
+}

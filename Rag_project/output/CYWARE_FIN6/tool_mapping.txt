@@ -1,0 +1,39 @@
+Based on the internal tools provided and the technique descriptions, here is the analysis:
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: Using Windows' Remote Desktop Protocol (RDP) to move laterally across affected networks
+Tool: psexec
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1055 – PROCESS INJECTION
+Description: Injecting LockerGoga and Ryuk ransomware
+Tool: Ryuk
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Executing an encoded command through PowerShell
+Tool: chrome-passwords
+
+Technique: T1129 – SHARED MODULES
+Description: Cobalt Strike payload dropping a malicious payload onto the systems
+Tool: metasploit
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Downloading a Cobalt Strike payload Communicating with a C2 server for dropping additional payloads
+Tool: plink
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: Use of a Windows Service created by Metasploit
+Tool: metasploit
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: Use of a Windows Service created by Metasploit
+Tool: metasploit
+
+Technique: T1068 – EXPLOITATION FOR PRIVILEGE ESCALATION
+Description: Escalating privileges in the system
+Tool: No tool

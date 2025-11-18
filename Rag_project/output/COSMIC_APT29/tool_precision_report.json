@@ -1,0 +1,16 @@
+{
+  "precision": 0.7142857142857143,
+  "true_positives": [
+    "adfind",
+    "adfind",
+    "chrome-passwords",
+    "ryuk",
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "plinkpsexecpaexecpupytintri",
+    "ryukpupy"
+  ],
+  "total_tools": 7,
+  "total_entries": 16
+}

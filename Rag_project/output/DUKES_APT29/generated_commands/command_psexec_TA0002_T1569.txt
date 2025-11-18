@@ -1,0 +1,15 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using only the tool PsExec to reproduce the specified behavior:
+
+**Command:** `psexec -s -a 1,2 -c "C:\Path\To\MaliciousExecutable.exe" -d`
+
+This command simulates the creation and writing of a malicious executable to disk (`-c` option) on processors 1 and 2 (`-a` option), and then executes it without waiting for it to terminate (`-d` option).
+
+**Command:** `psexec -s -a 1,2 -c "C:\Path\To\MaliciousExecutable.exe" -h`
+
+This command is similar to the previous one but runs the process with the account's elevated token if available (`-h` option) on processors 1 and 2.
+
+**Command:** `psexec -s -a 1,2 -c "C:\Path\To\MaliciousExecutable.exe" -l`
+
+This command runs the process as a limited user (strips the Administrators group and allows only privileges assigned to the Users group) on processors 1 and 2 (`-l` option).
+
+Note: The placeholders `<C:\Path\To\MaliciousExecutable.exe>` should be replaced with the actual path of the malicious executable.

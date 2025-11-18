@@ -1,0 +1,7 @@
+Based on the provided documentation and the attack description, I will generate a realistic command line using **only** the tool pupy to reproduce the Carbanak's process injection behavior.
+
+Here is my output:
+
+Command:`run memory_exec C:\\Windows\\System32\\svchost.exe privilege::debug`
+
+This command injects the svchost.exe process with the `memory_exec` module, simulating the Carbanak's process injection technique.

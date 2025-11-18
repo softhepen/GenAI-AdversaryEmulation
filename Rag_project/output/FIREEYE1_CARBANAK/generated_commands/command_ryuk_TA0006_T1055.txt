@@ -1,0 +1,12 @@
+Based on the provided documentation, I will generate realistic command lines using only the Ryuk tool to reproduce the attack behavior described.
+
+**Command:** `ryuk.exe --encrypt`
+This command confirms that you want to encrypt the system and starts the main ransomware process.
+
+**Command:** `ryuk.exe -p <process_name> --injects-into-new-process`
+This command injects code into a new process specified by `<process_name>` using the PROCESS INJECTION technique (T1055).
+
+**Command:** `ryuk.exe --disconnect-shares --drop-bat-files`
+This command disconnects shares and drops kill.bat and window.bat files into C:/Users/Public, which performs network share discovery.
+
+Note that I have used placeholders for process names as required.

@@ -1,0 +1,5 @@
+I will carefully analyze the attack description and construct realistic command lines using only the tool ryuk to reproduce the behavior.
+
+Command: `ryuk.exe --drop-bat-files`
+
+This command drops the kill.bat and window.bat files into C:/Users/Public, which performs network share discovery.

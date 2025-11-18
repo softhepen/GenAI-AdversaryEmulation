@@ -1,0 +1,7 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using **only** the tool Rubeus to reproduce the SYSTEM OWNER/USER DISCOVERY attack behavior.
+
+Command: `rubeus s4u /ptt /tgt <placeholder>`
+
+This command uses the s4u action, which is similar to Kekeo's tgs::s4u functionality. It attempts to identify the current user of the system by using constrained delegation (if configured) and abuse access to the target SPN/server.
+
+Note: I've used placeholders for any parameters that are not explicitly specified in the attack description. You can replace `<placeholder>` with actual values as needed.

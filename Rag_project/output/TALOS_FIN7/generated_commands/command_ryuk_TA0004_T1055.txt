@@ -1,0 +1,7 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool Ryuk to reproduce the specified behavior:
+
+**Command:** `ryuk.exe --inject <dll_name>`
+
+This command injects the stealer DLL directly into memory using PowerShell, allowing the malware to run in the context of legitimate processes.
+
+Note: `<dll_name>` is a placeholder for the actual name of the DLL that will be injected.

@@ -1,0 +1,11 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "chrome-passwords",
+    "chrome-passwords",
+    "invoke-psimage"
+  ],
+  "false_positives": [],
+  "total_tools": 3,
+  "total_entries": 4
+}

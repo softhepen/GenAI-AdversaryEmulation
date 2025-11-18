@@ -1,0 +1,15 @@
+Here are the command lines that simulate the described attack behavior using PsExec:
+
+Command: `psexec -u <domain_admin_account> -p <password> \\remote_system -s`
+
+This command uses a previously created domain administrator account to access systems and deploy MAZE ransomware.
+
+Command: `psexec -u <local_admin_account> -l \\remote_system -w <working_directory>`
+
+This command uses local accounts with administrator privileges to move laterally through the network and install payloads. The `-l` option runs the process as a limited user, stripping the Administrators group and allowing only privileges assigned to the Users group.
+
+Command: `psexec -u <service_account> -n 30 \\remote_system -r "Remote_Service"`
+
+This command uses compromised service accounts (services) to move laterally through the network. The `-n` option specifies a timeout in seconds connecting to remote computers, and the `-r` option specifies the name of the remote service to create or interact with.
+
+Note: Replace `<domain_admin_account>`, `<local_admin_account>`, `<service_account>`, `<password>`, `<working_directory>`, and `\\remote_system` with actual values.

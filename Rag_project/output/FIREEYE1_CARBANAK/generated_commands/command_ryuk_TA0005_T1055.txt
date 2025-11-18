@@ -1,0 +1,24 @@
+Based on the provided documentation and instructions, I will construct realistic command lines that simulate the described behavior of injecting code into a new process using the Ryuk tool.
+
+**Command:** `ryuk.exe --process-name <target_process_name>`
+
+This command line injects the Ryuk ransomware into a new process with the specified name. The `<target_process_name>` placeholder should be replaced with the actual name of the target process.
+
+Example:
+`Command: 'ryuk.exe --process-name notepad.exe'`
+
+**Command:** `ryuk.exe -e --process-name <target_process_name>`
+
+This command line confirms that you want to encrypt the system and injects Ryuk into a new process with the specified name. The `<target_process_name>` placeholder should be replaced with the actual name of the target process.
+
+Example:
+`Command: 'ryuk.exe -e --process-name explorer.exe'`
+
+**Command:** `ryuk.exe --drop-bat-files --disconnect-shares`
+
+This command line drops kill.bat and window.bat files into C:/Users/Public, performs network share discovery, and disconnects shares. This is a separate option to reset the environment.
+
+Example:
+`Command: 'ryuk.exe --drop-bat-files --disconnect-shares'`
+
+These command lines accurately reproduce the described behavior of injecting code into a new process using the Ryuk tool.

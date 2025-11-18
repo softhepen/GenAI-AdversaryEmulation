@@ -1,0 +1,3 @@
+Based on the provided documentation and the attack behavior description, I will generate a command line that simulates the use of HTTP/HTTPS as an application layer protocol for communication with the C&C server.
+
+Command: `plink.exe -telnet <CnC_Server_IP> -P <port_number>`

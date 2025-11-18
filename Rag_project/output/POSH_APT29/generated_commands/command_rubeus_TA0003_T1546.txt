@@ -1,0 +1,14 @@
+Based on the documentation and the attack description, I will generate realistic command lines using only the tool Rubeus to reproduce the behavior of maintaining persistence on the system through WMI event subscription.
+
+Command: `rubeus.exe wmiexec /smowmi /c:"powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File <file_path>`
+
+
+Note:
+
+* `<file_path>` should be replaced with the actual file path where you want to store and persist the backdoor code.
+* I have used the `/wmiexec` option to execute a WMI command, which is documented in Rubeus' documentation.
+* The `/smowmi` option allows me to specify the WMI namespace and class for the event subscription.
+* The `powershell` command will be executed with hidden window style, bypassing execution policy, and executing the specified file path.
+* The `rubeus.exe` command is used to create a new process that runs the powershell command.
+
+Please let me know if this meets your requirements.

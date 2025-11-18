@@ -1,0 +1,91 @@
+Here is the output:
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Threat actors use various obfuscation and encryption methods to make it difficult to detect and analyze their tools and techniques.
+Tool: invoke-psimage
+
+Technique: T1070 – INDICATOR REMOVAL ON HOST
+Description: Ability to self-destruct malware from the compromised system. This can help avoid detection and remove traces of the infection to maintain persistent access.
+Tool: rubeus
+
+Technique: T1078 – VALID ACCOUNTS
+Description: compromised credentials were used
+Tool: No tool
+
+- Tactic: TA0010 – EXFILTRATION
+Technique: T1048 – EXFILTRATION OVER ALTERNATIVE PROTOCOL
+Description: Seaduke is able to exfiltrate sensitive information such as emails from the victim's machine.
+Tool: plink
+
+Technique: T1567 – EXFILTRATION OVER WEB SERVICE
+Description: Data exfiltration through legitimate cloud services to camouflage malicious traffic.
+Tool: No tool
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: themed emails were sent with a CozyDuke payload
+Tool: No tool
+
+Technique: T1078 – VALID ACCOUNTS
+Description: compromised credentials were used
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1102 – WEB SERVICE
+Description: Attackers control Cozyduke through compromised Web sites by uploading "tasks" to a database file. This technique describes the use of web services for command and control malware.
+Tool: metasploit
+
+Technique: T1573 – ENCRYPTED CHANNEL
+Description: encoding and encryption layers were used
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Use of HTTP/HTTPS as an application layer protocol for communication with the C&C server.
+Tool: plink
+
+Technique: T1105 – REMOTE FILE COPY
+Description: Uploading and downloading files between the compromised system and the C&C server. This may include updating bot configuration, uploading command or script files, and downloading additional payloads.
+Tool: psexec
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: A task described as a coded PowerShell script that instructs Cozyduke to download and run Seaduke from a compromised website
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1005 – DATA FROM LOCAL SYSTEM
+Description: Gathering local information from the compromised system, such as operating system details, network configurations, and other information relevant to malware operations.
+Tool: No tool
+
+Technique: T1114 – EMAIL COLLECTION
+Description: Extracting email from MS Exchange servers using compromised credentials.
+Tool: chrome-passwords
+
+Technique: T1560 – ARCHIVE COLLECTED DATA
+Description: Storage of sensitive information collected for exfiltration or later use.
+Tool: No tool
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1558 – STEAL OR FORGE KERBEROS TICKETS
+Description: Using Kerberos pass-the-ticket attacks to impersonate legitimate users and gain unauthorized access to systems.
+Tool: rubeus
+
+Technique: T1003 – OS CREDENTIAL DUMPING
+Description: Mimikatz was used
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1078 – VALID ACCOUNTS
+Description: compromised credentials were used
+Tool: No tool
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1078 – VALID ACCOUNTS
+Description: compromised credentials were used
+Tool: No tool
+
+- Tactic: TA0040 – IMPACT
+Technique: T1561 – DISK WIPE
+Description: Secure file deletion to remove traces of malicious activity.
+Tool: No tool

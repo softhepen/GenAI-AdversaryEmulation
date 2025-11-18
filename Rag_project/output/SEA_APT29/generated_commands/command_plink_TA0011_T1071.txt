@@ -1,0 +1,7 @@
+Here are the command lines that simulate the attack behavior using the tool plink:
+
+Command: `plink.exe -ssh login.example.com`
+Command: `plink.exe -no-sanitise-stdout -ssh login.example.com`
+Command: `plink.exe -R <http_port>:localhost:<http_port> login.example.com`
+
+Note: These command lines are simulated using the tool's supported syntax and capabilities, as described in the documentation.

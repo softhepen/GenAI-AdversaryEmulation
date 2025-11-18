@@ -1,0 +1,18 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Phishing emails that contain links to malicious zipper files. Phishing emails that contain links to malicious zipper files. Phishing emails that contain links to malicious zipper files. Sending phishing emails containing malicious URLs.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1036 – MASQUERADING
+  Description: Malicious zipper files disguised as legitimate Windows shortcuts. Malicious zipper files disguised as legitimate Windows shortcuts. Malicious zipper files disguised as legitimate Windows shortcuts. The malicious shortcut file drops a seemingly innocuous U.S. State Department form to confuse and distract the user. Use of a C2 domain that mimics a legitimate service, in this case Pandora music streaming service. The malicious shortcut file (LNK) is disguised as a legitimate file The malicious shortcut file (LNK) is disguised as a legitimate file
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: This technique includes the use of obfuscation techniques to hide the malicious behavior of the malware. In the context described, the command included a specific type of obfuscation that may have been used to evade detection. This technique is applied when executable files or data are made less readable to avoid detection by security tools
+  Technique: T1218 – SIGNED BINARY PROXY EXECUTION
+  Description: rubdll32.exe was used
+- Tactic: TA0042 – RESOURCE DEVELOPMENT
+  Technique: T1588 – OBTAIN CAPABILITIES
+  Description: The attacker appears to have compromised the email server of a hospital and the corporate website of a consulting company in order to use their infrastructure to send phishing emails.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The use of a malicious shortcut file to execute the code. The malicious shortcut file (LNK) is executed by the user.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The use of a PowerShell command to execute additional code. Using a PowerShell command launched from the shortcut file (LNK).

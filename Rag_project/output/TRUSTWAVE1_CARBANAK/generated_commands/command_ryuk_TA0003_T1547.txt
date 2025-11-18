@@ -1,0 +1,7 @@
+Based on the provided documentation, I will generate a command line that simulates the behavior of using automatic operating system startup locations to maintain persistence.
+
+Command: `ryuk.exe --drop-bat-files`
+
+This command uses the `--drop-bat-files` option to drop two batch files (`kill.bat` and `window.bat`) into the `C:/Users/Public` directory, which will perform network share discovery. This simulates the behavior of maintaining persistence through automatic operating system startup locations.
+
+Note: I did not use any other options or parameters except for the specified one in the documentation to avoid inventing functionality not supported by the documentation.

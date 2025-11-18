@@ -1,0 +1,19 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the Metasploit tool to reproduce the following attack behavior:
+
+**Command:** `powershell.exe -ExecutionPolicy Bypass -File <script_file_path>`
+
+This command line executes a PowerShell script file (<script_file_path>) on the compromised machine. The `-ExecutionPolicy Bypass` flag allows the script to run without restrictions, and the `-File` option specifies the script file to execute.
+
+**Command:** `powershell.exe -InputFormat None -Command "Start-Process -FilePath <program_to_execute> -ArgumentList @('<arg1>', '<arg2>')"`
+
+This command line executes a program (<program_to_execute>) with arguments `<arg1>` and `<arg2>` using PowerShell's `Start-Process` cmdlet. The `-InputFormat None` flag prevents PowerShell from attempting to read input, and the `-Command` option specifies the command to execute.
+
+**Command:** `powershell.exe -File <script_file_path> -WindowStyle Hidden`
+
+This command line executes a PowerShell script file (<script_file_path>) in hidden window mode using the `-WindowStyle Hidden` flag. This allows the script to run without displaying a console window.
+
+**Command:** `powershell.exe -InputFormat None -Command "Start-Process -FilePath <script_to_execute> -ArgumentList @('<arg1>', '<arg2>')"`
+
+This command line executes a script file (<script_to_execute>) with arguments `<arg1>` and `<arg2>` using PowerShell's `Start-Process` cmdlet. The `-InputFormat None` flag prevents PowerShell from attempting to read input, and the `-Command` option specifies the command to execute.
+
+Please note that these command lines use placeholders for specific parameters (e.g., <script_file_path>, <program_to_execute>, <arg1>, <arg2>). You should substitute these values using the correct syntax from the Metasploit documentation.

@@ -1,0 +1,9 @@
+Here are the command lines that simulate the attack behavior:
+
+Command: `Rubeus.exe purge /luid:<placeholder>`
+
+Command: `Rubeus.exe triage /luid:<placeholder>`
+
+Command: `Rubeus.exe deletefile /path:<placeholder> /filename:MGsCOxPSNK.txt`
+
+Command: `Rubeus.exe deletefile /path:<placeholder> /filename:<dll_name>.dll`

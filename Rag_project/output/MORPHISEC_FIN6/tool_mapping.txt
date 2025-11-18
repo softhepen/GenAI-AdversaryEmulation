@@ -1,0 +1,75 @@
+Here is the analysis output:
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1505 – SERVER SOFTWARE COMPONENT
+Description: FrameworkPOS scraping malware installed on thin clients
+Tool: No tool
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: Using the Windows task scheduler to maintain persistence.
+Tool: No tool
+Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+Description: Using Run registry keys to maintain persistence
+Tool: rubeus
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Initializing PowerShell stages Using PowerShell extensions to load the Cobalt Strike beacon into memory HTA files that execute PowerShell scripts Use of embedded VBScript to execute malicious commands. Using PowerShell to execute malicious commands and scripts
+Tool: No tool
+Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+Description: Initializing WMI stages Using WMI to execute commands and scripts
+Tool: wmic
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: Using the Windows task scheduler to maintain persistence.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Downloading a payload such as the Cobalt Strike beacon. Downloading the payload of the next stage directly into memory from the command and control servers (C2)
+Tool: No tool
+Technique: T1219 – REMOTE ACCESS SOFTWARE
+Description: Using remote access tools such as the Cobalt Strike beacon to control the infected system
+Tool: metasploit
+Technique: T1071 – APPLICAITON LAYER PROTOCOL
+Description: Using DNS tunneling to exfiltrate data.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1620 – REFLECTIVE CODE LOADING
+Description: Loading code (such as Cobalt Strike beacon) directly into memory without writing it to disk Using advanced techniques to reflexively load code into memory by hashing out function names Direct reflexive loading of a DLL, a technique often used to inject code into memory without touching the disk
+Tool: No tool
+Technique: T1562 – IMPAIR DEFENSES
+Description: Techniques for evading detection by Endpoint Detection and Response (EDR) systems.
+Tool: No tool
+Technique: T1218 – SYSTEM BINARY PROXY EXECUTION
+Description: Using HTA (HTML Application) files to execute malicious code Uses rundll32.exe with System privileges to execute and export function "workerInstance" from a downloaded binary DLL "Assistant32.dll"
+Tool: No tool
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Using base64 encoding to obfuscate script content Using XOR encoding to obfuscate the beacon Obfuscation of information (XOR) before exfiltration
+Tool: No tool
+Technique: T1055 – PROCESS INJECTION
+Description: Remotely injected into the existing 32 bit or into a newly created 32 bit PowerShell process Injected shellcode is a regular Metasploit downloader shellcode
+Tool: metasploit
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: Using remote services to move laterally between systems
+Tool: plink
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1003 – OS CREDENTIAL DUMPING
+Description: harvest user credentials
+Tool: No tool
+Technique: T10003 – OS CREDENTIAL DUMPING
+Description: Using Mimikatz to collect credentials from the memory of the LSASS process.
+Tool: chrome-passwords
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1055 – PROCESS INJECTION
+Description: Remotely injected into the existing 32 bit or into a newly created 32 bit PowerShell process Injected shellcode is a regular Metasploit downloader shellcode
+Tool: metasploit
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: Using the Windows task scheduler to maintain persistence.
+Tool: No tool
+Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+Description: Using Run registry keys to maintain persistence
+Tool: rubeus

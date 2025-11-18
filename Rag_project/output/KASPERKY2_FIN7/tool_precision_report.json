@@ -1,0 +1,19 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "pupy",
+    "chrome-passwords",
+    "wmic",
+    "adfind",
+    "paexec",
+    "invoke-psimage",
+    "pupy",
+    "ryuk",
+    "pupy",
+    "ryuk",
+    "pupy"
+  ],
+  "false_positives": [],
+  "total_tools": 11,
+  "total_entries": 18
+}

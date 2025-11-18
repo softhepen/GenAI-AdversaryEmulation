@@ -1,0 +1,24 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "psexec",
+    "plink",
+    "metasploit",
+    "chrome-passwords",
+    "psexec",
+    "metasploit",
+    "metasploit",
+    "metasploit",
+    "metasploit",
+    "metasploit",
+    "psexec",
+    "psexec",
+    "psexec",
+    "ryuk",
+    "psexec",
+    "ryuk"
+  ],
+  "false_positives": [],
+  "total_tools": 16,
+  "total_entries": 30
+}

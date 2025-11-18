@@ -1,0 +1,9 @@
+Here are the command lines that simulate persistence via PowerShell:
+
+Command: `pupwinutils/psexec.py -s -i cmd /c powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File <file_path>`
+
+Command: `pupwinutils/psexec.py -s -i pwsh.exe /c powershell.exe -NoProfile -WindowStyle Hidden -Command "Start-Process -FilePath <file_path> -Verb RunAs"`
+
+Command: `rubber_ducky.ps1_oneliner` 
+
+Note: The `<file_path>` placeholder should be replaced with the actual path to the file that will be executed.

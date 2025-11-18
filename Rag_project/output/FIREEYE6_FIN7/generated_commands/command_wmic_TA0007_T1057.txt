@@ -1,0 +1,9 @@
+Based on the attack description, I will generate realistic command lines using only the tool WMIC to reproduce process discovery behavior.
+
+Here are my outputs:
+
+Command: `wmic path win32_process get name`
+
+This command uses the PROCESS class from WMI to retrieve a list of running processes and their names. This simulates the process discovery technique (T1057) by identifying running processes on a system.
+
+Let me know if this meets your requirements!

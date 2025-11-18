@@ -1,0 +1,19 @@
+Here are the command lines that simulate the attack behavior:
+
+Command: `adfind -f "(objectcategory=computer)"`
+
+This command searches for all computer objects in the Active Directory and displays their attributes.
+
+Command: `adfind -b dc=joehome,dc=net -f "objectcategory=person" -showdel`
+
+This command searches for deleted person objects (users) in the joehome.net domain and shows them.
+
+Command: `adfind -default -rb cn=users -f "&(objectcategory=person)(samaccountname=*)"`
+
+This command retrieves all user objects from the default domain's cn=users container that have a non-empty samaccountname attribute.
+
+Command: `adfind -b dc=joehome,dc=net -f "!(objectcategory=computer)"`
+
+This command searches for all objects in the joehome.net domain except computer objects and displays their attributes.
+
+Note: These commands are designed to simulate the attack behavior described in the attack description, using only the capabilities of the adfind tool as documented.

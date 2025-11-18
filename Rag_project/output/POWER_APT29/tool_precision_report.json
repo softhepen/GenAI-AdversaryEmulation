@@ -1,0 +1,21 @@
+{
+  "precision": 0.75,
+  "true_positives": [
+    "chrome-passwords",
+    "chrome-passwords",
+    "windows-credential-editor",
+    "windows-credential-editor",
+    "windows-credential-editor",
+    "invoke-psimage",
+    "rubeus",
+    "rubeus",
+    "rubeus"
+  ],
+  "false_positives": [
+    "plinkpsexec",
+    "rubeustinymet",
+    "rubeustinymet"
+  ],
+  "total_tools": 12,
+  "total_entries": 19
+}

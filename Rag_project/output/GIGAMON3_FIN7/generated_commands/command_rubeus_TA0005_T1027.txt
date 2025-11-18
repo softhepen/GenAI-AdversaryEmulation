@@ -1,0 +1,7 @@
+Based on the provided documentation and attack behavior, I will construct realistic command lines using only the tool rubeus to reproduce the described behavior.
+
+**Command:** `rubeus asktgs /ticket:<base64(ticket.kirbi)> /enc:aes256`
+
+This command uses the `asktgs` subcommand to get the credentials using U2U, with the provided ticket and encryption type `aes256`.
+
+Please note that I have used only the documented syntax and capabilities of rubeus to construct this command line.

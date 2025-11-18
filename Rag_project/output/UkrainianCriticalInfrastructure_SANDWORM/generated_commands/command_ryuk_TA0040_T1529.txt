@@ -1,0 +1,8 @@
+Based on the provided documentation and attack description, I will generate a realistic command line using only the Ryuk tool to reproduce the attack behavior.
+
+The attack behavior is to shutdown/reboot systems to interrupt access or aid in the destruction of those systems. This corresponds to Technique ID T1529 and Tactic ID TA0040.
+
+Here is the generated command line:
+Command: `ryuk.exe /shutdown`
+
+This command uses the Ryuk tool's documented syntax and capabilities to simulate the attack behavior, specifically the shutdown/reboot functionality.

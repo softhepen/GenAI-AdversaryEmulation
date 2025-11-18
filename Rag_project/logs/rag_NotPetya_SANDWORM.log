@@ -1,0 +1,20 @@
+[2025-11-06 19:15:52,459] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:15:54,907] INFO - Tool selection for report: NotPetya
+[2025-11-06 19:15:54,908] INFO - TTP extraction from CTI report
+[2025-11-06 19:15:54,918] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:16:09,875] INFO - Tool field precision: 1.00
+[2025-11-06 19:16:09,876] INFO - Validating LLM output
+[2025-11-06 19:16:09,880] INFO - Generating commands for report: NotPetya
+[2025-11-06 19:16:09,903] ERROR - No feasible attack actions found. Aborting.
+[2025-11-06 19:16:09,904] WARNING - No commands generated. Matching skipped.
+[2025-11-06 19:16:29,895] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:16:32,308] INFO - Tool selection for report: NotPetya
+[2025-11-06 19:16:32,309] INFO - TTP extraction from CTI report
+[2025-11-06 19:16:32,310] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:16:41,095] INFO - Tool field precision: 1.00
+[2025-11-06 19:16:41,095] INFO - Validating LLM output
+[2025-11-06 19:16:41,096] INFO - Generating commands for report: NotPetya
+[2025-11-06 19:16:41,122] INFO - Parsed 1 feasible attack actions.
+[2025-11-06 19:17:06,139] INFO - Saved command in output\NotPetya_SANDWORM\generated_commands\command_ryuk_TA0040_T1485.txt
+[2025-11-06 19:17:06,274] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\NotPetya_SANDWORM\match_results_chrf.csv
+[2025-11-06 19:17:06,278] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\NotPetya_SANDWORM\match_results_edit_distance.csv

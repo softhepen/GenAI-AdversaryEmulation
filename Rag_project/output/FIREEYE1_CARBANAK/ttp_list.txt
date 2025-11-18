@@ -1,0 +1,59 @@
+- Tactic: TA0009 – COLLECTION
+  Technique: T1056 – INPUT CAPTURE
+  Description: Capturing keystrokes to gather sensitive information Logs key strokes for con#gured processes and sends them to the command and control (C2) server
+  Technique: T1113 – SCREEN CAPTURE
+  Description: Capturing screenshots of the victim's desktop to monitor user activity. Capturing screenshots of the victim's desktop to monitor user activity. Adversaries may use utilities to capture screenshots of the victim's desktop to gather information about the environment and operations on the victim's system.
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: Stealing data from point-of-sale (POS) systems and Outlook.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1083 – FILE AND DIRECTORY DISCOVERY
+  Description: Managing and navigating the file system to locate files of interest.
+  Technique: T1057 – PROCESS DISCOVERY
+  Description: monitoring and collecting information about the processes running on a system.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1021 – REMOTE SERVICES
+  Description: Using tools like VNC to remotely control the victim's machine.
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Transferring files to or from a compromised system. The act of downloading an executable aligns with this technique, which covers the transfer of tools or files into a victim's environment. The act of downloading an executable aligns with this technique, which covers the transfer of tools or files into a victim's environment. Downloading and executing shellcode from a specific address
+  Technique: T1572 – PROTOCOL TUNNELING
+  Description: Using techniques like TCP tunneling to encapsulate traffic and avoid detection.
+  Technique: T1219 – REMOTE ACCESS SOFTWARE
+  Description: Ammyy Admin is a legitimate remote access tool often abused by attackers to gain remote control of victim systems. Using tools like VNC to remotely control the victim's machine.
+  Technique: T1071 – APPLICTION LAYER PROTOCOL
+  Description: Sending data to the C2 server could utilize common web protocols to communicate, making the traffic blend in with legitimate web traffic.
+  Technique: T1132 – DATA ENCODING
+  Description: Use of Base64 encoding to represent encrypted data
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: The CARBANAK backdoor's custom binary protocol uses RSA for the initial key exchange and AES for subsequent message encryption, providing an encrypted communication channel "The CARBANAK backdoor's custom binary protocol uses AES in CBC mode to encrypt message headers and bodies, providing an encrypted communication channel.
+- Tactic: TA0040 – IMPACT
+  Technique: T1485 – DATA DESTRUCTION
+  Description: Destroying data on the victim's system to disrupt operations or cover tracks.
+  Technique: T1561 – DISK WIPE
+  Description: This involves the destruction of data structures, such as the MBR, to prevent the operating system from booting. This technique aims to render the system unusable.
+  Technique: T1531 – ACCOUNT ACCESS REMOVAL
+  Description: Adversaries may remove accounts to limit access to the system or to deny access to specific users, which can include deleting user accounts.
+  Technique: T1486 – DATA ENCRYPTED
+  Description: Use of RC2 in CBC mode with PKCS#5 padding to encrypt messages.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The commands and parameter names are hashed before being compared by the binary, making it difficult to recover the original names of commands and parameters. Use of Base64 encoding to replace specific characters ('/' and '+') with others ('.' and '-') Described when the encoded payload is made to resemble a URI by inserting a random number of '/' characters in random locations. This is used to disguise the payload as a normal URI. This technique involves making analysis more difficult by encoding or encrypting data and/or commands. It can be used to protect strings, file names, command-and-control (C2) server addresses, and other variables used by the malware.
+  Technique: T1055 – PROCESS INJECTION
+  Description: The technique of injecting code into a new process is directly described by "injects into new process". The technique of injecting code into a new process is directly described by "injects into new process".
+  Technique: T1070 – INDICATOR REMOVAL ON HOST
+  Description: Adversaries may delete files to remove artifacts and other traces of their presence from the host to avoid detection.
+  Technique: T1036 – MASQUERADING
+  Description: Described when the malware adds a script extension (php, bml or cgi) with a random number of random parameters or a file extension (gif, jpg, png, htm, html, php) with no parameters.
+- Tactic: TA0006 – PRIVILEGE ESCALATION
+  Technique: T1055 – PROCESS INJECTION
+  Description: The technique of injecting code into a new process is directly described by "injects into new process". The technique of injecting code into a new process is directly described by "injects into new process".
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1136 – CREATE ACCOUNT
+  Description: Adversaries may create user accounts to establish persistence, elevate privileges, or facilitate other malicious activities.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+  Description: The CARBANAK backdoor communicates with its command and control servers to exfiltrate stolen data
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: CARBANAK has been delivered via weaponized document files and packed payloads in other executables, which can involve user execution of malicious files
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: use of PAExec

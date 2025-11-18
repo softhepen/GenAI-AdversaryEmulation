@@ -1,0 +1,25 @@
+Based on the provided documentation, I will generate realistic command lines using **only** the tool wmic to reproduce the attack behavior of gathering information about the victim's system.
+
+Here are the command lines:
+
+Command:`wmic os get /value`
+
+This command retrieves information about the operating system installed on the system.
+
+Command:`wmic csproduct get vendor, name, version /value`
+
+This command gathers details about the computer system, including its manufacturer (vendor), model name, and version.
+
+Command:`wmic cpu get numberofcores, numberoflogicalprocessors, maxclockspeed /value`
+
+This command extracts information about the processor, such as the number of physical cores, logical processors, and maximum clock speed.
+
+Command:`wmic bios get smbiosbiosversion, releasedate /value`
+
+This command retrieves details about the BIOS version and release date.
+
+Command:`wmic path win32_process get processid, name, executablepath /value`
+
+This command lists running processes on the system, including their process ID, name, and executable path.
+
+These commands should accurately reproduce the attack behavior of gathering information about the victim's system using WMI queries.

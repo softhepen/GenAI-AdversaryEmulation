@@ -1,0 +1,7 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool plink to simulate SSH tunneling behavior.
+
+Here are the commands:
+
+Command: `plink -sshlog <log_file> -L <listen_ip>:<listen_port>:<remote_host>:<remote_port>`
+
+Command: `plink -R <listen_ip>:<listen_port>:localhost:<local_port>`

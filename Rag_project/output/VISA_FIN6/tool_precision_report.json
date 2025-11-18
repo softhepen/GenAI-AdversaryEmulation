@@ -1,0 +1,20 @@
+{
+  "precision": 0.5454545454545454,
+  "true_positives": [
+    "psexec",
+    "adfind",
+    "metasploit",
+    "metasploit",
+    "windows-credential-editor",
+    "metasploit"
+  ],
+  "false_positives": [
+    "chromepasswordswindowscredentialeditor",
+    "metasploitinvokepsimage",
+    "adfindpsexec",
+    "plinkrubeus",
+    "chromepasswordswindowscredentialeditor"
+  ],
+  "total_tools": 11,
+  "total_entries": 15
+}

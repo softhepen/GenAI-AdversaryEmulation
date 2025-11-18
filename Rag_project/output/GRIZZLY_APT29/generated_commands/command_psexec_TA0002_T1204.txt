@@ -1,0 +1,9 @@
+Based on the provided documentation, I will generate realistic command lines using **only** the tool psexec to reproduce the attack behavior.
+
+Here is the output:
+
+Command: `psexec -l <user_name> <target_system>`
+
+Please note that I have used placeholders for `<user_name>` and `<target_system>` as they are not specified in the attack description. You must replace these with actual values.
+
+This command line simulates the execution of a process on the target system with limited privileges, which is consistent with the attack behavior described (T1204: USER EXECUTION).

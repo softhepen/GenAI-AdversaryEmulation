@@ -1,0 +1,15 @@
+I understand that I need to generate realistic command lines using only the tool PsExec to simulate the attack behavior of retrieving a list of running processes.
+
+Based on the documentation, I will use the following command line:
+
+Command: `psexec \\* -u <username> -p <password> -d cmd /c tasklist`
+
+Here's my reasoning:
+
+* `\\*` specifies the target system(s) to connect to. In this case, I'm targeting all available systems (`*`) to retrieve a list of running processes.
+* `-u <username>` allows me to specify a username for authentication purposes.
+* `-p <password>` specifies an optional password for the specified user name.
+* `-d` runs the process without waiting for it to terminate (non-interactive).
+* `cmd /c tasklist` executes the command `tasklist` on the target system, which retrieves a list of running processes.
+
+I will use placeholders for `<username>`, `<password>` and replace them with actual values if needed.

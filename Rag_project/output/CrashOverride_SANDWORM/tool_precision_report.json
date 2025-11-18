@@ -1,0 +1,14 @@
+{
+  "precision": 0.8,
+  "true_positives": [
+    "psexec",
+    "ryuk",
+    "ryuk",
+    "ryuk"
+  ],
+  "false_positives": [
+    "chromepasswordsplink"
+  ],
+  "total_tools": 5,
+  "total_entries": 14
+}

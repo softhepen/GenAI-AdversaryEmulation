@@ -1,0 +1,41 @@
+Here is the output:
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1546 – EVENT TRIGGER EXECUTION
+Description: FIN7 leveraged an application shim database to achieve persistent access on systems in multiple environments.
+Tool: adfind
+
+Technique: T1055 – PROCESS INJECTION
+Description: The CARBANAK DLL is injected into the svchost.exe process, demonstrating the use of process injection techniques.
+Tool: pupy
+
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.
+Tool: invoke-psimage
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1546 – EVENT TRIGGER EXECUTION
+Description: FIN7 leveraged an application shim database to achieve persistent access on systems in multiple environments.
+Tool: adfind
+
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.
+Tool: invoke-psimage
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: PowerShell is used to run a utility (sdbinst.exe) to register a shim database file, which is part of the persistence mechanism.
+Tool: chrome-passwords
+
+Technique: T1106 – NATIVE API
+Description: The use of RtlDecompressBuffer to handle decompression of the payload indicates leveraging native APIs to perform specific tasks.
+Tool: invoke-psimage
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1112 – MODIFY REGISTRY
+Description: the shellcode is stored in a registry key for later retrieval and execution. the ScRegisterTCPEndpoint function references a registry path where malicious shellcode and the CARBANAK DLL are stored.
+Tool: No tool
+
+Technique: T1055 – PROCESS INJECTION
+Description: The CARBANAK DLL is injected into the svchost.exe process, demonstrating the use of process injection techniques.
+Tool: pupy

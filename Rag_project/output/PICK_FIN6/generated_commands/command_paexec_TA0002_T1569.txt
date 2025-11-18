@@ -1,0 +1,9 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool PAExec to reproduce the behavior of Cobalt Strike's "psexec" lateral movement command.
+
+Here is the output:
+
+Command: `PAExec \\<target_server> -u <username> -p <password> -i -c MyApp.exe`
+
+Please note that I have inserted placeholders for specific parameters that need to be replaced with actual values, such as `<target_server>`, `<username>`, and `<password>`.
+
+Let me know if you'd like me to generate additional command lines or modify these ones in any way.

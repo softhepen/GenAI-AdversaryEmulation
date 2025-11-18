@@ -1,0 +1,13 @@
+Based on the provided documentation and attack description, I will generate command lines using only the tool Invoke-PSImage to simulate the behavior of creating or modifying system-level processes to repeatedly execute malicious payloads as part of persistence.
+
+Here is the output:
+
+Command: `Invoke-PSImage -Script <malicious_payload_script> -Out <new_image_file>.png -Image <existing_image_file>`
+
+Command: `Invoke-PSImage -Script <malicious_payload_script> -Out <new_image_file>.png -WebRequest`
+
+In these command lines, `<malicious_payload_script>` represents the script that will be encoded into the PNG image and used to execute malicious payloads. `<new_image_file>.png` is the output file name of the created image, and `<existing_image_file>` is an existing image file that can be modified by embedding the payload.
+
+The `WebRequest` parameter allows for execution from a web-hosted image.
+
+Please note that I have not included specific parameters or values in these command lines as they are placeholders to be filled according to the actual attack scenario.

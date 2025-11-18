@@ -1,0 +1,62 @@
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – OS CREDENTIAL DUMPING
+  Description: This involves extracting account login information from operating systems and software, such as username-password pairs, hashes, or other forms of authentication credentials. The act of extracting credentials from a compromised system. Once on the Exchange server, OilRig extracts credentials, which can be used to further compromise additional systems within the network.
+  Technique: T1110 – BRUTE FORCE
+  Description: Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or when password hashes are obtained.
+  Technique: T1566 – MODIFY AUTHENTICATION PROCESS
+  Description: The TwoFace++ loader modifies the authentication process by requiring a password and a salt to generate a hash. This hash is then compared against a hardcoded string to authenticate the inbound request. This modification in the authentication mechanism is a technique used to control access to the embedded
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1505 – SERVER SOFTWARE COMPONENT
+  Description: This involves installing a web shell on a compromised web server to gain persistent access to the server. To maintain persistence, OilRig deploys web shells on compromised servers. Web shells allow remote access and command execution, facilitating ongoing control over the compromised server.
+  Technique: T1566 – MODIFY AUTHENTICATION PROCESS
+  Description: The TwoFace++ loader modifies the authentication process by requiring a password and a salt to generate a hash. This hash is then compared against a hardcoded string to authenticate the inbound request. This modification in the authentication mechanism is a technique used to control access to the embedded
+  Technique: T1078 – VALID ACCOUNTS
+  Description: The webshell uses valid credentials (network administrator username and password) to authenticate and access remote systems. This aligns with using stolen or compromised credentials to gain unauthorized access to network resources.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Backdoors are tools that allow attackers to gain unauthorized access to systems, often bypassing security controls. This technique involves transferring tools or files to a compromised system. A GUI that allows file uploads and downloads is directly related to this technique, enabling operators to manage files on the compromised system through the C2 server. The panel allows file uploads and downloads is directly related to this technique, enabling operators to manage files on the compromised system through the C2 server.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: The malware communicates with its C2 server using DNS queries, specifically leveraging DNS TXT records. This technique involves using DNS queries and responses to communicate between the C2 server and the compromised system. DNS tunneling allows data to be hidden within DNS traffic, which can bypass traditional network defenses. This technique involves using application layer protocols for C2 communication. The Glimpse server's role as a DNS server to handle commands and responses fits within this technique, where DNS is used as an application layer protocol. The Poison Frog server uses HTTP for command and control (C2) communication. This technique involves using web protocols to send and receive data between the compromised system and the C2 server.
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1190 – EXPLOIT PUBLIC-FACING APPLICATIONS
+  Description: Adversaries may attempt to exploit a weakness in an Internet-facing host or system to initially access a network.
+  Technique: T1078 – VALID ACCOUNTS
+  Description: The webshell uses valid credentials (network administrator username and password) to authenticate and access remote systems. This aligns with using stolen or compromised credentials to gain unauthorized access to network resources.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1068 – EXPLOITATION FOR PRIVILEGE ESCALATION
+  Description: Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.
+  Technique: T1078 – VALID ACCOUNTS
+  Description: The webshell uses valid credentials (network administrator username and password) to authenticate and access remote systems. This aligns with using stolen or compromised credentials to gain unauthorized access to network resources.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1114 – EMAIL COLLECTION
+  Description: Ruler is an open-source tool used by OilRig to exploit OWA by setting malicious rules, retrieving the Global Address List, and executing code remotely. This tool leverages the built-in functionalities of Microsoft Exchange to maintain stealth and efficiency in their operations.
+  Technique: T1560 – ARCHIVE COLLECTED DATA
+  Description: The use of 7-Zip to compress and archive files before exfiltration is a classic example of this technique. Attackers often compress data to reduce its size, facilitate transfer, or obscure its contents.
+  Technique: T1074 – DATA STAGED
+  Description: Storing the compressed archives in the `C
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Using Ruler, OilRig can execute arbitrary commands on the Exchange server. This includes retrieving data, executing scripts, and deploying additional malware. Adversaries use PowerShell to run malicious scripts, download additional payloads, or execute commands directly.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1048 – EXFILTRATION OVER ALTERNATIVE PROTOCOL
+  Description: Alternate protocols include FTP, SMTP, HTTP/S, DNS, SMB, or any other network protocol not being used as the main command and control channel.
+  Technique: T1030 – DATA TRANSFER SIZE LIMITS
+  Description: The webshell checks for available storage space (ensuring more than 30 GB is free) before initiating the network download. This could be associated with techniques that avoid triggering alarms or detections related to large data transfers by ensuring the operation has sufficient space to proceed.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+  Description: This process is designed to obscure the true nature of the payload, requiring decryption before it can be analyzed. The steps to decode and decrypt the embedded webshell demonstrate the use of sophisticated decryption routines that must be followed to retrieve and execute the payload.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The use of a salt appended to the password before generating the SHA1 hash adds an extra layer of obfuscation, making it more challenging to brute force or predict the hash.
+  Technique: T1566 – MODIFY AUTHENTICATION PROCESS
+  Description: The TwoFace++ loader modifies the authentication process by requiring a password and a salt to generate a hash. This hash is then compared against a hardcoded string to authenticate the inbound request. This modification in the authentication mechanism is a technique used to control access to the embedded
+  Technique: T1078 – VALID ACCOUNTS
+  Description: The webshell uses valid credentials (network administrator username and password) to authenticate and access remote systems. This aligns with using stolen or compromised credentials to gain unauthorized access to network resources.
+- Tactic: TA0040 – IMPACT
+  Technique: T1486 – DATA ENCRYPTED FOR IMPACT
+  Description: This encryption method enhances security but also complicates efforts to analyze the malware without the correct decryption key. The process of using the 3DES cipher and a derived 24-character key (from the SHA256 hash) to decrypt the embedded webshell indicates an advanced encryption technique aimed at protecting the payload from unauthorized access.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1046 – NETWORK SERVICE DISCOVERY
+  Description: The nbtscan module is employed by the webshell to scan the network and create a list of IP addresses for systems it can interact with. This type of scanning is typically used to identify potential targets within a network.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: The use of RDP sessions to access and operate the Glimpse panel indicates the use of remote desktop services to control and manage compromised systems.

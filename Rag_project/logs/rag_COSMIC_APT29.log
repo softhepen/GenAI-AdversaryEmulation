@@ -1,0 +1,20 @@
+[2025-11-06 17:14:02,148] INFO - Building vectorstore from documentation
+[2025-11-06 17:15:03,411] INFO - Vectorstore saved to output\chroma_tool_docs
+[2025-11-06 17:15:03,412] INFO - Tool selection for report: COSMIC
+[2025-11-06 17:15:03,413] INFO - TTP extraction from CTI report
+[2025-11-06 17:15:03,424] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:16:29,020] INFO - Tool field precision: 0.71
+[2025-11-06 17:16:29,021] INFO - Validating LLM output
+[2025-11-06 17:16:29,021] WARNING - Invalid or multiple tools detected: 'plink, psexec, paexec, pupy, tintri' — replacing with 'No tool'
+[2025-11-06 17:16:29,022] WARNING - Invalid or multiple tools detected: 'ryuk, pupy' — replacing with 'No tool'
+[2025-11-06 17:16:29,023] INFO - Generating commands for report: COSMIC
+[2025-11-06 17:16:29,539] INFO - Parsed 5 feasible attack actions.
+[2025-11-06 17:16:36,964] INFO - Saved command in output\COSMIC_APT29\generated_commands\command_adfind_TA0005_T1036.txt
+[2025-11-06 17:16:45,663] INFO - Saved command in output\COSMIC_APT29\generated_commands\command_adfind_TA0005_T1036.txt
+[2025-11-06 17:16:56,496] INFO - Saved command in output\COSMIC_APT29\generated_commands\command_chrome_passwords_TA0009_T1056.txt
+[2025-11-06 17:17:13,312] INFO - Saved command in output\COSMIC_APT29\generated_commands\command_ryuk_TA0009_T1113.txt
+[2025-11-06 17:17:17,277] INFO - Saved command in output\COSMIC_APT29\generated_commands\command_chrome_passwords_TA0006_T1555.txt
+[2025-11-06 17:17:17,555] WARNING - No commands extracted from command_chrome_passwords_TA0006_T1555.txt
+[2025-11-06 17:17:17,798] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\COSMIC_APT29\match_results_chrf.csv
+[2025-11-06 17:17:17,804] WARNING - No commands extracted from command_chrome_passwords_TA0006_T1555.txt
+[2025-11-06 17:17:17,808] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\COSMIC_APT29\match_results_edit_distance.csv

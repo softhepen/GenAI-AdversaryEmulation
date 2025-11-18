@@ -1,0 +1,96 @@
+Here is the analysis output:
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1568 – DYNAMIC RESOLUTION
+Description: The malware uses a domain generation algorithm to dynamically create command and control (C2) domain names, making it more difficult to block and track.
+Tool: No tool
+
+Technique: T1008 – FALLBACK CHANNEL
+Description: Implementing domain generation algorithm (DGA) for C2 communication.
+Tool: No tool
+
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: The malware creates a child process (mshta.exe) that downloads a malicious script from an external URL.
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: POWRUNER uses HTTP GET requests to communicate with the C2 server, sending and receiving data to perform its operations.
+Tool: No tool
+
+Technique: T1132 – DATA ENCODING
+Description: Encoding communication and payloads using Base64.
+Tool: No tool
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1190 – EXPLOIT PUBLIC-FACING APPLICATION
+Description: The initial compromise was achieved through the exploitation of a known vulnerability, CVE-2017-0199, which allows remote code execution through a specially crafted file.
+Tool: No tool
+
+Technique: T1566 – PHISHING
+Description: APT34 sent a malicious file as an attachment in a spear-phishing email to the victim organization. This attachment is specifically crafted to exploit a vulnerability once opened by the target, leading to the execution of the malware payload.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1211 – EXPLOITATION FOR DEFENSE EVASION
+Description: By overwriting the function address with an existing instruction from EQNEDT32.EXE, the malware avoids detection by leveraging legitimate system functions to execute its payload, thus evading security defenses.
+Tool: No tool
+
+Technique: T1218 – SYSTEM BINARY PROXY EXECUTION
+Description: Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries.
+Tool: No tool
+
+Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+Description: The use of Ce%Util.exe to decode base64-encoded files (hUpdateCheckers.base and dUpdateCheckers.base) fits this technique. It's an example of how attackers use legitimate tools to handle encoded data, revealing the actual payload.
+Tool: No tool
+
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.
+Tool: No tool
+
+Technique: T1036 – MASQUERADING
+Description: Using legitimate-looking filenames.
+Tool: No tool
+
+Technique: T1070 – INDICATOR REMOVAL
+Description: After executing, cUpdateCheckers.bat and the .base files are deleted from the staging directory to remove traces of the malware's presence and reduce detection risk.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: The malware uses the WinExec function to create a new process, mshta.exe. The malware uses the WinExec function to create a new process, mshta.exe.
+Tool: No tool
+
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: The creation of the scheduled task for GoogleUpdateschecker.vbs is used to maintain persistence by ensuring the script runs regularly. The GoogleUpdateschecker.vbs script is set up to be launched every minute by the Task Scheduler, ensuring that the scripts dUpdateCheckers.ps1 and hUpdateCheckers.ps1 are executed regularly.
+Tool: No tool
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: The malware uses the WinExec function to create a new process, mshta.exe. The malware uses the WinExec function to create a new process, mshta.exe.
+Tool: No tool
+
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: The creation of the scheduled task for GoogleUpdateschecker.vbs is used to maintain persistence by ensuring the script runs regularly. The GoogleUpdateschecker.vbs script is set up to be launched every minute by the Task Scheduler, ensuring that the scripts dUpdateCheckers.ps1 and hUpdateCheckers.ps1 are executed regularly.
+Tool: No tool
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1083 – FILE AND DIRECTORY DISCOVERY
+Description: This renaming operation helps the malware to ensure the file is recognized as a script and executed properly.
+Tool: No tool
+
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: POWRUNER collects information about the currently logged in user, hostname, network configuration, and other system details through batch commands.
+Tool: No tool
+
+Technique: T1033 – SYSTEM OWNER/USER DISCOVERY
+Description: Enumerating logged-in users and administrator accounts.
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1113 – SCREEN CAPTURE
+Description: POWRUNER can receive a command from the C2 server to capture and store a screenshot of the victim's system
+Tool: No tool
+
+Technique: T1041 – EXFILTRATION OVER COMMAND AND CONTROL CHANNEL
+Description: POWRUNER uses its communication channel with the C2 server to exfiltrate the captured screenshot. This method involves sending data (in this case, the screenshot) back to the C2 server as part of its exfiltration process.
+Tool: No tool

@@ -1,0 +1,19 @@
+Here are the command lines that simulate the attack behavior:
+
+**Creating a new user account for persistence**
+
+Command: `psexec \\remote_system -u <new_user_name> -p <password> -l`
+
+**Creating a new admin user account for privilege escalation**
+
+Command: `psexec \\remote_system -u Domain\Administrator -p <password> -s -i`
+
+**Running a process with elevated privileges using an existing admin account**
+
+Command: `psexec \\remote_system -u Domain\Administrator -p <password> -h`
+
+**Running a process as limited user (strips Administrators group) using an existing non-admin account**
+
+Command: `psexec \\remote_system -u Domain\Username -p <password> -l`
+
+Please note that I've used placeholders for the new user name, password, and remote system IP address. You'll need to fill in these values according to your specific requirements.

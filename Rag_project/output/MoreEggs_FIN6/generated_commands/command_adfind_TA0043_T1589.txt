@@ -1,0 +1,19 @@
+Here are the command lines that simulate the adversary behavior described:
+
+Command: `adfind -sc whoami`
+
+This command retrieves information about the authenticated user and token.
+
+Command: `adfind -sc adinfo -binary`
+
+This command retrieves Active Directory information, including whoami info, in binary format.
+
+Command: `adfind -sc adam_email:<email_address>`
+
+This command finds an object in ADAM with a specified email address. `<email_address>` is a placeholder for the actual email address.
+
+Command: `adfind -sc adam_spn:<service_principal_name>`
+
+This command finds an object in ADAM with a specified service principal name. `<service_principal_name>` is a placeholder for the actual service principal name.
+
+Note that these commands only use the documented syntax and capabilities of the adfind tool, without inventing any new functionality.

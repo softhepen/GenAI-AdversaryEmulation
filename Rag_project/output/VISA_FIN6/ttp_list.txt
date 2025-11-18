@@ -1,0 +1,37 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Using phishing emails to infect the targeted victim's network Malicious documents containing links to a malicious server Malicious documents to infect victims
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Using PowerShell scripts to gain direct access to merchant networks. Launch malicious scripts on the infected machine ProcDump for analysis of running processes. Using PowerShell scripts to maintain access and move laterally through the network
+  Technique: T1204 – USER EXECUTION
+  Description: Infect victims with malware known as More_Eggs (aka Terra Loader)
+  Technique: T1106 – NATIVE API
+  Description: Use of native tools such as osql.exe to perform SQL queries.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1018 – REMOTE SYSTEM DISCOVERY
+  Description: Discovery of remote systems to identify eCommerce payment environments and servers
+  Technique: T1083 – FILE AND DIRECTORY DISCOVERY
+  Description: Using legitimate publicly available tools to map the internal network and conduct reconnaissance
+  Technique: T1087 – ACCOUNT DISCOVERY
+  Description: AdFind used to query Active Directory
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1219 – REMOTE ACCESSS TOOLS
+  Description: Leveraging various payloads such as Metasploit Framework components (e.g., Meterpreter, JSPSPY, and CmdSQL) Specialized version of the AMMYY remote administration tool (RAT) known as FlawedAmmyy Using Metasploit tools for remote access and privilege escalation. Using Meterpreter-based shells to maintain access and move laterally through the network
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: the malware use HTTP HEAD to check network connectivity
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1505 – SERVER SOFTWARE COMPONENT
+  Description: Establishing persistent access using Meterpreter related code
+- Tactic: TA0009 – COLLECTION
+  Technique: T1213 – DATA FROM INFORMATION REPOSITORIES
+  Description: Gathering information on systems running SQL Database Server instances and dumping schemas for multiple databases and SQL user accounts.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – OS CREDENTIAL DUMPING
+  Description: Targeting network credentials using a malware family known as Stealer One Collection of system credentials using Windows Credentials Editor Collection of system credentials, such as usernames and password hashes.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1068 – EXPLOITATION FOR PRIVILEGE ESCALATION
+  Description: Using Metasploit-related tools to exploit vulnerabilities and gain elevated privileges.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using valid accounts for lateral movement

@@ -1,0 +1,36 @@
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1070 – INDICATOR REMOVAL ON HOST
+  Description: Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Adversaries may clear Windows Event Logs to hide the activity of an intrusion.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Adversaries may obfuscate files or information to hide malicious code or artifacts, making it more difficult for security tools to detect them.
+  Technique: T1036 – MASQUERADING
+  Description: Adversaries may use randomly generated file names to disguise the true nature of malicious files, making detection more difficult.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. Adversaries may abuse Visual Basic (VB) for execution.
+  Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+  Description: Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads.
+  Technique: T1204 – USER EXECUTION
+  Description: Adversaries may rely on users to execute a binary that initiates the infection process, such as dropping multiple files onto the victim host.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1046 – NETWORK SERVICE DISCOVERY
+  Description: Adversaries may attempt to get a listing of services running on remote hosts and local network infrastructure devices, including those that may be vulnerable to remote software exploitation.
+  Technique: T1018 – REMOTE SYSTEM DISCOVERY
+  Description: Adversaries may attempt to get a listing of other systems by IP address, hostname, or other logical identifier on a network that may be used for Lateral Movement from the current system.
+  Technique: T1012 – QUERY REGISTRY
+  Description: Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – OS CREDENTIAL DUMPING
+  Description: Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory.
+- Tactic: TA0040 – IMPACT
+  Technique: T1490 – INHIBIT SYSTEM RECOVERY
+  Description: Adversaries may delete or remove built-in data and turn off services designed to aid in the recovery of a corrupted system to prevent recovery. Adversaries may delete or remove built-in data and turn off services designed to aid in the recovery of a corrupted system to prevent recovery. Adversaries may delete or remove built-in data and turn off services designed to aid in the recovery of a corrupted system to prevent recovery.
+  Technique: T1489 – SERVICE STOPPING
+  Description: Adversaries may stop or disable services on a system to render those services unavailable to legitimate users.
+  Technique: T1485 – DATA DESTRUCTION
+  Description: Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.
+  Technique: T1529 – SYSTEM SHUTDOWN/REBOOT
+  Description: Adversaries may shutdown/reboot systems to interrupt access to, or aid in the destruction of, those systems.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: Adversaries may use Valid Accounts to log into a service that accepts remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.

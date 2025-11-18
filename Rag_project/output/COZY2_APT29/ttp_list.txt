@@ -1,0 +1,46 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Sending spearphishing emails with links to a compromised website. Sending spearphishing emails with phony flash videos as attachments.
+  Technique: T1189 – DRIVE-BY COMPROMISE
+  Description: Using a legitimate website (in this case "diplomacy.pl") to host a ZIP archive containing a malicious executable.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: Using a self-extracting RAR file (RAR SFX) that, when executed by the user, installs the malware. The user runs a malicious executable file, presumably the fake money video (cash video). The user voluntarily runs the executable file Monkeys.exe to play the chimpanzee video.
+  Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+  Description: Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: attackers can execute shell commands through `cmd_task.dll`, allowing direct control and interaction with the victim's system.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Adversaries may transfer tools or other files from an external system into a compromised environment. Adversaries may transfer tools or other files from an external system into a compromised environment.
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: collected data communications were encrypted
+  Technique: T1132 – DATA ENCODING
+  Description: The data are encoded in BASE64 to hide their true content.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1036 – MASQUERADING
+  Description: The malware masquerades as a legitimate media file (in this case a money video) to trick the user. The malware masquerades as a harmless funny chimpanzee video to fool the user.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The player.exe dropper uses anti-detection techniques to avoid detection. The malware uses an encrypted CAB file that is decompressed and whose contents are created on the disk.
+  Technique: T1218 – SYSTEM BINARY PROXY EXECUTION
+  Description: The malware uses files signed with a digital signature (in this case, AMD's digital signature) to execute other malicious files. Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: The malicious file collects system information to understand the environment in which it is executed. An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.
+  Technique: T1012 – QUERY REGISTRY
+  Description: The malware performs a registry search, specifically in the registry key "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall," to locate installed security products.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.
+- Tactic: TA0040 – IMPACT
+  Technique: T1486 – DATA ENCRYPTED
+  Description: The malware uses an XOR encryption algorithm with a 16-byte rotating key to encrypt and decrypt a CAB file containing malware. The malware uses the RC4 encryption algorithm to encrypt the "racss.dat" configuration file on the disk. Data encoded in BASE64 is encrypted with the RC4 algorithm using the same encryption key as the malware configuration file.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1074 – DATA STAGED
+  Description: C&Cs temporarily store commands and new forms until the victim reconnects to retrieve local files. "Reporting" files maintain stolen system information, error output, and "AgentInfo" output from victim systems.
+  Technique: T1113 – SCREEN CAPTURE
+  Description: `screenshot_task.dll` is a 32-bit DLL used to capture a screenshot of the full desktop window and save it as a bitmap in the %temp% directory.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+  Description: Adversaries may steal data by exfiltrating it over an existing command and control channel.

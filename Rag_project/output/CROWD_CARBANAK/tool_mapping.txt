@@ -1,0 +1,76 @@
+Based on the provided internal tools and technique descriptions, I will analyze each technique and determine whether any internal tool explicitly confirms it can reproduce or simulate the behavior described.
+
+Here is the output:
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1219 – REMOTE ACCESS SOFTWARE
+Description: Use of remote access software to control victims' machines. Using remote access software to execute commands and manage victim systems.
+Tool: PAExec
+
+Technique: T1105 – INGRESS TOOLS TRANSFER
+Description: Transfer of additional tools or payloads to the compromised system. Transfer of additional tools or payloads to the compromised system. Transfer of additional tools or payloads to the compromised system.
+Tool: psexec
+
+Technique: T1102 – WEB SERVICE
+Description: Use of legitimate web services for command and control.
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1113 – SCREEN CAPTURE
+Description: Capture of compromised system screenshots. Capture of compromised system screenshots
+Tool: ryuk
+
+Technique: T1056 – INPUT CAPTURE
+Description: Capture of keyboard inputs.
+Tool: No tool
+
+Technique: T1005 – DATA FROM LOCAL SYSTEM
+Description: The malware collects basic system information and is able to take screenshots of victim systems
+Tool: windows-credential-editor
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1133 – EXTERNAL REMOTE SERVICES
+Description: Use of external remote services to maintain compromised system access.
+Tool: psexec
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: Using RDP to access and control the victim's system.
+Tool: plink
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: Collection of basic system information. Collection of system information.
+Tool: adfind
+
+- Tactic: TA0010 – EXFILTRATION
+Technique: T1567 – EXFILTRATION OVER WEB SERVICE
+Description: Data exfiltration through legitimate web services.
+Tool: No tool
+
+- Tactic: TA0002 – INITIAL ACCESS
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Using the Windows command shell to execute commands and scripts. Using PowerShell to execute arbitrary commands and scripts. Using PowerShell to execute commands.
+Tool: metasploit
+
+Technique: T1566 – PHISHING
+Description: Use of spear phishing attachments to gain initial access. Use of spear phishing attachments to gain initial access.
+Tool: No tool
+
+Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+Description: Using exploits to execute code on the victim's machine. Using exploits to execute code on the victim's machine.
+Tool: metasploit
+
+Technique: T1204 – USER EXECUTION
+Description: Use of malicious documents that require user intervention for execution.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Obfuscation of files or information to avoid detection.
+Tool: invoke-psimage
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1555 – CREDENTIALS FROM PASSWORD STORES
+Description: Extraction of credentials from password repositories.
+Tool: chrome-passwords

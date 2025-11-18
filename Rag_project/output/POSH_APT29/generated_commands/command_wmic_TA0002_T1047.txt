@@ -1,0 +1,7 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the WMIC tool to reproduce the specified behavior.
+
+**Maintaining persistence using WMI:**
+Command: `wmic PATH win32_process CALL create "C:\Windows\System32\svchost.exe"`
+
+
+This command creates a new process with the name "svchost.exe" in the system32 directory, simulating persistence on the system.

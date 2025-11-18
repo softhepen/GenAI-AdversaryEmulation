@@ -1,0 +1,18 @@
+[2025-11-06 19:25:26,560] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:25:28,740] INFO - Tool selection for report: CYWARE
+[2025-11-06 19:25:28,740] INFO - TTP extraction from CTI report
+[2025-11-06 19:25:28,753] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:26:45,908] INFO - Tool field precision: 1.00
+[2025-11-06 19:26:45,908] INFO - Validating LLM output
+[2025-11-06 19:26:45,939] INFO - Generating commands for report: CYWARE
+[2025-11-06 19:26:46,010] INFO - Parsed 8 feasible attack actions.
+[2025-11-06 19:26:54,079] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-06 19:27:17,834] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_plink_TA0001_T1071.txt
+[2025-11-06 19:27:26,899] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_pupy_TA0001_T1078.txt
+[2025-11-06 19:27:39,401] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_paexec_TA0003_T1505.txt
+[2025-11-06 19:27:49,628] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_pupy_TA0003_T1078.txt
+[2025-11-06 19:28:09,027] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_metasploit_TA0011_T1071.txt
+[2025-11-06 19:28:18,500] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_pupy_TA0005_T1078.txt
+[2025-11-06 19:28:46,783] INFO - Saved command in output\CYWARE_OILRIG\generated_commands\command_pupy_TA0004_T1078.txt
+[2025-11-06 19:28:53,221] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CYWARE_OILRIG\match_results_chrf.csv
+[2025-11-06 19:28:53,246] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CYWARE_OILRIG\match_results_edit_distance.csv

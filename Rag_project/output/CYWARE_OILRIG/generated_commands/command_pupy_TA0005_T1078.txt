@@ -1,0 +1,6 @@
+Based on the provided documentation, I will generate realistic command lines using only the tool Pupy to reproduce the attack behavior described.
+
+**Command:** `laze -s`
+This command simulates credential harvesting from local system accounts using Twoface for credential harvesting. The `-s` option is used to specify the source of the credentials (in this case, local system accounts).
+
+Please let me know if this meets the requirements or if you need further assistance!

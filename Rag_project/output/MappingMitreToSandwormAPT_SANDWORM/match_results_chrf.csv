@@ -1,0 +1,15 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0006_T1552.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",60.523,True
+command_chrome_passwords_TA0006_T1552.txt,chrome passwords,chrome-passwords <file_path>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",48.393,True
+command_chrome_passwords_TA0006_T1552.txt,chrome passwords,chrome-passwords --<dll_name>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",47.665,True
+command_ryuk_TA0005_T1070.txt,ryuk,ryuk.exe --delete-backups,`ryuk.exe --encrypt --process-name notepad.exe`,35.674,True
+command_ryuk_TA0005_T1070.txt,ryuk,ryuk.exe --stop-services,`ryuk.exe --encrypt --process-name notepad.exe`,38.104,True
+command_ryuk_TA0005_T1070.txt,ryuk,ryuk.exe --mount-shares,`ryuk.exe --encrypt --process-name notepad.exe`,38.671,True
+command_ryuk_TA0011_T1001.txt,ryuk,ryuk.exe --encrypt,`ryuk.exe --encrypt --process-name notepad.exe`,72.768,True
+command_ryuk_TA0011_T1001.txt,ryuk,ryuk.exe -p <process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,49.836,True
+command_ryuk_TA0011_T1001.txt,ryuk,ryuk.exe --disconnect-shares,`ryuk.exe --encrypt --process-name notepad.exe`,35.421,True
+command_ryuk_TA0011_T1001.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,36.908,True
+command_ryuk_TA0040_T1490.txt,ryuk,ryuk.exe /delete-backups,`ryuk.exe --encrypt --process-name notepad.exe`,29.303,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```",33.601,True

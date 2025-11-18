@@ -1,0 +1,8 @@
+Here is the analysis output:
+
+- Tactic: TA0040 – IMPACT
+Technique: T1485 – DATA DESTRUCTION
+Description: Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.
+Tool: Ryuk
+
+Note that the description of Ryuk mentions "Data Encrypted for Impact" which is related to the technique of Data Destruction.

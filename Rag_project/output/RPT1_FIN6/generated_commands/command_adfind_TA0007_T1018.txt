@@ -1,0 +1,15 @@
+Based on the attack description, I will generate realistic command lines using the tool adfind to simulate the behavior of REMOTE SYSTEM DISCOVERY (T1018) in Active Directory.
+
+Here are my outputs:
+
+Command: `adfind -sc msDS-Behavior-Version`
+
+Command: `adfind -sitenamedc -b dc=<domain_name>,dc=net -f "objectclass=*"`
+
+Command: `adfind -sc sl:msds* -b dc=<domain_name>,dc=net -f "objectcategory=computer"`
+
+Command: `adfind -sc admincountdmp -b dc=<domain_name>,dc=net -f "adminCount=1" -jsdenl "!m/(NT AUTHORITY|BUILTIN)/i"`
+
+Command: `adfind -s schdc -sc msDS-RevealedUsers`
+
+Let me know if these command lines meet the requirements.

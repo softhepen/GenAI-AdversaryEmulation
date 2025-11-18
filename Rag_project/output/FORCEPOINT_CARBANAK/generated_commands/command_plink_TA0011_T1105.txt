@@ -1,0 +1,18 @@
+Based on the provided documentation, I will construct realistic command lines to simulate the attack behavior using only the tool Plink.
+
+**Attack Behavior:** The "ggldr" script is responsible for transferring commands and receiving data through the use of Google services.
+
+**MITRE Technique and Tactic:**
+
+* Technique ID: T1105
+* Technique name: INGRESS TOOL TRANSFER
+* Tactic ID: TA0011
+* Tactic name: COMMAND AND CONTROL
+
+Here's the command line:
+
+Command: `plink -batch -ssh ggldr@<google_service_url>`
+
+This command uses the `-batch` option to disable interactive prompts, simulating a script that transfers commands and receives data through Google services. The `<google_service_url>` placeholder should be replaced with an actual URL, if available.
+
+Please note that I have not copied generic examples from the documentation and have instead constructed the command line using only the documented syntax and capabilities of Plink.

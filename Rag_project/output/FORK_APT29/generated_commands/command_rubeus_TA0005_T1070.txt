@@ -1,0 +1,15 @@
+Based on the provided documentation and the objective to generate realistic command lines using **only** the tool rubeus, I will attempt to reproduce the attack behavior of self-destructing malware from a compromised system.
+
+Command: `rubeus.exe kill`
+
+This command uses the "kill" subcommand to terminate the current process running Rubeus. This can help remove traces of the infection and maintain persistent access by eliminating any potential indicators of compromise (IOCs).
+
+Command: `rubeus.exe wipe /persistent /clear`
+
+This command uses the "wipe" subcommand with the "/persistent" option to clear all persisted data, such as credentials and tickets. The "/clear" option removes any stored artifacts, further reducing the risk of detection.
+
+Command: `rubeus.exe scrub /delete /all`
+
+This command uses the "scrub" subcommand with the "/delete" option to delete all files, registry keys, and other persisted data associated with Rubeus. The "/all" option specifies that all stored artifacts should be removed.
+
+Please note that these commands are based solely on the provided documentation and may not cover all possible scenarios or edge cases. Additionally, it is essential to remember that any action performed using this tool can potentially introduce detectable risks from various perspectives.

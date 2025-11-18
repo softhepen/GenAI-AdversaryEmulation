@@ -1,0 +1,9 @@
+Here are the command lines I came up with to simulate FIN7's attack behavior using only the adfind tool:
+
+Command: `adfind -b CN=Application Shim Database,CN=Schema,CN=Configuration,DC=example,DC=com -sc adobjcnt:applicationshim`
+
+Command: `adfind -b CN=Application Shim Database,CN=Schema,CN=Configuration,DC=example,DC=com -ds -showdel`
+
+Command: `adfind -b CN=Application Shim Database,CN=Schema,CN=Configuration,DC=example,DC=com -fsps -showdisabled`
+
+Please let me know if these command lines meet the requirements and simulate the attack behavior accurately.

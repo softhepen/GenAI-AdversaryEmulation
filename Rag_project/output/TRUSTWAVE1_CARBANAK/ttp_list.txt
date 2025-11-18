@@ -1,0 +1,32 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Sending targeted emails containing malicious attachments to gain initial access.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: Execution of malicious code when the user opens a file or link.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Using command interpreters and scripting to execute code.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Transfer of tools or files from an external system to the compromised system.
+  Technique: T1102 – WEB SERVICE
+  Description: Using web services to store information that threat actors can retrieve.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Cloud services were involved
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1112 – MODIFY REGISTRY
+  Description: Modification of registry keys for various malicious purposes, such as keeping track of the last command executed.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: Use of scheduled tasks to maintain persistence in the system.
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: Using automatic operating system startup locations to maintain persistence.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Using valid credentials to access various systems.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+  Description: Steal data by exfiltrating it over a command and control channel
+- Tactic: TA0042 – RESOURCE DEVELOPMENT
+  Technique: T1588 – OBTAIN CAPABILITIES
+  Description: Attackers acquire code signing certificates to sign their malicious executables.

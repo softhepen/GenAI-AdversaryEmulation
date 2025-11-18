@@ -1,0 +1,15 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "invoke-psimage",
+    "pupy",
+    "plink"
+  ],
+  "false_positives": [
+    "chromepasswordsmetasploitpupytinymet",
+    "adfindwindowscredentialeditorwmic",
+    "paexecpsexec"
+  ],
+  "total_tools": 6,
+  "total_entries": 6
+}

@@ -1,0 +1,13 @@
+[2025-11-07 13:40:18,435] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:40:20,654] INFO - Tool selection for report: GIGAMON1
+[2025-11-07 13:40:20,654] INFO - TTP extraction from CTI report
+[2025-11-07 13:40:20,669] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:40:47,419] INFO - Tool field precision: 1.00
+[2025-11-07 13:40:47,421] INFO - Validating LLM output
+[2025-11-07 13:40:47,453] INFO - Generating commands for report: GIGAMON1
+[2025-11-07 13:40:47,498] INFO - Parsed 3 feasible attack actions.
+[2025-11-07 13:41:00,369] INFO - Saved command in output\GIGAMON1_FIN7\generated_commands\command_chrome_passwords_TA0002_T1204.txt
+[2025-11-07 13:41:21,926] INFO - Saved command in output\GIGAMON1_FIN7\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 13:41:43,010] INFO - Saved command in output\GIGAMON1_FIN7\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-07 13:41:43,368] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GIGAMON1_FIN7\match_results_chrf.csv
+[2025-11-07 13:41:43,381] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GIGAMON1_FIN7\match_results_edit_distance.csv

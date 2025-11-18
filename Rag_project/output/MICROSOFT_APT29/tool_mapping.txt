@@ -1,0 +1,32 @@
+After analyzing the descriptions of the techniques and the internal tools, I have matched each technique with an internal tool that explicitly confirms it can reproduce or simulate the described behavior. Here is the output:
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: The spear-phishing emails included links that looked like OneDrive share notifications.
+Tool: No tool
+
+Technique: T1204 – USER EXECUTION
+Description: The exploitation chain is initiated when recipients click on the link in the spear-phishing email The ZIP archive contains a malicious LNK file. Users must open the malicious LNK file.
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: An obfuscated PowerShell command is executed.
+Tool: chrome-passwords
+
+Technique: T1204 – USER EXECUTION
+Description: The exploitation chain is initiated when recipients click on the link in the spear-phishing email The ZIP archive contains a malicious LNK file. Users must open the malicious LNK file.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: The exploitation chain involves the installation of a backdoor DLL on the victim's system. `cyzfc.dat` extracts and installs the final payload.
+Tool: psexec
+
+Technique: T1219 – REMOTE ACCESS SOFTWARE
+Description: The backdoor DLL provides attackers with remote access to victim systems.
+Tool: paexec
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Adversaries may communicate using OSI application layer protocols.
+Tool: plink

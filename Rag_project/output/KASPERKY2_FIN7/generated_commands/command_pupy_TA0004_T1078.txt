@@ -1,0 +1,17 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using only the tool Pupy to reproduce the behavior of collecting credentials from various software.
+
+Command: `lazagne windows`
+
+This command uses the Lazagne module to retrieve passwords stored on a Windows system. The `windows` parameter specifies the target operating system.
+
+Command: `creddump linux`
+
+This command uses the creddump module to retrieve system hashes (e.g., Unix passwords) on a Linux system.
+
+Command: `hashmon /path/to/memory/directory`
+
+This command uses the hashmon module to crawl process memory and find system passwords on a Linux system. The `/path/to/memory/directory` placeholder should be replaced with the actual path to the memory directory.
+
+Command: `loot_memory --browser=browser_name`
+
+This command uses the loot_memory module to crawl process memory and retrieve browser passwords. The `--browser=browser_name` parameter specifies the type of browser (e.g., Chrome, Firefox) whose passwords should be retrieved.

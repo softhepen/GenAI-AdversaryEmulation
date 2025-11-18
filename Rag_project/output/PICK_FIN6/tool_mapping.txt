@@ -1,0 +1,96 @@
+Here is the output:
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1016 – SYSTEM NETWORK DISCOVERY
+Description: these tools were used to conduct internal reconnaissance
+Tool: adfind
+
+Technique: T1087 – ACCOUNT DISCOVERY
+Description: Identify user accounts that could access additional hosts in the domain.
+Tool: chrome-passwords
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1560 – ARCHIVE COLLECTED DATA
+Description: 7-Zip was used to compress data 7-zip to compress the results for exfiltration
+Tool: No tool
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1078 – VALID ACCOUNTS
+Description: stolen credentials were used in the initial phase of the intrusion
+Tool: psexec
+
+Technique: T1190 – EXPLOIT PUBLIC-FACING APPLICATION
+Description: to initially gain access to the environment, FIN6 compromised and internet facing system.
+Tool: metasploit
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: SMB connections were used. FIN6 exploited the RDP protocol to move laterally within the environment using stolen credentials Using RDP protocol to move laterally between systems using compromised credentials. Moved laterally using RDP Use of psexec for lateral movement via Windows administrative shares.
+Tool: paexec
+
+Technique: T1078 – VALID ACCOUNTS
+Description: FIN6 used stolen credentials to access system and move laterally within the environment
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1112 – MODIFY REGISTRY
+Description: it was used, togheter with ID.004, to install malicious Windows services.
+Tool: No tool
+
+Technique: T1078 – VALID ACCOUNTS
+Description: FIN6 used stolen credentials to access system and move laterally within the environment
+Tool: chrome-passwords
+
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: FIN6 used base64-encoded payloads to obfuscate the malicious content and make it less obvious to security tools. Metasploit revere HTTP shellcode payload
+Tool: metasploit
+
+Technique: T1070 – INDICATOR REMOVAL ON HOST
+Description: Utility script with anti-forensic commands to remove indicators on compromised systems.
+Tool: No tool
+
+Technique: T1562 – IMPAIR DEFENSE
+Description: Disabling antivirus and destabilizing the operating system using kill.bat commands.
+Tool: No tool
+
+Technique: T1036 – MASQUERADING
+Description: Renamed psexec service name to "mstdc" to masquerade as legitimate Windows executable "msdtc"
+Tool: paexec
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: it was used, togheter with ID.004, to install malicious Windows services. These services execute PowerShell commands on remote systems. Creation of Windows services with random 16-character names
+Tool: metasploit
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: it was used, togheter with ID.004, to install malicious Windows services. These services execute PowerShell commands on remote systems.
+Tool: metasploit
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: PowerShell commands were used on remote systems.
+Tool: No tool
+
+Technique: T1569 – SYSTEM SERVICES
+Description: Cobalt Strike's "psexec" lateral movement command Use of psexec to run services and scripts on remote systems.
+Tool: paexec
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Cobalt Strike httpsstager configured to download a second payload Cobalt Strike httpsstager configured to download a third payload HTTPS request for an additional download Encoded PowerShell commands to download and execute content from Pastebin Configured servers as malware distribution servers Preparation of distribution and utility scripts for later transfer and use.
+Tool: metasploit
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Communicate with the C2 IP address over TCP port 443
+Tool: No tool
+
+- Tactic: TA005 – DEFENSE EVASION
+Technique: T1078 – VALID ACCOUNTS
+Description: Use of compromised credentials to access additional systems.
+Tool: No tool
+
+- Tactic: TA0040 – IMPACT
+Technique: T1486 – DATA ENCRYPTED FOR IMPACT
+Description: Staging LockerGaga for the installation
+Tool: No tool

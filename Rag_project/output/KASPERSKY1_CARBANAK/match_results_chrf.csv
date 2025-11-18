@@ -1,0 +1,2 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0009_T1056.txt,chrome passwords,chrome-passwords -p <file_path_to_chrome_database>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",33.365,True

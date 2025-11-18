@@ -1,0 +1,21 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool Pupy to reproduce the attack behavior.
+
+**Attack Behavior:** The attacker deletes files to eliminate traces of his activity and obstruct investigations.
+
+**MITRE Technique and Tactic:** T1070 (INDICATOR REMOVAL ON HOST) | TA0005 (DEFENSE EVASION)
+
+Here are the command lines that simulate this attack behavior:
+
+Command: `pupy <file_path> rm -rf`
+
+This command uses the Pupy shell to execute the `rm` command, which is used to delete files. The `<file_path>` placeholder should be replaced with the actual path of the file(s) to be deleted.
+
+Command: `pupy <directory_path> rm -r`
+
+This command uses the Pupy shell to execute the `rm` command in a directory, deleting all files and subdirectories recursively. The `<directory_path>` placeholder should be replaced with the actual path of the directory to be cleaned.
+
+Command: `pupy find /path/to/directory/ -type f -exec rm {} \;`
+
+This command uses the Pupy shell to execute the `find` command, which searches for files in a specified directory and executes the `rm` command on each file found. The `/path/to/directory/` placeholder should be replaced with the actual path of the directory to search.
+
+Note: These commands assume that the Pupy shell is already installed and configured on the system being attacked.

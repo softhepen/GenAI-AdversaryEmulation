@@ -1,0 +1,16 @@
+[2025-11-06 18:21:09,520] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:21:11,674] INFO - Tool selection for report: FORCEPOINT
+[2025-11-06 18:21:11,675] INFO - TTP extraction from CTI report
+[2025-11-06 18:21:11,685] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:21:45,729] INFO - Tool field precision: 0.67
+[2025-11-06 18:21:45,730] INFO - Validating LLM output
+[2025-11-06 18:21:45,731] WARNING - Invalid or multiple tools detected: 'None' — replacing with 'No tool'
+[2025-11-06 18:21:45,731] WARNING - Invalid or multiple tools detected: 'None' — replacing with 'No tool'
+[2025-11-06 18:21:45,736] INFO - Generating commands for report: FORCEPOINT
+[2025-11-06 18:21:45,756] INFO - Parsed 4 feasible attack actions.
+[2025-11-06 18:22:12,399] INFO - Saved command in output\FORCEPOINT_CARBANAK\generated_commands\command_plink_TA0002_T1071.txt
+[2025-11-06 18:22:22,178] INFO - Saved command in output\FORCEPOINT_CARBANAK\generated_commands\command_chrome_passwords_TA0011_T1102.txt
+[2025-11-06 18:22:39,099] INFO - Saved command in output\FORCEPOINT_CARBANAK\generated_commands\command_plink_TA0011_T1105.txt
+[2025-11-06 18:23:01,659] INFO - Saved command in output\FORCEPOINT_CARBANAK\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-06 18:23:02,366] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FORCEPOINT_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:23:02,375] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FORCEPOINT_CARBANAK\match_results_edit_distance.csv

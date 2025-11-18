@@ -1,0 +1,15 @@
+[2025-11-06 17:44:32,591] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:44:35,987] INFO - Tool selection for report: MICROSOFT
+[2025-11-06 17:44:35,987] INFO - TTP extraction from CTI report
+[2025-11-06 17:44:35,999] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:45:13,297] INFO - Tool field precision: 0.80
+[2025-11-06 17:45:13,301] INFO - Validating LLM output
+[2025-11-06 17:45:13,301] WARNING - Invalid or multiple tools detected: 'adfind (for gathering information from Active Directory)' — replacing with 'No tool'
+[2025-11-06 17:45:13,305] INFO - Generating commands for report: MICROSOFT
+[2025-11-06 17:45:13,334] INFO - Parsed 4 feasible attack actions.
+[2025-11-06 17:45:20,113] INFO - Saved command in output\MICROSOFT_APT29\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-06 17:45:36,495] INFO - Saved command in output\MICROSOFT_APT29\generated_commands\command_psexec_TA0011_T1105.txt
+[2025-11-06 17:45:44,372] INFO - Saved command in output\MICROSOFT_APT29\generated_commands\command_paexec_TA0011_T1219.txt
+[2025-11-06 17:46:10,322] INFO - Saved command in output\MICROSOFT_APT29\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-06 17:46:10,923] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MICROSOFT_APT29\match_results_chrf.csv
+[2025-11-06 17:46:10,932] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MICROSOFT_APT29\match_results_edit_distance.csv

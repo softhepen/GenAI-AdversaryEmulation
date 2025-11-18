@@ -1,0 +1,15 @@
+[2025-11-06 19:08:59,318] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:09:01,458] INFO - Tool selection for report: CrashOverride
+[2025-11-06 19:09:01,459] INFO - TTP extraction from CTI report
+[2025-11-06 19:09:01,471] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:10:34,883] INFO - Tool field precision: 0.80
+[2025-11-06 19:10:34,884] INFO - Validating LLM output
+[2025-11-06 19:10:34,884] WARNING - Invalid or multiple tools detected: 'chrome-passwords, plink' — replacing with 'No tool'
+[2025-11-06 19:10:34,885] INFO - Generating commands for report: CrashOverride
+[2025-11-06 19:10:35,408] INFO - Parsed 4 feasible attack actions.
+[2025-11-06 19:11:01,313] INFO - Saved command in output\CrashOverride_SANDWORM\generated_commands\command_psexec_TA0040_T1489.txt
+[2025-11-06 19:11:12,488] INFO - Saved command in output\CrashOverride_SANDWORM\generated_commands\command_ryuk_TA0003_T1543.txt
+[2025-11-06 19:11:25,343] INFO - Saved command in output\CrashOverride_SANDWORM\generated_commands\command_ryuk_TA0004_T1543.txt
+[2025-11-06 19:11:36,637] INFO - Saved command in output\CrashOverride_SANDWORM\generated_commands\command_ryuk_TA0002_T1053.txt
+[2025-11-06 19:11:36,926] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CrashOverride_SANDWORM\match_results_chrf.csv
+[2025-11-06 19:11:36,937] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CrashOverride_SANDWORM\match_results_edit_distance.csv

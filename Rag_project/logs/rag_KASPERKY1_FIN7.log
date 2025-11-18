@@ -1,0 +1,14 @@
+[2025-11-07 13:54:50,158] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:54:52,323] INFO - Tool selection for report: KASPERKY1
+[2025-11-07 13:54:52,324] INFO - TTP extraction from CTI report
+[2025-11-07 13:54:52,335] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:55:34,898] INFO - Tool field precision: 0.75
+[2025-11-07 13:55:34,899] INFO - Validating LLM output
+[2025-11-07 13:55:34,899] WARNING - Invalid or multiple tools detected: 'metasploit, tinymet' — replacing with 'No tool'
+[2025-11-07 13:55:34,929] INFO - Generating commands for report: KASPERKY1
+[2025-11-07 13:55:34,979] INFO - Parsed 3 feasible attack actions.
+[2025-11-07 13:55:59,698] INFO - Saved command in output\KASPERKY1_FIN7\generated_commands\command_chrome_passwords_TA0009_T1185.txt
+[2025-11-07 13:56:38,275] INFO - Saved command in output\KASPERKY1_FIN7\generated_commands\command_metasploit_TA0002_T1203.txt
+[2025-11-07 13:58:49,024] INFO - Saved command in output\KASPERKY1_FIN7\generated_commands\command_metasploit_TA0011_T1105.txt
+[2025-11-07 13:58:53,963] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\KASPERKY1_FIN7\match_results_chrf.csv
+[2025-11-07 13:58:53,993] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\KASPERKY1_FIN7\match_results_edit_distance.csv

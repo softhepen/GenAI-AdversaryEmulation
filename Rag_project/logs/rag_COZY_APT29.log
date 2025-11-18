@@ -1,0 +1,14 @@
+[2025-11-06 17:18:33,905] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:18:36,145] INFO - Tool selection for report: COZY
+[2025-11-06 17:18:36,145] INFO - TTP extraction from CTI report
+[2025-11-06 17:18:36,159] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:19:27,394] INFO - Tool field precision: 0.50
+[2025-11-06 17:19:27,396] INFO - Validating LLM output
+[2025-11-06 17:19:27,396] WARNING - Invalid or multiple tools detected: 'psexec, paexec' — replacing with 'No tool'
+[2025-11-06 17:19:27,397] WARNING - Invalid or multiple tools detected: 'chrome-passwords, metasploit, tinymet' — replacing with 'No tool'
+[2025-11-06 17:19:27,398] INFO - Generating commands for report: COZY
+[2025-11-06 17:19:27,436] INFO - Parsed 2 feasible attack actions.
+[2025-11-06 17:20:02,916] INFO - Saved command in output\COZY_APT29\generated_commands\command_adfind_TA0005_T1036.txt
+[2025-11-06 17:20:09,399] INFO - Saved command in output\COZY_APT29\generated_commands\command_chrome_passwords_TA0005_T1027.txt
+[2025-11-06 17:20:10,713] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\COZY_APT29\match_results_chrf.csv
+[2025-11-06 17:20:10,732] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\COZY_APT29\match_results_edit_distance.csv

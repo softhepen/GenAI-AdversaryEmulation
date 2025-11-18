@@ -1,0 +1,34 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0042_T1566.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0042_T1566.txt,chrome passwords,chrome-passwords -p <file_path> <url> <username>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.343,True
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -ScriptBlock {Invoke-Mimikatz} -OutputFile <image_file_name>.png,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.503,True
+command_rubeus_TA0005_T1112.txt,rubeus,rubeus.exe reg add /key:HKCU\Software\Microsoft\Windows\CurrentVersion\Run /value:PowerDuke /type:string,`rubeus.exe kerberoast /domain:oz.local`,0.333,True
+command_rubeus_TA0007_T1033.txt,rubeus,rubeus s4u /ptt /tgt <placeholder>,`rubeus.exe kerberoast /domain:oz.local`,0.378,True
+command_rubeus_TA0007_T1083.txt,rubeus,rubeus ls <directory_path>,`rubeus.exe kerberoast /domain:oz.local`,0.303,True
+command_windows_credential_editor_TA0001_T1059.txt,windows credential editor,wce.exe dump kerberos,"```sh
+wce.exe -w
+```",0.39,True
+command_windows_credential_editor_TA0001_T1059.txt,windows credential editor,wce.exe reuse kerberos <TGT_ticket> load,"```sh
+wce.exe -w
+```",0.267,True
+command_windows_credential_editor_TA0001_T1059.txt,windows credential editor,wce.exe dump digest <username>,"```sh
+wce.exe -w
+```",0.32,True
+command_windows_credential_editor_TA0001_T1059.txt,windows credential editor,wce.exe reuse digest <username> <password> load,"```sh
+wce.exe -w
+```",0.269,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -s <username>:<domain>:<ntlm_hash>:<password>,"```sh
+wce.exe -w
+```",0.174,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -s john:dell:11111111111111111111111111111111:99999999999999999999999999999999,"```sh
+wce.exe -w
+```",0.098,True
+command_windows_credential_editor_TA0002_T1059.txt,windows credential editor,wce -s <username>:<domain>:<ntlm_hash>:<password> -c,"```sh
+wce.exe -w
+```",0.167,True
+command_windows_credential_editor_TA0002_T1204.txt,windows credential editor,wce.exe -dump-kerb,"```sh
+wce.exe -w
+```",0.474,True
+command_windows_credential_editor_TA0002_T1204.txt,windows credential editor,wce.exe -load-kerb <ticket_file>,"```sh
+wce.exe -w
+```",0.346,True

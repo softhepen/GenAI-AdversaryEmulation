@@ -1,0 +1,5 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_ryuk_TA0040_T1485.txt,ryuk,ryuk.exe --destroy-data <file_path>,`ryuk.exe --encrypt --process-name notepad.exe`,30.343,True
+command_ryuk_TA0040_T1485.txt,ryuk,ryuk.exe --wipe-backups <backup_location>,`ryuk.exe --encrypt --process-name notepad.exe`,26.094,True
+command_ryuk_TA0040_T1485.txt,ryuk,ryuk.exe --mount-shares <network_share>,`ryuk.exe --encrypt --process-name notepad.exe`,28.982,True
+command_ryuk_TA0040_T1485.txt,ryuk,ryuk.exe --encrypt-files <file_pattern>,`ryuk.exe --encrypt --process-name notepad.exe`,48.29,True

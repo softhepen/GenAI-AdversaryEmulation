@@ -1,0 +1,24 @@
+[2025-11-07 14:06:04,534] INFO - Loading existing vectorstore from disk
+[2025-11-07 14:06:07,104] INFO - Tool selection for report: MORPHISEC
+[2025-11-07 14:06:07,104] INFO - TTP extraction from CTI report
+[2025-11-07 14:06:07,117] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 14:07:06,585] INFO - Tool field precision: 1.00
+[2025-11-07 14:07:06,586] INFO - Validating LLM output
+[2025-11-07 14:07:06,591] INFO - Generating commands for report: MORPHISEC
+[2025-11-07 14:07:06,621] ERROR - No feasible attack actions found. Aborting.
+[2025-11-07 14:07:06,621] WARNING - No commands generated. Matching skipped.
+[2025-11-07 14:07:17,766] INFO - Loading existing vectorstore from disk
+[2025-11-07 14:07:19,966] INFO - Tool selection for report: MORPHISEC
+[2025-11-07 14:07:19,967] INFO - TTP extraction from CTI report
+[2025-11-07 14:07:19,968] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 14:08:19,642] INFO - Tool field precision: 1.00
+[2025-11-07 14:08:19,643] INFO - Validating LLM output
+[2025-11-07 14:08:19,643] INFO - Generating commands for report: MORPHISEC
+[2025-11-07 14:08:19,671] INFO - Parsed 5 feasible attack actions.
+[2025-11-07 14:08:50,302] INFO - Saved command in output\MORPHISEC_FIN7\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 14:09:09,438] INFO - Saved command in output\MORPHISEC_FIN7\generated_commands\command_psexec_TA0002_T1053.txt
+[2025-11-07 14:09:25,476] INFO - Saved command in output\MORPHISEC_FIN7\generated_commands\command_psexec_TA0003_T1053.txt
+[2025-11-07 14:10:38,121] INFO - Saved command in output\MORPHISEC_FIN7\generated_commands\command_psexec_TA0004_T1053.txt
+[2025-11-07 14:10:50,962] INFO - Saved command in output\MORPHISEC_FIN7\generated_commands\command_pupy_TA0004_T1055.txt
+[2025-11-07 14:10:52,030] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MORPHISEC_FIN7\match_results_chrf.csv
+[2025-11-07 14:10:52,045] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MORPHISEC_FIN7\match_results_edit_distance.csv

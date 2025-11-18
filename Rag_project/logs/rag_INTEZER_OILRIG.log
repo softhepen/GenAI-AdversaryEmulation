@@ -1,0 +1,42 @@
+[2025-11-06 19:36:43,262] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:36:45,507] INFO - Tool selection for report: INTEZER
+[2025-11-06 19:36:45,508] INFO - TTP extraction from CTI report
+[2025-11-06 19:36:45,510] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:38:34,220] INFO - Tool field precision: 0.00
+[2025-11-06 19:38:34,223] INFO - Validating LLM output
+[2025-11-06 19:38:34,224] WARNING - Invalid or multiple tools detected: 'adfind (used for gathering information from Active Directory)' — replacing with 'No tool'
+[2025-11-06 19:38:34,225] WARNING - Invalid or multiple tools detected: 'adfind (used for gathering information from Active Directory)' — replacing with 'No tool'
+[2025-11-06 19:38:34,225] WARNING - Invalid or multiple tools detected: 'psexec (allows for remote execution and scheduling tasks)' — replacing with 'No tool'
+[2025-11-06 19:38:34,229] WARNING - Invalid or multiple tools detected: 'psexec (allows for remote execution and scheduling tasks)' — replacing with 'No tool'
+[2025-11-06 19:38:34,230] WARNING - Invalid or multiple tools detected: 'chrome-passwords (extracts credentials stored in Google Chrome's password manager)' — replacing with 'No tool'
+[2025-11-06 19:38:34,231] WARNING - Invalid or multiple tools detected: 'psexec (allows for remote execution and scheduling tasks)' — replacing with 'No tool'
+[2025-11-06 19:38:34,231] WARNING - Invalid or multiple tools detected: 'psexec (allows for remote execution and scheduling tasks)' — replacing with 'No tool'
+[2025-11-06 19:38:34,232] WARNING - Invalid or multiple tools detected: 'adfind (used for gathering information from Active Directory)' — replacing with 'No tool'
+[2025-11-06 19:38:34,232] WARNING - Invalid or multiple tools detected: 'chrome-passwords (extracts credentials stored in Google Chrome's password manager)' — replacing with 'No tool'
+[2025-11-06 19:38:34,233] WARNING - Invalid or multiple tools detected: 'chrome-passwords (extracts credentials stored in Google Chrome's password manager)' — replacing with 'No tool'
+[2025-11-06 19:38:34,235] INFO - Generating commands for report: INTEZER
+[2025-11-06 19:38:34,300] ERROR - No feasible attack actions found. Aborting.
+[2025-11-06 19:38:34,300] WARNING - No commands generated. Matching skipped.
+[2025-11-06 19:38:45,847] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:38:48,001] INFO - Tool selection for report: INTEZER
+[2025-11-06 19:38:48,001] INFO - TTP extraction from CTI report
+[2025-11-06 19:38:48,002] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:39:57,434] INFO - Tool field precision: 0.33
+[2025-11-06 19:39:57,435] INFO - Validating LLM output
+[2025-11-06 19:39:57,435] WARNING - Invalid or multiple tools detected: 'adfind, chrome-passwords, psexec' — replacing with 'No tool'
+[2025-11-06 19:39:57,435] WARNING - Invalid or multiple tools detected: 'adfind, chrome-passwords' — replacing with 'No tool'
+[2025-11-06 19:39:57,436] WARNING - Invalid or multiple tools detected: 'paexec, psexec' — replacing with 'No tool'
+[2025-11-06 19:39:57,436] WARNING - Invalid or multiple tools detected: 'paexec, psexec, wmic' — replacing with 'No tool'
+[2025-11-06 19:39:57,436] WARNING - Invalid or multiple tools detected: 'paexec, psexec, wmic' — replacing with 'No tool'
+[2025-11-06 19:39:57,436] WARNING - Invalid or multiple tools detected: 'adfind, wmic' — replacing with 'No tool'
+[2025-11-06 19:39:57,437] INFO - Generating commands for report: INTEZER
+[2025-11-06 19:39:57,472] INFO - Parsed 3 feasible attack actions.
+[2025-11-06 19:40:06,824] INFO - Saved command in output\INTEZER_OILRIG\generated_commands\command_chrome_passwords_TA0005_T1027.txt
+[2025-11-06 19:40:11,627] INFO - Saved command in output\INTEZER_OILRIG\generated_commands\command_chrome_passwords_TA0009_T1005.txt
+[2025-11-06 19:40:15,077] INFO - Saved command in output\INTEZER_OILRIG\generated_commands\command_chrome_passwords_TA0006_T1115.txt
+[2025-11-06 19:40:15,161] WARNING - No commands extracted from command_chrome_passwords_TA0006_T1115.txt
+[2025-11-06 19:40:15,187] WARNING - No commands extracted from command_chrome_passwords_TA0009_T1005.txt
+[2025-11-06 19:40:15,192] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\INTEZER_OILRIG\match_results_chrf.csv
+[2025-11-06 19:40:15,196] WARNING - No commands extracted from command_chrome_passwords_TA0006_T1115.txt
+[2025-11-06 19:40:15,197] WARNING - No commands extracted from command_chrome_passwords_TA0009_T1005.txt
+[2025-11-06 19:40:15,199] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\INTEZER_OILRIG\match_results_edit_distance.csv

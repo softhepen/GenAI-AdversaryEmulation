@@ -1,0 +1,7 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using the tool adfind to simulate the FIN7 attack behavior.
+
+Command:`adfind -sc adobjcnt:fsp -base CN=Foreign Security Principals,CN=Schema,CN=Configuration`
+
+(Note: This command counts all foreign security principal objects in the Foreign Security Principals container, simulating the application shim database used by FIN7 for persistent access.)
+
+Please let me know if this meets your requirements or if you'd like me to generate additional command lines.

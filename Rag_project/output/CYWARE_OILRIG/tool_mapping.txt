@@ -1,0 +1,65 @@
+Here is the analysis output:
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+Description: Attackers embed malicious macros within Microsoft Excel files. When a victim enables macro The attackers exploit the CVE-2017-0199 vulnerability, which allows remote code execution due to improper handling of objects in memory by the Windows Object Linking and Embedding (OLE) API.
+Tool: No tool
+
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Attackers use PowerShell to execute malicious scripts Once the Excel document is opened and the macros are enabled, Visual Basic for Applications (VBA) scripts can be executed. PowerShell scripts are often used due to their powerful capabilities and deep integration with Windows
+Tool: chrome-passwords
+
+Technique: T1204 – USER EXECUTION
+Description: The "Agent Injector" Trojan was used to install the ISMAgent backdoor. This indicates that once the email attachment was executed by the victim, the Trojan initiated the installation of additional malicious payloads.
+Tool: No tool
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: The adversaries use phishing emails to deliver weaponized Microsoft Excel documents
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: The adversaries create and host fake websites that mimic legitimate services, such as a Juniper Networks VPN portal or University of Oxford websites.
+Tool: plink
+
+Technique: T1078 – VALID ACCOUNTS
+Description: Used tools like Twoface for credential harvesting from local system accounts.
+Tool: pupy
+
+- Tactic: TA0042 – RESOURCE DEVELOPMENT
+Technique: T1583 – ACQUIRE INFRASTRUCTURE
+Description: The group registers domain names similar to those of legitimate organizations (like Oxford University) to lend authenticity to their fake sites.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1505 – SERVER SOFTWARE COMPONENT
+Description: The use of web shells such as TwoFace, RunningBee, and RGDoor suggests the attackers implanted malicious scripts on compromised web servers to gain persistent access.
+Tool: paexec
+
+Technique: T1078 – VALID ACCOUNTS
+Description: Used tools like Twoface for credential harvesting from local system accounts.
+Tool: pupy
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: The RAT communicates over HTTP, allowing it to send and receive commands or exfiltrate data through standard web traffic. The RAT also uses DNS for communication, which can help evade detection by blending with regular DNS traffic.
+Tool: metasploit
+
+Technique: T1573 – ENCRYPTED CHANNEL
+Description: Created remote administration tools supporting HTTP and DNS communication with potential encryption.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1078 – VALID ACCOUNTS
+Description: Used tools like Twoface for credential harvesting from local system accounts.
+Tool: pupy
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1078 – VALID ACCOUNTS
+Description: Used tools like Twoface for credential harvesting from local system accounts.
+Tool: pupy
+
+- Tactic: TA0043 – RECONNAISSANCE
+Technique: T1589 – GATHER VICTIM IDENTITY INFORMATION
+Description: Adversaries may gather credentials that can be used during targeting.
+Tool: No tool

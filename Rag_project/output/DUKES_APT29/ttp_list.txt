@@ -1,0 +1,53 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Using specially crafted Microsoft Word documents and PDFs as malicious e-mail attachments to infiltrate target organizations. Use of spearphishing attachments to deliver malware. Use of links in spearphishing emails to induce victims to visit compromised websites or download malware. Using a spearphishing email containing a link to a zipper file hosted on a cloud storage service (DropBox). 'sending spear-phishing e-mails containing malicious links leading victims to a compromised Web site hosting cozyduke.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1569 – SYSTEM SERVICES
+  Description: Creation and writing of a malicious executable to disk and its subsequent execution.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Executing remote commands on the compromised machine. Execution of arbitrary commands through the Windows Command Prompt or other script interpreters. use of scripts to perform specific actions, such as executing hacking tools via script files included in self-extracting archives
+  Technique: T1204 – USER EXECUTION
+  Description: Modified executables are executed by victims, resulting in the infection. persuasion of the user to run a malicious file, which in the case of OnionDuke occurs when the user runs the modified file containing the malicious wrapper.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1041 – EXFILTRATION OVER COMMAND AND CONTROL CHANNEL
+  Description: Exfiltration of data through a command-and-control (C&C) channel. Using C&C (Command and Control) channels to exfiltrate stolen data from the compromised system. Use of a command and control channel to exfiltrate collected data to a C&C server.
+  Technique: T1048 – EXFILTRATION OVER ALTERNATIVE PROTOCOL
+  Description: Use of protocols other than the standard communication protocol to exfiltrate stolen data, such as HTTP, HTTPS, FTP, or WebDav
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1082 – SYSTEM INFORMATION DOSCOVERY
+  Description: Collection of information on the compromised system. collection of system information about the configuration of the victim computer. system information gathering, which could be exploited by the system information gathering module to gather details about the compromised system.
+  Technique: T1033 – SYSTEM OWNER/USER DISCOVERY
+  Description: One of the capabilities of OnionDuke is to collect system information and attempt to steal usernames and passwords of victims.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – CREDENTIAL DUMPING
+  Description: Collection of credentials through various techniques.
+  Technique: T1555 – CREDENTIALS FROM PASSWORD STORES
+  Description: Theft of credentials stored in web browsers.
+- Tactic: TA0040 – IMPACT
+  Technique: T1499 – ENDPOINT DENIAL OF SERVICE
+  Description: Use of DoS attacks to compromise or limit the availability of systems.
+  Technique: T1498 – NETWORK DENIAL OF SERVICE
+  Description: One of OnionDuke's modules is designed to perform Denial of Service (DoS) attacks.
+- Tactic: TA0042 – RESOURCE DEVELOPMENT
+  Technique: T1584 – COMPROMISE INFRASTRUCTURE
+  Description: the compromised Tor node modifies executables downloaded over an HTTP connection to introduce malware or other malicious coding.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Using HTTP connections to download executables. Use of web protocols (HTTP/HTTPS) for communication with the C&C server and transfer of exfiltrated data.
+  Technique: T1102 – WEB SERVICE
+  Description: communication with a command and control (C&C) server via HTTP or HTTPS to download commands for execution.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: Using remote services to execute commands on compromised machines.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: Data collection activity by an attacker from a local system. Collection of data from the local system, as files created within a given period and with specific extensions. Collection of data from the local system, including user files with specific extensions.
+  Technique: T1056 – INPUT CAPTURE
+  Description: Keylogging, which is the capture of user input data
+  Technique: T1113 – SCREEN CAPTURE
+  Description: Capturing screenshots of the desktop or specific windows. capture of screenshots of the desktop or specific windows, used by the screenshot module to collect visual information from the system.
+  Technique: T1115 – CLIPBOARD DATA
+  Description: Theft of the contents of the system clipboard.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1036 – MASQUERADING
+  Description: Use of techniques to mask the activity or malicious nature of the software. In the specific case of OnionDuke, the malicious wrapper added to executable files could be considered a form of masking to avoid detection

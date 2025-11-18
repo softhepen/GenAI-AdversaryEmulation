@@ -1,0 +1,13 @@
+{
+  "precision": 0.75,
+  "true_positives": [
+    "chrome-passwords",
+    "metasploit",
+    "metasploit"
+  ],
+  "false_positives": [
+    "metasploittinymet"
+  ],
+  "total_tools": 4,
+  "total_entries": 7
+}

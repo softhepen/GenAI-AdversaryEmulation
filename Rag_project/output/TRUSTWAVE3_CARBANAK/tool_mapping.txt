@@ -1,0 +1,78 @@
+Here is the output:
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: In each campaign, a malicious Word or RTF document was sent to specific employees. This is a form of spearphishing where the attacker targets specific individuals with malicious attachments to gain initial access.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1204 – USER EXECUTION
+Description: This technique involves tricking the user into executing a file that contains malicious code.
+Tool: No tool
+
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: Using scheduled tasks to execute programs or scripts at specific times or intervals.
+Tool: No tool
+
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: Persistence is established by creating a scheduled task
+Tool: rubeus
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1113 – SCREEN CAPTURE
+Description: Taking screenshots of the victim's desktop to capture sensitive information displayed on the screen.
+Tool: No tool
+
+Technique: T1022 – DATA ENCRYPTED FOR IMPACT
+Description: The adversary encrypts files and data to make them inaccessible to users and applications and potentially to exfiltrate information from the victim's network.
+Tool: ryuk
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: There are two VBS scripts. There are four more VBS scripts Using command-line interfaces to execute commands.
+Tool: No tool
+
+Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+Description: Adversaries use Windows Management Instrumentation (WMI) to obtain information.
+Tool: No tool
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1055 – PROCESS INJECTION
+Description: dversaries inject code into the address space of another process to execute their payload. Reflective DLL injection is a method of process injection where a DLL is loaded into the address space of a process without the use of traditional Windows APIs.
+Tool: ryuk
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: The adversary gathers information about the system.
+Tool: No tool
+
+Technique: T1057 – PROCESS DISCOVERY
+Description: The adversary attempts to get a listing of running processes on a system.
+Tool: No tool
+
+Technique: T1046 – NETWORK SERVICE SCANNING
+Description: Adversaries use network service scanning to locate systems and services that are accessible over the network.
+Tool: No tool
+
+- Tactic: TA0010 – EXFILTRATION
+Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+Description: The adversary uses an existing command and control channel to exfiltrate data.
+Tool: ryuk
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: the malware uses "http POST" to send data
+Tool: No tool
+
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Adversaries may transfer tools or files to the victim's system to perform further actions or operations.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1055 – PROCESS INJECTION
+Description: dversaries inject code into the address space of another process to execute their payload. Reflective DLL injection is a method of process injection where a DLL is loaded into the address space of a process without the use of traditional Windows APIs.
+Tool: ryuk
+
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: This technique includes various methods of obfuscating files or data to avoid detection. Base64 encoding is a common method of obfuscation used to hide the contents of a payload.
+Tool: chrome-passwords

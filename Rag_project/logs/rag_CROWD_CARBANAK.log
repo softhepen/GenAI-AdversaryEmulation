@@ -1,0 +1,21 @@
+[2025-11-06 18:10:43,064] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:10:45,252] INFO - Tool selection for report: CROWD
+[2025-11-06 18:10:45,253] INFO - TTP extraction from CTI report
+[2025-11-06 18:10:45,264] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:12:02,171] INFO - Tool field precision: 1.00
+[2025-11-06 18:12:02,173] INFO - Validating LLM output
+[2025-11-06 18:12:02,205] INFO - Generating commands for report: CROWD
+[2025-11-06 18:12:02,255] INFO - Parsed 11 feasible attack actions.
+[2025-11-06 18:12:36,914] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_paexec_TA0011_T1219.txt
+[2025-11-06 18:13:05,355] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_psexec_TA0011_T1105.txt
+[2025-11-06 18:13:22,337] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_ryuk_TA0009_T1113.txt
+[2025-11-06 18:13:34,109] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_windows_credential_editor_TA0009_T1005.txt
+[2025-11-06 18:13:47,869] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_psexec_TA0003_T1133.txt
+[2025-11-06 18:14:05,927] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_plink_TA0008_T1021.txt
+[2025-11-06 18:14:16,572] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_adfind_TA0007_T1082.txt
+[2025-11-06 18:14:41,112] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_metasploit_TA0002_T1059.txt
+[2025-11-06 18:14:58,290] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_metasploit_TA0002_T1203.txt
+[2025-11-06 18:15:13,621] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-06 18:15:21,548] INFO - Saved command in output\CROWD_CARBANAK\generated_commands\command_chrome_passwords_TA0006_T1555.txt
+[2025-11-06 18:15:32,005] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CROWD_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:15:32,052] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CROWD_CARBANAK\match_results_edit_distance.csv

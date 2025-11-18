@@ -1,0 +1,11 @@
+Based on the provided documentation and attack description, I will construct realistic command lines that simulate the described behavior using only the Ryuk tool.
+
+**Command: `ryuk.exe --check-sandbox`**
+
+This command line uses the documented option `--check-sandbox` to detect if the system environment is a sandbox (e.g., by checking the size of the drive).
+
+**Command: `ryuk.exe --sandbox-evasion <drive_size>`**
+
+This command line includes a placeholder `<drive_size>` for the specific value indicating the detected sandbox. The Ryuk tool will use this parameter to evade detection.
+
+Please note that these command lines are simulated and should not be executed in a production environment without proper authorization and testing.

@@ -1,0 +1,54 @@
+Here is the analysis:
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: BOOSTWRITE retrieves an encryption key from a remote server The ability to upload and download files is directly related to this technique, which involves transferring tools or files into or out of a compromised environment.
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: BOOSTWRITE communicates over the internet using a common protocol to connect to a hardcoded IP address and retrieve the decryption key and IV. This technique involves using standard web protocols to communicate with a command-and-control (C2) server.
+Tool: plink
+
+Technique: T1573 – ENCRYPTED CHANNEL
+Description: BOOSTWRITE uses the ChaCha stream cipher, a symmetric encryption algorithm, to encrypt and decrypt the payloads.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1055 – PROCESS INJECTION
+Description: The malware is effectively injecting itself into the process. This allows the malware to execute within the context of a trusted application, making it harder to detect and more likely to bypass security controls.
+Tool: No tool
+
+Technique: T1574 – HIJACK EXECUTION FLOW
+Description: OOSTWRITE is crafted to exploit the DLL search order used by applications, specifically targeting those that load the Dwrite.dll (a legitimate Microsoft DirectX Typography Services DLL).
+Tool: No tool
+
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: The process of embedding and encrypting DLL payloads within the DWrite.dll file and then decrypting them using a custom key and IV retrieved from a remote server is similar to software packing.
+Tool: No tool
+
+Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+Description: BOOSTWRITE scans its own image to find and use a multi-XOR key to decode data within its body.
+Tool: No tool
+
+Technique: T1036 – MASQUERADING
+Description: By tampering with the NCR Aloha Command Center Client's user-interface, the malware could be disguising its malicious actions as normal application behavior.
+Tool: No tool
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1055 – PROCESS INJECTION
+Description: The malware is effectively injecting itself into the process. This allows the malware to execute within the context of a trusted application, making it harder to detect and more likely to bypass security controls.
+Tool: No tool
+
+Technique: T1574 – HIJACK EXECUTION FLOW
+Description: OOSTWRITE is crafted to exploit the DLL search order used by applications, specifically targeting those that load the Dwrite.dll (a legitimate Microsoft DirectX Typography Services DLL).
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1574 – HIJACK EXECUTION FLOW
+Description: OOSTWRITE is crafted to exploit the DLL search order used by applications, specifically targeting those that load the Dwrite.dll (a legitimate Microsoft DirectX Typography Services DLL).
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1204 – USER EXECUTION
+Description: The downloaded and decrypted payloads are PE32.DLL files that are likely malicious.
+Tool: No tool

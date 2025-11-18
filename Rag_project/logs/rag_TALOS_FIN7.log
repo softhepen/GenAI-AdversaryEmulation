@@ -1,0 +1,17 @@
+[2025-11-07 14:21:31,878] INFO - Loading existing vectorstore from disk
+[2025-11-07 14:21:33,982] INFO - Tool selection for report: TALOS
+[2025-11-07 14:21:33,982] INFO - TTP extraction from CTI report
+[2025-11-07 14:21:33,984] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 14:22:09,641] INFO - Tool field precision: 0.40
+[2025-11-07 14:22:09,642] INFO - Validating LLM output
+[2025-11-07 14:22:09,642] WARNING - Invalid or multiple tools detected: 'adfind, chrome-passwords, rubeus, ryuk, tinymet' — replacing with 'No tool'
+[2025-11-07 14:22:09,642] WARNING - Invalid or multiple tools detected: 'Invoke-psimage, Metasploit, Windows-Credential-Editor, Psexec' — replacing with 'No tool'
+[2025-11-07 14:22:09,642] WARNING - Invalid or multiple tools detected: 'plink, pupy' — replacing with 'No tool'
+[2025-11-07 14:22:09,673] INFO - Generating commands for report: TALOS
+[2025-11-07 14:22:09,741] INFO - Parsed 2 feasible attack actions.
+[2025-11-07 14:22:13,307] INFO - Saved command in output\TALOS_FIN7\generated_commands\command_chrome_passwords_TA0006_T1555.txt
+[2025-11-07 14:22:21,171] INFO - Saved command in output\TALOS_FIN7\generated_commands\command_ryuk_TA0004_T1055.txt
+[2025-11-07 14:22:21,190] WARNING - No commands extracted from command_chrome_passwords_TA0006_T1555.txt
+[2025-11-07 14:22:21,238] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TALOS_FIN7\match_results_chrf.csv
+[2025-11-07 14:22:21,240] WARNING - No commands extracted from command_chrome_passwords_TA0006_T1555.txt
+[2025-11-07 14:22:21,243] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TALOS_FIN7\match_results_edit_distance.csv

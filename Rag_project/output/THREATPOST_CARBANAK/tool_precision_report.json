@@ -1,0 +1,13 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "plink",
+    "ryuk",
+    "metasploit",
+    "ryuk",
+    "chrome-passwords"
+  ],
+  "false_positives": [],
+  "total_tools": 5,
+  "total_entries": 6
+}

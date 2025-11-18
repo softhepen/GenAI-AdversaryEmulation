@@ -1,0 +1,15 @@
+{
+  "precision": 0.3333333333333333,
+  "true_positives": [
+    "metasploit",
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "chromepasswordspsexecpaexecplinkpupy",
+    "rubeusryuktinymet",
+    "metasploitpupypsexec",
+    "metasploitpupy"
+  ],
+  "total_tools": 6,
+  "total_entries": 7
+}

@@ -1,0 +1,9 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using **only** the tool Rubeus to reproduce the following attack behavior:
+
+Adversaries may search for files and directories on local and remote systems.
+
+Command: `rubeus ls <directory_path>`
+
+*Replace `<directory_path>` with a valid directory path (e.g., "C:\Users\username", "D:\sharedfolder")*
+
+This command simulates searching for files and directories on the local system.

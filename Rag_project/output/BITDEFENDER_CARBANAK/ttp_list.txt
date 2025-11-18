@@ -1,0 +1,34 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Use of spear-phishing emails with malicious URLs Use of contaminated documents to download a Cobalt Strike beacon component. Use of spear-phishing emails with malicious URLs Use of contaminated documents. Use of contaminated documents to download a Cobalt Strike beacon component. Use of contaminated documents to download a Cobalt Strike beacon component. Use of spear-phishing emails with malicious URLs
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Compromising the credentials of a domain administrator.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1083 – FILE AND DIRECTORY DISCOVERY
+  Description: Discovery activities to identify and locate sensitive information and files within the compromised infrastructure.
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: Gather information about the system to evaluate the configuration and installed applications. The file "9D01CA.txt" collects and sends basic information about the compromised system, including computer name and operating system version.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+  Description: Attackers prepare data to be exfiltrated from the compromised network to a location controlled by them.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1210 – EXPLOITATION OF REMOTE SERVICES
+  Description: Exploitation of vulnerabilities to execute remote code.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: Execution of malicious files by the user. Execution of compromised documents by users. Opening the original document downloaded from the malicious URL triggers the creation of the temporary file. Execution of the malicious payload through user interaction.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Scripts are embedded in the attached files and run automatically when the files are opened. The attacker executes commands to interact with the system and move laterally. Downloading additional scripts.
+- Tactic: TA0040 – IMPACT
+  Technique: T1485 – DATA DESTRUCTION
+  Description: Deleting files from the system.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1070 – INDICATOR REMOVAL
+  Description: Attackers clean the logs to reduce the signs of their activities. The file "MGsCOxPSNK.txt" was deleted after execution to avoid detection and forensic analysis. Deleting the DLL from the system to avoid detection.
+  Technique: T1036 – MASQUERADING
+  Description: Use of decoy files that look like normal documents.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Obfuscation or encryption of files to avoid detection. Obfuscation of files to avoid detection.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: The document downloaded from the malicious URL introduces files into the victim's system. Transfer and placement of the malicious payload on the system. Transfer of malicious tools or files into the target system. File transfer from a command and control (C2) server.

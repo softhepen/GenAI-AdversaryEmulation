@@ -1,0 +1,35 @@
+- Tactic: TA0040 – IMPACT
+  Technique: T1561 – DISK WIPE
+  Description: Adversaries may wipe or corrupt raw disk data on specific systems or in large numbers in a network to interrupt availability to system and network resources.
+  Technique: T1495 – FIRMWARE CORRUPTION
+  Description: Adversaries may overwrite or corrupt the flash memory contents of system BIOS or other firmware in devices attached to a system in order to render them inoperable or unable to boot, thus denying the availability to use the devices and/or the system.
+  Technique: T1485 – DATA DESTRUCTION
+  Description: Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources. Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources. Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources. Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.
+  Technique: T1489 – SERVICE STOP
+  Description: Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Adversaries may stop or disable services on a system to render those services unavailable to legitimate users.
+  Technique: T0833 – MANIPULATION OF CONTROL
+  Description: Adversaries may manipulate physical process control within the industrial environment. Methods of manipulating control can include changes to set point values, tags, or other parameters. Adversaries may manipulate control systems devices or possibly leverage their own, to communicate with and command physical control processes. The duration of manipulation may be temporary or longer sustained, depending on operator detection.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic.
+  Technique: T1090 – PROXY
+  Description: Adversaries may use a connection proxy to direct network traffic between systems or act as an intermediary for network communications to a command and control server to avoid direct connections to their infrastructure.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+  Description: Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence. Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence. Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence. Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence. Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+  Description: Adversaries may create or modify system-level processes to repeatedly execute malicious payloads. Adversaries may create or modify system-level processes to repeatedly execute malicious payloads. Adversaries may create or modify system-level processes to repeatedly execute malicious payloads.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPT INTERPRETER
+  Description: Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.
+  Technique: T1129 – SHARED MODULES
+  Description: Adversaries may execute malicious payloads via loading shared modules. Adversaries may execute malicious payloads via loading shared modules. Adversaries may execute malicious payloads via loading shared modules.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1036 – MASQUERADING
+  Description: Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.
+- Tactic: TA0107 – INHIBIT REPONSE FUNCTION
+  Technique: T0814 – DENIAL OF SERVICE
+  Description: Adversaries may perform Denial-of-Service (DoS) attacks to disrupt expected device functionality.

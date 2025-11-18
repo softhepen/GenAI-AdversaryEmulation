@@ -1,0 +1,16 @@
+I understand the task and the constraints.
+
+Based on the provided documentation, I will generate realistic command lines using **only** the tool `Invoke-PSImage` to simulate the attack behavior described in T1027 (OBFUSCATED FILES OR INFORMATION) under TA0005 (DEFENSE EVASION).
+
+Here are my attempts:
+
+Command: ``invoke-psimage -e -i <image_file> -o <output_png>``
+* This command encodes a PowerShell script into an image file and saves it as a PNG.
+
+Command: ``invoke-psimage -d -i <existing_image_file> -o <output_png>``
+* This command embeds a payload (PowerShell script) in the least significant bytes of an existing image, making it look like a normal picture.
+
+Command: ``invoke-psimage -c -b 1920 -h 1200 -i <script> -o <output_png>``
+* This command creates a new PNG image from scratch using only the payload data (PowerShell script), with dimensions of 1920x1200.
+
+Please let me know if these commands meet your expectations.

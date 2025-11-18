@@ -1,0 +1,9 @@
+Based on the provided documentation and attack description, I will construct a command line that simulates using RDP to access and control the victim's system.
+
+Command: `plink.exe -no-antispoof -R 3389:localhost:3389 <victim_machine_ip>`
+
+This command uses the Plink tool to establish a connection to the victim machine's RDP service (port 3389) and forward it to the local machine. The `<victim_machine_ip>` placeholder represents the IP address of the victim machine.
+
+Note that I did not include any authentication credentials, as they are not explicitly mentioned in the attack description. Additionally, I used the `-no-antispoof` option to disable antispoofing, which is necessary for RDP connections.
+
+The command line accurately reproduces the behavior described in the attack description and corresponds to the MITRE technique T1021 (REMOTE SERVICES) and tactic TA0008 (LATERAL MOVEMENT).

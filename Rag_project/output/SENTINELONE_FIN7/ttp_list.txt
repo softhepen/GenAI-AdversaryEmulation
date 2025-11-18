@@ -1,0 +1,22 @@
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: The backdoor uses HTTPS for communication, which is an application layer protocol. Mimicking CDN domains indicates that the traffic is designed to blend in with legitimate web traffic.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The backdoor is implemented using JavaScript, executed via the Windows Script Host (wscript.exe), which is a common scripting interpreter. wscript.exe is used to execute JavaScript scripts. The adversaries rely on this interpreter to execute their malicious JavaScript. The command executes a JavaScript backdoor using mses.exe, which is associated with executing JScript.
+  Technique: T1204 – USER EXECUTION
+  Description: a Microsoft document is used.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: The malware performs checks on the system environment to detect if it is running in a sandbox (e.g., by checking the size of the drive). checking whether the malware is running in a virtualized environment
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: an obfuscated JavaScript backdoor is used
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: The malware performs checks on the system environment to detect if it is running in a sandbox (e.g., by checking the size of the drive). checking whether the malware is running in a virtualized environment
+  Technique: T1482 – DOMAIN TRUST DISCOVERY
+  Description: This refers to querying Active Directory to discover domain trust relationships, which helps attackers gather information about the environment.
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: Retrieving information about the operating system and the screen resolution
+  Technique: T1057 – PROCESS DISCOVERY
+  Description: Retrieving a list of running processes helps attackers understand the environment, identify security software, or locate valuable processes to exploit.

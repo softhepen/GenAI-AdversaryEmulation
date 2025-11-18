@@ -1,0 +1,15 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool Ryuk to reproduce the exfiltration of data over a command and control channel.
+
+Command: `ryuk.exe --disconnect-shares`
+
+This command is used to disconnect shares, which could be a precursor to exfiltrating data. The adversary may use this option to prepare the system for further exploitation.
+
+Command: `ryuk.exe -e`
+
+The `-e` option is used to confirm that the user wants to encrypt the system. This could be an indication that the adversary is preparing to exfiltrate sensitive data or files.
+
+Command: `ryuk.exe --drop-bat-files`
+
+This command drops kill.bat and window.bat into C:/Users/Public, which may be used for network share discovery or other malicious purposes.
+
+These commands simulate the initial steps of the attack, setting up the system for further exploitation and data exfiltration.

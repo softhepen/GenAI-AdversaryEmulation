@@ -1,0 +1,17 @@
+[2025-11-06 18:58:13,386] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:58:15,563] INFO - Tool selection for report: TRENDMICRO
+[2025-11-06 18:58:15,563] INFO - TTP extraction from CTI report
+[2025-11-06 18:58:15,576] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:59:19,577] INFO - Tool field precision: 0.29
+[2025-11-06 18:59:19,578] INFO - Validating LLM output
+[2025-11-06 18:59:19,579] WARNING - Invalid or multiple tools detected: 'psexec, paexec, plink' — replacing with 'No tool'
+[2025-11-06 18:59:19,579] WARNING - Invalid or multiple tools detected: 'psexec, paexec, plink' — replacing with 'No tool'
+[2025-11-06 18:59:19,579] WARNING - Invalid or multiple tools detected: 'windows-credential-editor, chrome-passwords' — replacing with 'No tool'
+[2025-11-06 18:59:19,608] WARNING - Invalid or multiple tools detected: 'adfind, psexec, paexec, plink' — replacing with 'No tool'
+[2025-11-06 18:59:19,609] WARNING - Invalid or multiple tools detected: 'windows-credential-editor, chrome-passwords' — replacing with 'No tool'
+[2025-11-06 18:59:19,611] INFO - Generating commands for report: TRENDMICRO
+[2025-11-06 18:59:19,658] INFO - Parsed 2 feasible attack actions.
+[2025-11-06 18:59:32,903] INFO - Saved command in output\TRENDMICRO_WIZARDSPIDER\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-06 18:59:43,619] INFO - Saved command in output\TRENDMICRO_WIZARDSPIDER\generated_commands\command_windows_credential_editor_TA0006_T1003.txt
+[2025-11-06 18:59:43,689] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRENDMICRO_WIZARDSPIDER\match_results_chrf.csv
+[2025-11-06 18:59:43,694] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRENDMICRO_WIZARDSPIDER\match_results_edit_distance.csv

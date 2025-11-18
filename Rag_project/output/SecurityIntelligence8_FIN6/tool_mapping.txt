@@ -1,0 +1,86 @@
+Here is the analysis:
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: Use of spear phishing emails to attract specific employees with fake job ads. Sending spear phishing emails containing links to malicious payloads. Sending spear phishing links via LinkedIn or email. Sending spear phishing emails containing links to malicious payloads. Sending spear phishing links via LinkedIn or email.
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: Using JavaScript/JScript to execute the More_eggs malware. Using PowerShell to execute commands. Using Windows scripts to execute malicious commands. Using JavaScript to execute malicious commands. Executing commands through the Windows shell. Execution of commands and scripts using PowerShell.
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+Description: Use of Windows Management Instrumentation (WMI) to automate the remote execution of PowerShell scripts. Using WMI to perform network reconnaissance and lateral movement within the environment.
+Tool: wmic
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1072 – SOFTWARE DEPLOYMENT TOOLS
+Description: Use of tools such as Metasploit for malware distribution.
+Tool: metasploit
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1204 – USER EXECUTION
+Description: Deception of the user to execute a malicious file.
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1129 – SHARED MODULES
+Description: Loading of shared modules, such as signed DLLs.
+Tool: No tool
+
+- Tactic: TA0042 – RESOURCE DEVELOPMENT
+Technique: T1588 – OBTAIN CAPABILITIES
+Description: Purchase of malware from a malware-as-a-service provider
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Obfuscation of PowerShell commands using base64 encoding.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1070 – INDICATOR REMOVAL
+Description: Deletion of malicious files to hide traces. Creation of non-malicious decoy documents to confuse researchers and obfuscate malicious activities.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1218 – SYSTEM BINARY PROXY EXECUTION
+Description: regsvr32.exe is used
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+Description: the loader decodes the backdoor
+Tool: No tool
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1072 – SOFTWARE DEPLOYMENT TOOLS
+Description: Use of tools such as Metasploit for malware distribution.
+Tool: metasploit
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1071 – REMOTE EXECUTION
+Description: Use of web protocols for malicious communications. Communication with the command and control server. The attacker used PowerShell and WMI to connect and download and execute a DLL file
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: Transfer of malicious tools from an external system to the compromised network. Downloading files and scripts. Transfer of additional malicious files.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1219 – REMOTE ACCESS TOOLS
+Description: Using remote access tools such as Meterpreter to establish a session with the compromised system
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1573 – ENCRYPTED CHANNEL
+Description: encoding methods were used
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+Description: the shellcode loader was observed as updater.exe
+Tool: ryuk

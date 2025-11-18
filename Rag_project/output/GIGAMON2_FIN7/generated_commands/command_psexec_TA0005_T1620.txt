@@ -1,0 +1,14 @@
+Based on the provided documentation and the objective to simulate reflective DLL injection using PsExec, I will construct realistic command lines that accurately reproduce the attack behavior.
+
+Here is the output:
+
+Command: `psexec \\target_machine -accepteula -nobanner -l -priority high cmd /c start /b "path_to_dll" /a /w`
+
+Note:
+*   `\\target_machine` is the target machine to which PsExec will connect and execute the command.
+*   `-accepteula` and `-nobanner` flags suppress the display of the license dialog and startup banner, respectively.
+*   `-l` flag runs the process as a limited user (strips the Administrators group and allows only privileges assigned to the Users group).
+*   `-priority high` flag sets the priority of the process to high.
+*   `cmd /c start /b "path_to_dll" /a /w` executes the command to inject the DLL into a process.
+
+Please note that I have used placeholders for `target_machine`, `path_to_dll`. These values should be replaced with actual parameters during execution.

@@ -1,0 +1,14 @@
+{
+  "precision": 0.4,
+  "true_positives": [
+    "chrome-passwords",
+    "ryuk"
+  ],
+  "false_positives": [
+    "adfindchromepasswordsrubeusryuktinymet",
+    "invokepsimagemetasploitwindowscredentialeditorpsexec",
+    "plinkpupy"
+  ],
+  "total_tools": 5,
+  "total_entries": 7
+}

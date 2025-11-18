@@ -1,0 +1,20 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1190 – EXPLOIT PUBLIC-FACING APPLICATION
+  Description: Adversaries may attempt to exploit a weakness in an Internet-facing host or system to initially access a network.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1036 – MASQUERADING
+  Description: Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Encrypting and/or encoding file content aims to conceal malicious artifacts within a file used in an intrusion.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Tools or files may be copied from an external adversary-controlled system to the victim network through the command and control channel.
+- Tactic: T0009 – COLLECTION
+  Technique: T1056 – INPUT CAPTURE
+  Description: Adversaries may use methods of capturing user input to obtain credentials or collect information.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1041 – EXFILTRATION OVER C2 CHANNEL
+  Description: Adversaries may steal data by exfiltrating it over an existing command and control channel.

@@ -1,0 +1,17 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "wmic",
+    "metasploit",
+    "metasploit",
+    "ryuk"
+  ],
+  "false_positives": [
+    "metasploitchromepasswords",
+    "chromepasswordsinvokepsimage",
+    "metasploitwmic",
+    "metasploitryuk"
+  ],
+  "total_tools": 8,
+  "total_entries": 17
+}

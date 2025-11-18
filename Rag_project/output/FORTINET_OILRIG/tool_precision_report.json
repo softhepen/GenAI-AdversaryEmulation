@@ -1,0 +1,13 @@
+{
+  "precision": 0.75,
+  "true_positives": [
+    "chrome-passwords",
+    "wmic",
+    "ryuk"
+  ],
+  "false_positives": [
+    "metasploitpsexecplinkpupy"
+  ],
+  "total_tools": 4,
+  "total_entries": 5
+}

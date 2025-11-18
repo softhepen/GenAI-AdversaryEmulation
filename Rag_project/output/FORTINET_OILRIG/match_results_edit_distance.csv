@@ -1,0 +1,3 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_ryuk_TA0002_T1105.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,0.417,True
+command_wmic_TA0002_T1047.txt,wmic,wmic /node:<c2_server_ip> /namespace:\\root\cimv2 path Win32_PingResult call Ping,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.29,True

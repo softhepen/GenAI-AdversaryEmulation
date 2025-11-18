@@ -1,0 +1,25 @@
+[2025-11-07 12:57:06,106] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:57:08,509] INFO - Tool selection for report: PICK
+[2025-11-07 12:57:08,509] INFO - TTP extraction from CTI report
+[2025-11-07 12:57:08,525] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:58:48,841] INFO - Tool field precision: 0.80
+[2025-11-07 12:58:48,843] INFO - Validating LLM output
+[2025-11-07 12:58:48,843] WARNING - Invalid or multiple tools detected: 'chrome-passwords, psexec' — replacing with 'No tool'
+[2025-11-07 12:58:48,844] WARNING - Invalid or multiple tools detected: 'powershell' — replacing with 'No tool'
+[2025-11-07 12:58:48,844] WARNING - Invalid or multiple tools detected: 'chrome-passwords, psexec' — replacing with 'No tool'
+[2025-11-07 12:58:48,850] INFO - Generating commands for report: PICK
+[2025-11-07 12:58:48,885] INFO - Parsed 12 feasible attack actions.
+[2025-11-07 12:59:13,067] INFO - Saved command in output\PICK_FIN6\generated_commands\command_adfind_TA0007_T1016.txt
+[2025-11-07 12:59:22,794] INFO - Saved command in output\PICK_FIN6\generated_commands\command_chrome_passwords_TA0007_T1087.txt
+[2025-11-07 12:59:30,546] INFO - Saved command in output\PICK_FIN6\generated_commands\command_psexec_TA0001_T1078.txt
+[2025-11-07 12:59:50,476] INFO - Saved command in output\PICK_FIN6\generated_commands\command_metasploit_TA0001_T1190.txt
+[2025-11-07 13:00:20,329] INFO - Saved command in output\PICK_FIN6\generated_commands\command_paexec_TA0008_T1021.txt
+[2025-11-07 13:00:45,689] INFO - Saved command in output\PICK_FIN6\generated_commands\command_chrome_passwords_TA0005_T1078.txt
+[2025-11-07 13:00:52,679] INFO - Saved command in output\PICK_FIN6\generated_commands\command_metasploit_TA0005_T1027.txt
+[2025-11-07 13:01:02,915] INFO - Saved command in output\PICK_FIN6\generated_commands\command_paexec_TA0005_T1036.txt
+[2025-11-07 13:01:13,651] INFO - Saved command in output\PICK_FIN6\generated_commands\command_metasploit_TA0003_T1543.txt
+[2025-11-07 13:01:39,497] INFO - Saved command in output\PICK_FIN6\generated_commands\command_metasploit_TA0004_T1543.txt
+[2025-11-07 13:01:50,822] INFO - Saved command in output\PICK_FIN6\generated_commands\command_paexec_TA0002_T1569.txt
+[2025-11-07 13:02:36,672] INFO - Saved command in output\PICK_FIN6\generated_commands\command_metasploit_TA0011_T1105.txt
+[2025-11-07 13:02:54,466] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\PICK_FIN6\match_results_chrf.csv
+[2025-11-07 13:02:54,557] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\PICK_FIN6\match_results_edit_distance.csv

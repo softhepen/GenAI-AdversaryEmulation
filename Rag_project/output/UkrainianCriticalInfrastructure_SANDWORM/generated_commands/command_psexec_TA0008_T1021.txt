@@ -1,0 +1,9 @@
+Here are the command lines that simulate the attack behavior described:
+
+Command:`psexec.exe -u <user_name> -p <password> -r telnet`
+
+Command:`psexec.exe -s -i -w <working_directory> -e -f <program_path>`
+
+Command:`psexec.exe -u <user_name> -p <password> -r vnc`
+
+Please note that I've used placeholders for user name, password, and program path as per the instructions.

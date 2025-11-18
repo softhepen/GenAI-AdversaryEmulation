@@ -1,0 +1,13 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "adfind",
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "psexecpaexec",
+    "chromepasswordsmetasploittinymet"
+  ],
+  "total_tools": 4,
+  "total_entries": 8
+}

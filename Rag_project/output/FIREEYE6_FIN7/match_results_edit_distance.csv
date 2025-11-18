@@ -1,0 +1,15 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_invoke_psimage_TA0003_T1547.txt,invoke psimage,Invoke-PSImage -Script .\Invoke-Mimikatz.ps1 -Out .\startup.exe -Startup,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.566,True
+command_invoke_psimage_TA0004_T1547.txt,invoke psimage,Invoke-PSImage -Script .\Invoke-Mimikatz.ps1 -Out .\startup.png -Image .\kiwi.jpg -Startup,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,0.682,True
+command_wmic_TA0007_T1057.txt,wmic,wmic path win32_process get name,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.417,True
+command_wmic_TA0009_T1018.txt,wmic,wmic os get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.293,True
+command_wmic_TA0009_T1018.txt,wmic,"wmic csproduct get vendor, name, version /value","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.27,True
+command_wmic_TA0009_T1018.txt,wmic,"wmic cpu get numberofcores, numberoflogicalprocessors, maxclockspeed /value","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.302,True
+command_wmic_TA0009_T1018.txt,wmic,"wmic bios get smbiosbiosversion, releasedate /value","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.313,True
+command_wmic_TA0009_T1018.txt,wmic,"wmic path win32_process get processid, name, executablepath /value","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.431,True
+command_wmic_TA0009_T1082.txt,wmic,wmic os get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.293,True
+command_wmic_TA0009_T1082.txt,wmic,wmic cpu get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.265,True
+command_wmic_TA0009_T1082.txt,wmic,wmic bios get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.286,True
+command_wmic_TA0009_T1082.txt,wmic,wmic process list /output:XML > process_output.xml,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.333,True
+command_wmic_TA0009_T1082.txt,wmic,"wmic path win32_process get name,processid,caption /format:value","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.375,True

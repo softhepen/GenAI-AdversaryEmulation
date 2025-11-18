@@ -1,0 +1,9 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using **only** the tool psexec to reproduce the following attack behavior:
+
+The dropper downloads and installs remote access tools (RATs) on the victim's machine.
+
+Here is the output:
+
+Command: `psexec \\<target_computer> -u <username> -p <password> cmd /c powershell.exe -ExecutionPolicy Bypass -File <ransomware_dll_path>`
+
+Note: The placeholders `<target_computer>`, `<username>`, `<password>`, and `<ransomware_dll_path>` must be replaced with the actual values.

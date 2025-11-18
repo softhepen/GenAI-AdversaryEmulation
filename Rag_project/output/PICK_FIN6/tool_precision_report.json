@@ -1,0 +1,24 @@
+{
+  "precision": 0.8,
+  "true_positives": [
+    "adfind",
+    "chrome-passwords",
+    "psexec",
+    "metasploit",
+    "paexec",
+    "chrome-passwords",
+    "metasploit",
+    "paexec",
+    "metasploit",
+    "metasploit",
+    "paexec",
+    "metasploit"
+  ],
+  "false_positives": [
+    "chromepasswordspsexec",
+    "powershell",
+    "chromepasswordspsexec"
+  ],
+  "total_tools": 15,
+  "total_entries": 21
+}

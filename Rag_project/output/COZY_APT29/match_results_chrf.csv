@@ -1,0 +1,5 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0005_T1036.txt,adfind,"adfind -sddl++ -resolvesids -sdpipe+x -where ""(&(objectCategory=link)(path=<shortcut_file_path>))""",`adfind.exe -f (objectcategory=person) > ad_users.txt`,21.899,True
+command_adfind_TA0005_T1036.txt,adfind,"adfind -sdpipe+ -resolvesidsgeneric -where ""(&(objectCategory=form)(name=<form_name>))""",`adfind.exe -f (objectcategory=person) > ad_users.txt`,23.365,True
+command_adfind_TA0005_T1036.txt,adfind,"adfind -sddl+++ -resolvesids -sdpipe+x -where ""(&(objectCategory=computer)(dn=<pandora_music_streaming_service_dns>))""",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,25.741,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",64.495,True

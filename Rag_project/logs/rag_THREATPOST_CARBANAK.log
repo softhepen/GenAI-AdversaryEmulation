@@ -1,0 +1,15 @@
+[2025-11-06 18:33:19,814] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:33:21,990] INFO - Tool selection for report: THREATPOST
+[2025-11-06 18:33:21,990] INFO - TTP extraction from CTI report
+[2025-11-06 18:33:22,001] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:33:52,524] INFO - Tool field precision: 1.00
+[2025-11-06 18:33:52,525] INFO - Validating LLM output
+[2025-11-06 18:33:52,555] INFO - Generating commands for report: THREATPOST
+[2025-11-06 18:33:52,606] INFO - Parsed 5 feasible attack actions.
+[2025-11-06 18:34:09,198] INFO - Saved command in output\THREATPOST_CARBANAK\generated_commands\command_plink_TA0011_T1219.txt
+[2025-11-06 18:34:24,201] INFO - Saved command in output\THREATPOST_CARBANAK\generated_commands\command_ryuk_TA0002_T1204.txt
+[2025-11-06 18:34:46,985] INFO - Saved command in output\THREATPOST_CARBANAK\generated_commands\command_metasploit_TA0042_T1587.txt
+[2025-11-06 18:34:53,897] INFO - Saved command in output\THREATPOST_CARBANAK\generated_commands\command_ryuk_TA0009_T1113.txt
+[2025-11-06 18:35:04,100] INFO - Saved command in output\THREATPOST_CARBANAK\generated_commands\command_chrome_passwords_TA0006_T1555.txt
+[2025-11-06 18:35:08,653] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\THREATPOST_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:35:08,671] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\THREATPOST_CARBANAK\match_results_edit_distance.csv

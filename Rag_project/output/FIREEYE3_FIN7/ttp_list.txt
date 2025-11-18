@@ -1,0 +1,11 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Sending a document
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: Convincing the user to enable macros for execution through social engineering tactics
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Use of obfuscated JavaScript as a next-stage payload extracted from the form caption the execution of VBScript, which in this case is used to launch JavaScript. The backdoor uses JavaScript to execute commands received from the C2 server, leveraging the eval function to run these commands dynamically.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The obfuscation of both the macro and the JavaScript is part of this technique, where adversaries disguise their code to evade detection.

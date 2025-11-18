@@ -1,0 +1,13 @@
+[2025-11-07 13:28:39,413] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:28:41,573] INFO - Tool selection for report: FIREEYE3
+[2025-11-07 13:28:41,573] INFO - TTP extraction from CTI report
+[2025-11-07 13:28:41,586] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:29:05,725] INFO - Tool field precision: 1.00
+[2025-11-07 13:29:05,726] INFO - Validating LLM output
+[2025-11-07 13:29:05,731] INFO - Generating commands for report: FIREEYE3
+[2025-11-07 13:29:05,764] INFO - Parsed 3 feasible attack actions.
+[2025-11-07 13:29:18,733] INFO - Saved command in output\FIREEYE3_FIN7\generated_commands\command_chrome_passwords_TA0002_T1204.txt
+[2025-11-07 13:29:43,325] INFO - Saved command in output\FIREEYE3_FIN7\generated_commands\command_metasploit_TA0002_T1059.txt
+[2025-11-07 13:29:57,934] INFO - Saved command in output\FIREEYE3_FIN7\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-07 13:29:59,781] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE3_FIN7\match_results_chrf.csv
+[2025-11-07 13:29:59,800] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FIREEYE3_FIN7\match_results_edit_distance.csv

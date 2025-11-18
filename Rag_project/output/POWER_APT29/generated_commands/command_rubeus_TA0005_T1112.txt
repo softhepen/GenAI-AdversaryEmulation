@@ -1,0 +1,7 @@
+Based on the documentation and the provided description, I will generate a realistic command line using Rubeus to simulate the PowerDuke backdoor persistence via HKCU Run Key.
+
+Here is the output:
+
+Command:`rubeus.exe reg add /key:HKCU\Software\Microsoft\Windows\CurrentVersion\Run /value:PowerDuke /type:string`
+
+This command adds a new registry value named "PowerDuke" to the HKCU\Software\Microsoft\Windows\CurrentVersion\Run key, which is a known persistence mechanism for malware.

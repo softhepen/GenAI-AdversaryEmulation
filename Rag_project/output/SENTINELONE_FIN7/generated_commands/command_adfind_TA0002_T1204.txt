@@ -1,0 +1,15 @@
+Based on the provided documentation, I will generate realistic command lines using the adfind tool to reproduce the attack behavior described in the Microsoft document.
+
+Here is the output:
+
+Command: `adfind msDS-ReplConnectionFailures`
+
+Command: `adfind msDS-ReplLinkFailures -f "msPKIRoamingTimeStamp:<timestamp>"`
+
+Command: `adfind msDS-ReplPendingOps -c 10 -s `<file_path>``
+
+Command: `adfind msDS-ReplQueueStatistics -f "msDS-Site-Affinity:<site_name>"`
+
+Command: `adfind msDS-RetiredReplNCSignatures -f "msPKIRoamingTimeStamp:<timestamp>"`
+
+Note that I have used the placeholders `<file_path>` and `<site_name>` where necessary, as per the strict policy.

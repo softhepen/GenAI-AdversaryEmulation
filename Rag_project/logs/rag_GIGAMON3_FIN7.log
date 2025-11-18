@@ -1,0 +1,14 @@
+[2025-11-07 13:53:22,008] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:53:24,073] INFO - Tool selection for report: GIGAMON3
+[2025-11-07 13:53:24,074] INFO - TTP extraction from CTI report
+[2025-11-07 13:53:24,085] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:53:57,419] INFO - Tool field precision: 0.50
+[2025-11-07 13:53:57,420] INFO - Validating LLM output
+[2025-11-07 13:53:57,420] WARNING - Invalid or multiple tools detected: 'chrome-passwords, metasploit, psexec, pupy, tiny_met' — replacing with 'No tool'
+[2025-11-07 13:53:57,420] WARNING - Invalid or multiple tools detected: 'paexec, psexec' — replacing with 'No tool'
+[2025-11-07 13:53:57,421] INFO - Generating commands for report: GIGAMON3
+[2025-11-07 13:53:57,446] INFO - Parsed 2 feasible attack actions.
+[2025-11-07 13:54:22,834] INFO - Saved command in output\GIGAMON3_FIN7\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-07 13:54:31,838] INFO - Saved command in output\GIGAMON3_FIN7\generated_commands\command_rubeus_TA0005_T1027.txt
+[2025-11-07 13:54:32,326] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GIGAMON3_FIN7\match_results_chrf.csv
+[2025-11-07 13:54:32,332] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GIGAMON3_FIN7\match_results_edit_distance.csv

@@ -1,0 +1,5 @@
+Here are the command lines that simulate the attack behavior using only the tool psexec:
+
+Command: `psexec \\remote_system -u domain\username -p password osql.exe -S <SQL_Server_Instance> -Q "SELECT * FROM database.table"`
+
+Note: Replace `<remote_system>` with the actual remote system name or IP address, `<domain>` and `<username>` with the actual domain and username for authentication, `<password>` with the actual password for authentication, `<SQL_Server_Instance>` with the actual SQL Server instance name.

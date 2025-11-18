@@ -1,0 +1,19 @@
+[2025-11-06 17:48:56,606] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:48:58,985] INFO - Tool selection for report: POSH
+[2025-11-06 17:48:58,986] INFO - TTP extraction from CTI report
+[2025-11-06 17:48:58,997] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:50:14,113] INFO - Tool field precision: 1.00
+[2025-11-06 17:50:14,116] INFO - Validating LLM output
+[2025-11-06 17:50:14,118] INFO - Generating commands for report: POSH
+[2025-11-06 17:50:14,148] INFO - Parsed 9 feasible attack actions.
+[2025-11-06 17:50:23,415] INFO - Saved command in output\POSH_APT29\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-06 17:50:52,524] INFO - Saved command in output\POSH_APT29\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-06 17:51:03,136] INFO - Saved command in output\POSH_APT29\generated_commands\command_rubeus_TA0002_T1106.txt
+[2025-11-06 17:51:22,959] INFO - Saved command in output\POSH_APT29\generated_commands\command_rubeus_TA0003_T1546.txt
+[2025-11-06 17:51:43,073] INFO - Saved command in output\POSH_APT29\generated_commands\command_chrome_passwords_TA0005_T1027.txt
+[2025-11-06 17:52:01,460] INFO - Saved command in output\POSH_APT29\generated_commands\command_rubeus_TA0005_T1546.txt
+[2025-11-06 17:52:19,564] INFO - Saved command in output\POSH_APT29\generated_commands\command_ryuk_TA0005_T1036.txt
+[2025-11-06 17:52:38,282] INFO - Saved command in output\POSH_APT29\generated_commands\command_paexec_TA0011_T1105.txt
+[2025-11-06 17:52:56,918] INFO - Saved command in output\POSH_APT29\generated_commands\command_chrome_passwords_TA0011_T1573.txt
+[2025-11-06 17:52:57,686] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\POSH_APT29\match_results_chrf.csv
+[2025-11-06 17:52:57,701] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\POSH_APT29\match_results_edit_distance.csv

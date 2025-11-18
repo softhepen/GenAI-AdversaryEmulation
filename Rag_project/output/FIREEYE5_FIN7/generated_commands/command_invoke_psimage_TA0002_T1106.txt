@@ -1,0 +1,9 @@
+Based on the documentation and the attack description, I will generate realistic command lines using **only** the tool `Invoke-PSImage` to reproduce the behavior of leveraging native APIs for decompression.
+
+Here is my output:
+
+Command:`Invoke-PSImage -ScriptBlock {RtlDecompressBuffer} -OutputFile `<file_path>``
+
+In this command line, I used the documented syntax of `Invoke-PSImage` to encode a PowerShell script in a PNG file and generate a one-liner for executing. The `-ScriptBlock` parameter is set to `{RtlDecompressBuffer}`, which represents the native API function used for decompression. The `-OutputFile` parameter is a placeholder for the file path where the encoded image will be saved.
+
+Please note that I have not included any specific values for `<file_path>`, as they were not provided in the attack description. You may need to substitute this value with a valid file path using the correct syntax from the documentation.

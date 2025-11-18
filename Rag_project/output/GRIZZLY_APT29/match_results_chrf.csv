@@ -1,0 +1,6 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_invoke_psimage_TA0005_T1027.txt,invoke psimage,Invoke-PSImage -Script { Get-Content -Path <file_path> -ErrorAction SilentlyContinue },`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,30.351,True
+command_psexec_TA0002_T1204.txt,psexec,psexec -l <user_name> <target_system>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",15.552,True
+command_psexec_TA0011_T1105.txt,psexec,psexec \\<target_computer> -u <username> -p <password> cmd /c powershell.exe -ExecutionPolicy Bypass -File <ransomware_dll_path>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",24.836,True

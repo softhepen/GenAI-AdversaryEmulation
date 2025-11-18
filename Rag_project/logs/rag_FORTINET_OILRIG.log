@@ -1,0 +1,16 @@
+[2025-11-06 19:30:17,799] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:30:20,029] INFO - Tool selection for report: FORTINET
+[2025-11-06 19:30:20,029] INFO - TTP extraction from CTI report
+[2025-11-06 19:30:20,040] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:30:50,692] INFO - Tool field precision: 0.75
+[2025-11-06 19:30:50,693] INFO - Validating LLM output
+[2025-11-06 19:30:50,694] WARNING - Invalid or multiple tools detected: 'metasploit, psexec, plink, pupy' — replacing with 'No tool'
+[2025-11-06 19:30:50,723] INFO - Generating commands for report: FORTINET
+[2025-11-06 19:30:50,749] INFO - Parsed 3 feasible attack actions.
+[2025-11-06 19:30:54,776] INFO - Saved command in output\FORTINET_OILRIG\generated_commands\command_chrome_passwords_TA0002_T1204.txt
+[2025-11-06 19:31:12,184] INFO - Saved command in output\FORTINET_OILRIG\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-06 19:31:24,426] INFO - Saved command in output\FORTINET_OILRIG\generated_commands\command_ryuk_TA0002_T1105.txt
+[2025-11-06 19:31:24,451] WARNING - No commands extracted from command_chrome_passwords_TA0002_T1204.txt
+[2025-11-06 19:31:24,535] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FORTINET_OILRIG\match_results_chrf.csv
+[2025-11-06 19:31:24,538] WARNING - No commands extracted from command_chrome_passwords_TA0002_T1204.txt
+[2025-11-06 19:31:24,543] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\FORTINET_OILRIG\match_results_edit_distance.csv

@@ -1,0 +1,19 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool plink to reproduce the REMOTE SYSTEM DISCOVERY attack behavior.
+
+Command: `plink.exe -ssh <attacker_ssh_user>@<target_system_ip>`
+
+This command connects to a target system using SSH protocol without specifying a particular port or protocol version. The placeholder `<attacker_ssh_user>` can be replaced with the actual username of the attacker, and `<target_system_ip>` with the IP address of the targeted system.
+
+Command: `plink.exe -R <listen-IP>:<listen-port>:<target_system_ip>:22`
+
+This command forwards a remote port (22) to a local address (`<listen-IP>`) on a specific port (`<listen-port>`). This can be used to establish an SSH connection to the target system. The placeholders `<listen-IP>`, `<listen-port>`, and `<target_system_ip>` should be replaced with actual values.
+
+Command: `plink.exe -ssh <attacker_ssh_user>@*`
+
+This command uses a wildcard (`*`) instead of a specific hostname or IP address, allowing for the connection to any system on the network. The placeholder `<attacker_ssh_user>` can be replaced with the actual username of the attacker.
+
+Command: `plink.exe -R :22:<target_system_ip>:22 -ssh <attacker_ssh_user>@`
+
+This command establishes an SSH connection to the target system without specifying a particular protocol version or port. The placeholders `<listen-IP>`, `<target_system_ip>`, and `<attacker_ssh_user>` should be replaced with actual values.
+
+Please note that these command lines are generated based on the provided documentation and attack description, and they may not necessarily represent real-world attacks.

@@ -1,0 +1,53 @@
+# Tool Descriptions
+
+## adfind
+
+AdFind is a free command-line query tool that can be used for gathering information from Active Directory. It supports techniques such as Account Discovery, Domain Trust Discovery, Permission Groups Discovery, Remote System Discovery, and System Network Configuration Discovery.
+
+## chrome-passwords
+
+Chrome Passwords is a tool used to extract credentials stored in Google Chrome's password manager. It has been used by threat actors to retrieve saved usernames and passwords from the browser, often leveraging built-in Windows APIs to decrypt the stored data. This tool can be executed via scripts or malware to silently access sensitive credential information without user interaction. It supports techniques such as Credential Access, Credentials from Password Stores, and Credentials from Web Browsers.
+
+## invoke-psimage
+
+Invoke-PSImage takes a PowerShell script and embeds the bytes of the script into the pixels of a PNG image. It generates a one-liner for executing either from a file or from the web. An example of usage is embedding the PowerShell code from the Invoke-Mimikatz module into an image file. By calling the image file from a macro, the macro downloads the picture and executes the PowerShell code, which in this case dumps the passwords. It supports techniques such as Obfuscated Files or Information: Steganography and Obfuscated Files or Information: Embedded Payloads
+
+## metasploit
+
+Metasploit is a modular penetration testing platform that enables users to write, test, and execute exploit code against remote targets. It includes a wide range of payloads, encoders, and post-exploitation modules, making it a powerful tool for simulating attacks and assessing security vulnerabilities. Adversaries have used Metasploit to automate exploitation, deliver malware, and perform reconnaissance and lateral movement within compromised environments. It supports techniques such as Exploit Public-Facing Application, Command and Scripting Interpreter: PowerShell, Command and Scripting Interpreter: Unix Shell, Command and Scripting Interpreter: Windows Command Shell, Ingress Tool Transfer, Lateral Tool Transfer, Remote Services: Remote Desktop Protocol, Remote Services: SSH, Remote Services: VNC, System Information Discovery, System Network Configuration Discovery, System Owner/User Discovery, System Service Discovery, Process Discovery, File and Directory Discovery, Network Service Scanning, Network Sniffing, Automated Exfiltration, and Data Compressed.
+
+## paexec
+
+PAExec is a redistributable, open-source alternative to PsExec that allows users to launch Windows programs on remote systems. It is commonly used for remote administration and can execute processes with different user credentials, making it useful for lateral movement and remote task execution. PAExec does not require installation on the remote system and can operate without writing to disk, which makes it attractive for stealthy operations. It supports techniques such as Remote Services: SMB/Windows Admin Shares, Execution through API: CreateProcess, Ingress Tool Transfer, and Command and Scripting Interpreter: Windows Command Shell.
+
+## plink
+
+ Plink is a command-line network connection tool used to establish SSH sessions, typically as part of the PuTTY suite. It allows for remote command execution over SSH and is often used in scripts or automated tasks. Adversaries may abuse Plink to create encrypted tunnels for command and control or to facilitate lateral movement within a compromised network. It supports techniques such as Remote Services: SSH, Ingress Tool Transfer, and Tunneling: SSH Tunneling.
+
+## psexec
+
+PsExec is a free Microsoft tool that can be used to execute a program on another computer. It is used by IT administrators and attackers. It supports techniques such as Create Account: Domain Account, Create or Modify System Process: Windows Service, Lateral Tool Transfer, Remote Services: SMB/Windows Admin Shares and System Services: Service Execution
+
+## pupy
+
+Pupy is an open source, cross-platform (Windows, Linux, OSX, Android) remote administration and post-exploitation tool. It is written in Python and can be generated as a payload in several different ways (Windows exe, Python file, PowerShell oneliner/file, Linux elf, APK, Rubber Ducky, etc.). It supports techniques such as Abuse Elevation Control Mechanism: Bypass User Account Control, Access Token Manipulation: Token Impersonation/Theft, Account Discovery: Local Account, Adversary-in-the-Middle: LLMNR/NBT-NS Poisoning and SMB Relay, Application Layer Protocol: Web Protocols, Archive Collected Data: Archive via Utility, Audio Capture, Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder, Boot or Logon Autostart Execution: XDG Autostart Entries, Command and Scripting Interpreter: PowerShell, Command and Scripting Interpreter: Python, Create Account: Local Account, Create Account: Domain Account, Create or Modify System Process: Systemd Service, Credentials from Password Stores, Credentials from Web Browsers, Email Collection: Local Email Collection, Encrypted Channel: Asymmetric Cryptography, Exfiltration Over C2 Channel, File and Directory Discovery, Indicator Removal: Clear Windows Event Logs, Ingress Tool Transfer, Input Capture: Keylogging, Network Service Discovery, Network Share Discovery, OS Credential Dumping: LSASS Memory, OS Credential Dumping: LSA Secrets, OS Credential Dumping: Cached Domain Credentials, Process Discovery, Process Injection: Dynamic-link Library Injection, Remote Services: Remote Desktop Protocol, Screen Capture, System Information Discovery, System Network Configuration Discovery, System Network Connections Discovery, System Owner/User Discovery, System Services: Service Execution, Unsecured Credentials: Credentials In Files, Use Alternate Authentication Material: Pass the Ticket, Video Capture, and Virtualization/Sandbox Evasion: System Checks. 
+
+## rubeus
+
+Rubeus is a C# toolset designed for raw Kerberos interaction that has been used since at least 2020, including in ransomware operations. It supports techniques such as Domain Trust Discovery, Steal or Forge Kerberos Tickets: Golden Ticket, Steal or Forge Kerberos Tickets: Silver Ticket, Steal or Forge Kerberos Tickets: Kerberoasting, and Steal or Forge Kerberos Tickets: AS-REP Roasting. 
+
+## ryuk
+
+Ryuk is a ransomware designed to target enterprise environments that has been used in attacks since at least 2018. Ryuk shares code similarities with Hermes ransomware. It supports techniques such as Access Token Manipulation, Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder, Command and Scripting Interpreter: Windows Command Shell, Data Encrypted for Impact, File and Directory Discovery, File and Directory Permissions Modification: Windows File and Directory Permissions Modification, Impair Defenses: Disable or Modify Tools, Inhibit System Recovery, Local Storage Discovery, Masquerading, Match Legitimate Resource Name or Location, Native API, Obfuscated Files or Information, Process Discovery, Process Injection, Remote Services: SMB/Windows Admin Shares, Scheduled Task/Job: Scheduled Task, Service Stop, System Location Discovery: System Language Discovery, System Network Configuration Discovery, Traffic Signaling and Valid Accounts: Domain Accounts
+
+## tinymet
+
+TinyMet is a lightweight version of the Metasploit Meterpreter payload designed for stealthy post-exploitation activities. It has been used by threat actors to maintain access, execute commands, and perform reconnaissance on compromised systems with minimal footprint. TinyMet is particularly useful in environments where avoiding detection is critical, as it omits many of the larger Meterpreter features to reduce size and complexity. It supports techniques such as Command and Scripting Interpreter: Windows Command Shell, Process Discovery, System Information Discovery, System Owner/User Discovery, System Network Configuration Discovery, and Ingress Tool Transfer.
+
+## windows-credential-editor
+
+Windows Credential Editor is a password dumping tool. It supports technique such as OS Credential Dumping: LSASS Memory 
+
+## wmic
+
+WMIC (Windows Management Instrumentation Command-line) is a native Windows utility that provides a command-line interface for WMI operations. It allows users to query system information, manage processes and services, and execute remote commands. Adversaries often abuse WMIC for stealthy execution, lateral movement, and system reconnaissance, as it is built into Windows and commonly used by administrators, making its activity harder to detect. It supports techniques such as Execution: Windows Management Instrumentation, System Information Discovery, Process Discovery, System Owner/User Discovery, System Network Configuration Discovery, and Remote Services: Remote WMI. 

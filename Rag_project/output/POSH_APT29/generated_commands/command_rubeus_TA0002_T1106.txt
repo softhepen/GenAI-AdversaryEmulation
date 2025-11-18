@@ -1,0 +1,7 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using only the tool Rubeus to reproduce the following attack behavior:
+
+Creating a new WMI class and adding a text property.
+
+**Command:** `rubeus.exe wmi create /class:<new_wmi_class_name> /prop:text=<property_name>:<property_value>`
+
+Note: I will use placeholders for the `<new_wmi_class_name>` and `<property_name>` parameters, as they are not specified in the attack description.

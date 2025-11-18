@@ -1,0 +1,2 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_ryuk_TA0004_T1055.txt,ryuk,ryuk.exe --inject <dll_name>,`ryuk.exe --encrypt --process-name notepad.exe`,36.043,True

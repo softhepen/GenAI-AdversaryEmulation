@@ -1,0 +1,17 @@
+{
+  "precision": 1.0,
+  "true_positives": [
+    "plink",
+    "chrome-passwords",
+    "adfind",
+    "ryuk",
+    "chrome-passwords",
+    "ryuk",
+    "adfind",
+    "wmic",
+    "psexec"
+  ],
+  "false_positives": [],
+  "total_tools": 9,
+  "total_entries": 9
+}

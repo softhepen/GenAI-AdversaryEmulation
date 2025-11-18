@@ -1,0 +1,10 @@
+Here are the command lines that simulate Ammyy Admin's behavior using PAExec:
+
+Command: `paexec.exe -c -u <user_name> -p <password> -i`
+Command: `paexec.exe -s -u <user_name> -p <password> -i`
+Command: `paexec.exe -l -u <user_name> -p <password> -i`
+Command: `paexec.exe -h -u <user_name> -p <password> -i`
+
+Note that I've used the `-c` option to copy the specified program (PAExec itself) to the remote system for execution, and the `-i` option to run the process so that it interacts with the desktop of the specified session on the specified system. I've also included placeholders for `<user_name>` and `<password>`, as these parameters are not explicitly specified in the attack description.
+
+I have not used any other options, such as `-a`, `-n`, or `-p@`/`-p@d`, as they do not seem relevant to simulating Ammyy Admin's behavior.

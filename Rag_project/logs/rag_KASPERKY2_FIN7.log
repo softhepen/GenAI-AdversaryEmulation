@@ -1,0 +1,21 @@
+[2025-11-07 13:59:11,053] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:59:13,156] INFO - Tool selection for report: KASPERKY2
+[2025-11-07 13:59:13,156] INFO - TTP extraction from CTI report
+[2025-11-07 13:59:13,167] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 14:00:37,053] INFO - Tool field precision: 1.00
+[2025-11-07 14:00:37,054] INFO - Validating LLM output
+[2025-11-07 14:00:37,083] INFO - Generating commands for report: KASPERKY2
+[2025-11-07 14:00:37,129] INFO - Parsed 11 feasible attack actions.
+[2025-11-07 14:00:52,475] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_pupy_TA0001_T1078.txt
+[2025-11-07 14:01:10,774] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 14:01:21,071] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-07 14:01:39,551] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_adfind_TA0007_T1082.txt
+[2025-11-07 14:02:00,524] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_paexec_TA0007_T1016.txt
+[2025-11-07 14:02:17,981] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_invoke_psimage_TA0011_T1105.txt
+[2025-11-07 14:02:25,756] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_pupy_TA0005_T1078.txt
+[2025-11-07 14:02:38,091] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_ryuk_TA0003_T1547.txt
+[2025-11-07 14:02:55,420] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_pupy_TA0003_T1078.txt
+[2025-11-07 14:03:06,116] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_ryuk_TA0004_T1547.txt
+[2025-11-07 14:03:23,047] INFO - Saved command in output\KASPERKY2_FIN7\generated_commands\command_pupy_TA0004_T1078.txt
+[2025-11-07 14:03:24,968] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\KASPERKY2_FIN7\match_results_chrf.csv
+[2025-11-07 14:03:24,990] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\KASPERKY2_FIN7\match_results_edit_distance.csv

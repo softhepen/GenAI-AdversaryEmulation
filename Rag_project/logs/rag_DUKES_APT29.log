@@ -1,0 +1,21 @@
+[2025-11-06 17:32:30,162] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:32:32,367] INFO - Tool selection for report: DUKES
+[2025-11-06 17:32:32,368] INFO - TTP extraction from CTI report
+[2025-11-06 17:32:32,369] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:34:34,602] INFO - Tool field precision: 0.55
+[2025-11-06 17:34:34,603] INFO - Validating LLM output
+[2025-11-06 17:34:34,603] WARNING - Invalid or multiple tools detected: 'chrome (for credential dumping)' — replacing with 'No tool'
+[2025-11-06 17:34:34,603] WARNING - Invalid or multiple tools detected: 'chrome (for credential dumping)' — replacing with 'No tool'
+[2025-11-06 17:34:34,603] WARNING - Invalid or multiple tools detected: 'chrome' — replacing with 'No tool'
+[2025-11-06 17:34:34,607] WARNING - Invalid or multiple tools detected: 'chrome (for credential dumping)' — replacing with 'No tool'
+[2025-11-06 17:34:34,607] WARNING - Invalid or multiple tools detected: 'chrome (for credential dumping)' — replacing with 'No tool'
+[2025-11-06 17:34:34,608] INFO - Generating commands for report: DUKES
+[2025-11-06 17:34:34,686] INFO - Parsed 6 feasible attack actions.
+[2025-11-06 17:34:57,748] INFO - Saved command in output\DUKES_APT29\generated_commands\command_psexec_TA0002_T1569.txt
+[2025-11-06 17:35:32,632] INFO - Saved command in output\DUKES_APT29\generated_commands\command_metasploit_TA0002_T1059.txt
+[2025-11-06 17:35:54,967] INFO - Saved command in output\DUKES_APT29\generated_commands\command_metasploit_TA0010_T1041.txt
+[2025-11-06 17:36:36,286] INFO - Saved command in output\DUKES_APT29\generated_commands\command_metasploit_TA0011_T1071.txt
+[2025-11-06 17:36:46,331] INFO - Saved command in output\DUKES_APT29\generated_commands\command_metasploit_TA0011_T1102.txt
+[2025-11-06 17:37:01,081] INFO - Saved command in output\DUKES_APT29\generated_commands\command_psexec_TA0008_T1021.txt
+[2025-11-06 17:37:14,448] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DUKES_APT29\match_results_chrf.csv
+[2025-11-06 17:37:14,512] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DUKES_APT29\match_results_edit_distance.csv

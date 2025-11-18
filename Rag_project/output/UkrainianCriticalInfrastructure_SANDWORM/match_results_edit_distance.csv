@@ -1,0 +1,8 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_psexec_TA0008_T1021.txt,psexec,psexec.exe -u <user_name> -p <password> -r telnet,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.324,True
+command_psexec_TA0008_T1021.txt,psexec,psexec.exe -s -i -w <working_directory> -e -f <program_path>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.229,True
+command_psexec_TA0008_T1021.txt,psexec,psexec.exe -u <user_name> -p <password> -r vnc,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.31,True
+command_ryuk_TA0040_T1529.txt,ryuk,ryuk.exe /shutdown,`ryuk.exe --encrypt --process-name notepad.exe`,0.369,True

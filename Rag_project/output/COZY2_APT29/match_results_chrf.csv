@@ -1,0 +1,4 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_wmic_TA0002_T1047.txt,wmic,"wmic /node:<target_computer> /namespace:\\root\cimv2 path Win32_Process call Create,CommandLine=""calc.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`",24.287,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /node:<target_computer> /namespace:\\root\cimv2 path Win32_ScriptingObject call GetScript,ScriptLanguage=""VBScript"",ScriptText=""Set fso = CreateObject('scripting.filesystem') Set file = fso.CreateTextFile(\""<file_path>\"", True) file.Write \""Hello World!\""""","`wmic /node:#{""POS system""} process call create #{""executable""}`",10.142,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /node:<target_computer> /namespace:\\root\cimv2 path Win32_PrintJob call SetPrintJob,PrinterName=""<printer_name>"",PrintFile=""C:\\path\\to\\print_file.txt""","`wmic /node:#{""POS system""} process call create #{""executable""}`",12.05,True

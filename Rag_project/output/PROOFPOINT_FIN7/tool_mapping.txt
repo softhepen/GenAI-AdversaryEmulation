@@ -1,0 +1,78 @@
+Here is the analysis:
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+Description: FIN7's Bateleur backdoor and the updated macros use sophisticated methods to detect and evade sandboxes or analysis environments.
+Tool: No tool
+
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: FIN7 changed their obfuscation techniques in the document attachments to hide malicious content.
+Tool: No tool
+
+Technique: T1070 – INDICATOR REMOVAL ON HOST
+Description: The macro writes the extracted JScript payload to the debug.txt file in the temporary folder, likely with the intent to delete this file after execution to evade detection and forensic analysis.
+Tool: No tool
+
+Technique: T1036 – MASQUERADING
+Description: a legitimate name is used for the scheduled task
+Tool: No tool
+
+Technique: T1218 – SIGNED SCRIPT PROXY EXECUTION
+Description: a regsvr32 command is written to a file and then executed.
+Tool: No tool
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+Description: FIN7's Bateleur backdoor and the updated macros use sophisticated methods to detect and evade sandboxes or analysis environments.
+Tool: No tool
+
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: The malware gathers information about the infected system.
+Tool: No tool
+
+Technique: T1057 – PROCESS DISCOVERY
+Description: The malware lists running processes on the system.
+Tool: No tool
+
+Technique: T1046 – NETWORK SERVICE SCANNING
+Description: This technique involves scanning network services to gather information about the network and potentially identify other systems and
+Tool: No tool
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: The email contains a malicious attachment designed to deceive the recipient into opening the file.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: The macro creates a scheduled task to ensure the execution of the JScript payload.
+Tool: No tool
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: The macro creates a scheduled task to ensure the execution of the JScript payload.
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1105 – INGRESS TOOL TRANSFER
+Description: The malware can update itself by downloading new versions from the command and control server.
+Tool: No tool
+
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: Using web protocols (HTTP/HTTPS) for command and control communication.
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1113 – SCREEN CAPTURE
+Description: The malware takes screenshots of the infected system.
+Tool: No tool
+
+- Tactic: TA0006 – CREDENTIAL ACCESS
+Technique: T1003 – CREDENTIAL DUMPING
+Description: The malware exfiltrates credentials (passwords) from the victim's machine, though it requires an additional module from the C&C server.
+Tool: No tool
+
+- Tactic: TA00002 – EXECUTION
+Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+Description: This technique involves using Windows Management Instrumentation (WMI) to execute commands or scripts.
+Tool: No tool

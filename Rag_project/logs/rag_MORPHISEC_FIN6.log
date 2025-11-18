@@ -1,0 +1,25 @@
+[2025-11-07 12:52:22,272] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:52:24,439] INFO - Tool selection for report: MORPHISEC
+[2025-11-07 12:52:24,440] INFO - TTP extraction from CTI report
+[2025-11-07 12:52:24,458] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:53:56,638] INFO - Tool field precision: 0.50
+[2025-11-07 12:53:56,640] INFO - Validating LLM output
+[2025-11-07 12:53:56,641] WARNING - Invalid or multiple tools detected: 'psexec, paexec' — replacing with 'No tool'
+[2025-11-07 12:53:56,641] WARNING - Invalid or multiple tools detected: 'metasploit, chrome-passwords' — replacing with 'No tool'
+[2025-11-07 12:53:56,642] WARNING - Invalid or multiple tools detected: 'psexec, paexec' — replacing with 'No tool'
+[2025-11-07 12:53:56,645] WARNING - Invalid or multiple tools detected: 'metasploit, plink' — replacing with 'No tool'
+[2025-11-07 12:53:56,646] WARNING - Invalid or multiple tools detected: 'metasploit, tinymet' — replacing with 'No tool'
+[2025-11-07 12:53:56,646] WARNING - Invalid or multiple tools detected: 'invoke-psimage, rubeus' — replacing with 'No tool'
+[2025-11-07 12:53:56,647] WARNING - Invalid or multiple tools detected: 'rubeus, metasploit' — replacing with 'No tool'
+[2025-11-07 12:53:56,647] WARNING - Invalid or multiple tools detected: 'psexec, paexec' — replacing with 'No tool'
+[2025-11-07 12:53:56,649] INFO - Generating commands for report: MORPHISEC
+[2025-11-07 12:53:56,727] INFO - Parsed 7 feasible attack actions.
+[2025-11-07 12:54:20,787] INFO - Saved command in output\MORPHISEC_FIN6\generated_commands\command_rubeus_TA0003_T1547.txt
+[2025-11-07 12:54:51,479] INFO - Saved command in output\MORPHISEC_FIN6\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-07 12:55:13,327] INFO - Saved command in output\MORPHISEC_FIN6\generated_commands\command_metasploit_TA0011_T1219.txt
+[2025-11-07 12:55:31,502] INFO - Saved command in output\MORPHISEC_FIN6\generated_commands\command_metasploit_TA0005_T1055.txt
+[2025-11-07 12:55:42,123] INFO - Saved command in output\MORPHISEC_FIN6\generated_commands\command_plink_TA0008_T1021.txt
+[2025-11-07 12:55:59,046] INFO - Saved command in output\MORPHISEC_FIN6\generated_commands\command_metasploit_TA0004_T1055.txt
+[2025-11-07 12:56:30,415] INFO - Saved command in output\MORPHISEC_FIN6\generated_commands\command_rubeus_TA0004_T1547.txt
+[2025-11-07 12:56:38,151] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MORPHISEC_FIN6\match_results_chrf.csv
+[2025-11-07 12:56:38,189] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MORPHISEC_FIN6\match_results_edit_distance.csv

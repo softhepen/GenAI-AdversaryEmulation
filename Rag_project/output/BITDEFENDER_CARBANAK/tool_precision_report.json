@@ -1,0 +1,18 @@
+{
+  "precision": 0.5555555555555556,
+  "true_positives": [
+    "pupy",
+    "adfind",
+    "wmic",
+    "pupy",
+    "rubeus"
+  ],
+  "false_positives": [
+    "paexecpsexec",
+    "chromepasswordsinvokepsimage",
+    "invokepsimagerubeus",
+    "paexecpsexec"
+  ],
+  "total_tools": 9,
+  "total_entries": 13
+}

@@ -1,0 +1,13 @@
+Here are the command lines that simulate the attack behavior using PsExec:
+
+Command: `psexec \\remote-system -u <new_user_name> -p <password>`
+
+Command: `psexec \\remote-system -s -u <new_system_account> -p <password>`
+
+Command: `psexec \\remote-system -i -u <existing_admin_account> -p <password> -a 1,3`
+
+Command: `psexec \\remote-system -c C:\path\to\executable.exe -u <existing_admin_account> -p <password>`
+
+Command: `psexec \\remote-system -e -u <new_user_name> -p <password> -w C:\directory`
+
+Please note that these command lines are designed to simulate the attack behavior and should not be executed in a production environment.

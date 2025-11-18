@@ -1,0 +1,15 @@
+[2025-11-07 12:50:35,000] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:50:37,226] INFO - Tool selection for report: MoreEggs
+[2025-11-07 12:50:37,227] INFO - TTP extraction from CTI report
+[2025-11-07 12:50:37,242] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:51:17,726] INFO - Tool field precision: 0.40
+[2025-11-07 12:51:17,727] INFO - Validating LLM output
+[2025-11-07 12:51:17,727] WARNING - Invalid or multiple tools detected: 'psexec, plink, paexec' — replacing with 'No tool'
+[2025-11-07 12:51:17,727] WARNING - Invalid or multiple tools detected: 'chrome-passwords, rubeus' — replacing with 'No tool'
+[2025-11-07 12:51:17,728] WARNING - Invalid or multiple tools detected: 'adfind, windows-credential-editor' — replacing with 'No tool'
+[2025-11-07 12:51:17,729] INFO - Generating commands for report: MoreEggs
+[2025-11-07 12:51:17,764] INFO - Parsed 2 feasible attack actions.
+[2025-11-07 12:51:32,476] INFO - Saved command in output\MoreEggs_FIN6\generated_commands\command_adfind_TA0043_T1589.txt
+[2025-11-07 12:51:56,337] INFO - Saved command in output\MoreEggs_FIN6\generated_commands\command_windows_credential_editor_TA0002_T1059.txt
+[2025-11-07 12:51:57,567] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MoreEggs_FIN6\match_results_chrf.csv
+[2025-11-07 12:51:57,576] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MoreEggs_FIN6\match_results_edit_distance.csv

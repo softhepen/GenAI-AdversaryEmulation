@@ -1,0 +1,20 @@
+{
+  "precision": 0.2727272727272727,
+  "true_positives": [
+    "plink",
+    "ryuk",
+    "adfind"
+  ],
+  "false_positives": [
+    "pupypsexec",
+    "paexecplink",
+    "chromepasswordsinvokepsimagemetasploittinymetwmic",
+    "adfindwindowscredentialeditor",
+    "pupypsexec",
+    "psexecplink",
+    "invokepsimagemetasploit",
+    "paexecplink"
+  ],
+  "total_tools": 11,
+  "total_entries": 22
+}

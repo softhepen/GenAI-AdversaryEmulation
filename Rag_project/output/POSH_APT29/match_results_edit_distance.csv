@@ -1,0 +1,22 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -p > output.txt,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.404,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,"chrome-passwords -p | powershell.exe -file ""backdoor.ps1""","[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.368,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,"chrome-passwords -c | powershell.exe -file ""cookie_decoder.ps1""","[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.35,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords <powershell_script> | base64,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.353,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -c <encrypted_backdoor_code>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.353,True
+command_chrome_passwords_TA0011_T1573.txt,chrome passwords,chrome-passwords -p <url> -u <username> -c <blob_column_name>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.305,True
+command_chrome_passwords_TA0011_T1573.txt,chrome passwords,chrome-passwords -e <seed_local_to_user> -d <encrypted_data> -o <output_file>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.269,True
+command_chrome_passwords_TA0011_T1573.txt,chrome passwords,chrome-passwords -d <encrypted_data> -s <seed_local_to_user> -o <output_file>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.269,True
+command_paexec_TA0011_T1105.txt,paexec,"paexec -c ""C:\Path\To\AdditionalCode.exe"" -lo C:\Temp\PAExec.log"," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.264,True
+command_paexec_TA0011_T1105.txt,paexec,"paexec -csrc ""C:\Path\To\AdditionalCode.exe"" -dfr"," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",0.264,True
+command_rubeus_TA0002_T1106.txt,rubeus,rubeus.exe wmi create /class:<new_wmi_class_name> /prop:text=<property_name>:<property_value>,`rubeus.exe kerberoast /domain:oz.local`,0.301,True
+command_rubeus_TA0003_T1546.txt,rubeus,"rubeus.exe wmiexec /smowmi /c:""powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File <file_path>",`rubeus.exe kerberoast /domain:oz.local`,0.308,True
+command_rubeus_TA0005_T1546.txt,rubeus,rubeus.exe wmienum /s:<wmi_event_subscription_name> /p:WMI_EVENT_SUBSCRIPTION_PASSWORD /t:WMI_EVENT_SUBSCRIPTION_TARGET,`rubeus.exe kerberoast /domain:oz.local`,0.214,True
+command_rubeus_TA0005_T1546.txt,rubeus,""" and enclosed in backticks.",`rubeus.exe kerberoast /domain:oz.local`,0.176,True
+command_ryuk_TA0005_T1036.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,0.417,True
+command_ryuk_TA0005_T1036.txt,ryuk,ryuk.exe -p <process_name>,`ryuk.exe --encrypt --process-name notepad.exe`,0.63,True
+command_ryuk_TA0005_T1036.txt,ryuk,ryuk.exe --disconnect-shares,`ryuk.exe --encrypt --process-name notepad.exe`,0.427,True
+command_ryuk_TA0005_T1036.txt,ryuk,"ryuk.exe -e --process-name ""<legitimate_process_name>""",`ryuk.exe --encrypt --process-name notepad.exe`,0.634,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic PATH win32_process CALL create ""C:\Windows\System32\svchost.exe""","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.421,True

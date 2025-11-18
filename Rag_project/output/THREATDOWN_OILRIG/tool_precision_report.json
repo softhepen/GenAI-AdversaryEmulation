@@ -1,0 +1,15 @@
+{
+  "precision": 0.3333333333333333,
+  "true_positives": [
+    "chrome-passwords",
+    "ryuk"
+  ],
+  "false_positives": [
+    "updateexe",
+    "wmi",
+    "updateexe",
+    "updateexe"
+  ],
+  "total_tools": 6,
+  "total_entries": 16
+}

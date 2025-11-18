@@ -1,0 +1,29 @@
+Here is the analysis:
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1071 – APPLICATION LAYER PROTOCOL
+Description: DNS tunneling is used to establish and maintain a covert channel for C2 communication, evading traditional detection mechanisms that might monitor for suspicious IP traffic.
+Tool: plink
+
+Technique: T1573 – ENCRYPTED CHANNEL
+Description: an encrypted comunication channel is used
+Tool: No tool
+
+Technique: T1008 – FALLBACK CHANNEL
+Description: a secondary C2 is used
+Tool: No tool
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: PowerShell scripts are used to deploy DNS TXT record stagers into memory. executing malicious PowerShell commands
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: encrypted data are returned
+Tool: rubeus
+
+- Tactic: TA0008 – LATERAL MOVEMENT
+Technique: T1021 – REMOTE SERVICES
+Description: use of Cobalt Strike's psexec_psh command to create and execute services on remote hosts using the RPC Service Controller protoco
+Tool: No tool

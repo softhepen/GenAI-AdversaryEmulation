@@ -1,0 +1,11 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "wmic"
+  ],
+  "false_positives": [
+    "paexecplink"
+  ],
+  "total_tools": 2,
+  "total_entries": 19
+}

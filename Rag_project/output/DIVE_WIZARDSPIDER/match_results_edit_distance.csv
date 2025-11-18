@@ -1,0 +1,18 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0003_T1078.txt,chrome passwords,chrome-passwords -p <stolen_credentials>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.371,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_credentials>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.371,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_credentials> -o <output_file>,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.316,True
+command_chrome_passwords_TA0005_T1078.txt,chrome passwords,chrome-passwords -p <stolen_credentials> -o <output_file> -d,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.308,True
+command_ryuk_TA0002_T1059.txt,ryuk,ryuk.exe --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,0.417,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```",0.462,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,"wce -g ""mypassword""","```sh
+wce.exe -w
+```",0.308,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -K > kerberos_tickets.txt,"```sh
+wce.exe -w
+```",0.204,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -k < kerberos_tickets.txt,"```sh
+wce.exe -w
+```",0.204,True

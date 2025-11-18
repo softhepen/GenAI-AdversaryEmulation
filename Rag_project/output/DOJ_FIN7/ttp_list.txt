@@ -1,0 +1,31 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: phishing emails that contain a malicious Microsoft Word document designed to look harmless but includes embedded malware.
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Stealing credentials through surveillance for unauthorized access to sensitive information.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: It leads the employee to open the attachment and activate the malware.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: The infected computer connects to a command and control server, allowing FIN7 to remotely control the victim's machine.
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: FIN7 downloads additional malware to the victim computer through its control panel.
+  Technique: T1219 – REMOTE ACCESS SOFTWARE
+  Description: The use of Carbanak malware for persistent access and control.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Stealing credentials through surveillance for unauthorized access to sensitive information.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Stealing credentials through surveillance for unauthorized access to sensitive information.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1078 – VALID ACCOUNTS
+  Description: Stealing credentials through surveillance for unauthorized access to sensitive information.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1125 – VIDEO CAPTURE
+  Description: The malware also recorded videos of desktop activity, enabling more detailed surveillance and data theft.
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: FIN7 used its access to extract financial information and customer payment card data from the victim's system.
+  Technique: T1113 – SCREEN CAPTURE
+  Description: FIN7's malware took screenshots of desktop activity to steal credentials and other sensitive information.

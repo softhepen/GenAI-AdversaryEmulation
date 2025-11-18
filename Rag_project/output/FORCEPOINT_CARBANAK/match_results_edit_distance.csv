@@ -1,0 +1,11 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0011_T1102.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_plink_TA0002_T1071.txt,plink,"plink.exe -batch login.example.com -l fred -o ""GET /path/to/web/protocol"" -v",`plink.exe <domain_admin>@<bankfileserver_ip>`,0.295,True
+command_plink_TA0002_T1071.txt,plink,"plink.exe -load mysession -o ""POST /path/to/web/protocol"" -v",`plink.exe <domain_admin>@<bankfileserver_ip>`,0.34,True
+command_plink_TA0002_T1071.txt,plink,"plink.exe login.example.com -l fred -P 8080 -o ""HEAD /path/to/web/protocol"" -v",`plink.exe <domain_admin>@<bankfileserver_ip>`,0.323,True
+command_plink_TA0011_T1071.txt,plink,"plink.exe mysession echo ""GET / HTTP/1.1"" -batch",`plink.exe <domain_admin>@<bankfileserver_ip>`,0.298,True
+command_plink_TA0011_T1071.txt,plink,"plink.exe login.example.com -l fred -v ""POST / HTTP/1.1"" -batch",`plink.exe <domain_admin>@<bankfileserver_ip>`,0.349,True
+command_plink_TA0011_T1071.txt,plink,"plink.exe mysession -ssh -o ""Accept: text/html"" -o ""User-Agent: ggldr/1.0"" GET http://example.com",`plink.exe <domain_admin>@<bankfileserver_ip>`,0.252,True
+command_plink_TA0011_T1105.txt,plink,plink -batch -ssh ggldr@<google_service_url>,"```sh
+plink -ssh #{user}@#{server}
+```",0.463,True

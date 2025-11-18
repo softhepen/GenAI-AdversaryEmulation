@@ -1,0 +1,52 @@
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The Bateleur backdoor, written in JScript, is executed as part of the attack chain, allowing remote code execution. FIN7 transitioned from their previous GGLDR script to a new JScript backdoor called Bateleur.execution. The malicious payload is a JScript that is extracted and executed. JScript is a common scripting language used for automation and code execution. The malicious payload is a JScript that is extracted and executed. JScript is a common scripting language used for automation and code execution. The malware uses PowerShell scripts for executing commands. This technique involves writing and executing commands or scripts. In this case, writing a cmd.exe command to a file and then executing it. a command is executed via a batch file Executing commands via PowerShell. A PowerShell command containing a payload
+  Technique: T1204 – USER EXECUTION
+  Description: The macro-laden Word document requires the user to open the file and enable the macro for execution, leading to the extraction of the JScript payload.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The macro creates a scheduled task to ensure the execution of the JScript payload. This technique involves the use of scheduled tasks to execute programs or scripts at a specific time or interval for persistence.
+  Technique: T1129 – SHARED MODULES
+  Description: The malware loads executables (EXEs) and dynamic-link libraries (DLLs) into memory.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: FIN7's Bateleur backdoor and the updated macros use sophisticated methods to detect and evade sandboxes or analysis environments. This technique involves malware checking the environment for signs of being run in a virtualized or sandboxed environment to avoid detection or analysis. Common checks include identifying virtual machines or sandbox-specific indicators.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: FIN7 changed their obfuscation techniques in the document attachments to hide malicious content. The adversary uses obfuscation to hide malicious code or make it harder to analyze.
+  Technique: T1070 – INDICATOR REMOVAL ON HOST
+  Description: The macro writes the extracted JScript payload to the debug.txt file in the temporary folder, likely with the intent to delete this file after execution to evade detection and forensic analysis. his involves removing files that may indicate malicious activity, such as deleting scheduled tasks or other artifacts after they have been executed to avoid detection. Removing installation file and path and remove scheduled tasks. removing the temporary command file removing the temporary command file
+  Technique: T1036 – MASQUERADING
+  Description: a legitimate name is used for the scheduled task
+  Technique: T1218 – SIGNED SCRIPT PROXY EXECUTION
+  Description: a regsvr32 command is written to a file and then executed.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: FIN7's Bateleur backdoor and the updated macros use sophisticated methods to detect and evade sandboxes or analysis environments. This technique involves malware checking the environment for signs of being run in a virtualized or sandboxed environment to avoid detection or analysis. Common checks include identifying virtual machines or sandbox-specific indicators.
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: The malware gathers information about the infected system. This technique involves gathering information about the system to better understand the environment or to gather information useful for further attacks. This can include details like the computer name, operating system, and more.
+  Technique: T1057 – PROCESS DISCOVERY
+  Description: The malware lists running processes on the system. Listing the processes that are currently running on a system.
+  Technique: T1046 – NETWORK SERVICE SCANNING
+  Description: This technique involves scanning network services to gather information about the network and potentially identify other systems and
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: The email contains a malicious attachment designed to deceive the recipient into opening the file. The use of a service-specific lure, such as claiming encryption by Outlook Protect Service or Google Documents Protect Service, is a form of social engineering to persuade the victim to interact with the file.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The macro creates a scheduled task to ensure the execution of the JScript payload. This technique involves the use of scheduled tasks to execute programs or scripts at a specific time or interval for persistence.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The macro creates a scheduled task to ensure the execution of the JScript payload. This technique involves the use of scheduled tasks to execute programs or scripts at a specific time or interval for persistence.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: The malware can update itself by downloading new versions from the command and control server. This technique involves transferring tools or other files to a compromised system. In this case, the load_exe request to the command and control (C&C) server to retrieve an executable file. the load_exe request to the command and control (C&C) server to retrieve an executable file. the load_dll request to the command and control (C&C) server retrieves a DLL. A command file is retrieved from the command and control (C&C) server. A command file is retrieved from the command and control (C&C) server. A command file is retrieved from the command and control (C&C) server.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: Using web protocols (HTTP/HTTPS) for command and control communication. Sending the output of the executed command to the C&C server. Sending the output of the executed command to the C&C server. Bateleur communicates with its C&C server using web protocols (HTTPS and HTTP POST), which is common for exfiltrating data and receiving commands.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1113 – SCREEN CAPTURE
+  Description: The malware takes screenshots of the infected system. Capturing screenshots of the victim's machine.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – CREDENTIAL DUMPING
+  Description: The malware exfiltrates credentials (passwords) from the victim's machine, though it requires an additional module from the C&C server. Retrieving credentials
+- Tactic: TA00002 – EXECUTION
+  Technique: T1047 – WINDOWS MANAGEMENT INSTRUMENTATION
+  Description: This technique involves using Windows Management Instrumentation (WMI) to execute commands or scripts. Here, WMI is used to execute the retrieved EXE. Using WMI to execute commands

@@ -1,0 +1,14 @@
+[2025-11-06 17:26:47,634] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:26:49,775] INFO - Tool selection for report: CROWD
+[2025-11-06 17:26:49,776] INFO - TTP extraction from CTI report
+[2025-11-06 17:26:49,787] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:27:42,652] INFO - Tool field precision: 0.75
+[2025-11-06 17:27:42,653] INFO - Validating LLM output
+[2025-11-06 17:27:42,653] WARNING - Invalid or multiple tools detected: 'PAExec, Plink' — replacing with 'No tool'
+[2025-11-06 17:27:42,657] INFO - Generating commands for report: CROWD
+[2025-11-06 17:27:42,684] INFO - Parsed 3 feasible attack actions.
+[2025-11-06 17:27:55,893] INFO - Saved command in output\CROWD_APT29\generated_commands\command_wmic_TA0007_T1518.txt
+[2025-11-06 17:28:17,742] INFO - Saved command in output\CROWD_APT29\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-06 17:28:30,570] INFO - Saved command in output\CROWD_APT29\generated_commands\command_windows_credential_editor_TA0006_T1003.txt
+[2025-11-06 17:28:31,174] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CROWD_APT29\match_results_chrf.csv
+[2025-11-06 17:28:31,191] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\CROWD_APT29\match_results_edit_distance.csv

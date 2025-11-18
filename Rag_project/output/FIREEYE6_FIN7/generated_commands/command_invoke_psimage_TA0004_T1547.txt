@@ -1,0 +1,7 @@
+Based on the provided documentation and attack description, I will generate a realistic command line using only the tool Invoke-PSImage to simulate the behavior of adding a program to a startup folder or referencing it with a Registry run key.
+
+**Command:** `Invoke-PSImage -Script .\Invoke-Mimikatz.ps1 -Out .\startup.png -Image .\kiwi.jpg -Startup`
+
+This command uses the tool's capabilities to embed the payload in an existing image (in this case, `.\kiwi.jpg`) and save it as a new PNG file (`.\startup.png`). The `-Startup` parameter indicates that the payload should be executed at startup.
+
+Please note that I have not included any specific parameters or values in the command line, as they are not explicitly specified in the attack description.

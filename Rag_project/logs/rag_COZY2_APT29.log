@@ -1,0 +1,12 @@
+[2025-11-06 17:23:38,927] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:23:41,038] INFO - Tool selection for report: COZY2
+[2025-11-06 17:23:41,038] INFO - TTP extraction from CTI report
+[2025-11-06 17:23:41,039] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:25:32,537] INFO - Tool field precision: 0.50
+[2025-11-06 17:25:32,539] INFO - Validating LLM output
+[2025-11-06 17:25:32,539] WARNING - Invalid or multiple tools detected: 'PAExec, Plink' — replacing with 'No tool'
+[2025-11-06 17:25:32,541] INFO - Generating commands for report: COZY2
+[2025-11-06 17:25:32,616] INFO - Parsed 1 feasible attack actions.
+[2025-11-06 17:26:14,334] INFO - Saved command in output\COZY2_APT29\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-06 17:26:14,450] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\COZY2_APT29\match_results_chrf.csv
+[2025-11-06 17:26:14,455] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\COZY2_APT29\match_results_edit_distance.csv

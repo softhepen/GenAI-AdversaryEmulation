@@ -1,0 +1,59 @@
+[2025-11-06 18:37:46,651] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:37:48,843] INFO - Tool selection for report: TRUSTWAVE2
+[2025-11-06 18:37:48,843] INFO - TTP extraction from CTI report
+[2025-11-06 18:37:48,854] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:38:21,201] INFO - Tool field precision: 0.00
+[2025-11-06 18:38:21,202] INFO - Validating LLM output
+[2025-11-06 18:38:21,202] WARNING - Invalid or multiple tools detected: 'Kerberos/Domain Controller' — replacing with 'No tool'
+[2025-11-06 18:38:21,206] INFO - Generating commands for report: TRUSTWAVE2
+[2025-11-06 18:38:21,216] ERROR - No feasible attack actions found. Aborting.
+[2025-11-06 18:38:21,217] WARNING - No commands generated. Matching skipped.
+[2025-11-06 18:38:39,311] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:38:41,474] INFO - Tool selection for report: TRUSTWAVE2
+[2025-11-06 18:38:41,474] INFO - TTP extraction from CTI report
+[2025-11-06 18:38:41,476] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:39:56,078] INFO - Tool field precision: 0.00
+[2025-11-06 18:39:56,079] INFO - Validating LLM output
+[2025-11-06 18:39:56,079] WARNING - Invalid or multiple tools detected: 'Kerberos' — replacing with 'No tool'
+[2025-11-06 18:39:56,079] WARNING - Invalid or multiple tools detected: 'Windows Update' — replacing with 'No tool'
+[2025-11-06 18:39:56,079] WARNING - Invalid or multiple tools detected: 'Base64' — replacing with 'No tool'
+[2025-11-06 18:39:56,079] WARNING - Invalid or multiple tools detected: 'Kerberos' — replacing with 'No tool'
+[2025-11-06 18:39:56,079] WARNING - Invalid or multiple tools detected: 'Kerberos' — replacing with 'No tool'
+[2025-11-06 18:39:56,080] INFO - Generating commands for report: TRUSTWAVE2
+[2025-11-06 18:39:56,110] ERROR - No feasible attack actions found. Aborting.
+[2025-11-06 18:39:56,110] WARNING - No commands generated. Matching skipped.
+[2025-11-06 18:40:08,743] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:40:10,897] INFO - Tool selection for report: TRUSTWAVE2
+[2025-11-06 18:40:10,898] INFO - TTP extraction from CTI report
+[2025-11-06 18:40:10,899] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:40:37,434] INFO - Tool field precision: 0.00
+[2025-11-06 18:40:37,436] INFO - Validating LLM output
+[2025-11-06 18:40:37,437] WARNING - Invalid or multiple tools detected: 'Mimikatz' — replacing with 'No tool'
+[2025-11-06 18:40:37,438] INFO - Generating commands for report: TRUSTWAVE2
+[2025-11-06 18:40:37,462] ERROR - No feasible attack actions found. Aborting.
+[2025-11-06 18:40:37,462] WARNING - No commands generated. Matching skipped.
+[2025-11-06 18:40:58,058] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:41:00,243] INFO - Tool selection for report: TRUSTWAVE3
+[2025-11-06 18:41:00,244] INFO - TTP extraction from CTI report
+[2025-11-06 18:41:00,256] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:42:31,488] INFO - Tool field precision: 0.40
+[2025-11-06 18:42:31,488] INFO - Validating LLM output
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'psexec, paexec' — replacing with 'No tool'
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'psexec, paexec, rubeus' — replacing with 'No tool'
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'chrome-passwords, metasploit, tinyMet' — replacing with 'No tool'
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'wmi' — replacing with 'No tool'
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'metasploit, tinyMet' — replacing with 'No tool'
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'metasploit, tinyMet' — replacing with 'No tool'
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'metasploit, tinyMet' — replacing with 'No tool'
+[2025-11-06 18:42:31,489] WARNING - Invalid or multiple tools detected: 'metasploit, tinyMet' — replacing with 'No tool'
+[2025-11-06 18:42:31,490] WARNING - Invalid or multiple tools detected: 'ryuk, psexec, paexec' — replacing with 'No tool'
+[2025-11-06 18:42:31,520] INFO - Generating commands for report: TRUSTWAVE3
+[2025-11-06 18:42:31,571] INFO - Parsed 6 feasible attack actions.
+[2025-11-06 18:43:03,153] INFO - Saved command in output\TRUSTWAVE3_CARBANAK\generated_commands\command_rubeus_TA0003_T1543.txt
+[2025-11-06 18:43:26,966] INFO - Saved command in output\TRUSTWAVE3_CARBANAK\generated_commands\command_ryuk_TA0009_T1022.txt
+[2025-11-06 18:43:38,204] INFO - Saved command in output\TRUSTWAVE3_CARBANAK\generated_commands\command_ryuk_TA0004_T1055.txt
+[2025-11-06 18:43:56,310] INFO - Saved command in output\TRUSTWAVE3_CARBANAK\generated_commands\command_ryuk_TA0010_T1041.txt
+[2025-11-06 18:44:19,721] INFO - Saved command in output\TRUSTWAVE3_CARBANAK\generated_commands\command_ryuk_TA0005_T1055.txt
+[2025-11-06 18:44:41,126] INFO - Saved command in output\TRUSTWAVE3_CARBANAK\generated_commands\command_chrome_passwords_TA0005_T1027.txt
+[2025-11-06 18:44:41,624] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRUSTWAVE3_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:44:41,635] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRUSTWAVE3_CARBANAK\match_results_edit_distance.csv

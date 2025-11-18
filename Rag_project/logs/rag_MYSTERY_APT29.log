@@ -1,0 +1,14 @@
+[2025-11-06 17:46:30,627] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:46:32,774] INFO - Tool selection for report: MYSTERY
+[2025-11-06 17:46:32,774] INFO - TTP extraction from CTI report
+[2025-11-06 17:46:32,785] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:48:04,283] INFO - Tool field precision: 0.50
+[2025-11-06 17:48:04,284] INFO - Validating LLM output
+[2025-11-06 17:48:04,285] WARNING - Invalid or multiple tools detected: 'psexec, paexec, plink, puppy' — replacing with 'No tool'
+[2025-11-06 17:48:04,285] WARNING - Invalid or multiple tools detected: 'psexec, paexec, plink, puppy' — replacing with 'No tool'
+[2025-11-06 17:48:04,315] INFO - Generating commands for report: MYSTERY
+[2025-11-06 17:48:04,368] INFO - Parsed 2 feasible attack actions.
+[2025-11-06 17:48:19,037] INFO - Saved command in output\MYSTERY_APT29\generated_commands\command_psexec_TA0002_T1059.txt
+[2025-11-06 17:48:39,455] INFO - Saved command in output\MYSTERY_APT29\generated_commands\command_psexec_TA0002_T1059.txt
+[2025-11-06 17:48:39,768] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MYSTERY_APT29\match_results_chrf.csv
+[2025-11-06 17:48:39,773] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MYSTERY_APT29\match_results_edit_distance.csv

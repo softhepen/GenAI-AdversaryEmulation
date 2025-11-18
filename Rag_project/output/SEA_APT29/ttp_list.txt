@@ -1,0 +1,17 @@
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Malware is packaged using UPX, a common packer to compress and obfuscate the contents of the malware. Even if the UPX packer is removed, using PyInstaller to convert a Python program into an executable can result in some degree of obfuscation, further hiding the source code and intentions of the malware. The underlying Python code has been obfuscated The use of obfuscated code, string manipulation, and the use of methods such as string append, base64 decoding, and ZLIB decompression are all obfuscation techniques to hide the true intentions and functionality of the code. The Python code still appears to be obfuscated The use of obfuscated variable and class names with long, unique strings is an obfuscation technique. The use of base64-encoded data and further compressed with ZLIB is an obfuscation technique. Encryption and base64 encoding of the data in the Cookie value are obfuscation techniques. RC4 algorithm is used RC4 algorithm is used
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The use of `exec()` to execute Python code dynamically . This allows malware to execute arbitrary commands or runtime code.
+- Tactic: None – DISCOVERY
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: The malware determines which operating system it is running on, which is a form of system information discovery.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1546 – EVENT TRIGGERED EXECUTION
+  Description: Persistence via PowerShell
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: Persistence via the Run registry key Persistence via .lnk stored in the startup directory
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: The use of HTTP/HTTPS for communication.

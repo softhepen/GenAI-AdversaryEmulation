@@ -1,0 +1,19 @@
+Here are some command lines that simulate the attack behavior using only the PsExec tool:
+
+Command: `psexec \-u <valid_domain_user> \-p <password> \\remote_system`
+
+This command uses a valid domain user account to access the remote system, simulating unauthorized access.
+
+Command: `psexec \-u <domain>\user1 \-p <password> \-s \\remote_system`
+
+This command runs the process in the System account on the remote system, gaining elevated privileges and simulating escalated access.
+
+Command: `psexec \-u <domain>\user2 \-p <password> -i 0 \\remote_system`
+
+This command runs the process interactively in the console session of the remote system, allowing for interactive shell access and simulating unauthorized access.
+
+Command: `psexec \-u <domain>\admin \-p <password> -s -e \\remote_system`
+
+This command runs the process as an administrator on the remote system, without loading the user's profile, simulating elevated privileges and unauthorized access.
+
+Note that I've used placeholders for the valid domain user account, password, and remote system IP address. You should replace these with actual values when executing the commands in your lab environment.

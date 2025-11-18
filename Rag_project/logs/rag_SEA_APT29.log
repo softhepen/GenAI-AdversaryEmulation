@@ -1,0 +1,16 @@
+[2025-11-06 18:00:09,128] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:00:11,266] INFO - Tool selection for report: SEA
+[2025-11-06 18:00:11,266] INFO - TTP extraction from CTI report
+[2025-11-06 18:00:11,267] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:00:45,902] INFO - Tool field precision: 0.50
+[2025-11-06 18:00:45,903] INFO - Validating LLM output
+[2025-11-06 18:00:45,903] WARNING - Invalid or multiple tools detected: 'chrome-passwords, metasploit, pupy, tinymet' — replacing with 'No tool'
+[2025-11-06 18:00:45,903] WARNING - Invalid or multiple tools detected: 'adfind, windows-credential-editor, wmic' — replacing with 'No tool'
+[2025-11-06 18:00:45,904] WARNING - Invalid or multiple tools detected: 'paexec, psexec' — replacing with 'No tool'
+[2025-11-06 18:00:45,934] INFO - Generating commands for report: SEA
+[2025-11-06 18:00:45,986] INFO - Parsed 3 feasible attack actions.
+[2025-11-06 18:00:57,431] INFO - Saved command in output\SEA_APT29\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-06 18:01:09,405] INFO - Saved command in output\SEA_APT29\generated_commands\command_pupy_TA0003_T1546.txt
+[2025-11-06 18:01:18,110] INFO - Saved command in output\SEA_APT29\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-06 18:01:19,059] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\SEA_APT29\match_results_chrf.csv
+[2025-11-06 18:01:19,067] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\SEA_APT29\match_results_edit_distance.csv

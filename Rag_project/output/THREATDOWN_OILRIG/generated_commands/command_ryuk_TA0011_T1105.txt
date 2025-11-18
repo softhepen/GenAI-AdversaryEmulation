@@ -1,0 +1,9 @@
+Based on the provided documentation and the description of the attack behavior, I will generate realistic command lines using only the tool Ryuk to reproduce the INGRESS TOOL TRANSFER technique.
+
+Here is the output:
+
+Command:`ryuk.exe --drop-bat-files`
+
+This command line simulates the transfer of files or tools into a compromised environment by dropping kill.bat and window.bat into C:/Users/Public, which will perform network share discovery.
+
+Please note that I have used only the documented syntax and capabilities of the Ryuk tool to construct this command line.

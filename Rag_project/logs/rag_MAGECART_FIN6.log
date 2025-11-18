@@ -1,0 +1,16 @@
+[2025-11-07 12:46:14,060] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:46:16,198] INFO - Tool selection for report: MAGECART
+[2025-11-07 12:46:16,199] INFO - TTP extraction from CTI report
+[2025-11-07 12:46:16,212] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:46:55,598] INFO - Tool field precision: 0.33
+[2025-11-07 12:46:55,629] INFO - Validating LLM output
+[2025-11-07 12:46:55,629] WARNING - Invalid or multiple tools detected: 'chrome-passwords, psexec, paexec, plink, pupy' — replacing with 'No tool'
+[2025-11-07 12:46:55,630] WARNING - Invalid or multiple tools detected: 'rubeus, ryuk, tinymet' — replacing with 'No tool'
+[2025-11-07 12:46:55,630] WARNING - Invalid or multiple tools detected: 'metasploit, pupy, psexec' — replacing with 'No tool'
+[2025-11-07 12:46:55,631] WARNING - Invalid or multiple tools detected: 'metasploit, pupy' — replacing with 'No tool'
+[2025-11-07 12:46:55,633] INFO - Generating commands for report: MAGECART
+[2025-11-07 12:46:55,662] INFO - Parsed 2 feasible attack actions.
+[2025-11-07 12:47:11,065] INFO - Saved command in output\MAGECART_FIN6\generated_commands\command_metasploit_TA0001_T1190.txt
+[2025-11-07 12:47:25,828] INFO - Saved command in output\MAGECART_FIN6\generated_commands\command_chrome_passwords_TA0011_T1056.txt
+[2025-11-07 12:47:27,086] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MAGECART_FIN6\match_results_chrf.csv
+[2025-11-07 12:47:27,100] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\MAGECART_FIN6\match_results_edit_distance.csv

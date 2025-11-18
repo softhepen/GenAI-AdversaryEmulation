@@ -1,0 +1,13 @@
+[2025-11-06 17:43:10,762] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:43:12,910] INFO - Tool selection for report: GRIZZLY
+[2025-11-06 17:43:12,910] INFO - TTP extraction from CTI report
+[2025-11-06 17:43:12,911] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:43:38,378] INFO - Tool field precision: 1.00
+[2025-11-06 17:43:38,380] INFO - Validating LLM output
+[2025-11-06 17:43:38,384] INFO - Generating commands for report: GRIZZLY
+[2025-11-06 17:43:38,417] INFO - Parsed 3 feasible attack actions.
+[2025-11-06 17:43:50,047] INFO - Saved command in output\GRIZZLY_APT29\generated_commands\command_psexec_TA0002_T1204.txt
+[2025-11-06 17:44:03,516] INFO - Saved command in output\GRIZZLY_APT29\generated_commands\command_psexec_TA0011_T1105.txt
+[2025-11-06 17:44:15,147] INFO - Saved command in output\GRIZZLY_APT29\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-06 17:44:15,352] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GRIZZLY_APT29\match_results_chrf.csv
+[2025-11-06 17:44:15,361] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\GRIZZLY_APT29\match_results_edit_distance.csv

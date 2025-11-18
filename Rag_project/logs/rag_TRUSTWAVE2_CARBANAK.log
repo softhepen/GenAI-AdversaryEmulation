@@ -1,0 +1,11 @@
+[2025-11-06 18:45:30,353] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:45:32,483] INFO - Tool selection for report: TRUSTWAVE2
+[2025-11-06 18:45:32,483] INFO - TTP extraction from CTI report
+[2025-11-06 18:45:32,485] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:46:32,238] INFO - Tool field precision: 1.00
+[2025-11-06 18:46:32,239] INFO - Validating LLM output
+[2025-11-06 18:46:32,240] INFO - Generating commands for report: TRUSTWAVE2
+[2025-11-06 18:46:32,264] INFO - Parsed 1 feasible attack actions.
+[2025-11-06 18:46:46,620] INFO - Saved command in output\TRUSTWAVE2_CARBANAK\generated_commands\command_ryuk_TA0004_T1055.txt
+[2025-11-06 18:46:46,700] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRUSTWAVE2_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:46:46,707] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRUSTWAVE2_CARBANAK\match_results_edit_distance.csv

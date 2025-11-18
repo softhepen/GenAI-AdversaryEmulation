@@ -1,0 +1,21 @@
+[2025-11-06 18:55:38,993] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:55:41,340] INFO - Tool selection for report: DIVE
+[2025-11-06 18:55:41,340] INFO - TTP extraction from CTI report
+[2025-11-06 18:55:41,351] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:56:36,528] INFO - Tool field precision: 0.86
+[2025-11-06 18:56:36,529] INFO - Validating LLM output
+[2025-11-06 18:56:36,529] WARNING - Invalid or multiple tools detected: 'plink, psexec, paexec' — replacing with 'No tool'
+[2025-11-06 18:56:36,533] INFO - Generating commands for report: DIVE
+[2025-11-06 18:56:36,571] INFO - Parsed 6 feasible attack actions.
+[2025-11-06 18:56:55,821] INFO - Saved command in output\DIVE_WIZARDSPIDER\generated_commands\command_chrome_passwords_TA0005_T1078.txt
+[2025-11-06 18:57:04,662] INFO - Saved command in output\DIVE_WIZARDSPIDER\generated_commands\command_chrome_passwords_TA0003_T1078.txt
+[2025-11-06 18:57:07,933] INFO - Saved command in output\DIVE_WIZARDSPIDER\generated_commands\command_chrome_passwords_TA0001_T1078.txt
+[2025-11-06 18:57:11,927] INFO - Saved command in output\DIVE_WIZARDSPIDER\generated_commands\command_chrome_passwords_TA0004_T1078.txt
+[2025-11-06 18:57:21,394] INFO - Saved command in output\DIVE_WIZARDSPIDER\generated_commands\command_windows_credential_editor_TA0006_T1003.txt
+[2025-11-06 18:57:28,217] INFO - Saved command in output\DIVE_WIZARDSPIDER\generated_commands\command_ryuk_TA0002_T1059.txt
+[2025-11-06 18:57:28,239] WARNING - No commands extracted from command_chrome_passwords_TA0001_T1078.txt
+[2025-11-06 18:57:28,298] WARNING - No commands extracted from command_chrome_passwords_TA0004_T1078.txt
+[2025-11-06 18:57:28,537] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DIVE_WIZARDSPIDER\match_results_chrf.csv
+[2025-11-06 18:57:28,539] WARNING - No commands extracted from command_chrome_passwords_TA0001_T1078.txt
+[2025-11-06 18:57:28,542] WARNING - No commands extracted from command_chrome_passwords_TA0004_T1078.txt
+[2025-11-06 18:57:28,548] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DIVE_WIZARDSPIDER\match_results_edit_distance.csv

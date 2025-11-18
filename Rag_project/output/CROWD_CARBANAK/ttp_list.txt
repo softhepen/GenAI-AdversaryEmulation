@@ -1,0 +1,41 @@
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1219 – REMOTE ACCESS SOFTWARE
+  Description: Use of remote access software to control victims' machines. Using remote access software to execute commands and manage victim systems.
+  Technique: T1105 – INGRESS TOOLS TRANSFER
+  Description: Transfer of additional tools or payloads to the compromised system. Transfer of additional tools or payloads to the compromised system. Transfer of additional tools or payloads to the compromised system.
+  Technique: T1102 – WEB SERVICE
+  Description: Use of legitimate web services for command and control.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1113 – SCREEN CAPTURE
+  Description: Capture of compromised system screenshots Capture of compromised system screenshots
+  Technique: T1056 – INPUT CAPTURE
+  Description: Capture of keyboard inputs.
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: The malware collects basic system information and is able to take screenshots of victim systems
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1133 – EXTERNAL REMOTE SERVICES
+  Description: Use of external remote services to maintain compromised system access.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: Using RDP to access and control the victim's system.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: Collection of basic system information. Collection of system information.
+- Tactic: TA0010 – EXFILTRATION
+  Technique: T1567 – EXFILTRATION OVER WEB SERVICE
+  Description: Data exfiltration through legitimate web services.
+- Tactic: TA0002 – INITIAL ACCESS
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Using the Windows command shell to execute commands and scripts. Using PowerShell to execute arbitrary commands and scripts. Using PowerShell to execute commands.
+  Technique: T1566 – PHISHING
+  Description: Use of spear phishing attachments to gain initial access. Use of spear phishing attachments to gain initial access.
+  Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+  Description: Using exploits to execute code on the victim's machine. Using exploits to execute code on the victim's machine.
+  Technique: T1204 – USER EXECUTION
+  Description: Use of malicious documents that require user intervention for execution.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Obfuscation of files or information to avoid detection.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1555 – CREDENTIALS FROM PASSWORD STORES
+  Description: Extraction of credentials from password repositories

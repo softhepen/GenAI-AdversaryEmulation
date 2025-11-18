@@ -1,0 +1,19 @@
+[2025-11-07 14:16:46,128] INFO - Loading existing vectorstore from disk
+[2025-11-07 14:16:48,481] INFO - Tool selection for report: SENTINELONE
+[2025-11-07 14:16:48,481] INFO - TTP extraction from CTI report
+[2025-11-07 14:16:48,483] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 14:17:34,196] INFO - Tool field precision: 1.00
+[2025-11-07 14:17:34,197] INFO - Validating LLM output
+[2025-11-07 14:17:34,201] INFO - Generating commands for report: SENTINELONE
+[2025-11-07 14:17:34,254] INFO - Parsed 9 feasible attack actions.
+[2025-11-07 14:18:06,509] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-07 14:18:20,094] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_chrome_passwords_TA0002_T1059.txt
+[2025-11-07 14:18:34,127] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_adfind_TA0002_T1204.txt
+[2025-11-07 14:18:43,455] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_ryuk_TA0005_T1497.txt
+[2025-11-07 14:19:02,664] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_chrome_passwords_TA0005_T1027.txt
+[2025-11-07 14:19:14,513] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_ryuk_TA0007_T1497.txt
+[2025-11-07 14:19:32,631] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_adfind_TA0007_T1482.txt
+[2025-11-07 14:19:41,073] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_wmic_TA0007_T1082.txt
+[2025-11-07 14:19:58,198] INFO - Saved command in output\SENTINELONE_FIN7\generated_commands\command_psexec_TA0007_T1057.txt
+[2025-11-07 14:20:00,732] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\SENTINELONE_FIN7\match_results_chrf.csv
+[2025-11-07 14:20:00,753] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\SENTINELONE_FIN7\match_results_edit_distance.csv

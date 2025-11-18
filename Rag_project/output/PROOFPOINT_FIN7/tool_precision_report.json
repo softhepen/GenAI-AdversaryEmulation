@@ -1,0 +1,12 @@
+{
+  "precision": 0.0,
+  "true_positives": [],
+  "false_positives": [
+    "regsvr32",
+    "scheduledtask",
+    "scheduledtask",
+    "wmi"
+  ],
+  "total_tools": 4,
+  "total_entries": 17
+}

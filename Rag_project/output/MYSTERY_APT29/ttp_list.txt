@@ -1,0 +1,20 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: use of malicious attachments
+- Tactic: TA0002 – EXECUTION
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. Copy file, move file, make directory, and kill process
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: communications are encrytped
+  Technique: T1102 – WEB SERVICE
+  Description: The malware uses Twitter and searches for specific tweets from pre-made accounts.
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: By leveraging web protocols like HTTP/HTTPS, the malware communicates with the C2 servers
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: transferring tools or payloads into a compromised environmen Download and execute new malware from the C2 server
+  Technique: T1008 – FALLBACK CHANNELS
+  Description: If Twitter was not working or the accounts were down, the malware use Google Search to find encrypted strings.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: The use of encrypted URLs within tweets indicates obfuscation, as the content is concealed to avoid easy identification or analysis The use of GIF files to hide additional backdoors involves obfuscation, making it harder to detect the malicious content as it is embedded in seemingly benign file formats. It uses encrypted strings found through Google Search to locate its next C2 server The backdoors are obfuscated within GIF files and are encrypted to hide their true nature

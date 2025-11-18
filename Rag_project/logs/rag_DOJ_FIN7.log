@@ -1,0 +1,17 @@
+[2025-11-07 13:22:45,295] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:22:47,403] INFO - Tool selection for report: DOJ
+[2025-11-07 13:22:47,404] INFO - TTP extraction from CTI report
+[2025-11-07 13:22:47,417] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:23:54,450] INFO - Tool field precision: 0.86
+[2025-11-07 13:23:54,451] INFO - Validating LLM output
+[2025-11-07 13:23:54,452] WARNING - Invalid or multiple tools detected: 'metasploit, pupy, ryuk' — replacing with 'No tool'
+[2025-11-07 13:23:54,454] INFO - Generating commands for report: DOJ
+[2025-11-07 13:23:54,498] INFO - Parsed 6 feasible attack actions.
+[2025-11-07 13:23:59,366] INFO - Saved command in output\DOJ_FIN7\generated_commands\command_pupy_TA0001_T1078.txt
+[2025-11-07 13:24:14,377] INFO - Saved command in output\DOJ_FIN7\generated_commands\command_plink_TA0011_T1071.txt
+[2025-11-07 13:24:28,890] INFO - Saved command in output\DOJ_FIN7\generated_commands\command_pupy_TA0003_T1078.txt
+[2025-11-07 13:24:34,354] INFO - Saved command in output\DOJ_FIN7\generated_commands\command_pupy_TA0004_T1078.txt
+[2025-11-07 13:24:48,683] INFO - Saved command in output\DOJ_FIN7\generated_commands\command_pupy_TA0005_T1078.txt
+[2025-11-07 13:25:08,546] INFO - Saved command in output\DOJ_FIN7\generated_commands\command_windows_credential_editor_TA0009_T1005.txt
+[2025-11-07 13:25:09,576] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DOJ_FIN7\match_results_chrf.csv
+[2025-11-07 13:25:09,594] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DOJ_FIN7\match_results_edit_distance.csv

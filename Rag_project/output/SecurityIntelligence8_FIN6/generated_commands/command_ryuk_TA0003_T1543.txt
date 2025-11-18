@@ -1,0 +1,7 @@
+Based on the documentation and the provided attack description, I will generate realistic command lines using only the tool Ryuk to reproduce the following attack behavior:
+
+**Command:** `ryuk.exe /inject <dll_name>`
+
+This command injects a shellcode loader (updater.exe) into the system process, which is observed as updater.exe.
+
+Note: `<dll_name>` placeholder needs to be replaced with the actual DLL name used in the attack.

@@ -1,0 +1,40 @@
+- Tactic: TA0002 – EXECUTION
+  Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+  Description: The use of LNK files and VBScript, along with mshta.exe, are methods used to exploit the client system for execution of the malware.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The use of VBScript and mshta.exe demonstrates the application of scripting to achieve malicious goals. This TTP involves the use of PowerShell scripts for execution. The script mentioned is heavily obfuscated and is used to execute shellcode. This TTP involves the use of PowerShell scripts for execution. The script mentioned is heavily obfuscated and is used to execute shellcode. The use of VBScript the use of PowerShell scripts for execution
+  Technique: T1204 – USER EXECUTION
+  Description: An adversary may rely upon specific actions by a user in order to gain execution. An adversary may rely upon specific actions by a user in order to gain execution.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: how a scheduled task is set up to execute a VBScript file at a specified interval for maintaining persistence on the system.​ creating tasks or jobs that run at specified intervals or times to maintain persistence on the victim system
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: targeting individuals or organizations with phishing emails that contain malicious attachments, such as DOCX or RTF files. The goal is to deceive the recipient into opening the attachment and executing the embedded malware.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: how a scheduled task is set up to execute a VBScript file at a specified interval for maintaining persistence on the system.​ creating tasks or jobs that run at specified intervals or times to maintain persistence on the victim system
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: how a scheduled task is set up to execute a VBScript file at a specified interval for maintaining persistence on the system.​ creating tasks or jobs that run at specified intervals or times to maintain persistence on the victim system
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1057 – PROCESS DISCOVERY
+  Description: The VBScript is using WMI queries to check if a particular PowerShell script is running, which is an example of process discovery. This technique involves identifying running processes on a system. If the process is not found, the script then starts it, ensuring the required script is active.​ identifying and listing the processes currently running on the victim's system
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.
+  Technique: T1070 – INDICATOR REMOVAL
+  Description: the delete function is used to remove specified files
+- Tactic: TA0009 – COLLECTION
+  Technique: T1018 – REMOTE SYSTEM DISCOVERY
+  Description: gathering information about the victim's system, such as operating system details, processor information, BIOS version, and running processes. This is done using WMI queries, which helps the attacker understand the environment and plan further actions.
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: Sends victim machine information (OS, Processor, BIOS, and running processes) using WMI queries.
+  Technique: T1113 – SCREEN CAPTURE
+  Description: capturing screenshots of the victim's desktop
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: Adversaries may employ an encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol.

@@ -1,0 +1,9 @@
+Here are the command lines to retrieve information about the operating system and screen resolution using WMIC:
+
+Command: `wmic os get /value`
+
+This command retrieves basic information about the operating system, such as its version, architecture, and build number.
+
+Command: `wmic path win32_videodescriptor get vidmode, width, height /value`
+
+This command retrieves the current screen resolution, including the video mode, width, and height of the display.

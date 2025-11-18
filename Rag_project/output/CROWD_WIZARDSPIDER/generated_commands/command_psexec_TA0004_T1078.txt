@@ -1,0 +1,7 @@
+Here are some command lines that simulate the attack behavior of using or creating new user accounts for persistence and privilege escalation:
+
+Command: `psexec -u <new_user_name> -p <new_password> //remote-system`
+Command: `psexec -a 1,2 -c -i -l -s -v C:\path\to\new.exe //remote-system`
+Command: `psexec -e -f -i -n <timeout_seconds> -u <existing_user_name> -w C:\path\to\directory //remote-system`
+
+Note: Replace `<new_user_name>` and `<new_password>` with actual values.

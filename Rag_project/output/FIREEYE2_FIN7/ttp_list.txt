@@ -1,0 +1,11 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: FIN7's use of spear-phishing emails with malicious attachments to target individuals with access to valuable SEC filings FIN7 used spear-phishing emails containing LNK files to trick victims into initiating the infection process.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The use of LNK files as a method of delivering malware that requires the victim to execute the file.
+  Technique: T1203 – EXPOLITATION FOR CLIENT EXECUTION
+  Description: The mshta.exe process and VBScript execution are used to exploit the system for code execution without relying on Office macros.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1219 – REMOTE ACCESS SOFTWARE
+  Description: The CARBANAK backdoor allows FIN7 to maintain remote access to victim systems, giving them control over compromised environments for extended periods.

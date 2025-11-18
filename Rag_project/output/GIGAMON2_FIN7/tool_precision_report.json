@@ -1,0 +1,17 @@
+{
+  "precision": 0.75,
+  "true_positives": [
+    "chrome-passwords",
+    "psexec",
+    "adfind",
+    "invoke-psimage",
+    "psexec",
+    "chrome-passwords"
+  ],
+  "false_positives": [
+    "none",
+    "none"
+  ],
+  "total_tools": 8,
+  "total_entries": 9
+}

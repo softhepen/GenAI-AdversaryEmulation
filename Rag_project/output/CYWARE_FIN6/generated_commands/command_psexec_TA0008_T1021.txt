@@ -1,0 +1,9 @@
+Here are the command lines I came up with to simulate lateral movement using psexec, following the provided documentation and guidelines:
+
+Command: `psexec -u <remote_username> -p <password> -r <remote_service_name>`
+
+Command: `psexec -i -u <remote_username> -p <password> -r <remote_service_name> -w <working_directory>`
+
+Command: `psexec -s -u <remote_username> -p <password> -r <remote_service_name> -x`
+
+Note that I used placeholders for the remote username, password, and remote service name as required by the guidelines.

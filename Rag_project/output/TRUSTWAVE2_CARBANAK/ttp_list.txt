@@ -1,0 +1,73 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: The attacker uses social engineering to convince the agent to open a malicious email attachment. The email contains a malicious Word document.
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The agent executes the malicious attachment, triggered by the attacker. The malicious Word document contains the encoded .VBS script.
+  Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+  Description: The attack involves a .VBS script that performs various malicious activities. This involves the use of Visual Basic scripts to execute commands on the system, which is what the malicious VB Script is doing. Adversaries may abuse PowerShell commands and scripts for execution. This technique involves the use of scripting languages such as VBS (Visual Basic Script) to execute malicious actions. The .VBE (encoded VBS) script is a form of scripting used to perform various actions. This technique involves the use of scripting languages such as VBS (Visual Basic Script) to execute malicious actions. The creation and execution of a PowerShell script. a VBscript A PowerShell script.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: This technique involves using scheduled tasks for persistence. The malware creates a scheduled task named `SysChecks` to execute the VBS script. Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. This can be used to execute code at a specific time or on a recurring schedule.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: The script is capable of stealing system information. Adversaries may gather data from local systems for exfiltration. Adversaries may gather data from local systems for exfiltration.
+  Technique: T1113 – SCREEN CAPTURE
+  Description: The script takes desktop screenshots. Adversaries may capture screenshots to gather information from the victim's desktop. Adversaries may capture screenshots to gather information from the victim's desktop. Adversaries may capture screenshots of the victim's desktop. Powershell script
+  Technique: T1056 – INPUT CAPTURE
+  Description: Adversaries may capture keystrokes to gather information from the victim.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: The encoded .VBS script downloads additional malware after being executed on the victim's system. This technique involves transferring tools or files from an external system into the victim environment. The victim system retrieves the additional malware from http This technique involves transferring tools or files to the victim system. The malware adds the VBS file to the `WindowsUpdate` folder. Adversaries may transfer tools or other files from an external system into a compromised environment. This technique involves transferring tools or files into a compromised system. The VBScript file is saved and created in the target system's directory. The malware can receive additional executables from the attacker and install them on the victim's system. This technique involves transferring tools or files to a compromised system. The malware can download and execute EXE files, VBScript, or PowerShell scripts, which aligns with the use of a backdoor to transfer tools or additional payloads into the victim's system.
+  Technique: T1071 – APPLICAITON LAYER PROTOCOL
+  Description: Adversaries may use web protocols like HTTP to communicate with their command and control (C2) servers. Adversaries use application layer protocols for command and control (C2) communications.
+  Technique: T1219 – REMOTE ACCESS TOOLS
+  Description: Adversaries may use remote access tools to control systems and maintain persistence.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: This technique involves adding registry keys to automatically execute programs upon user logon. The malware adds entries to the `CurrentVersion\Run` and `CurrentVersion\RunOnce` keys. This technique involves configuring the system to execute the malicious payload during system boot or user logon. Although not directly related to dropping the VBScript, the placement in %temp% could be part of a persistence mechanism. This technique involves creating or modifying registry entries to ensure that the malware executes automatically upon system boot or user logon. Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key. These mechanisms ensure that the program runs each time the user logs in or the system starts. Adversaries may create or modify shortcut files (.lnk) that are automatically started at boot or logon to execute malware or other malicious code. This technique involves placing shortcuts in specific locations, such as the startup folder, to achieve persistence. If the registry key is used to ensure the malware runs on startup or after a logon, this technique applies. Modifying the Termservice service to start automatically on Windows startup is a form of persistence where the malware ensures that it will be able to reconnect to the system after a reboot.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: This technique involves using scheduled tasks for persistence. The malware creates a scheduled task named `SysChecks` to execute the VBS script. Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. This can be used to execute code at a specific time or on a recurring schedule.
+  Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+  Description: This technique involves creating or modifying Windows services for persistence or to execute malicious code. Adversaries may create or modify Windows services to ensure their malware runs automatically when the system starts or when a service is started. The malware creates a new Windows service to ensure its persistence. It sets up the service with a path that disguises its true nature, often using a name that mimics legitimate services.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: This technique involves using scheduled tasks for persistence. The malware creates a scheduled task named `SysChecks` to execute the VBS script. Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. This can be used to execute code at a specific time or on a recurring schedule.
+  Technique: T1543 – CREATE OR MODIFY SYSTEM PROCESS
+  Description: This technique involves creating or modifying Windows services for persistence or to execute malicious code. The malware creates a new Windows service to ensure its persistence. It sets up the service with a path that disguises its true nature, often using a name that mimics legitimate services.
+  Technique: T1055 – PROCESS INJECTION
+  Description: Adversaries may inject code into the address space of another process to evade detection and achieve persistence. he malware injects its code into a new `svchost.exe` process. Process injection is a common technique used to execute malicious code within the context of a legitimate process to evade detection and
+  Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+  Description: This technique involves creating or modifying registry entries to ensure that the malware executes automatically upon system boot or user logon. Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key. These mechanisms ensure that the program runs each time the user logs in or the system starts. Adversaries may create or modify shortcut files (.lnk) that are automatically started at boot or logon to execute malware or other malicious code. This technique involves placing shortcuts in specific locations, such as the startup folder, to achieve persistence. If the registry key is used to ensure the malware runs on startup or after a logon, this technique applies. Modifying the Termservice service to start automatically on Windows startup is a form of persistence where the malware ensures that it will be able to reconnect to the system after a reboot.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1036 – MASQUERADING
+  Description: his technique involves disguising malicious files or processes to appear as legitimate ones. Adversaries may use masquerading to disguise their files or processes as something legitimate to avoid detection. This technique involves disguising files or processes to make them appear legitimate. The creation of the "WindowsUpdate_" folder and the naming conventions used may be attempts to blend in with legitimate system operations. Adversaries may change the file extension of a file to match a different file type. They can use this tactic to disguise files as benign or known types, making them less likely to be detected or scrutinized by security tools or users.
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Adversaries may use various methods to obfuscate data to evade detection. This technique involves encoding or obfuscating files or information to hide their true purpose. The use of Base64 encoding is a form of obfuscation that helps to evade detection by making the payload less recognizable. The use of base64 encoding and integer-ed characters (chr) to obfuscate the script. This more accurately reflects the described obfuscation of the VBScript payload. The data is encrypted with RC4 and Base64, which constitutes obfuscation. Obfuscation techniques are used to make it harder for security tools to analyze or detect the exfiltrated data. The configuration filename is a base64 string, indicating the use of obfuscation. Strings are obfuscated to avoid static string analysis
+  Technique: T1055 – PROCESS INJECTION
+  Description: Adversaries may inject code into the address space of another process to evade detection and achieve persistence. he malware injects its code into a new `svchost.exe` process. Process injection is a common technique used to execute malicious code within the context of a legitimate process to evade detection and
+  Technique: T1089 – DISABLING SECURITY TOOLS
+  Description: Adversaries may disable or interfere with security tools to prevent them from detecting or responding to the attack.
+  Technique: T1562 – IMPAIR DEFENSE
+  Description: The malware searches Kaspersky antivirus processes and terminates them if running on the victim system.
+  Technique: T1140 – DEOBFUSCATE/DECODE FILES OR INFORMATION
+  Description: This technique involves decoding or deobfuscating information to make it usable. The loader script decodes the Base64 string to retrieve the VBScript payload.
+  Technique: T1112 – MODIFY REGISTRY
+  Description: The malware interacts with the Windows registry, specifically modifying registry keys
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: The malware checks the \"isDebugged\" flag in the PEB (Process Environment Block) and also checks for significant delay of code execution by utilizing the GetTickCount() function to detect if the process is being debugged
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+  Description: Adversaries may attempt to get detailed information about the system they are targeting. Collecting information about the system, such as system name, system manufacturer, system model, total physical memory, processor details, BIOS version, and system type. Collecting information about the system, such as system name, system manufacturer, system model, total physical memory, processor details, BIOS version, and system type.
+  Technique: T1018 – REMOTE SYSTEM DISCOVERY
+  Description: The malware downloads several reconnaissance tools like Nmap, FreeRDP, NCat, NPing to map out the network.
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: The malware checks the \"isDebugged\" flag in the PEB (Process Environment Block) and also checks for significant delay of code execution by utilizing the GetTickCount() function to detect if the process is being debugged
+- Tactic: TA00011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Adversaries may transfer tools or other files from an external system into a compromised environment. Adversaries may transfer tools or other files from an external system into a compromised environment. Adversaries may transfer tools or other files from an external system into a compromised environment. Adversaries may transfer tools or other files from an external system into a compromised environment.
+- Tactic: TA0006 – CREDENTIAL ACCESS
+  Technique: T1003 – CREDENTIAL DUMPING
+  Description: Adversaries may dump credentials to obtain user passwords or hashes. This technique involves extracting credentials from operating system memory, files, or other sources. Mimikatz is a well-known tool for credential dumping, and its use to extract passwords from LSASS memory falls directly under this technique.
+- Tactic: TA0008 – LATERAL MOVEMENT
+  Technique: T1021 – REMOTE SERVICES
+  Description: This technique involves using remote services such as Remote Desktop Protocol (RDP) or other remote access tools. Enabling and configuring Remote Desktop is a direct use of this technique to maintain access to the system. This technique involves the use of Remote Desktop Protocol (RDP) for remote access to systems. While the text specifically mentions Ammyy and VNC, RDP is a common protocol for similar purposes.

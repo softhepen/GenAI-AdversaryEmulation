@@ -1,0 +1,16 @@
+[2025-11-07 12:23:18,819] INFO - Loading existing vectorstore from disk
+[2025-11-07 12:23:21,098] INFO - Tool selection for report: THREATDOWN
+[2025-11-07 12:23:21,099] INFO - TTP extraction from CTI report
+[2025-11-07 12:23:21,102] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 12:25:01,837] INFO - Tool field precision: 0.33
+[2025-11-07 12:25:01,839] INFO - Validating LLM output
+[2025-11-07 12:25:01,840] WARNING - Invalid or multiple tools detected: 'update.exe' — replacing with 'No tool'
+[2025-11-07 12:25:01,841] WARNING - Invalid or multiple tools detected: 'wmi' — replacing with 'No tool'
+[2025-11-07 12:25:01,842] WARNING - Invalid or multiple tools detected: 'update.exe' — replacing with 'No tool'
+[2025-11-07 12:25:01,845] WARNING - Invalid or multiple tools detected: 'update.exe' — replacing with 'No tool'
+[2025-11-07 12:25:01,847] INFO - Generating commands for report: THREATDOWN
+[2025-11-07 12:25:01,866] INFO - Parsed 2 feasible attack actions.
+[2025-11-07 12:25:17,671] INFO - Saved command in output\THREATDOWN_OILRIG\generated_commands\command_chrome_passwords_TA0001_T1204.txt
+[2025-11-07 12:25:27,507] INFO - Saved command in output\THREATDOWN_OILRIG\generated_commands\command_ryuk_TA0011_T1105.txt
+[2025-11-07 12:25:28,591] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\THREATDOWN_OILRIG\match_results_chrf.csv
+[2025-11-07 12:25:28,601] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\THREATDOWN_OILRIG\match_results_edit_distance.csv

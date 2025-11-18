@@ -1,0 +1,19 @@
+Here are the command lines that simulate the use of Windows Management Instrumentation (WMI) to automate the remote execution of PowerShell scripts and perform network reconnaissance and lateral movement:
+
+Command: `wmic /namespace:\\root\cimv2 /class Win32_Process Call Create "powershell.exe -file <powershell_script_path>"`
+
+Command: `wmic /namespace:\\root\cimv2 /class Win32_Process Call Create "powershell.exe -command <powershell_command>"`
+
+Command: `wmic /namespace:\\root\cimv2 /class Win32_NetworkAdapter Get IPAddresses, Speed`
+
+Command: `wmic /namespace:\\root\cimv2 /class Win32_ComputerSystem Get Username, Domain`
+
+Command: `wmic /namespace:\\root\cimv2 /class Win32_OperatingSystem Get BuildNumber, OSArchitecture`
+
+Command: `wmic /namespace:\\root\cimv2 /class Win32_NetworkConnection Get LocalName, RemoteName`
+
+Command: `wmic /namespace:\\root\cimv2 /class Win32_LogonSession Get AntivirusDisableTime, LogonTime`
+
+Note: `<powershell_script_path>` and `<powershell_command>` should be replaced with actual file paths and commands. The placeholders are used to simulate the attack behavior without revealing any specific information.
+
+These command lines demonstrate how WMI can be used to automate the execution of PowerShell scripts, gather network information, and perform lateral movement within the environment, as described in the provided attack description.

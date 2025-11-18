@@ -1,0 +1,13 @@
+Based on the provided documentation, I will generate realistic command lines using **only** the tool pupy to reproduce the described attack behavior.
+
+The attack description mentions creating a PowerShell script that uses techniques like CreateThread and VirtualAlloc for shellcode injection. This corresponds to the MITRE technique T1055 (PROCESS INJECTION) and tactic TA0004 (PRIVILEGE ESCALATION).
+
+Here are the generated command lines:
+
+Command: `py -c "import subprocess;subprocess.call([r'C:\\Windows\\System32\\calc.exe'])"`
+
+Command: `download 'C:\\Windows\\System32\\calc.exe'`
+
+Command: `shell_exec 'CreateThread'`
+
+Command: `pexec -c "import ctypes;ctypes.windll.kernel32.CreateThread"`

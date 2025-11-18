@@ -1,0 +1,38 @@
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: APT34's use of LinkedIn messages to deliver booby-trapped job opportunity documents is an example of spearphishing via a service
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: The Word document "Job-Details.doc" is the malicious file that the adversary is hoping the victim will execute, leading to the compromise of their system.
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The APT34 campaign uses a scheduled task to repeatedly launch the dropped executable file ("Client update.exe") as part of their persistence mechanism. The task is set to run every X minutes, ensuring that the malware remains active on the system over time. The creation of a scheduled task named SystemFailureReporter to execute the payload every 5 minutes is a direct use of this technique. The task ensures that the malicious payload continues to run and maintain persistence even after reboots or other interruptions.
+- Tactic: TA0005 – DEFENSE EVASION
+  Technique: T1562 – IMPAIR DEFENSES
+  Description: The verification of a connected mouse is an anti-sandboxing technique. Sandboxes, which are often used in malware analysis, might not simulate a connected mouse, allowing the malware to detect and avoid running in such an environment.
+  Technique: T1497 – VIRTUALIZATION/SANDBOX EVASION
+  Description: TVerification that a mouse is connected to the PC (anti-sandboxing technique).
+  Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+  Description: Dropping an executable with a ".doc" extension and later renaming it to ".exe" is a technique used to disguise the file's true nature and avoid detection by users or automated systems. The Mersenne Twister PRNG might be used to generate keys or pseudorandom values that are part of an encryption scheme. This obfuscates the data being communicated between the malware and the command and control (C2) server, making it harder for defenders to interpret or detect.
+  Technique: T1036 – MASQUERADING
+  Description: The use of a "Flickr lookalike page" is an example of masquerading, where the attacker creates a page that resembles a legitimate service to hide malicious content or responses.
+- Tactic: TA0003 – PERSISTENCE
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The APT34 campaign uses a scheduled task to repeatedly launch the dropped executable file ("Client update.exe") as part of their persistence mechanism. The task is set to run every X minutes, ensuring that the malware remains active on the system over time. The creation of a scheduled task named SystemFailureReporter to execute the payload every 5 minutes is a direct use of this technique. The task ensures that the malicious payload continues to run and maintain persistence even after reboots or other interruptions.
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+  Technique: T1053 – SCHEDULED TASK/JOB
+  Description: The APT34 campaign uses a scheduled task to repeatedly launch the dropped executable file ("Client update.exe") as part of their persistence mechanism. The task is set to run every X minutes, ensuring that the malware remains active on the system over time. The creation of a scheduled task named SystemFailureReporter to execute the payload every 5 minutes is a direct use of this technique. The task ensures that the malicious payload continues to run and maintain persistence even after reboots or other interruptions.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1071 – APPLICATION LAYER PROTOCOL
+  Description: APT34 utilizes DNS tunneling to communicate with their command and control (C2) servers during the execution of the malicious macros. The macros use DNS requests to send beacons back to the attacker, providing updates on the malware's execution stage and delivering victim-identifiable information. This technique is characteristic of APT34's operations and is employed early in the attack chain to establish communication with the C2.
+  Technique: T1132 – DATA ENCODING
+  Description: The gathered PC information is encoded before being used, likely to obfuscate the data and make it harder to detect by security mechanisms. This technique is used to obscure the data being collected and transmitted, thereby reducing the chances of detection by defensive tools.
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: The backdoor's ability to download files from a remote server aligns with this technique, as it involves transferring tools or files into the compromised environment.
+  Technique: T1573 – ENCRYPTED CHANNEL
+  Description: The attackers use the Mersenne Twister pseudorandom number generator as the basis for encrypted communication.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: The encoded data being derived from the PC information indicates that the malware is gathering system-specific data, which is then encoded and possibly used for further operations such as communication with the C2 server. This technique is used by the malware to collect important system information to tailor its actions according to the target environment. Calculating a victim identifier based on user-name, computer-name, and domain name involves collecting data from the local system to create a unique identifier for tracking and communication purposes.
+- Tactic: TA0007 – DISCOVERY
+  Technique: T1007 – SYSTEM SERVICE DISCOVERY
+  Description: The malware's verification of the existence of update.xml can be considered a form of system service discovery, where it checks for the presence of specific files or components required for further operations.

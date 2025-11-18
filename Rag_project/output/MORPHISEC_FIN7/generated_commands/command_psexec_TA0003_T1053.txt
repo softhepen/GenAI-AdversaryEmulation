@@ -1,0 +1,16 @@
+Here is the command line that simulates the attack behavior using the **psexec** tool:
+
+```
+Command: `psexec \\<victim_computer> -u <user_name> -c -a 1,2 cmd /c powershell.exe -File <powershell_script_path>`
+```
+
+In this command line:
+
+* `<victim_computer>` is the name of the victim's computer.
+* `<user_name>` is the username used to access the victim's computer.
+* `-c` option copies the PowerShell script to the remote system for execution.
+* `-a 1,2` specifies that the process runs on CPUs 1 and 2.
+* `cmd /c` executes the command specified after the `/c` flag.
+* `powershell.exe -File <powershell_script_path>` executes a PowerShell script located at `<powershell_script_path>`.
+
+Note: You need to replace `<victim_computer>`, `<user_name>`, and `<powershell_script_path>` with actual values.

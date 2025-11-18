@@ -1,0 +1,14 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -s auser:adomain:99999999999999999999999999999999:99999999999999999999999999999999,"```sh
+wce.exe -w
+```",2.378,True
+command_windows_credential_editor_TA0006_T1003.txt,windows credential editor,wce -w,"```sh
+wce.exe -w
+```",33.601,True
+command_wmic_TA0002_T1047.txt,wmic,"wmic /NAMESPACE:""root\cimv2"" /ROLE:__elah! /NODE:<computer_name> PROCESS CREATE <namespace_path>\Win32_Process.StartService","`wmic /node:#{""POS system""} process call create #{""executable""}`",11.181,True
+command_wmic_TA0007_T1518.txt,wmic,wmic SOFTWAREELEMENT get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",9.973,True
+command_wmic_TA0007_T1518.txt,wmic,wmic SOFTWAREFEATURE list /format:list,"`wmic /node:#{""POS system""} process call create #{""executable""}`",11.498,True
+command_wmic_TA0007_T1518.txt,wmic,wmic SOUNDDEV get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",11.983,True
+command_wmic_TA0007_T1518.txt,wmic,wmic STARTUP get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",12.339,True
+command_wmic_TA0007_T1518.txt,wmic,wmic SYSACCOUNT get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",11.331,True
+command_wmic_TA0007_T1518.txt,wmic,wmic SYSDRIVER list /format:list,"`wmic /node:#{""POS system""} process call create #{""executable""}`",12.627,True

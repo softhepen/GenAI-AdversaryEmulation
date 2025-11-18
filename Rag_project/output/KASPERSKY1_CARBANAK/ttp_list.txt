@@ -1,0 +1,18 @@
+- Tactic: TA0002 – EXECUTION
+  Technique: T1204 – USER EXECUTION
+  Description: a spear-phishing email with a CPL attachment
+  Technique: T1203 – EXPLOITATION FOR CLIENT EXECUTION
+  Description: Exploitation of vulnerabilities in client software to execute arbitrary code.
+- Tactic: TA0001 – INITIAL ACCESS
+  Technique: T1566 – PHISHING
+  Description: Sending spear phishing e-mails with malicious attachments to induce the victim to execute the malware. Sending spear phishing e-mails with malicious attachments to induce the victim to execute the malware.
+- Tactic: TA0011 – COMMAND AND CONTROL
+  Technique: T1105 – INGRESS TOOL TRANSFER
+  Description: Transfer of tools or payloads from an external network to a compromised network.
+- Tactic: TA0009 – COLLECTION
+  Technique: T1125 – VIDEO CAPTURE
+  Description: Collection of video from compromised devices.
+  Technique: T1005 – DATA FROM LOCAL SYSTEM
+  Description: Collection of video from compromised devices
+  Technique: T1056 – INPUT CAPTURE
+  Description: attackers with the keylogged data for that particular machine can understand what the victim was doing

@@ -1,0 +1,11 @@
+Based on the provided documentation and attack description, I will generate realistic command lines using only the tool Ryuk to reproduce the process injection behavior.
+
+Here is my output:
+
+Command: `ryuk.exe --process-name <target_process_name>`
+
+This command line injects code into a target process named `<target_process_name>` and performs process injection.
+
+Note: The `<target_process_name>` placeholder should be replaced with an actual process name of interest, such as "explorer.exe" or "chrome.exe".
+
+Please let me know if this meets the required output format and if I need to make any adjustments.

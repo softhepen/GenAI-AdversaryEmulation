@@ -1,0 +1,19 @@
+[2025-11-06 18:35:26,376] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:35:28,577] INFO - Tool selection for report: TRUSTWAVE1
+[2025-11-06 18:35:28,578] INFO - TTP extraction from CTI report
+[2025-11-06 18:35:28,588] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:36:24,698] INFO - Tool field precision: 0.57
+[2025-11-06 18:36:24,698] INFO - Validating LLM output
+[2025-11-06 18:36:24,699] WARNING - Invalid or multiple tools detected: 'metasploit, pupy' — replacing with 'No tool'
+[2025-11-06 18:36:24,699] WARNING - Invalid or multiple tools detected: 'psexec, paexec, plink' — replacing with 'No tool'
+[2025-11-06 18:36:24,699] WARNING - Invalid or multiple tools detected: 'pupy, psexec' — replacing with 'No tool'
+[2025-11-06 18:36:24,703] INFO - Generating commands for report: TRUSTWAVE1
+[2025-11-06 18:36:24,727] INFO - Parsed 4 feasible attack actions.
+[2025-11-06 18:36:28,994] INFO - Saved command in output\TRUSTWAVE1_CARBANAK\generated_commands\command_chrome_passwords_TA0002_T1204.txt
+[2025-11-06 18:36:50,355] INFO - Saved command in output\TRUSTWAVE1_CARBANAK\generated_commands\command_rubeus_TA0005_T1112.txt
+[2025-11-06 18:37:10,227] INFO - Saved command in output\TRUSTWAVE1_CARBANAK\generated_commands\command_pupy_TA0003_T1053.txt
+[2025-11-06 18:37:22,389] INFO - Saved command in output\TRUSTWAVE1_CARBANAK\generated_commands\command_ryuk_TA0003_T1547.txt
+[2025-11-06 18:37:22,413] WARNING - No commands extracted from command_chrome_passwords_TA0002_T1204.txt
+[2025-11-06 18:37:22,694] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRUSTWAVE1_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:37:22,697] WARNING - No commands extracted from command_chrome_passwords_TA0002_T1204.txt
+[2025-11-06 18:37:22,702] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\TRUSTWAVE1_CARBANAK\match_results_edit_distance.csv

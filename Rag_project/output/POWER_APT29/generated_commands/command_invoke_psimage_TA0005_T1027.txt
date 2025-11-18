@@ -1,0 +1,9 @@
+Based on the provided documentation and the attack behavior described, I will generate realistic command lines using **only** the tool `Invoke-PSImage` to reproduce the steganography attack.
+
+Here is my output:
+
+Command: `Invoke-PSImage -ScriptBlock {Invoke-Mimikatz} -OutputFile <image_file_name>.png`
+
+This command line uses the `Invoke-PSImage` tool to encode a PowerShell script (in this case, `Invoke-Mimikatz`) into the pixels of a PNG image. The output file name is specified as `<image_file_name>.png`, which can be replaced with an actual file name.
+
+Note that I did not include any specific values for the file name placeholder, as it depends on the context and requirements of the attack simulation.

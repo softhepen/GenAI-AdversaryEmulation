@@ -1,0 +1,19 @@
+[2025-11-06 18:06:44,597] INFO - Loading existing vectorstore from disk
+[2025-11-06 18:06:46,999] INFO - Tool selection for report: BITDEFENDER
+[2025-11-06 18:06:46,999] INFO - TTP extraction from CTI report
+[2025-11-06 18:06:47,000] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 18:08:07,827] INFO - Tool field precision: 0.56
+[2025-11-06 18:08:07,828] INFO - Validating LLM output
+[2025-11-06 18:08:07,829] WARNING - Invalid or multiple tools detected: 'paexec, psexec' — replacing with 'No tool'
+[2025-11-06 18:08:07,829] WARNING - Invalid or multiple tools detected: 'chrome-passwords, invoke-psimage' — replacing with 'No tool'
+[2025-11-06 18:08:07,829] WARNING - Invalid or multiple tools detected: 'invoke-psimage, rubeus' — replacing with 'No tool'
+[2025-11-06 18:08:07,859] WARNING - Invalid or multiple tools detected: 'paexec, psexec' — replacing with 'No tool'
+[2025-11-06 18:08:07,862] INFO - Generating commands for report: BITDEFENDER
+[2025-11-06 18:08:07,896] INFO - Parsed 5 feasible attack actions.
+[2025-11-06 18:08:52,352] INFO - Saved command in output\BITDEFENDER_CARBANAK\generated_commands\command_pupy_TA0001_T1078.txt
+[2025-11-06 18:09:20,220] INFO - Saved command in output\BITDEFENDER_CARBANAK\generated_commands\command_adfind_TA0007_T1083.txt
+[2025-11-06 18:09:29,258] INFO - Saved command in output\BITDEFENDER_CARBANAK\generated_commands\command_wmic_TA0007_T1082.txt
+[2025-11-06 18:10:12,326] INFO - Saved command in output\BITDEFENDER_CARBANAK\generated_commands\command_pupy_TA0002_T1059.txt
+[2025-11-06 18:10:22,027] INFO - Saved command in output\BITDEFENDER_CARBANAK\generated_commands\command_rubeus_TA0005_T1070.txt
+[2025-11-06 18:10:24,244] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\BITDEFENDER_CARBANAK\match_results_chrf.csv
+[2025-11-06 18:10:24,260] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\BITDEFENDER_CARBANAK\match_results_edit_distance.csv

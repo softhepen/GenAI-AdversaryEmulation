@@ -1,0 +1,43 @@
+Based on the internal tools provided and the technique descriptions, here is the output:
+
+- Tactic: TA0002 – EXECUTION
+Technique: T1059 – COMMAND AND SCRIPTING INTERPRETER
+Description: A custom PowerShell script is used to execute and manage payload delivery, showcasing the use of PowerShell as an execution platform.
+Tool: chrome-passwords
+
+Technique: T1106 – NATIVE API
+Description: The use of Windows API functions to perform the injection, manage memory, and create threads is a critical aspect of reflective DLL injection.
+Tool: No tool
+
+- Tactic: TA0005 – DEFENSE EVASION
+Technique: T1620 – REFLECTIVE CODE LOADING
+Description: Reflective DLL injection is a technique where a DLL is injected into a process without touching disk, which helps evade traditional security controls.
+Tool: psexec
+
+Technique: T1112 – MODIFY REGISTRY
+Description: This technique involves modifying the Windows Registry to store malicious data or configurations.
+Tool: adfind
+
+Technique: T1027 – OBFUSCATED FILES OR INFORMATION
+Description: After scraping the sensitive data, the malware encrypts the stolen information before writing it to disk.
+Tool: No tool
+
+- Tactic: TA0003 – PERSISTENCE
+Technique: T1546 – EVENT TRIGGERED EXECUTION
+Description: Application Shimming is a technique that involves modifying how applications are executed on the system by creating a custom compatibility shim.
+Tool: invoke-psimage
+
+- Tactic: TA0004 – PRIVILEGE ESCALATION
+Technique: T1546 – EVENT TRIGGERED EXECUTION
+Description:
+Tool: No tool
+
+- Tactic: TA0007 – DISCOVERY
+Technique: T1057 – PROCESS DISCOVERY
+Description: This describes enumerating running processes on the infected system, which is a process discovery technique.
+Tool: psexec
+
+- Tactic: TA0009 – COLLECTION
+Technique: T1005 – DATA FROM LOCAL SYSTEM
+Description: Memory scraping is a method used to extract sensitive data, such as payment card information, directly from the memory of running processes.
+Tool: chrome-passwords

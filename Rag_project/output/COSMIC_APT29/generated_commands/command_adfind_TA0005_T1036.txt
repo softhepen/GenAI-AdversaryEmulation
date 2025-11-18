@@ -1,0 +1,5 @@
+Based on the documentation provided, I will generate realistic command lines using **only** the adfind tool to reproduce the attack behavior of disguising a malicious file as an image or document to look legitimate.
+
+Here is the output:
+
+Command: `adfind -b <domain_controller> -f "(|(name=<malicious_file_name>.jpg)(name=<malicious_file_name>.doc))" -d "JPEG Photo"`

@@ -1,0 +1,24 @@
+[2025-11-06 17:53:46,298] INFO - Loading existing vectorstore from disk
+[2025-11-06 17:53:48,733] INFO - Tool selection for report: POWER
+[2025-11-06 17:53:48,734] INFO - TTP extraction from CTI report
+[2025-11-06 17:53:48,750] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 17:55:07,472] INFO - Tool field precision: 0.75
+[2025-11-06 17:55:07,475] INFO - Validating LLM output
+[2025-11-06 17:55:07,476] WARNING - Invalid or multiple tools detected: 'plink, psexec' — replacing with 'No tool'
+[2025-11-06 17:55:07,477] WARNING - Invalid or multiple tools detected: 'rubeus, tiny_met' — replacing with 'No tool'
+[2025-11-06 17:55:07,477] WARNING - Invalid or multiple tools detected: 'rubeus, tiny_met' — replacing with 'No tool'
+[2025-11-06 17:55:07,479] INFO - Generating commands for report: POWER
+[2025-11-06 17:55:07,508] INFO - Parsed 9 feasible attack actions.
+[2025-11-06 17:55:19,647] INFO - Saved command in output\POWER_APT29\generated_commands\command_chrome_passwords_TA0042_T1566.txt
+[2025-11-06 17:55:22,850] INFO - Saved command in output\POWER_APT29\generated_commands\command_chrome_passwords_TA0001_T1586.txt
+[2025-11-06 17:55:48,196] INFO - Saved command in output\POWER_APT29\generated_commands\command_windows_credential_editor_TA0001_T1059.txt
+[2025-11-06 17:56:08,857] INFO - Saved command in output\POWER_APT29\generated_commands\command_windows_credential_editor_TA0002_T1204.txt
+[2025-11-06 17:56:30,762] INFO - Saved command in output\POWER_APT29\generated_commands\command_windows_credential_editor_TA0002_T1059.txt
+[2025-11-06 17:56:44,958] INFO - Saved command in output\POWER_APT29\generated_commands\command_invoke_psimage_TA0005_T1027.txt
+[2025-11-06 17:56:57,051] INFO - Saved command in output\POWER_APT29\generated_commands\command_rubeus_TA0005_T1112.txt
+[2025-11-06 17:57:07,688] INFO - Saved command in output\POWER_APT29\generated_commands\command_rubeus_TA0007_T1083.txt
+[2025-11-06 17:57:20,932] INFO - Saved command in output\POWER_APT29\generated_commands\command_rubeus_TA0007_T1033.txt
+[2025-11-06 17:57:20,956] WARNING - No commands extracted from command_chrome_passwords_TA0001_T1586.txt
+[2025-11-06 17:57:21,487] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\POWER_APT29\match_results_chrf.csv
+[2025-11-06 17:57:21,489] WARNING - No commands extracted from command_chrome_passwords_TA0001_T1586.txt
+[2025-11-06 17:57:21,502] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\POWER_APT29\match_results_edit_distance.csv

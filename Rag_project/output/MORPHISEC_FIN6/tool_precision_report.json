@@ -1,0 +1,25 @@
+{
+  "precision": 0.5,
+  "true_positives": [
+    "rubeus",
+    "wmic",
+    "metasploit",
+    "metasploit",
+    "plink",
+    "chrome-passwords",
+    "metasploit",
+    "rubeus"
+  ],
+  "false_positives": [
+    "psexecpaexec",
+    "metasploitchromepasswords",
+    "psexecpaexec",
+    "metasploitplink",
+    "metasploittinymet",
+    "invokepsimagerubeus",
+    "rubeusmetasploit",
+    "psexecpaexec"
+  ],
+  "total_tools": 16,
+  "total_entries": 20
+}

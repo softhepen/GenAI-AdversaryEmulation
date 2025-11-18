@@ -1,0 +1,19 @@
+[2025-11-06 19:17:24,292] INFO - Loading existing vectorstore from disk
+[2025-11-06 19:17:26,409] INFO - Tool selection for report: OlympicDestroyer
+[2025-11-06 19:17:26,409] INFO - TTP extraction from CTI report
+[2025-11-06 19:17:26,420] INFO - Searching for tool alignment with CTI report...
+[2025-11-06 19:18:55,728] INFO - Tool field precision: 1.00
+[2025-11-06 19:18:55,729] INFO - Validating LLM output
+[2025-11-06 19:18:55,760] INFO - Generating commands for report: OlympicDestroyer
+[2025-11-06 19:18:56,613] INFO - Parsed 9 feasible attack actions.
+[2025-11-06 19:19:14,644] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_ryuk_TA0005_T1027.txt
+[2025-11-06 19:19:30,976] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_psexec_TA0002_T1059.txt
+[2025-11-06 19:20:20,413] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_wmic_TA0002_T1047.txt
+[2025-11-06 19:20:50,026] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_paexec_TA0007_T1046.txt
+[2025-11-06 19:21:22,284] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_plink_TA0007_T1018.txt
+[2025-11-06 19:21:33,198] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_adfind_TA0007_T1012.txt
+[2025-11-06 19:21:48,075] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_ryuk_TA0006_T1003.txt
+[2025-11-06 19:22:27,343] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_psexec_TA0040_T1489.txt
+[2025-11-06 19:22:37,118] INFO - Saved command in output\OlympicDestroyer_SANDWORM\generated_commands\command_plink_TA0008_T1021.txt
+[2025-11-06 19:22:48,811] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\OlympicDestroyer_SANDWORM\match_results_chrf.csv
+[2025-11-06 19:22:48,831] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\OlympicDestroyer_SANDWORM\match_results_edit_distance.csv

@@ -1,0 +1,14 @@
+Based on the documentation and the attack description, I've generated a command line that simulates OS credential dumping using PsExec:
+
+Command:`psexec -i -u <Domain\User> -p <password> cmd /c "whoami"`
+
+This command:
+
+* Runs the `cmd` executable as an interactive process (`-i`)
+* Specifies the user account `<Domain\User>` and password `<password>` for login to the remote system
+* Uses the `-u` flag to specify a valid user name in the `Domain\User` syntax, which allows the process to run with access to network resources
+* Copies the specified program (in this case, `cmd`) even if it already exists on the remote system (`-f` is not included)
+* Runs the program so that it interacts with the desktop of the specified session on the remote system (`-i`)
+* Uses the `whoami` command to obtain information about the current user
+
+Please note that this command line does not include any specific file paths, ports, or registry keys as the attack description does not mention them.

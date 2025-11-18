@@ -1,0 +1,13 @@
+Here are some realistic command lines using **only** the tool psexec to reproduce the following attack behavior:
+
+Use of external remote services to maintain compromised system access.
+
+Command: `psexec \\remote_system -u <username> -p <password> -r <service_name>`
+Command: `psexec \\remote_system -s -r <service_name>`
+Command: `psexec \\remote_system -h -r <service_name>`
+
+Note:
+- `<username>` and `<password>` are placeholders for the actual credentials used to access the remote system.
+- `<service_name>` is a placeholder for the name of the external remote service being accessed.
+
+Please let me know if you would like me to generate more command lines.

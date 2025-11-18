@@ -1,0 +1,19 @@
+[2025-11-07 13:20:50,543] INFO - Loading existing vectorstore from disk
+[2025-11-07 13:20:52,771] INFO - Tool selection for report: DEEPWATCH
+[2025-11-07 13:20:52,772] INFO - TTP extraction from CTI report
+[2025-11-07 13:20:53,120] INFO - Searching for tool alignment with CTI report...
+[2025-11-07 13:21:52,777] INFO - Tool field precision: 0.29
+[2025-11-07 13:21:52,778] INFO - Validating LLM output
+[2025-11-07 13:21:52,779] WARNING - Invalid or multiple tools detected: 'paexec, psexec, rubeus, ryuk, tinymet, wmic' — replacing with 'No tool'
+[2025-11-07 13:21:52,779] WARNING - Invalid or multiple tools detected: 'paexec, psexec, rubeus, ryuk, tinymet, wmic' — replacing with 'No tool'
+[2025-11-07 13:21:52,780] WARNING - Invalid or multiple tools detected: 'ryuk, pupy, tinymet' — replacing with 'No tool'
+[2025-11-07 13:21:52,809] WARNING - Invalid or multiple tools detected: 'ryuk, pupy, tinymet' — replacing with 'No tool'
+[2025-11-07 13:21:52,810] WARNING - Invalid or multiple tools detected: 'paexec, psexec' — replacing with 'No tool'
+[2025-11-07 13:21:52,812] INFO - Generating commands for report: DEEPWATCH
+[2025-11-07 13:21:52,874] INFO - Parsed 2 feasible attack actions.
+[2025-11-07 13:21:56,061] INFO - Saved command in output\DEEPWATCH_FIN7\generated_commands\command_chrome_passwords_TA0002_T1204.txt
+[2025-11-07 13:22:19,266] INFO - Saved command in output\DEEPWATCH_FIN7\generated_commands\command_windows_credential_editor_TA0006_T1003.txt
+[2025-11-07 13:22:19,293] WARNING - No commands extracted from command_chrome_passwords_TA0002_T1204.txt
+[2025-11-07 13:22:19,385] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DEEPWATCH_FIN7\match_results_chrf.csv
+[2025-11-07 13:22:19,388] WARNING - No commands extracted from command_chrome_passwords_TA0002_T1204.txt
+[2025-11-07 13:22:19,392] INFO - Results exported to: C:\Users\ilag9\Desktop\Rag_project\output\DEEPWATCH_FIN7\match_results_edit_distance.csv
